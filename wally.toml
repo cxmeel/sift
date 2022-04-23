@@ -1,0 +1,8 @@
+[package]
+name = "csqrl/sift"
+description = "Immutable data manipulation in Luau"
+version = "0.0.0"
+license = "MIT"
+author = "csqrl (https://csqrl.dev)"
+registry = "https://github.com/upliftgames/wally-index"
+realm = "shared"

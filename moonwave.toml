@@ -1,0 +1,14 @@
+title = "Sift"
+gitSourceBranch = "main"
+changelog = true
+
+classOrder = ["Sift"]
+
+[[navbar.items]]
+label = "Itch.io"
+href = "https://csqrl.itch.io/sift"
+position = "right"
+
+[docusaurus.themeConfig.colorMode]
+respectPrefersColorScheme = true
+defaultMode = "dark"

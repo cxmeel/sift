@@ -1,0 +1,56 @@
+{
+  "name": "@rbxts/sift",
+  "version": "0.0.0",
+  "description": "Immutable data manipulation in Luau",
+  "main": "./src/init.lua",
+  "types": "@types",
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "rbxtsc",
+    "watch": "rbxtsc -w",
+    "prepublishOnly": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/csqrl/sift.git"
+  },
+  "keywords": [
+    "table",
+    "array",
+    "dictionary",
+    "config",
+    "json",
+    "utility",
+    "roblox",
+    "robloxdev",
+    "robloxlua",
+    "roblox-lua",
+    "luau",
+    "wally",
+    "rojo",
+    "roact",
+    "roblox-rojo",
+    "dot-notation"
+  ],
+  "author": "csqrl (https://csqrl.dev)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/csqrl/sift/issues"
+  },
+  "homepage": "https://github.com/csqrl/sift#readme",
+  "files": [
+    "src",
+    "@types",
+    "*.project.json"
+  ],
+  "devDependencies": {
+    "@rbxts/compiler-types": "1.3.3-types.1",
+    "@rbxts/types": "1.0.576",
+    "rbxts-transform-debug": "1.1.0-ts4.5",
+    "rbxts-transform-env": "1.1.0-ts4.5",
+    "roblox-ts": "1.3.3",
+    "typescript": "4.6.3"
+  }
+}

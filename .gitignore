@@ -1,0 +1,5 @@
+*.rbx*
+*.env
+
+packages/
+node_modules/
