@@ -6,7 +6,6 @@
 ]=]
 local Array = {
 	At = require(script.At),
-	Clear = require(script.Clear),
 	Concat = require(script.Concat),
 	ConcatDeep = require(script.ConcatDeep),
 	Copy = require(script.Copy),
