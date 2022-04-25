@@ -21,7 +21,7 @@
 	end) -- false
 	```
 ]=]
-local function every<T>(array: { T }, predicate: (T?, number?) -> boolean?): boolean
+local function every<T>(array: { T }, predicate: (T, number) -> boolean?): boolean
 	for index, value in ipairs(array) do
 		if not predicate(value, index) then
 			return false

@@ -18,7 +18,7 @@
 	end) -- 2
 	```
 ]=]
-local function findWhere<T>(array: { T }, predicate: (T?, number?) -> boolean?, from: number?): number?
+local function findWhere<T>(array: { T }, predicate: (T, number) -> boolean?, from: number?): number?
 	local length = #array
 
 	from = if type(from) == "number" then if from < 1 then length + from else from else 1
