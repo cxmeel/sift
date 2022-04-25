@@ -1,1 +1,5 @@
+--!strict
+--[=[
+  @class Dictionary
+]=]
 return {}
