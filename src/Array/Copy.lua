@@ -16,14 +16,4 @@
 	print(new == array) -- false
 	```
 ]=]
-local function copy<T>(array: { T }): { T }
-	local result = {}
-
-	for _, item in ipairs(array) do
-		table.insert(result, item)
-	end
-
-	return result
-end
-
-return copy
+return table.clone
