@@ -25,11 +25,7 @@
 	end, {}) -- { 3, 2, 1 }
 	```
 ]=]
-local function reduceRight<T>(
-	array: { T },
-	reducer: (({ T } | T)?, T?, number?) -> { T } | T,
-	initReduction: ({ T } | T)?
-): { T } | T
+local function reduceRight<T, U>(array: { T }, reducer: (U, T, number) -> U, initReduction: U?): U
 	local result = initReduction
 	local start = #array
 

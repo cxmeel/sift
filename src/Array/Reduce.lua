@@ -24,11 +24,7 @@
 	end, {}) -- { 1, 2, 3 }
 	```
 ]=]
-local function reduce<T>(
-	array: { T },
-	reducer: (({ T } | T)?, T?, number?) -> { T } | T,
-	initReduction: ({ T } | T)?
-): { T } | T
+local function reduce<T, U>(array: { T }, reducer: (U, T, number) -> U, initReduction: U?): U
 	local result = initReduction
 	local start = 1
 
