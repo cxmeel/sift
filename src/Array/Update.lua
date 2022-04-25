@@ -39,6 +39,7 @@ end
 	end, function(value)
 		return 10
 	end) -- { 1, 2, 3, 10 }
+	```
 ]=]
 local function update<T>(array: { T }, index: number, updater: Updater<T>?, callback: Callback<T>?): { T }
 	local length = #array
