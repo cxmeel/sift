@@ -7,8 +7,8 @@ local Util = require(Sift.Util)
   @function Count
   @within Dictionary
 
-  @param dictionary {T} -- The dictionary to count.
-  @param predicate? (value?: T, key?: K) -> boolean? -- The predicate to use to filter the dictionary.
+  @param dictionary T -- The dictionary to count.
+  @param predicate? (value: T, key: K, dictionary: T) -> boolean? -- The predicate to use to filter the dictionary.
   @return number -- The number of items in the dictionary.
 
   Counts the number of items in a dictionary.

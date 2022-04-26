@@ -3,7 +3,7 @@
   @function Copy
   @within Dictionary
 
-  @param dictionary {T} -- The dictionary to copy.
+  @param dictionary T -- The dictionary to copy.
   @return T -- The copied dictionary.
 
   Copies a dictionary.
