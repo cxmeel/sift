@@ -8,7 +8,7 @@ local Util = require(Sift.Util)
 	@within Array
 
 	@param array {T} -- The array to filter.
-	@param predicate? (value?: T, index?: number) -> boolean? -- The predicate to use to filter the array.
+	@param predicate? (value: T, index: number, array: {T}) -> boolean? -- The predicate to use to filter the array.
 	@return {T} -- The filtered array.
 
 	Filters an array.

@@ -4,7 +4,7 @@
 	@within Array
 
 	@param array {T} -- The array to check.
-	@param predicate (value?: T, index?: number) -> boolean? -- The predicate to use to check the array.
+	@param predicate (value: T, index: number, array: {T}) -> boolean? -- The predicate to use to check the array.
 	@return boolean -- Whether every item in the array passes the predicate.
 
 	Checks whether every item in the array passes the predicate.

@@ -8,7 +8,7 @@ local Util = require(Sift.Util)
 	@within Array
 
 	@param array {T} -- The array to count the number of items in.
-	@param predicate? (value?: T, index?: number) -> boolean? -- The predicate to use to filter the array.
+	@param predicate? (value: T, index: number, array: {T}) -> boolean? -- The predicate to use to filter the array.
 	@return number -- The number of items in the array.
 
 	Counts the number of items in an array.

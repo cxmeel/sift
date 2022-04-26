@@ -4,9 +4,9 @@
 	@within Array
 
 	@param array {T} -- The array to reduce.
-	@param reducer (accumulator: A, value: T, index: number) -> A -- The reducer to use.
-	@param initialReduction? A -- The initial accumulator value.
-	@return A -- The final accumulator value.
+	@param reducer (accumulator: U, value: T, index: number, array: {T}) -> U -- The reducer to use.
+	@param initialReduction? U = {T}[#{T}] -- The initial accumulator value.
+	@return U -- The final accumulator value.
 
 	Reduces the array using the given reducer and initial accumulator value,
 	starting from the end of the array. If no `initialReduction` value is given,

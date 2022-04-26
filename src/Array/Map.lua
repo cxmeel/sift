@@ -4,7 +4,7 @@
 	@within Array
 
 	@param array {T} -- The array to map.
-	@param mapper (value?: T, index?: number) -> T? -- The mapper function.
+	@param mapper (value: T, index: number, array: {T}) -> T? -- The mapper function.
 	@return {T} -- The mapped array.
 
 	Maps the array using the mapper function.

@@ -4,7 +4,7 @@
 	@within Array
 
 	@param array {T} -- The array to search.
-	@param predicate (value?: T, index?: number) -> boolean? -- The predicate to use to check the array.
+	@param predicate (value: T, index: number, array: {T}) -> boolean? -- The predicate to use to check the array.
 	@param from? number -- The index to start searching from.
 	@return number -- The index of the last item in the array that matches the predicate.
 

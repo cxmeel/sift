@@ -19,8 +19,8 @@ end
 
 	@param array {T} -- The array to update.
 	@param index {number} -- The index to update.
-	@param updater? (value?: T, index?: number) -> T -- The updater function.
-	@param callback? (index?: number) -> T -- The callback function.
+	@param updater? (value: T, index: number) -> T -- The updater function.
+	@param callback? (index: number) -> T -- The callback function.
 	@return {T} -- The updated array.
 
 	Updates an array at the given index. If the value at the given index does
