@@ -19,7 +19,7 @@ local Copy = require(script.Parent.Copy)
 	end) -- { "e", "d", "c", "b", "a" }
 	```
 ]=]
-local function sort<T>(array: { T }, comparator: ((T, T) -> boolean)?): { T }
+local function sort<T>(array: { T }, comparator: ((firstValue: T, secondValue: T) -> boolean)?): { T }
 	local result = Copy(array)
 
 	table.sort(result, comparator)

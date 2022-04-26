@@ -21,9 +21,9 @@
 	end) -- false
 	```
 ]=]
-local function some<T>(array: { T }, predicate: (T, number) -> boolean?): boolean
+local function some<T>(array: { T }, predicate: (value: T, index: number, array: { T }) -> boolean?): boolean
 	for index, value in ipairs(array) do
-		if predicate(value, index) then
+		if predicate(value, index, array) then
 			return true
 		end
 	end

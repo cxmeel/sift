@@ -25,7 +25,11 @@
 	end, {}) -- { 3, 2, 1 }
 	```
 ]=]
-local function reduceRight<T, U>(array: { T }, reducer: (U, T, number) -> U, initReduction: U?): U
+local function reduceRight<T, U>(
+	array: { T },
+	reducer: (accumulator: U, value: T, index: number, array: { T }) -> U,
+	initReduction: U?
+): U
 	local result = initReduction
 	local start = #array
 
@@ -35,7 +39,7 @@ local function reduceRight<T, U>(array: { T }, reducer: (U, T, number) -> U, ini
 	end
 
 	for index = start, 1, -1 do
-		result = reducer(result, array[index], index)
+		result = reducer(result, array[index], index, array)
 	end
 
 	return result

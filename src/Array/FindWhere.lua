@@ -18,13 +18,17 @@
 	end) -- 2
 	```
 ]=]
-local function findWhere<T>(array: { T }, predicate: (T, number) -> boolean?, from: number?): number?
+local function findWhere<T>(
+	array: { T },
+	predicate: (value: T, index: number, array: { T }) -> boolean?,
+	from: number?
+): number?
 	local length = #array
 
 	from = if type(from) == "number" then if from < 1 then length + from else from else 1
 
 	for index = from, #array do
-		if predicate(array[index], index) then
+		if predicate(array[index], index, array) then
 			return index
 		end
 	end

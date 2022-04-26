@@ -24,7 +24,11 @@
 	end, {}) -- { 1, 2, 3 }
 	```
 ]=]
-local function reduce<T, U>(array: { T }, reducer: (U, T, number) -> U, initReduction: U?): U
+local function reduce<T, U>(
+	array: { T },
+	reducer: (accumulator: U, value: T, index: number, array: { T }) -> U,
+	initReduction: U?
+): U
 	local result = initReduction
 	local start = 1
 
@@ -34,7 +38,7 @@ local function reduce<T, U>(array: { T }, reducer: (U, T, number) -> U, initRedu
 	end
 
 	for index = start, #array do
-		result = reducer(result, array[index], index)
+		result = reducer(result, array[index], index, array)
 	end
 
 	return result

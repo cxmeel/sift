@@ -17,11 +17,11 @@
 	end) -- { 2, 4, 6 }
 	```
 ]=]
-local function map<T>(array: { T }, mapper: (T, number) -> T?): { T }
+local function map<T>(array: { T }, mapper: (value: T, index: number, array: { T }) -> T?): { T }
 	local mapped = {}
 
 	for index, value in ipairs(array) do
-		local mappedValue = mapper(value, index)
+		local mappedValue = mapper(value, index, array)
 
 		if mappedValue ~= nil then
 			table.insert(mapped, mappedValue)

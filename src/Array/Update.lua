@@ -4,8 +4,8 @@ local Sift = script.Parent.Parent
 local Util = require(Sift.Util)
 local Copy = require(script.Parent.Copy)
 
-type Callback<T> = (number) -> T
-type Updater<T> = (T, number) -> T
+type Callback<T> = (index: number) -> T
+type Updater<T> = (currentValue: T, index: number) -> T
 
 local function call<T>(callback: Callback<T>, index: number)
 	if type(callback) == "function" then

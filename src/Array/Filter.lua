@@ -21,13 +21,13 @@ local Util = require(Sift.Util)
 	end) -- { 2, 3 }
 	```
 ]=]
-local function filter<T>(array: { T }, predicate: ((T, number) -> boolean?)?): { T }
+local function filter<T>(array: { T }, predicate: ((value: T, index: number, array: { T }) -> boolean?)?): { T }
 	local result = {}
 
 	predicate = if type(predicate) == "function" then predicate else Util.Func.Truthy
 
 	for index, value in ipairs(array) do
-		if predicate(value, index) then
+		if predicate(value, index, array) then
 			table.insert(result, value)
 		end
 	end
