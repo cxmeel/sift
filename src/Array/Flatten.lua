@@ -22,15 +22,15 @@
 	```
 ]=]
 local function flatten<T>(array: { T }, depth: number?): { T }
-	local result = {}
-
 	depth = if type(depth) == "number" then depth else math.huge
 
-	for _, value in pairs(array) do
+	local result = {}
+
+	for _, value in ipairs(array) do
 		if type(value) == "table" and depth > 0 then
 			local nested = flatten(value, depth - 1)
 
-			for _, nestedValue in pairs(nested) do
+			for _, nestedValue in ipairs(nested) do
 				table.insert(result, nestedValue)
 			end
 		else
