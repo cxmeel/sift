@@ -51,7 +51,4 @@ local Array = {
 	ZipAll = require(script.ZipAll),
 }
 
--- Aliases --
-Array.Contains = Array.Includes
-
 return Array
