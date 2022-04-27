@@ -31,7 +31,9 @@ local function freezeDeep<T>(array: { T }): { T }
 		end
 	end
 
-	return table.freeze(result)
+	table.freeze(result)
+
+	return result
 end
 
 return freezeDeep
