@@ -73,8 +73,8 @@ jobs:
           printf "[tokens]\n\"https://api.wally.run/\" = \"%s\"" "$WALLY_TOKEN" >> ~/.wally/auth.toml
           wally publish
 
-      - name: Publish to NPM
-        if: ${{ github.event.release.prerelease == false }}
-        uses: JS-DevTools/npm-publish@v1
-        with:
-          token: ${{ secrets.NPM_TOKEN }}
+      # - name: Publish to NPM
+      #   if: ${{ github.event.release.prerelease == false }}
+      #   uses: JS-DevTools/npm-publish@v1
+      #   with:
+      #     token: ${{ secrets.NPM_TOKEN }}

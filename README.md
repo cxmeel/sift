@@ -3,7 +3,6 @@
 [freddylist/llama]: https://github.com/freddylist/llama
 [osyrisrblx/t]: https://github.com/osyrisrblx/t
 [upliftgames/moonwave]: https://github.com/upliftgames/moonwave
-[roblox-ts]: https://roblox-ts.com
 
 # Sift
 
@@ -19,7 +18,6 @@ As per the recommendations in [Llama's README][freddylist/llama], the following 
   - Sift _will not_ check types at runtime. If you're using the library wrong, you'll get errors at runtime anyway!
 - Organised tests. `*.spec` files are now alongside their source files, making it easier to locate them.
 - Documentation is now generated using [@upliftgames' moonwave][upliftgames/moonwave] (Docusaurus). This makes it quick and easy to add new documentation, and provides a pleasant experience for the user.
-- TypeScript support. Sift is written in Luau, but includes a TypeScript declaration file to make Sift compatible with [roblox-ts][roblox-ts].
 
 ## What's New?
 
