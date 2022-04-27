@@ -23,14 +23,19 @@ As per the recommendations in [Llama's README][freddylist/llama], the following 
 
 ### Arrays (Lists)
 
-- `At`: Get an element at a specific index (negative indices are supported).
-- `Freeze`: Freeze an array.
-- `FreezeDeep`: Freeze an array and all nested arrays.
-- `Shuffle`: Shuffle the elements of an array to a random order.
+- `at`: Get an element at a specific index (negative indices are supported).
+- `freeze`: Freeze an array.
+- `freezeDeep`: Freeze an array and all nested arrays.
+- `shuffle`: Shuffle the elements of an array to a random order.
 
 ### Dictionaries
 
-- `Entries`: Get the entries of a dictionary as an array of key-value pairs.
-- `Freeze`: Freeze a dictionary.
-- `FreezeDeep`: Freeze a dictionary and all nested dictionaries.
-- `FromEntries`: Create a dictionary from an array of key-value pairs.
+- `dotFlatten` (experimental): Flatten nested dictionaries into a single dictionary using dot-notation.
+- `entries`: Get the entries of a dictionary as an array of key-value pairs.
+- `freeze`: Freeze a dictionary.
+- `freezeDeep`: Freeze a dictionary and all nested dictionaries.
+- `fromEntries`: Create a dictionary from an array of key-value pairs.
+
+### Sets
+
+- `count`: Get the number of elements in a set.
