@@ -1,8 +1,9 @@
 local None = require(script.Parent.None)
 
---- @type None None
---- @within Sift
-
+--[=[
+  @type None None
+  @within Sift
+]=]
 export type None = typeof(None)
 export type Dictionary<K, V> = { [K]: V }
 export type Array<T> = Dictionary<number, T>
