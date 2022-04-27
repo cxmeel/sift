@@ -1,7 +1,8 @@
 return function()
 	local Merge = require(script.Parent.Merge)
+	local None = require(script.Parent.Parent.None)
 
-	it("should combines two or more dictionaries, where the last value overrides previous", function()
+	it("should combine two or more dictionaries, where the last value overrides previous", function()
 		local dictionary1 = { hello = "roblox", goodbye = "world" }
 		local dictionary2 = { hello = "hello" }
 
@@ -24,5 +25,28 @@ return function()
 
 		expect(dictionary1.hello).to.equal("roblox")
 		expect(dictionary2.hello).to.equal("hello")
+	end)
+
+	it("should accept nil values", function()
+		local dictionary1 = { hello = "roblox", goodbye = "world" }
+
+		local merged = Merge(dictionary1, nil)
+
+		expect(merged).to.be.a("table")
+
+		expect(merged.hello).to.equal("roblox")
+		expect(merged.goodbye).to.equal("world")
+	end)
+
+	it("should remove values set to None", function()
+		local dictionary1 = { hello = "roblox", goodbye = "world" }
+		local dictionary2 = { goodbye = None }
+
+		local merged = Merge(dictionary1, dictionary2)
+
+		expect(merged).to.be.a("table")
+
+		expect(merged.hello).to.equal("roblox")
+		expect(merged.goodbye).to.equal(nil)
 	end)
 end
