@@ -10,9 +10,17 @@ end
 --[=[
   @function dotFlatten
   @within Dictionary
+  @tag Experimental
 
   @param dictionary { [any]: any }
-  @returns { [string]: any }
+  @return { [string]: any }
+
+  :::caution
+
+  This method is experimental. It can only be accessed by requiring the
+  `/Dictionary/dotFlatten` file directly.
+
+  :::
 
   Flattens a dictionary recursively, converting nested dictionaries
   into dot-notation paths.
@@ -20,32 +28,21 @@ end
   ```lua
   local dictionary = {
     hello = {
-      world = "hello!",
       cat = "meow",
-      animal = {
-        dog = "woof",
-        unicorn = "sparkle",
-      },
+      animal = { dog = "woof" },
     },
-    world = {
-      "earth",
-      "venus",
-      "mars",
-      "robloxia",
-    }
+    world = { "earth", "venus" },
   }
 
   local flattened = dotFlatten(dictionary)
-  -- {
-  --   hello.world = "hello!",
-  --   hello.cat = "meow",
-  --   hello.animal.dog = "woof",
-  --   hello.animal.unicorn = "sparkle",
-  --   world[0] = "earth",
-  --   world[1] = "venus",
-  --   world[2] = "mars",
-  --   world[3] = "robloxia",
-  -- }
+  --[[
+    {
+      hello.cat = "meow",
+      hello.animal.dog = "woof",
+      world[0] = "earth",
+      world[1] = "venus",
+    }
+  ]]
   ```
 ]=]
 local function dotFlatten(dictionary: { [any]: any }): { [string]: any }
