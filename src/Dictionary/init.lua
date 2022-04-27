@@ -16,6 +16,7 @@ return {
 	Freeze = require(script.Freeze),
 	FreezeDeep = require(script.FreezeDeep),
 	FromArray = require(script.FromArray),
+	FromEntries = require(script.FromEntries),
 	Has = require(script.Has),
 	Includes = require(script.Includes),
 	Keys = require(script.Keys),
