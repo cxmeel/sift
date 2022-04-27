@@ -1,6 +1,6 @@
 --!strict
 --[=[
-  @function FromArray
+  @function FromArrays
   @within Dictionary
 
   @param keys {K} -- An array containing values to be used as keys.
@@ -14,10 +14,10 @@
   local keys = { "hello", "goodbye" }
   local values = { "roblox", "world" }
 
-  local dictionary = FromArray(keys, values) -- { hello = "roblox", goodbye = "world" }
+  local dictionary = FromArrays(keys, values) -- { hello = "roblox", goodbye = "world" }
   ```
 ]=]
-local function fromArray<K, V>(keys: { K }, values: { V }): { [K]: V }
+local function fromArrays<K, V>(keys: { K }, values: { V }): { [K]: V }
 	local keysLength = #keys
 	local result = {}
 
@@ -28,4 +28,4 @@ local function fromArray<K, V>(keys: { K }, values: { V }): { [K]: V }
 	return result
 end
 
-return fromArray
+return fromArrays

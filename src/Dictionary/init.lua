@@ -15,7 +15,7 @@ return {
 	Flip = require(script.Flip),
 	Freeze = require(script.Freeze),
 	FreezeDeep = require(script.FreezeDeep),
-	FromArray = require(script.FromArray),
+	FromArrays = require(script.FromArrays),
 	FromEntries = require(script.FromEntries),
 	Has = require(script.Has),
 	Includes = require(script.Includes),

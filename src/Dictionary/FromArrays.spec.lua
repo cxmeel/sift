@@ -1,11 +1,11 @@
 return function()
-	local FromArray = require(script.Parent.FromArray)
+	local FromArrays = require(script.Parent.FromArrays)
 
 	it("should return a dictionary composed of the given keys and values", function()
 		local keys = { "hello", "goodbye" }
 		local values = { "roblox", "world" }
 
-		local dictionary = FromArray(keys, values)
+		local dictionary = FromArrays(keys, values)
 
 		expect(dictionary).to.be.a("table")
 

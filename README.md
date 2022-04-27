@@ -20,3 +20,19 @@ As per the recommendations in [Llama's README][freddylist/llama], the following 
 - Organised tests. `*.spec` files are now alongside their source files, making it easier to locate them.
 - Documentation is now generated using [@upliftgames' moonwave][upliftgames/moonwave] (Docusaurus). This makes it quick and easy to add new documentation, and provides a pleasant experience for the user.
 - TypeScript support. Sift is written in Luau, but includes a TypeScript declaration file to make Sift compatible with [roblox-ts][roblox-ts].
+
+## What's New?
+
+### Arrays (Lists)
+
+- `At`: Get an element at a specific index (negative indices are supported).
+- `Freeze`: Freeze an array.
+- `FreezeDeep`: Freeze an array and all nested arrays.
+- `Shuffle`: Shuffle the elements of an array to a random order.
+
+### Dictionaries
+
+- `Entries`: Get the entries of a dictionary as an array of key-value pairs.
+- `Freeze`: Freeze a dictionary.
+- `FreezeDeep`: Freeze a dictionary and all nested dictionaries.
+- `FromEntries`: Create a dictionary from an array of key-value pairs.

@@ -23,6 +23,7 @@ local Array = {
 	Freeze = require(script.Freeze),
 	FreezeDeep = require(script.FreezeDeep),
 	Includes = require(script.Includes),
+	Insert = require(script.Insert),
 	Last = require(script.Last),
 	Map = require(script.Map),
 	Pop = require(script.Pop),
