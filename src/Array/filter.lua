@@ -11,7 +11,7 @@ local Util = require(Sift.Util)
 	@param predicate? (value: T, index: number, array: {T}) -> boolean? -- The predicate to use to filter the array.
 	@return {T} -- The filtered array.
 
-	Filters an array.
+	Filters an array using a predicate. Any items that do not pass the predicate will be removed from the array.
 
 	```lua
 	local array = { 1, 2, 3 }
@@ -24,7 +24,7 @@ local Util = require(Sift.Util)
 local function filter<T>(array: { T }, predicate: ((value: T, index: number, array: { T }) -> boolean?)?): { T }
 	local result = {}
 
-	predicate = if type(predicate) == "function" then predicate else Util.Func.Truthy
+	predicate = if type(predicate) == "function" then predicate else Util.func.truthy
 
 	for index, value in ipairs(array) do
 		if predicate(value, index, array) then

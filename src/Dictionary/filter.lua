@@ -8,10 +8,10 @@ local Util = require(Sift.Util)
   @within Dictionary
 
   @param dictionary {[K]: V} -- The dictionary to filter.
-  @param filterer? (value: V, key: K, dictionary: {[K]: V}) -> boolean? -- The filterer to use to filter the dictionary.
+  @param predicate? (value: V, key: K, dictionary: {[K]: V}) -> boolean? -- The predicate to use to filter the dictionary.
   @return {[K]: V} -- The filtered dictionary.
 
-  Filters a dictionary.
+  Filters a dictionary using a predicate. Any items that do not pass the predicate will be removed from the dictionary.
 
   ```lua
   local dictionary = { hello = "world", goodbye = "goodbye" }
@@ -23,14 +23,14 @@ local Util = require(Sift.Util)
 ]=]
 local function filter<K, V>(
 	dictionary: { [K]: V },
-	filterer: ((value: V, key: K, dictionary: { [K]: V }) -> boolean?)?
+	predicate: ((value: V, key: K, dictionary: { [K]: V }) -> boolean?)?
 ): { [K]: V }
 	local result = {}
 
-	filterer = if type(filterer) == "function" then filterer else Util.Func.Truthy
+	predicate = if type(predicate) == "function" then predicate else Util.func.truthy
 
 	for key, value in pairs(dictionary) do
-		if filterer(value, key, dictionary) then
+		if predicate(value, key, dictionary) then
 			result[key] = value
 		end
 	end

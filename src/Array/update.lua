@@ -49,7 +49,7 @@ local function update<T>(array: { T }, index: number, updater: Updater<T>?, call
 		index += length
 	end
 
-	updater = if type(updater) == "function" then updater else Util.Func.Returned
+	updater = if type(updater) == "function" then updater else Util.func.returned
 
 	if result[index] ~= nil then
 		result[index] = updater(result[index], index)
