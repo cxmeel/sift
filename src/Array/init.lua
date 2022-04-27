@@ -1,9 +1,6 @@
 --!strict
 --[=[
 	@class Array
-
-	Array is a submodule of Sift. It provides a number of functions for
-	manipulating arrays.
 ]=]
 local Array = {
 	At = require(script.At),
