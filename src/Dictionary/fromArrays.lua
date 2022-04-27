@@ -1,6 +1,6 @@
 --!strict
 --[=[
-  @function FromArrays
+  @function fromArrays
   @within Dictionary
 
   @param keys {K} -- An array containing values to be used as keys.

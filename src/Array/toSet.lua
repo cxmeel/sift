@@ -3,7 +3,7 @@ local Sift = script.Parent.Parent
 local _T = require(Sift.Types)
 
 --[=[
-	@function ToSet
+	@function toSet
 	@within Array
 
 	@param array {T} -- The array to convert to a set.

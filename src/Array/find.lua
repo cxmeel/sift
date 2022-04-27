@@ -1,6 +1,6 @@
 --!strict
 --[=[
-	@function Find
+	@function find
 	@within Array
 
 	@param array {T} -- The array to search.

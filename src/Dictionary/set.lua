@@ -2,7 +2,7 @@
 local copy = require(script.Parent.copy)
 
 --[=[
-  @function Set
+  @function set
   @within Dictionary
 
   @param dictionary {[K]: V} -- The dictionary to set the value in.

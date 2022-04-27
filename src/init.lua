@@ -22,4 +22,13 @@ local Sift = {
 
 Sift.List = Sift.Array
 
+--- @prop Array Array
+--- @within Sift
+
+--- @prop Dictionary Dictionary
+--- @within Sift
+
+--- @prop Set Set
+--- @within Sift
+
 return Sift

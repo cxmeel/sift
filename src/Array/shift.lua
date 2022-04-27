@@ -1,6 +1,6 @@
 --!strict
 --[=[
-	@function Shift
+	@function shift
 	@within Array
 
 	@param array {T} -- The array to shift.

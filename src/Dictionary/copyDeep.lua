@@ -1,6 +1,6 @@
 --!strict
 --[=[
-  @function CopyDeep
+  @function copyDeep
   @within Dictionary
 
   @param dictionary T -- The dictionary to copy.

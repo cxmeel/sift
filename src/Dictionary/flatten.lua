@@ -1,6 +1,6 @@
 --!strict
 --[=[
-  @function Flatten
+  @function flatten
   @within Array
 
   @param dictionary T -- The dictionary to flatten.

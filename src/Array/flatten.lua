@@ -1,6 +1,6 @@
 --!strict
 --[=[
-	@function Flatten
+	@function flatten
 	@within Array
 
 	@param array {T} -- The array to flatten.

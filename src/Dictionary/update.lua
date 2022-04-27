@@ -14,7 +14,7 @@ local function call<K, V>(callback: Callback<K, V>, key: K)
 end
 
 --[=[
-  @function Update
+  @function update
   @within Dictionary
 
   @param dictionary {[K]: V} -- The dictionary to update.

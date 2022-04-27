@@ -1,6 +1,6 @@
 --!strict
 --[=[
-  @function Map
+  @function map
   @within Dictionary
 
   @param dictionary {[K]: V} -- The dictionary to map.

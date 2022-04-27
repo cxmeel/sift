@@ -1,6 +1,16 @@
 --!strict
 --[=[
 	@class Array
+
+	An array is a table consisting of index-value pairs. You don't need to
+	manually specify the indices when you create an array.
+
+	```lua
+	local array = {
+		"hello",
+		"world",
+	}
+	```
 ]=]
 local Array = {
 	at = require(script.at),

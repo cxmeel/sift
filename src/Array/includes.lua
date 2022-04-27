@@ -2,7 +2,7 @@
 local Find = require(script.Parent.find)
 
 --[=[
-	@function Includes
+	@function includes
 	@within Array
 
 	@param array {T} -- The array to search.

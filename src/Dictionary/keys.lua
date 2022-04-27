@@ -1,6 +1,6 @@
 --!strict
 --[=[
-  @function Keys
+  @function keys
   @within Dictionary
 
   @param dictionary {[K]: V} -- The dictionary to get the keys of.

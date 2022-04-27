@@ -1,6 +1,6 @@
 --!strict
 --[=[
-	@function Push
+	@function push
 	@within Array
 
 	@param array {T} -- The array to push an element to.

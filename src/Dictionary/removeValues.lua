@@ -4,7 +4,7 @@ local Sift = script.Parent.Parent
 local ToSet = require(Sift.Array.toSet)
 
 --[=[
-  @function RemoveValues
+  @function removeValues
   @within Dictionary
 
   @param dictionary {[K]: V} -- The dictionary to remove the values from.

@@ -2,7 +2,7 @@
 local Copy = require(script.Parent.copy)
 
 --[=[
-	@function Sort
+	@function sort
 	@within Array
 
 	@param array {T} -- The array to sort.

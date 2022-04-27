@@ -1,6 +1,6 @@
 --!strict
 --[=[
-	@function RemoveIndex
+	@function removeIndex
 	@within Array
 
 	@param array {T} -- The array to remove the value from.

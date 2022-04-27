@@ -2,7 +2,7 @@
 local Copy = require(script.Parent.copy)
 
 --[=[
-  @function Freeze
+  @function freeze
   @within Array
 
   @param array {T} -- The array to freeze.

@@ -5,7 +5,7 @@ local None = require(Sift.None)
 local copyDeep = require(script.Parent.copyDeep)
 
 --[=[
-  @function MergeDeep
+  @function mergeDeep
   @within Dictionary
 
   @param dictionaries? ...U -- The dictionaries to merge.

@@ -1,6 +1,6 @@
 --!strict
 --[=[
-	@function Map
+	@function map
 	@within Array
 
 	@param array {T} -- The array to map.

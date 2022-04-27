@@ -1,6 +1,6 @@
 --!strict
 --[=[
-  @function RemoveValue
+  @function removeValue
   @within Dictionary
 
   @param dictionary {[K]: V} -- The dictionary to remove the value from.

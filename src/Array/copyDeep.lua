@@ -1,6 +1,6 @@
 --!strict
 --[=[
-	@function CopyDeep
+	@function copyDeep
 	@within Array
 
 	@param array {T} -- The array to copy.

@@ -1,6 +1,6 @@
 --!strict
 --[=[
-  @function Values
+  @function values
   @within Dictionary
 
   @param dictionary {[K]: V} -- The dictionary to get the values from.

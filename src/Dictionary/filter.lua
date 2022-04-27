@@ -4,7 +4,7 @@ local Sift = script.Parent.Parent
 local Util = require(Sift.Util)
 
 --[=[
-  @function Filter
+  @function filter
   @within Dictionary
 
   @param dictionary {[K]: V} -- The dictionary to filter.

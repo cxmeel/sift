@@ -2,7 +2,7 @@
 local At = require(script.Parent.at)
 
 --[=[
-	@function First
+	@function first
 	@within Array
 
 	@param array {T} -- The array to get the first item from.

@@ -2,7 +2,7 @@
 local At = require(script.Parent.at)
 
 --[=[
-	@function Last
+	@function last
 	@within Array
 
 	@param array {T} -- The array to get the last element of.

@@ -2,7 +2,7 @@
 local ToSet = require(script.Parent.toSet)
 
 --[=[
-	@function RemoveValues
+	@function removeValues
 	@within Array
 
 	@param array {T} -- The array to remove values from.

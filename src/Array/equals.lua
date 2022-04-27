@@ -24,7 +24,7 @@ local function compare(a, b)
 end
 
 --[=[
-	@function Equals
+	@function equals
 	@within Array
 
 	@param ... ...{T} -- The arrays to compare.

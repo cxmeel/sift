@@ -1,6 +1,6 @@
 --!strict
 --[=[
-	@function RemoveIndices
+	@function removeIndices
 	@within Array
 
 	@param array {T} -- The array to remove the indices from.

@@ -1,6 +1,6 @@
 --!strict
 --[=[
-  @function FromEntries
+  @function fromEntries
   @within Dictionary
 
   @param entries {{ K, V }} -- An array of key-value pairs.

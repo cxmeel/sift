@@ -2,7 +2,7 @@
 local Copy = require(script.Parent.copy)
 
 --[=[
-	@function Shuffle
+	@function shuffle
 	@within Array
 
 	@param array {T} -- The array to shuffle.

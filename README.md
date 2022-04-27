@@ -7,7 +7,7 @@
 
 # Sift
 
-Immutable data manipulation for Luau.
+Immutable data library for Luau (Roblox).
 
 Heavily based on [@freddylist's Llama][freddylist/llama] library, which is no longer maintained.
 

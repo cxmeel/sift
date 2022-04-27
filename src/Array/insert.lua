@@ -1,6 +1,6 @@
 --!strict
 --[=[
-  @function Insert
+  @function insert
   @within Array
 
   @param array {T} -- The array to insert the value into.

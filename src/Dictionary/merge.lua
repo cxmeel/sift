@@ -4,7 +4,7 @@ local Sift = script.Parent.Parent
 local None = require(Sift.None)
 
 --[=[
-  @function Merge
+  @function merge
   @within Dictionary
 
   @param dictionaries? ...U -- The dictionaries to merge.

@@ -24,7 +24,7 @@ local function compareDeep(a, b)
 end
 
 --[=[
-  @function EqualsDeep
+  @function equalsDeep
   @within Dictionary
 
   @param ... ...T -- The dictionaries to compare.

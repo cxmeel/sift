@@ -1,6 +1,6 @@
 --!strict
 --[=[
-  @function Create
+  @function create
   @within Array
 
   @param length number -- The length of the array to create.

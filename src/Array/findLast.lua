@@ -1,6 +1,6 @@
 --!strict
 --[=[
-	@function FindLast
+	@function findLast
 	@within Array
 
 	@param array {T} -- The array to search.

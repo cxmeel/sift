@@ -1,6 +1,6 @@
 --!strict
 --[=[
-	@function Reverse
+	@function reverse
 	@within Array
 
 	@param array {T} -- The array to reverse.

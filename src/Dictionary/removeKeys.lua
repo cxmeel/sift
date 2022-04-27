@@ -2,7 +2,7 @@
 local copy = require(script.Parent.copy)
 
 --[=[
-  @function RemoveKeys
+  @function removeKeys
   @within Dictionary
 
   @param dictionary {[K]: V} -- The dictionary to remove the keys from.

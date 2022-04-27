@@ -2,7 +2,7 @@
 --[=[
   @class Dictionary
 ]=]
-return {
+local Dictionary = {
 	copy = require(script.copy),
 	copyDeep = require(script.copyDeep),
 	count = require(script.count),
@@ -32,3 +32,5 @@ return {
 	update = require(script.update),
 	values = require(script.values),
 }
+
+return Dictionary

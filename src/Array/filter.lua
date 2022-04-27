@@ -4,7 +4,7 @@ local Sift = script.Parent.Parent
 local Util = require(Sift.Util)
 
 --[=[
-	@function Filter
+	@function filter
 	@within Array
 
 	@param array {T} -- The array to filter.

@@ -1,6 +1,6 @@
 --!strict
 --[=[
-  @function Flip
+  @function flip
   @within Dictionary
 
   @param dictionary T -- The dictionary to flip.

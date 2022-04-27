@@ -1,6 +1,6 @@
 --!strict
 --[=[
-	@function Slice
+	@function slice
 	@within Array
 
 	@param array {T} -- The array to slice.

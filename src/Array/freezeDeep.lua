@@ -1,6 +1,6 @@
 --!strict
 --[=[
-	@function FreezeDeep
+	@function freezeDeep
 	@within Array
 
 	@param array {T} -- The array to freeze.

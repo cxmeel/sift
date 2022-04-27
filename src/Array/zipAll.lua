@@ -5,7 +5,7 @@ local Reduce = require(script.Parent.reduce)
 local None = require(Sift.None)
 
 --[=[
-	@function ZipAll
+	@function zipAll
 	@within Array
 
 	@param ... ...{T} -- The arrays to zip.

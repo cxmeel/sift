@@ -2,7 +2,7 @@
 local Copy = require(script.Parent.copy)
 
 --[=[
-  @function Freeze
+  @function freeze
   @within Dictionary
 
   @param dictionary T -- The dictionary to freeze.

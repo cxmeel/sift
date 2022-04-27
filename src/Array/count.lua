@@ -4,7 +4,7 @@ local Sift = script.Parent.Parent
 local Util = require(Sift.Util)
 
 --[=[
-	@function Count
+	@function count
 	@within Array
 
 	@param array {T} -- The array to count the number of items in.

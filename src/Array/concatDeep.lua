@@ -5,7 +5,7 @@ local CopyDeep = require(script.Parent.copyDeep)
 local None = require(Sift.None)
 
 --[=[
-	@function ConcatDeep
+	@function concatDeep
 	@within Array
 
 	@param ... ...{T} -- The arrays to concatenate.

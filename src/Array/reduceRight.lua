@@ -1,6 +1,6 @@
 --!strict
 --[=[
-	@function ReduceRight
+	@function reduceRight
 	@within Array
 
 	@param array {T} -- The array to reduce.

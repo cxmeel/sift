@@ -1,6 +1,6 @@
 --!strict
 --[=[
-  @function FreezeDeep
+  @function freezeDeep
   @within Dictionary
 
   @param dictionary T -- The dictionary to freeze.

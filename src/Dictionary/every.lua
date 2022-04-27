@@ -1,6 +1,6 @@
 --!strict
 --[=[
-  @function Every
+  @function every
   @within Dictionary
 
   @param dictionary {[K]: V} -- The dictionary to check.

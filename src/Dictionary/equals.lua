@@ -24,7 +24,7 @@ local function compare(a, b)
 end
 
 --[=[
-  @function Equals
+  @function equals
   @within Dictionary
 
   @param ... ...T -- The dictionaries to compare.

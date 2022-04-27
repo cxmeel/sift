@@ -1,6 +1,6 @@
 --!strict
 --[=[
-	@function Pop
+	@function pop
 	@within Array
 
 	@param array {T} -- The array to pop an element from.

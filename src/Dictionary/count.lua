@@ -4,7 +4,7 @@ local Sift = script.Parent.Parent
 local Util = require(Sift.Util)
 
 --[=[
-  @function Count
+  @function count
   @within Dictionary
 
   @param dictionary T -- The dictionary to count.

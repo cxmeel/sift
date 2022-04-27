@@ -1,6 +1,6 @@
 --!strict
 --[=[
-	@function Set
+	@function set
 	@within Array
 
 	@param array {T} -- The array to set the value on.

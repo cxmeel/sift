@@ -4,7 +4,7 @@ local Sift = script.Parent.Parent
 local None = require(Sift.None)
 
 --[=[
-	@function Concat
+	@function concat
 	@within Array
 
 	@param ... ...{T} -- The arrays to concatenate.

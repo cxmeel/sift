@@ -1,6 +1,6 @@
 --!strict
 --[=[
-	@function Some
+	@function some
 	@within Array
 
 	@param array {T} -- The array to check.

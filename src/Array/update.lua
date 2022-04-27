@@ -14,7 +14,7 @@ local function call<T>(callback: Callback<T>, index: number)
 end
 
 --[=[
-	@function Update
+	@function update
 	@within Array
 
 	@param array {T} -- The array to update.

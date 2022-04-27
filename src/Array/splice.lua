@@ -1,6 +1,6 @@
 --!strict
 --[=[
-	@function Splice
+	@function splice
 	@within Array
 
 	@param array {T} -- The array to splice.

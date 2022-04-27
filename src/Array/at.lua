@@ -1,6 +1,6 @@
 --!strict
 --[=[
-	@function At
+	@function at
 	@within Array
 
 	@param array {T} -- The array to get the value from.
