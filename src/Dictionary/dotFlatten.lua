@@ -45,6 +45,7 @@ end
   ]]
   ```
 ]=]
+-- TODO: i tired now sleep make nice later
 local function dotFlatten(dictionary: { [any]: any }): { [string]: any }
 	local result = {}
 
