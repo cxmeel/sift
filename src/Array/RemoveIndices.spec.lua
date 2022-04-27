@@ -1,5 +1,5 @@
 return function()
-	local RemoveIndices = require(script.Parent.RemoveIndices)
+	local RemoveIndices = require(script.Parent.removeIndices)
 
 	it("should remove the elements at the given indices", function()
 		local array = { 1, 2, 3, 4, 5 }

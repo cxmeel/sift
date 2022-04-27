@@ -1,5 +1,5 @@
 --!strict
-local Find = require(script.Parent.Find)
+local Find = require(script.Parent.find)
 
 --[=[
 	@function Includes

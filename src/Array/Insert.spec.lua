@@ -1,5 +1,5 @@
 return function()
-	local Insert = require(script.Parent.Insert)
+	local Insert = require(script.Parent.insert)
 
 	it(
 		"should insert the given values into an array at the given index, shifting all values after it to the right",

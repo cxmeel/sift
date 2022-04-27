@@ -42,7 +42,7 @@ end
 	```
 ]=]
 local function equals<T>(...: { T }): boolean
-	if Util.EqualObjects(...) then
+	if Util.equalObjects(...) then
 		return true
 	end
 

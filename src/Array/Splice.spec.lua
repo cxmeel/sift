@@ -1,5 +1,5 @@
 return function()
-	local Splice = require(script.Parent.Splice)
+	local Splice = require(script.Parent.splice)
 
 	it("should insert the given values into the given array", function()
 		local array = { 1, 2, 3 }

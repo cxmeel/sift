@@ -28,7 +28,7 @@ local function count<K, V>(
 ): number
 	local counter = 0
 
-	predicate = if type(predicate) == "function" then predicate else Util.Func.Truthy
+	predicate = if type(predicate) == "function" then predicate else Util.func.truthy
 
 	for key, value in pairs(dictionary) do
 		if predicate(value, key, dictionary) then

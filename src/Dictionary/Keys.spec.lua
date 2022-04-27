@@ -1,5 +1,5 @@
 return function()
-	local Keys = require(script.Parent.Keys)
+	local Keys = require(script.Parent.keys)
 
 	it("should return an array of the keys in the dictionary", function()
 		local dictionary = { hello = "roblox", goodbye = "world" }

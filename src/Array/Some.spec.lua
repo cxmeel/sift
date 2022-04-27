@@ -1,5 +1,5 @@
 return function()
-	local Some = require(script.Parent.Some)
+	local Some = require(script.Parent.some)
 
 	it("should return true if the given predicate returns true for any element", function()
 		local array = { 1, 2, 3 }

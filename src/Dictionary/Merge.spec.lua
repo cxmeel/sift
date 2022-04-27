@@ -1,5 +1,5 @@
 return function()
-	local Merge = require(script.Parent.Merge)
+	local Merge = require(script.Parent.merge)
 	local None = require(script.Parent.Parent.None)
 
 	it("should combine two or more dictionaries, where the last value overrides previous", function()

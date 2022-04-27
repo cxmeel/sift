@@ -1,5 +1,5 @@
 --!strict
-local At = require(script.Parent.At)
+local At = require(script.Parent.at)
 
 --[=[
 	@function Last

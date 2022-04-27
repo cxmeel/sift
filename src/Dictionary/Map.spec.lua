@@ -1,5 +1,5 @@
 return function()
-	local Map = require(script.Parent.Map)
+	local Map = require(script.Parent.map)
 
 	it("should return a dictionary where entries are the result of the mapper function", function()
 		local dictionary = Map({ hello = "roblox", goodbye = "world" }, function(value)

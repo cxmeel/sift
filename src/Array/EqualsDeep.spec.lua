@@ -1,5 +1,5 @@
 return function()
-	local EqualsDeep = require(script.Parent.EqualsDeep)
+	local EqualsDeep = require(script.Parent.equalsDeep)
 
 	it("should return true if the arrays are equal", function()
 		local array1 = { 1, 2, 3 }

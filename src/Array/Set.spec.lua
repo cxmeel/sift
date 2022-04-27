@@ -1,5 +1,5 @@
 return function()
-	local Set = require(script.Parent.Set)
+	local Set = require(script.Parent.set)
 
 	it("should set the given value in the given array", function()
 		local array = { 1, 2, 3 }

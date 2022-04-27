@@ -1,5 +1,5 @@
 return function()
-	local CopyDeep = require(script.Parent.CopyDeep)
+	local CopyDeep = require(script.Parent.copyDeep)
 
 	it("should return a copy of the given array", function()
 		local array = { 1, 2, 3 }

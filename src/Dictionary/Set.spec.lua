@@ -1,5 +1,5 @@
 return function()
-	local Set = require(script.Parent.Set)
+	local Set = require(script.Parent.set)
 
 	it("should return a new dictionary with the given key/value set", function()
 		local dictionary = { hello = "roblox", goodbye = "world" }

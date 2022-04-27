@@ -1,5 +1,5 @@
 return function()
-	local FindWhere = require(script.Parent.FindWhere)
+	local FindWhere = require(script.Parent.findWhere)
 
 	it("should return the first element in the array that matches the given predicate", function()
 		local array = { 1, 2, 3 }

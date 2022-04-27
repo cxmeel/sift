@@ -1,5 +1,5 @@
 return function()
-	local Some = require(script.Parent.Some)
+	local Some = require(script.Parent.some)
 
 	it("should return true if the predicate returns true for any of the values", function()
 		local dictionary = { hello = "roblox", goodbye = "world" }

@@ -1,5 +1,5 @@
 return function()
-	local Concat = require(script.Parent.Concat)
+	local Concat = require(script.Parent.concat)
 
 	it("should join multiple arrays together into a single array", function()
 		local table1 = { 1, 2, 3 }

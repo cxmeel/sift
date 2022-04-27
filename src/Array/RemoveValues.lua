@@ -1,5 +1,5 @@
 --!strict
-local ToSet = require(script.Parent.ToSet)
+local ToSet = require(script.Parent.toSet)
 
 --[=[
 	@function RemoveValues

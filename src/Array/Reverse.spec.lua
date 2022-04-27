@@ -1,5 +1,5 @@
 return function()
-	local Reverse = require(script.Parent.Reverse)
+	local Reverse = require(script.Parent.reverse)
 
 	it("should reverse the given array", function()
 		local array = { 1, 2, 3 }

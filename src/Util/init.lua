@@ -1,5 +1,5 @@
 return {
-	Assert = require(script.Assert),
-	EqualObjects = require(script.EqualObjects),
-	Func = require(script.Func),
+	assert = require(script.assert),
+	equalObjects = require(script.equalObjects),
+	func = require(script.func),
 }

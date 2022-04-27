@@ -1,5 +1,5 @@
 return function()
-	local FromArrays = require(script.Parent.FromArrays)
+	local FromArrays = require(script.Parent.fromArrays)
 
 	it("should return a dictionary composed of the given keys and values", function()
 		local keys = { "hello", "goodbye" }

@@ -1,5 +1,5 @@
 return function()
-	local RemoveValue = require(script.Parent.RemoveValue)
+	local RemoveValue = require(script.Parent.removeValue)
 
 	it("should remove the elements with the given value", function()
 		local array = { 1, 2, 3, 4, 5 }

@@ -1,5 +1,5 @@
 return function()
-	local RemoveKey = require(script.Parent.RemoveKey)
+	local RemoveKey = require(script.Parent.removeKey)
 
 	it("should return a new dictionary with the given key removed", function()
 		local dictionary = { hello = "roblox", goodbye = "world" }

@@ -1,5 +1,5 @@
 return function()
-	local Count = require(script.Parent.Count)
+	local Count = require(script.Parent.count)
 
 	it("should return the number of elements in the given array", function()
 		local array = { 1, 2, 3 }

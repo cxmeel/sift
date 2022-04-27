@@ -9,7 +9,7 @@ local function returned(...)
 end
 
 return {
-	Truthy = truthy,
-	Noop = noop,
-	Returned = returned,
+	truthy = truthy,
+	noop = noop,
+	returned = returned,
 }

@@ -1,5 +1,5 @@
 return function()
-	local At = require(script.Parent.At)
+	local At = require(script.Parent.at)
 
 	it("should return the value at the given index", function()
 		local array = { 1, 2, 3 }

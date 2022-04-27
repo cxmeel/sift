@@ -1,5 +1,5 @@
 return function()
-	local Push = require(script.Parent.Push)
+	local Push = require(script.Parent.push)
 
 	it("should return an array with new value(s) added", function()
 		local array = Push({ 1, 2, 3 }, "Hello")

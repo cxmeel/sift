@@ -1,5 +1,5 @@
 return function()
-	local FindLast = require(script.Parent.FindLast)
+	local FindLast = require(script.Parent.findLast)
 
 	it("should return the first element that matches the given value", function()
 		local array = { 1, 2, 3 }

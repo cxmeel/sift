@@ -1,5 +1,5 @@
 return function()
-	local Reduce = require(script.Parent.Reduce)
+	local Reduce = require(script.Parent.reduce)
 
 	it("should reduce the given array to a single value", function()
 		local array = { 1, 2, 3 }

@@ -1,7 +1,7 @@
 --!strict
 local Sift = script.Parent.Parent
 
-local ToSet = require(Sift.Array.ToSet)
+local ToSet = require(Sift.Array.toSet)
 
 --[=[
   @function RemoveValues

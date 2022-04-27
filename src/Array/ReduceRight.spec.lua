@@ -1,5 +1,5 @@
 return function()
-	local ReduceRight = require(script.Parent.ReduceRight)
+	local ReduceRight = require(script.Parent.reduceRight)
 
 	it("should reduce the given array from the right", function()
 		local array = { 1, 2, 3 }

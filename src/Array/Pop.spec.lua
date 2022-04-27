@@ -1,5 +1,5 @@
 return function()
-	local Pop = require(script.Parent.Pop)
+	local Pop = require(script.Parent.pop)
 
 	it("should remove the last element of the given array", function()
 		local array = { 1, 2, 3 }

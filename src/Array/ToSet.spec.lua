@@ -1,5 +1,5 @@
 return function()
-	local ToSet = require(script.Parent.ToSet)
+	local ToSet = require(script.Parent.toSet)
 
 	it("should return a set", function()
 		local array = { 1, 2, 3 }

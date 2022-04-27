@@ -1,5 +1,5 @@
 return function()
-	local FromEntries = require(script.Parent.FromEntries)
+	local FromEntries = require(script.Parent.fromEntries)
 
 	it("should create a new dictionary from the given key-value pairs", function()
 		local entries = { { "hello", "roblox" }, { "goodbye", "world" } }

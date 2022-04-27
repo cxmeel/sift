@@ -1,5 +1,5 @@
 return function()
-	local FindWhereLast = require(script.Parent.FindWhereLast)
+	local FindWhereLast = require(script.Parent.findWhereLast)
 
 	it("should return the last element that matches the predicate", function()
 		local array = { 1, 2, 3, 4, 5 }

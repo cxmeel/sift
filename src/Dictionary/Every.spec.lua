@@ -1,5 +1,5 @@
 return function()
-	local Every = require(script.Parent.Every)
+	local Every = require(script.Parent.every)
 
 	it("should return true if all elements match the predicate", function()
 		local dictionary = { hello = "world", goodbye = "world" }

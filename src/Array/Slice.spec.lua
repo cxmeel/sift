@@ -1,5 +1,5 @@
 return function()
-	local Slice = require(script.Parent.Slice)
+	local Slice = require(script.Parent.slice)
 
 	it("should return a slice of the given array", function()
 		local array = { 1, 2, 3 }

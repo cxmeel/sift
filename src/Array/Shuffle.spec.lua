@@ -1,5 +1,5 @@
 return function()
-	local Shuffle = require(script.Parent.Shuffle)
+	local Shuffle = require(script.Parent.shuffle)
 
 	it("should return a shuffled array", function()
 		local array = { 1, 2, 3 }

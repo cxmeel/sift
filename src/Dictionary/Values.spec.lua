@@ -1,5 +1,5 @@
 return function()
-	local Values = require(script.Parent.Values)
+	local Values = require(script.Parent.values)
 
 	it("should return a list of the values in the dictionary", function()
 		local dictionary = { hello = "roblox", goodbye = "world" }

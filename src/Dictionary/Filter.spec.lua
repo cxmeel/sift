@@ -1,5 +1,5 @@
 return function()
-	local Filter = require(script.Parent.Filter)
+	local Filter = require(script.Parent.filter)
 
 	it("should return a copy of the given dictionary with only the elements that match the predicate", function()
 		local dictionary = { hello = "world", goodbye = "goodbye" }

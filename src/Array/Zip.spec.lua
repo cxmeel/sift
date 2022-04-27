@@ -1,5 +1,5 @@
 return function()
-	local Zip = require(script.Parent.Zip)
+	local Zip = require(script.Parent.zip)
 
 	it("should zip together two arrays", function()
 		local array1 = { 1, 2, 3 }

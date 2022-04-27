@@ -1,6 +1,6 @@
 return function()
 	local None = require(script.Parent.Parent.None)
-	local ZipAll = require(script.Parent.ZipAll)
+	local ZipAll = require(script.Parent.zipAll)
 
 	it("should zip together two arrays", function()
 		local array1 = { 1, 2, 3 }

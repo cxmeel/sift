@@ -1,5 +1,5 @@
 return function()
-	local Map = require(script.Parent.Map)
+	local Map = require(script.Parent.map)
 
 	it("should return an array where values are the result of the mapper function", function()
 		local array = Map({ 1, 2, 3 }, function(value)

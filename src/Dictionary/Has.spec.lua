@@ -1,5 +1,5 @@
 return function()
-	local Has = require(script.Parent.Has)
+	local Has = require(script.Parent.has)
 
 	it("should return true if the dictionary has the given key", function()
 		local dictionary = { hello = "roblox", goodbye = "world" }

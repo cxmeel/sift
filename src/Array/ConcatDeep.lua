@@ -1,7 +1,7 @@
 --!strict
 local Sift = script.Parent.Parent
 
-local CopyDeep = require(script.Parent.CopyDeep)
+local CopyDeep = require(script.Parent.copyDeep)
 local None = require(Sift.None)
 
 --[=[

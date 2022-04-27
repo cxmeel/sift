@@ -1,5 +1,5 @@
 return function()
-	local FreezeDeep = require(script.Parent.FreezeDeep)
+	local FreezeDeep = require(script.Parent.freezeDeep)
 
 	it("should return a read-only copy of the given array", function()
 		local array = { 1, 2, 3 }

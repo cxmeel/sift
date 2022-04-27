@@ -1,5 +1,5 @@
 --!strict
-local Reduce = require(script.Parent.Reduce)
+local Reduce = require(script.Parent.reduce)
 
 --[=[
 	@function Zip

@@ -1,5 +1,5 @@
 return function()
-	local Unshift = require(script.Parent.Unshift)
+	local Unshift = require(script.Parent.unshift)
 
 	it("should return a new array with the given value at the beginning", function()
 		local array = { 1, 2, 3 }

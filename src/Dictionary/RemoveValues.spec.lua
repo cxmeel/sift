@@ -1,5 +1,5 @@
 return function()
-	local RemoveValues = require(script.Parent.RemoveValues)
+	local RemoveValues = require(script.Parent.removeValues)
 
 	it("should return a new dictionary with the given values removed", function()
 		local dictionary = { hello = "world", goodbye = "world", cat = "meow", dog = "woof" }

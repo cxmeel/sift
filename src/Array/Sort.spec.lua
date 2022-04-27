@@ -1,5 +1,5 @@
 return function()
-	local Sort = require(script.Parent.Sort)
+	local Sort = require(script.Parent.sort)
 
 	it("should sort the given array", function()
 		local array = { 1, 2, 3 }

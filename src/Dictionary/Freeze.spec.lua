@@ -1,5 +1,5 @@
 return function()
-	local Freeze = require(script.Parent.Freeze)
+	local Freeze = require(script.Parent.freeze)
 
 	it("should return a read-only copy of the given dictionary", function()
 		local dictionary = { hello = "roblox", goodbye = "world" }

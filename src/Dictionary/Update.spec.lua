@@ -1,5 +1,5 @@
 return function()
-	local Update = require(script.Parent.Update)
+	local Update = require(script.Parent.update)
 
 	it("should return a new dictionary with the given key updated", function()
 		local dictionary = { cats = 2 }

@@ -1,5 +1,5 @@
 return function()
-	local Find = require(script.Parent.Find)
+	local Find = require(script.Parent.find)
 
 	it("should return the first element that matches the given value", function()
 		local array = { 1, 2, 3 }

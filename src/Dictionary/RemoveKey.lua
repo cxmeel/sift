@@ -1,5 +1,5 @@
 --!strict
-local copy = require(script.Parent.Copy)
+local copy = require(script.Parent.copy)
 
 --[=[
   @function RemoveKey

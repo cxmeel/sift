@@ -1,5 +1,5 @@
 return function()
-	local Entries = require(script.Parent.Entries)
+	local Entries = require(script.Parent.entries)
 
 	it("should return a list of entries as key-value pairs", function()
 		local dictionary = { hello = "roblox", goodbye = "world" }

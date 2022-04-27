@@ -1,5 +1,5 @@
 return function()
-	local Includes = require(script.Parent.Includes)
+	local Includes = require(script.Parent.includes)
 
 	it("should return true if the dictionary includes the given value", function()
 		local dictionary = { hello = "roblox", goodbye = "world" }

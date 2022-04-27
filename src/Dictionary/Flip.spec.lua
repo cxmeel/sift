@@ -1,5 +1,5 @@
 return function()
-	local Flip = require(script.Parent.Flip)
+	local Flip = require(script.Parent.flip)
 
 	it("should return a flipped dictionary", function()
 		local dictionary = { hello = "roblox", goodbye = "world" }

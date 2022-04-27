@@ -1,5 +1,5 @@
 return function()
-	local Update = require(script.Parent.Update)
+	local Update = require(script.Parent.update)
 
 	it("should update the value at the given index", function()
 		local array = { 1, 2, 3 }

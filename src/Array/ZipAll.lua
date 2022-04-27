@@ -1,7 +1,7 @@
 --!strict
 local Sift = script.Parent.Parent
 
-local Reduce = require(script.Parent.Reduce)
+local Reduce = require(script.Parent.reduce)
 local None = require(Sift.None)
 
 --[=[

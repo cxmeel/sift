@@ -1,5 +1,5 @@
 return function()
-	local Shift = require(script.Parent.Shift)
+	local Shift = require(script.Parent.shift)
 
 	it("should remove the first item from the array", function()
 		local array = { 1, 2, 3 }

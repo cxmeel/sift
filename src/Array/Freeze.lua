@@ -1,5 +1,5 @@
 --!strict
-local Copy = require(script.Parent.Copy)
+local Copy = require(script.Parent.copy)
 
 --[=[
   @function Freeze

@@ -1,5 +1,5 @@
 return function()
-	local Equals = require(script.Parent.Equals)
+	local Equals = require(script.Parent.equals)
 
 	it("should return true if the dictionaries are equal", function()
 		local dictionary1 = { hello = "world", goodbye = "world" }

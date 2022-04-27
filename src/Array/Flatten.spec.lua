@@ -1,5 +1,5 @@
 return function()
-	local Flatten = require(script.Parent.Flatten)
+	local Flatten = require(script.Parent.flatten)
 
 	it("should return a flattened array", function()
 		local array = { 1, 2, { 3, 4 } }

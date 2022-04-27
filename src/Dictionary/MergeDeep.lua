@@ -2,7 +2,7 @@
 local Sift = script.Parent.Parent
 
 local None = require(Sift.None)
-local copyDeep = require(script.Parent.CopyDeep)
+local copyDeep = require(script.Parent.copyDeep)
 
 --[=[
   @function MergeDeep
