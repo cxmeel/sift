@@ -41,6 +41,15 @@ Heavily based on [@freddylist's Llama][freddylist/llama] library, which is no lo
 
 Documentation, powered by [moonwave][upliftgames/moonwave], is available at https://csqrl.github.io/sift.
 
+## v0.x
+
+For the time being, releases will remain at v0.x, and Sift should not be considered 100% stable. This is in line with the [Semantic Versioning 2.0.0](https://semver.org) specification.
+
+- Breaking changes may occur when the minor version is incremented.
+- The patch version will be incremented for additions, non-breaking changes, and bug fixes.
+
+This will remain the same until v1.x.
+
 ## Quick Start
 
 Sift is available from [Wally][sift/wally], [Itch.io][sift/itch.io], the [Roblox Library][sift/roblox], and [GitHub releases][sift/releases].
