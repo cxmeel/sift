@@ -1,0 +1,12 @@
+{
+  "name": "SiftServe",
+  "tree": {
+    "$className": "DataModel",
+    "ServerScriptService": {
+      "$className": "ServerScriptService",
+      "Sift": {
+        "$path": "default.project.json"
+      }
+    }
+  }
+}

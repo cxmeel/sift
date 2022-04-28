@@ -1,0 +1,33 @@
+{
+  "name": "SiftTest",
+  "tree": {
+    "$className": "DataModel",
+    "ServerScriptService": {
+      "$className": "ServerScriptService",
+      "Sift": {
+        "$path": "default.project.json"
+      }
+    },
+    "TestService": {
+      "$className": "TestService",
+      "$properties": {
+        "ExecuteWithStudioRun": true
+      },
+      "Packages": {
+        "$className": "Folder",
+        "TestEZ": {
+          "$path": "modules/testez"
+        }
+      },
+      "TestRunner": {
+        "$path": "TestRunner.server.lua"
+      }
+    },
+    "Players": {
+      "$className": "Players",
+      "$properties": {
+        "CharacterAutoLoads": false
+      }
+    }
+  }
+}
