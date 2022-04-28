@@ -6,3 +6,5 @@ license = "MIT"
 author = "csqrl (https://csqrl.dev)"
 registry = "https://github.com/upliftgames/wally-index"
 realm = "shared"
+exclude = ["**"]
+include = ["src", "src/**", "wally.toml", "wally.lock", "default.project.json"]
