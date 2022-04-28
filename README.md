@@ -30,8 +30,6 @@ As per the recommendations in [Llama's README][freddylist/llama], the following 
 
 ### Dictionaries
 
-- `dotFlatten` (experimental): Flatten nested dictionaries into a single dictionary using dot-notation.
-- `dotRestore` (experimental): Restore a dictionary flattened with dot-notation back into a nested dictionary.
 - `entries`: Get the entries of a dictionary as an array of key-value pairs.
 - `freeze`: Freeze a dictionary.
 - `freezeDeep`: Freeze a dictionary and all nested dictionaries.
