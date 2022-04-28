@@ -3,7 +3,7 @@ name: Create GitHub Release
 on:
   workflow_dispatch:
     branches:
-      - default
+      - main
 
 jobs:
   create-release:
