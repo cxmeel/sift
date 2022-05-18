@@ -18,12 +18,19 @@ local Sift = {
 
 	None = require(script.None),
 	Types = require(script.Types),
+
+	equalObjects = require(script.Util.equalObjects),
+	isEmpty = require(script.Util.isEmpty),
 }
 
 Sift.List = Sift.Array
 
 --- @prop Array Array
 --- @within Sift
+
+--- @prop List Array
+--- @within Sift
+--- @tag Alias
 
 --- @prop Dictionary Dictionary
 --- @within Sift
