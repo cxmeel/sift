@@ -2,8 +2,8 @@
   "name": "@rbxts/sift",
   "version": "0.0.1",
   "description": "Immutable data library for Luau",
-  "main": "./out/init.lua",
-  "types": "./out/index.d.ts",
+  "main": "out/init.lua",
+  "types": "out/index.d.ts",
   "publishConfig": {
     "access": "public"
   },
