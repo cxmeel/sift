@@ -9,11 +9,13 @@
 [sift/wally]: https://wally.run/package/csqrl/sift
 [sift/roblox]: https://www.roblox.com/library/9486684823
 [sift/itch.io]: https://csqrl.itch.io/sift
+[sift/npm]: https://npmjs.com/package/@rbxts/sift
 
 <!-- Shields -->
 
 [shields/github-release]: https://img.shields.io/github/v/release/csqrl/sift?label=latest+release&style=flat
 [shields/wally]: https://img.shields.io/endpoint?url=https://runkit.io/clockworksquirrel/wally-version-shield/branches/master/csqrl/sift&color=blue&label=wally&style=flat
+[shields/npm]: https://img.shields.io/npm/v/@rbxts/sift?style=flat
 
 <!-- Badges -->
 
@@ -27,13 +29,13 @@
 
 <div align="center">
 
-[![Source code][badges/github]][sift] [![Itch.io store page][badges/itch]][sift/itch.io] [![Roblox library][badges/roblox]][sift/roblox]
+[![Source code][badges/github]][sift] [![NPM Package][badges/npm]][sift/npm] [![Itch.io store page][badges/itch]][sift/itch.io] [![Roblox library][badges/roblox]][sift/roblox]
 
-[![Latest GitHub version][shields/github-release]][sift/releases] [![Latest Wally version][shields/wally]][sift/wally]
+[![Latest GitHub version][shields/github-release]][sift/releases] [![Latest Wally version][shields/wally]][sift/wally] [![Latest NPM version][shields/npm]][sift/npm]
 
 </div>
 
-Immutable data library for Luau (Roblox).
+Immutable data library for Luau and roblox-ts.
 
 Heavily based on [@freddylist's Llama][freddylist/llama] library, which is no longer maintained.
 
@@ -64,26 +66,31 @@ Wally is a CLI package manager (much like NPM, Yarn or Cargo) for Roblox by @Upl
 # wally.toml
 
 [dependencies]
-Sift = "csqrl/sift@0.0.0"
+Sift = "csqrl/sift@=0.0.1"
 ```
 
-```sh
+```shell
 $ wally install
 ```
 
 ### TypeScript
 
-You shouldn't need to use Sift in TypeScript. Sift essentially brings the power of TypeScript's Array, Object and Set methods to Luau.
+v0.0.1 of Sift includes TypeScript typings. This means Sift is now compatible with roblox-ts. Refer to the Luau docs for API details.
 
-See more on MDN:
+```shell
+$ npm install @rbxts/sift
+```
 
-- [Arrays on MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)
-- [Sets on MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set)
-- [Objects on MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)
+```ts
+// example.ts
+import Sift from "@rbxts/sift"
+
+Sift.Dictionary.merge({ a: 1, c: 2 }, { b: 3, c: Sift.None }) // { a: 1, b: 3 }
+```
 
 ### Manual Installation
 
-Grab a copy [from the Roblox Library][sift/roblox] or [GitHub releases][sift/releases], and drop it into Studio.
+Grab a copy [from the Roblox Library][sift/roblox] or [GitHub releases][sift/releases], and drop it into Studio. The Sift model file can be synced in using Rojo.
 
 ## What's Changed?
 
@@ -93,6 +100,7 @@ As per the recommendations in [Llama's README][freddylist/llama], the following 
   - Sift _will not_ check types at runtime. If you're using the library wrong, you'll get errors at runtime anyway!
 - Organised tests. `*.spec` files are now alongside their source files, making it easier to locate them.
 - Documentation is now generated using [@upliftgames' moonwave][upliftgames/moonwave] (Docusaurus). This makes it quick and easy to add new documentation, and provides a pleasant experience for the user.
+- Built-in TypeScript typings.
 
 ## What's New?
 

@@ -1,4 +1,5 @@
 --!strict
+local _T = require(script.Parent.Parent.Types)
 local Copy = require(script.Parent.copy)
 
 --[=[
@@ -19,7 +20,7 @@ local Copy = require(script.Parent.copy)
   new.goodbye.world = "hello" -- still works!
   ```
 ]=]
-local function freeze<T>(dictionary: T): T
+local function freeze(dictionary: _T.AnyDictionary): _T.AnyDictionary
 	local new = Copy(dictionary)
 
 	table.freeze(new)

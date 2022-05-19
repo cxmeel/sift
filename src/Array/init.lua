@@ -11,6 +11,12 @@
 		"world",
 	}
 	```
+
+	<br><br>
+
+	#### Aliases
+
+	`List`
 ]=]
 local Array = {
 	at = require(script.at),
@@ -58,5 +64,15 @@ local Array = {
 	zip = require(script.zip),
 	zipAll = require(script.zipAll),
 }
+
+Array.join = Array.concat
+Array.merge = Array.concat
+Array.joinDeep = Array.concatDeep
+Array.mergeDeep = Array.concatDeep
+Array.append = Array.push
+Array.prepend = Array.unshift
+Array.indexOf = Array.find
+Array.has = Array.includes
+Array.contains = Array.includes
 
 return Array

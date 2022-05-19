@@ -10,4 +10,6 @@ export type Array<T> = Dictionary<number, T>
 export type Set<T> = Dictionary<T, boolean>
 export type Table = Dictionary<any, any>
 
+export type AnyDictionary = Dictionary<any, any>
+
 return nil

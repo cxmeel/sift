@@ -2,6 +2,7 @@
 local Sift = script.Parent.Parent
 
 local Util = require(Sift.Util)
+local _T = require(Sift.Types)
 
 local function compare(a, b)
 	if type(a) ~= "table" or type(b) ~= "table" then
@@ -27,7 +28,7 @@ end
   @function equals
   @within Dictionary
 
-  @param ... ...T -- The dictionaries to compare.
+  @param ... ...{ [any]: any } -- The dictionaries to compare.
   @return boolean -- Whether the dictionaries are equal.
 
   Compares two dictionaries for equality.
@@ -41,7 +42,7 @@ end
   local value = Equals(dictionary, other1, other2) -- false
   ```
 ]=]
-local function equals<T>(...: T): boolean
+local function equals(...: _T.AnyDictionary): boolean
 	if Util.equalObjects(...) then
 		return true
 	end

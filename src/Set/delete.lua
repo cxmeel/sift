@@ -9,6 +9,8 @@
 
   Deletes values from a set.
 
+  Aliases: `subtract`
+
   ```lua
   local set = { hello = true, world = true }
 

@@ -12,6 +12,10 @@ local None = require(Sift.None)
 
 	Joins multiple arrays together into a single array.
 
+	#### Aliases
+
+	`join`, `merge`
+
 	```lua
 	local table1 = { 1, 2, 3 }
 	local table2 = { 4, 5, 6 }

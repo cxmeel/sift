@@ -1,7 +1,9 @@
 --!strict
+local _T = require(script.Parent.Parent.Types)
+
 --[=[
   @function flatten
-  @within Array
+  @within Dictionary
 
   @param dictionary T -- The dictionary to flatten.
   @param depth? number -- The depth to flatten the dictionary to.
@@ -25,12 +27,12 @@
   local new = Flatten(dictionary, 1) -- { hello = "world", world = "hello", roblox = { yes = "no", no = "yes" } }
   ```
 ]=]
-local function flatten<T>(dictionary: T, depth: number?): T
+local function flatten(dictionary: _T.AnyDictionary, depth: number?): _T.AnyDictionary
 	depth = if type(depth) == "number" then depth else math.huge
 
 	local result = {}
 
-	for key, value in pairs(dictionary) do
+	for key, value in pairs(dictionary :: _T.AnyDictionary) do
 		if type(value) == "table" and depth > 0 then
 			local nested = flatten(value, depth - 1)
 

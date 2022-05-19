@@ -4,7 +4,7 @@
 	@within Array
 
 	@param array {T} -- The array to search.
-	@param predicate (value: T, index: number, array: {T}) -> boolean? -- The predicate to use to check the array.
+	@param predicate (value: T, index: number, array: {T}) -> any -- The predicate to use to check the array.
 	@param from? number -- The index to start searching from.
 	@return number -- The index of the first item in the array that matches the predicate.
 
@@ -20,7 +20,7 @@
 ]=]
 local function findWhere<T>(
 	array: { T },
-	predicate: (value: T, index: number, array: { T }) -> boolean?,
+	predicate: (value: T, index: number, array: { T }) -> any,
 	from: number?
 ): number?
 	local length = #array

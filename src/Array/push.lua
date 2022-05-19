@@ -9,6 +9,10 @@
 
 	Adds elements to the end of the array.
 
+	#### Aliases
+
+	`append`
+
 	```lua
 	local array = { 1, 2, 3 }
 

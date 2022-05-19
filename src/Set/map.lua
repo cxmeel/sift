@@ -4,8 +4,8 @@
   @within Set
 
   @param set { [T]: boolean } -- The set to map.
-  @param mapper (T, {[T]: boolean}) -> T -- The mapper function.
-  @return {[T]: boolean} -- The mapped set.
+  @param mapper (T, {[T]: boolean}) -> U -- The mapper function.
+  @return {[U]: boolean} -- The mapped set.
 
   Iterates over a set, calling a mapper function for each item.
 
@@ -17,7 +17,7 @@
   end) -- { ["hello!"] = true, ["world!"] = true }
   ```
 ]=]
-local function map<T>(set: { [T]: boolean }, mapper: (T, { [T]: boolean }) -> T): { [T]: boolean }
+local function map<T, U>(set: { [T]: boolean }, mapper: (T, { [T]: boolean }) -> U): { [U]: boolean }
 	local result = {}
 
 	for key, _ in pairs(set) do

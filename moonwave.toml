@@ -4,6 +4,10 @@ changelog = true
 
 classOrder = ["Sift"]
 
+[home]
+# enabled = true
+includeReadme = true
+
 [[navbar.items]]
 label = "Itch.io"
 href = "https://csqrl.itch.io/sift"

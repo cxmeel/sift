@@ -15,6 +15,8 @@ local None = require(Sift.None)
   parameters may be any number of dictionaries or `nil`.
   Non-dictonaries will be ignored.
 
+  Aliases: `join`
+
   ```lua
   local dictionary1 = { hello = "roblox", goodbye = "world" }
   local dictionary2 = { goodbye = "goodbye" }

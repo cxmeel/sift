@@ -27,7 +27,7 @@ end
 	@function equals
 	@within Array
 
-	@param ... ...{T} -- The arrays to compare.
+	@param ... ...{any} -- The arrays to compare.
 	@return boolean -- Whether the arrays are equal.
 
 	Compares two arrays for equality.
