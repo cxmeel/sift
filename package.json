@@ -35,7 +35,11 @@
     "default.project.json"
   ],
   "devDependencies": {
-    "@rbxts/compiler-types": "^1.1.0-types.0",
-    "@rbxts/types": "^1.0.469"
+    "@rbxts/compiler-types": "^1.2.3-types.0",
+    "@rbxts/types": "^1.0.515",
+    "rbxts-transform-debug": "^1.0.0-rc.1",
+    "rbxts-transform-env": "^1.0.0-rc.0",
+    "typescript": "^4.3.5",
+    "roblox-ts": "^1.2.7"
   }
 }
