@@ -13,6 +13,10 @@ local Find = require(script.Parent.find)
 	Checks whether the array contains the value. This is a wrapper
 	around `Find`.
 
+	#### Aliases
+
+	`contains`, `has`
+
 	```lua
 	local array = { "hello", "world", "goodbye" }
 

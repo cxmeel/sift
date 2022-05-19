@@ -1,3 +1,6 @@
+--!strict
+local Types = require(script.Types)
+
 --[=[
 	@class Sift
 
@@ -9,7 +12,12 @@
 	can be accessed via their respective names within the Sift module
 	(e.g. `Sift.Array.At()`), or accessed directly (e.g. `local At = require(Sift.Array.At)`).
 
+	Some methods and modules also have aliases, which can are documented in the
+	corresponding submodule/method's documentation.
+
 	See the individual submodule pages for full documentation.
+
+	The Luau types `Dictionary<K, V>`, `Array<T>` (aliased as `List<T>`) and `Set<T>` are exported from the Sift module (e.g. they can be used via `Sift.Array<string>`), but are also available from [Sift.Types].
 ]=]
 local Sift = {
 	Array = require(script.Array),
@@ -37,5 +45,14 @@ Sift.List = Sift.Array
 
 --- @prop Set Set
 --- @within Sift
+
+--- @prop Types Types
+--- @within Sift
+
+export type Dictionary<K, V> = Types.Dictionary<K, V>
+
+export type Array<T> = Types.Array<T>
+export type List<T> = Array<T>
+export type Set<T> = Types.Set<T>
 
 return Sift

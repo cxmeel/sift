@@ -8,8 +8,8 @@ local None = require(Sift.None)
 	@function zipAll
 	@within Array
 
-	@param ... ...{T} -- The arrays to zip.
-	@return {T} -- The zipped array.
+	@param ... ...{any} -- The arrays to zip.
+	@return {any} -- The zipped array.
 
 	Zips multiple arrays together into a single array, filling
 	in missing values with `None`.

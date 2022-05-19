@@ -3,8 +3,8 @@
   @function flip
   @within Dictionary
 
-  @param dictionary T -- The dictionary to flip.
-  @return T -- The flipped dictionary.
+  @param dictionary { [K]: V } -- The dictionary to flip.
+  @return { [V]: K } -- The flipped dictionary.
 
   Flips a dictionary. Keys become values and values become keys.
 
@@ -14,7 +14,7 @@
   local new = Flip(dictionary) -- { world = "goodbye", roblox = "hello" }
   ```
 ]=]
-local function flip<T>(dictionary: T): T
+local function flip<K, V>(dictionary: { [K]: V }): { [V]: K }
 	local result = {}
 
 	for key, value in pairs(dictionary) do

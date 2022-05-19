@@ -6,7 +6,7 @@
 	@param array {T} -- The array to search.
 	@param value? any -- The value to search for.
 	@param from? number -- The index to start searching from.
-	@return number -- The index of the last item in the array that matches the value.
+	@return number? -- The index of the last item in the array that matches the value.
 
 	Finds the index of the last item in the array that matches the value.
 

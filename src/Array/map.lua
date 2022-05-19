@@ -4,8 +4,8 @@
 	@within Array
 
 	@param array {T} -- The array to map.
-	@param mapper (value: T, index: number, array: {T}) -> T? -- The mapper function.
-	@return {T} -- The mapped array.
+	@param mapper (value: T, index: number, array: {T}) -> U? -- The mapper function.
+	@return {U} -- The mapped array.
 
 	Maps the array using the mapper function.
 
@@ -17,7 +17,7 @@
 	end) -- { 2, 4, 6 }
 	```
 ]=]
-local function map<T>(array: { T }, mapper: (value: T, index: number, array: { T }) -> T?): { T }
+local function map<T, U>(array: { T }, mapper: (value: T, index: number, array: { T }) -> U?): { U }
 	local mapped = {}
 
 	for index, value in ipairs(array) do

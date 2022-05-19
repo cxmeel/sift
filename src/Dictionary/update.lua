@@ -19,9 +19,9 @@ end
 
   @param dictionary {[K]: V} -- The dictionary to update.
   @param key K -- The key to update.
-  @param updater? (value: V, key: K) -> V -- The updater function.
-  @param callback? (key: K) -> V -- The callback function.
-  @return {[K]: V} -- The updated dictionary.
+  @param updater? (value: V, key: K) -> U -- The updater function.
+  @param callback? (key: K) -> C -- The callback function.
+  @return {[K]: V & U & C } -- The updated dictionary.
 
   Updates a value in a dictionary at the given key. If the value at the given key does not exist, `callback` will be called, and its return value will be used as the value at the given key.
 
@@ -39,15 +39,17 @@ end
   end) -- { cats = 3, dogs = 1 }
   ```
 ]=]
-local function update<K, V>(
+local function update<K, V, U, C>(
 	dictionary: { [K]: V },
 	key: K,
-	updater: Updater<K, V>?,
-	callback: Callback<K, V>?
-): { [K]: V }
+	updater: ((value: V, key: K) -> U)?,
+	callback: ((key: K) -> C)?
+): { [K]: V & U & C }
 	local result = copy(dictionary)
 
 	updater = if type(updater) == "function" then updater else Util.func.returned
+
+	callback = if type(callback) == "function" then callback else Util.func.returned
 
 	if result[key] ~= nil then
 		result[key] = updater(result[key], key)

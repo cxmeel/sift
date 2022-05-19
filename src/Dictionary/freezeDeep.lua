@@ -1,4 +1,6 @@
 --!strict
+local _T = require(script.Parent.Parent.Types)
+
 --[=[
   @function freezeDeep
   @within Dictionary
@@ -17,7 +19,7 @@
   new.goodbye.world = "hello" -- error!
   ```
 ]=]
-local function freezeDeep(dictionary)
+local function freezeDeep(dictionary: _T.AnyDictionary): _T.AnyDictionary
 	local result = {}
 
 	for key, value in pairs(dictionary) do

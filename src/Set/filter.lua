@@ -8,7 +8,7 @@ local Util = require(Sift.Util)
   @within Set
 
   @param set { [T]: boolean } -- The set to filter.
-  @param predicate? (T, { [T]: boolean }) -> boolean? -- The function to filter the set with.
+  @param predicate? (item: T, set: { [T]: boolean }) -> any -- The function to filter the set with.
   @return { [T]: boolean } -- The filtered set.
 
   Filters a set using a predicate. Any items that do not pass the predicate will be removed from the set.
@@ -21,7 +21,7 @@ local Util = require(Sift.Util)
   end) -- { world = true }
   ```
 ]=]
-local function filter<T>(set: { [T]: boolean }, predicate: ((T, { [T]: boolean }) -> boolean?)?): { [T]: boolean }
+local function filter<T>(set: { [T]: boolean }, predicate: ((T, { [T]: boolean }) -> any)?): { [T]: boolean }
 	local result = {}
 
 	predicate = if type(predicate) == "function" then predicate else Util.func.truthy

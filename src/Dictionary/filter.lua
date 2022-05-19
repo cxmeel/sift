@@ -8,7 +8,7 @@ local Util = require(Sift.Util)
   @within Dictionary
 
   @param dictionary {[K]: V} -- The dictionary to filter.
-  @param predicate? (value: V, key: K, dictionary: {[K]: V}) -> boolean? -- The predicate to use to filter the dictionary.
+  @param predicate? (value: V, key: K, dictionary: {[K]: V}) -> any -- The predicate to use to filter the dictionary.
   @return {[K]: V} -- The filtered dictionary.
 
   Filters a dictionary using a predicate. Any items that do not pass the predicate will be removed from the dictionary.
@@ -23,7 +23,7 @@ local Util = require(Sift.Util)
 ]=]
 local function filter<K, V>(
 	dictionary: { [K]: V },
-	predicate: ((value: V, key: K, dictionary: { [K]: V }) -> boolean?)?
+	predicate: ((value: V, key: K, dictionary: { [K]: V }) -> any)?
 ): { [K]: V }
 	local result = {}
 

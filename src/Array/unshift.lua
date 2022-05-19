@@ -9,6 +9,10 @@
 
 	Inserts values to the beginning of an array.
 
+	#### Aliases
+
+	`prepend`
+
 	```lua
 	local array = { 1, 2, 3 }
 

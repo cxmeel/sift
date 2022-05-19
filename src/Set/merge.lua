@@ -8,6 +8,8 @@
 
   Combines one or more sets into a single set.
 
+  Aliases: `join`, `union`
+
   ```lua
   local set1 = { hello = true, world = true }
   local set2 = { cat = true, dog = true, hello = true }

@@ -14,6 +14,10 @@ local None = require(Sift.None)
 	Joins multiple arrays together into a single array, with deep copies of all
 	nested arrays.
 
+	#### Aliases
+
+	`joinDeep`, `mergeDeep`
+
 	```lua
 	local table1 = { 1, 2, { 3, 4 } }
 	local table2 = { 5, 6, { 7, 8 } }

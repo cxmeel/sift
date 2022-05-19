@@ -9,6 +9,8 @@
   Converts an array to a set, where each item is mapped to true.
   Duplicate items are discarded.
 
+  Aliases: `fromList`
+
   ```lua
   local array = { "hello", "world", "hello" }
 

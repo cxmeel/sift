@@ -5,8 +5,8 @@ local Reduce = require(script.Parent.reduce)
 	@function zip
 	@within Array
 
-	@param ... {T} -- The arrays to zip together.
-	@return {T} -- The zipped array.
+	@param ... {any} -- The arrays to zip together.
+	@return {any} -- The zipped array.
 
 	Zips multiple arrays together into a single array.
 

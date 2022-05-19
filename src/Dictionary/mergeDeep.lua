@@ -5,23 +5,25 @@ local None = require(Sift.None)
 local copyDeep = require(script.Parent.copyDeep)
 
 --[=[
-  @function mergeDeep
-  @within Dictionary
+	@function mergeDeep
+	@within Dictionary
 
-  @param dictionaries? ...U -- The dictionaries to merge.
-  @return T -- The merged dictionary.
+	@param dictionaries? ...U -- The dictionaries to merge.
+	@return T -- The merged dictionary.
 
-  Merges the given dictionaries into a single dictionary. If the
-  value is `None`, it will be removed from the result. This is
-  recursive. The parameters may be any number of dictionaries or
-  `nil`. Non-dictonaries will be ignored.
+	Merges the given dictionaries into a single dictionary. If the
+	value is `None`, it will be removed from the result. This is
+	recursive. The parameters may be any number of dictionaries or
+	`nil`. Non-dictonaries will be ignored.
 
-  ```lua
-  local dictionary1 = { hello = "roblox", goodbye = { world = "goodbye" } }
-  local dictionary2 = { goodbye = { world = "world" } }
+	Aliases: `joinDeep`
 
-  local merged = MergeDeep(dictionary1, dictionary2) -- { hello = "roblox", goodbye = { world = "world" } }
-  ```
+	```lua
+	local dictionary1 = { hello = "roblox", goodbye = { world = "goodbye" } }
+	local dictionary2 = { goodbye = { world = "world" } }
+
+	local merged = MergeDeep(dictionary1, dictionary2) -- { hello = "roblox", goodbye = { world = "world" } }
+	```
 ]=]
 local function mergeDeep<T>(...: { [any]: any }?): T
 	local result = {}
