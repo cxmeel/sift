@@ -1,7 +1,10 @@
 *.rbx*
 *.env
+*.tsbuildinfo
 
 roblox.toml
 
 packages/
 node_modules/
+out/
+include/
