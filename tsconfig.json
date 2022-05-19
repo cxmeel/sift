@@ -17,7 +17,7 @@
       "node_modules/@rbxts"
     ],
     // configurable
-    "rootDir": "typings",
+    "rootDir": "src",
     "outDir": "out",
     "baseUrl": "src",
     "incremental": true,
