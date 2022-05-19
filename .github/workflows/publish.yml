@@ -39,6 +39,9 @@ jobs:
         with:
           node-version: lts/*
 
+      - name: Install Roblox-TS
+        run: npm install -g roblox-ts
+
       - name: Setup Toolchain
         uses: Roblox/setup-foreman@v1
         with:
