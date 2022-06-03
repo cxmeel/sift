@@ -3,7 +3,7 @@
   @function merge
   @within Set
 
-  @param ... ...{ [any]: boolean } -- The sets to merge.
+  @param ... ...any -- The sets to merge.
   @return { [T]: boolean } -- The merged set.
 
   Combines one or more sets into a single set.
