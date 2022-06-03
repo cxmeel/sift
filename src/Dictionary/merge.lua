@@ -7,7 +7,7 @@ local None = require(Sift.None)
   @function merge
   @within Dictionary
 
-  @param dictionaries? ...U -- The dictionaries to merge.
+  @param dictionaries? ...any -- The dictionaries to merge.
   @return T -- The merged dictionary.
 
   Merges the given dictionaries into a single dictionary. If the

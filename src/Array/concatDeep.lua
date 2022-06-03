@@ -8,7 +8,7 @@ local None = require(Sift.None)
 	@function concatDeep
 	@within Array
 
-	@param ... ...{T} -- The arrays to concatenate.
+	@param ... ...any -- The arrays to concatenate.
 	@return {T} -- The concatenated array.
 
 	Joins multiple arrays together into a single array, with deep copies of all
