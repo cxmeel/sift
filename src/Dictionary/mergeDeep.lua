@@ -25,10 +25,12 @@ local copyDeep = require(script.Parent.copyDeep)
 	local merged = MergeDeep(dictionary1, dictionary2) -- { hello = "roblox", goodbye = { world = "world" } }
 	```
 ]=]
-local function mergeDeep<T>(...: { [any]: any }?): T
+local function mergeDeep<T>(...: any): T
 	local result = {}
 
-	for _, dictionary in ipairs({ ... }) do
+	for dictionaryIndex = 1, select("#", ...) do
+		local dictionary = select(dictionaryIndex, ...)
+
 		if type(dictionary) ~= "table" then
 			continue
 		end
