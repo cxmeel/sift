@@ -8,7 +8,7 @@ local None = require(Sift.None)
 	@function concatDeep
 	@within Array
 
-	@param ... ...{T} -- The arrays to concatenate.
+	@param ... ...any -- The arrays to concatenate.
 	@return {T} -- The concatenated array.
 
 	Joins multiple arrays together into a single array, with deep copies of all
@@ -25,10 +25,12 @@ local None = require(Sift.None)
 	local new = ConcatDeep(table1, table2) -- { 1, 2, { 3, 4 }, 5, 6, { 7, 8 } }
 	```
 ]=]
-local function concatDeep<T>(...: { T }): { T }
+local function concatDeep<T>(...: any): { T }
 	local result = {}
 
-	for _, array in ipairs({ ... }) do
+	for arrayIndex = 1, select("#", ...) do
+		local array = select(arrayIndex, ...)
+
 		if type(array) ~= "table" then
 			continue
 		end

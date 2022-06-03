@@ -24,6 +24,17 @@ return function()
 		expect(#new).to.equal(0)
 	end)
 
+	it("should accept nil values", function()
+		local new = ConcatDeep(nil, { 1, 2, 3 })
+		local new2 = ConcatDeep({ 1, 2, 3 }, nil)
+
+		expect(new).to.be.a("table")
+		expect(#new).to.equal(3)
+
+		expect(new2).to.be.a("table")
+		expect(#new2).to.equal(3)
+	end)
+
 	it("should join multiple arrays, copying nested arrays", function()
 		local table1 = { 1, 2, { 3, 4 } }
 		local table2 = { 5, 6, { 7, 8 } }
