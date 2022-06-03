@@ -23,8 +23,8 @@ local dictionary = {
 
 print(dictionary.cats) -- 2
 ```"><meta data-react-helmet="true" property="og:url" content="https://csqrl.github.io/sift/api/Dictionary"><meta data-react-helmet="true" name="docusaurus_locale" content="en"><meta data-react-helmet="true" name="docusaurus_tag" content="default"><link data-react-helmet="true" rel="canonical" href="https://csqrl.github.io/sift/api/Dictionary"><link data-react-helmet="true" rel="alternate" href="https://csqrl.github.io/sift/api/Dictionary" hreflang="en"><link data-react-helmet="true" rel="alternate" href="https://csqrl.github.io/sift/api/Dictionary" hreflang="x-default"><link rel="stylesheet" href="/sift/assets/css/styles.57777432.css">
-<link rel="preload" href="/sift/assets/js/runtime~main.afe0435f.js" as="script">
-<link rel="preload" href="/sift/assets/js/main.4a6bc6ca.js" as="script">
+<link rel="preload" href="/sift/assets/js/runtime~main.67ed33ce.js" as="script">
+<link rel="preload" href="/sift/assets/js/main.c46f0ce1.js" as="script">
 </head>
 <body>
 <script>!function(){function e(e){document.documentElement.setAttribute("data-theme",e)}var t=function(){var e=null;try{e=localStorage.getItem("theme")}catch(e){}return e}();null!==t?e(t):window.matchMedia("(prefers-color-scheme: dark)").matches?e("dark"):(window.matchMedia("(prefers-color-scheme: light)").matches,e("light"))}()</script><div id="__docusaurus">
@@ -37,29 +37,7 @@ print(dictionary.cats) -- 2
 
 <span class="token function">print</span><span class="token punctuation">(</span>dictionary<span class="token punctuation">.</span>cats<span class="token punctuation">)</span> <span class="token comment">-- 2</span>
 </code></pre>
-</div></header><h2 class="anchor anchorWithStickyNavbar_31ik" id="functions">Functions<a aria-hidden="true" class="hash-link" href="#functions" title="Direct link to heading">​</a></h2><div class="divider_3z1R"></div><h3 class="anchor anchorWithStickyNavbar_31ik" id="flatten"><code style="text-decoration:none">flatten</code><a aria-hidden="true" class="hash-link" href="#flatten" title="Direct link to heading">​</a></h3><div class="repositoryDetailsContainer_1UH0"><a class="sourceButton_2aE5" href="https://github.com/csqrl/sift/blob/main/src/Dictionary/flatten.lua#L30"><div class="sourceButtonText_monK">&lt;/&gt;</div></a></div><div class="memberString_P8-X"><code>Dictionary<!-- -->.</code><code class="green_3LnD">flatten</code><code>(</code><div class="inset_2cJr"><div><code>dictionary<!-- -->: </code><code class="blue_2Afy">T</code><code>,</code><span class="inlineDescription_17uy">-- <span>
-<p>The dictionary to flatten.</p>
-</span></span></div><div><code>depth?<!-- -->: </code><code class="blue_2Afy">number</code><span class="inlineDescription_17uy">-- <span>
-<p>The depth to flatten the dictionary to.</p>
-</span></span></div></div><code>) → </code><code class="blue_2Afy">T</code><span class="inlineDescription_17uy">-- <span>
-<p>The flattened dictionary.</p>
-</span></span></div><div>
-<p>Flattens a dictionary. If depth is not specified, it will flatten the dictionary as far as it can go.</p>
-<pre class="language-lua"><code class="language-lua"><span class="token keyword">local</span> dictionary <span class="token operator">=</span> <span class="token punctuation">{</span>
-  hello <span class="token operator">=</span> <span class="token string">"world"</span><span class="token punctuation">,</span>
-  goodbye <span class="token operator">=</span> <span class="token punctuation">{</span>
-    world <span class="token operator">=</span> <span class="token string">"hello"</span><span class="token punctuation">,</span>
-    roblox <span class="token operator">=</span> <span class="token punctuation">{</span>
-      yes <span class="token operator">=</span> <span class="token string">"no"</span><span class="token punctuation">,</span>
-      no <span class="token operator">=</span> <span class="token string">"yes"</span><span class="token punctuation">,</span>
-    <span class="token punctuation">}</span>
-  <span class="token punctuation">}</span>
-<span class="token punctuation">}</span>
-
-<span class="token keyword">local</span> new <span class="token operator">=</span> <span class="token function">Flatten</span><span class="token punctuation">(</span>dictionary<span class="token punctuation">)</span> <span class="token comment">-- { hello = "world", world = "hello", yes = "no", no = "yes" }</span>
-<span class="token keyword">local</span> new <span class="token operator">=</span> <span class="token function">Flatten</span><span class="token punctuation">(</span>dictionary<span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token comment">-- { hello = "world", world = "hello", roblox = { yes = "no", no = "yes" } }</span>
-</code></pre>
-</div><div class="divider_3z1R"></div><h3 class="anchor anchorWithStickyNavbar_31ik" id="keys"><code style="text-decoration:none">keys</code><a aria-hidden="true" class="hash-link" href="#keys" title="Direct link to heading">​</a></h3><div class="repositoryDetailsContainer_1UH0"><a class="sourceButton_2aE5" href="https://github.com/csqrl/sift/blob/main/src/Dictionary/keys.lua#L17"><div class="sourceButtonText_monK">&lt;/&gt;</div></a></div><div class="memberString_P8-X"><code>Dictionary<!-- -->.</code><code class="green_3LnD">keys</code><code>(</code><div class="inset_2cJr"><div><code>dictionary<!-- -->: </code><code class="purple__nFc">{</code><span><code>[</code><code class="blue_2Afy">K</code><code>]</code></span><code>: </code><code class="blue_2Afy">V</code><code class="purple__nFc">}</code><span class="inlineDescription_17uy">-- <span>
+</div></header><h2 class="anchor anchorWithStickyNavbar_31ik" id="functions">Functions<a aria-hidden="true" class="hash-link" href="#functions" title="Direct link to heading">​</a></h2><div class="divider_3z1R"></div><h3 class="anchor anchorWithStickyNavbar_31ik" id="keys"><code style="text-decoration:none">keys</code><a aria-hidden="true" class="hash-link" href="#keys" title="Direct link to heading">​</a></h3><div class="repositoryDetailsContainer_1UH0"><a class="sourceButton_2aE5" href="https://github.com/csqrl/sift/blob/main/src/Dictionary/keys.lua#L17"><div class="sourceButtonText_monK">&lt;/&gt;</div></a></div><div class="memberString_P8-X"><code>Dictionary<!-- -->.</code><code class="green_3LnD">keys</code><code>(</code><div class="inset_2cJr"><div><code>dictionary<!-- -->: </code><code class="purple__nFc">{</code><span><code>[</code><code class="blue_2Afy">K</code><code>]</code></span><code>: </code><code class="blue_2Afy">V</code><code class="purple__nFc">}</code><span class="inlineDescription_17uy">-- <span>
 <p>The dictionary to get the keys of.</p>
 </span></span></div></div><code>) → </code><code class="purple__nFc">{</code><code class="blue_2Afy">K</code><code class="purple__nFc">}</code><span class="inlineDescription_17uy">-- <span>
 <p>An array containing the keys of the given dictionary.</p>
@@ -69,106 +47,101 @@ print(dictionary.cats) -- 2
 
 <span class="token keyword">local</span> keys <span class="token operator">=</span> <span class="token function">Keys</span><span class="token punctuation">(</span>dictionary<span class="token punctuation">)</span> <span class="token comment">-- { "hello", "goodbye" }</span>
 </code></pre>
-</div><div class="divider_3z1R"></div><h3 class="anchor anchorWithStickyNavbar_31ik" id="removeValues"><code style="text-decoration:none">removeValues</code><a aria-hidden="true" class="hash-link" href="#removeValues" title="Direct link to heading">​</a></h3><div class="repositoryDetailsContainer_1UH0"><a class="sourceButton_2aE5" href="https://github.com/csqrl/sift/blob/main/src/Dictionary/removeValues.lua#L23"><div class="sourceButtonText_monK">&lt;/&gt;</div></a></div><div class="memberString_P8-X"><code>Dictionary<!-- -->.</code><code class="green_3LnD">removeValues</code><code>(</code><div class="inset_2cJr"><div><code>dictionary<!-- -->: </code><code class="purple__nFc">{</code><span><code>[</code><code class="blue_2Afy">K</code><code>]</code></span><code>: </code><code class="blue_2Afy">V</code><code class="purple__nFc">}</code><code>,</code><span class="inlineDescription_17uy">-- <span>
-<p>The dictionary to remove the values from.</p>
-</span></span></div><div><code>values<!-- -->: </code><code class="blue_2Afy">...V</code><span class="inlineDescription_17uy">-- <span>
-<p>The values to remove.</p>
-</span></span></div></div><code>) → </code><code class="purple__nFc">{</code><span><code>[</code><code class="blue_2Afy">K</code><code>]</code></span><code>: </code><code class="blue_2Afy">V</code><code class="purple__nFc">}</code><span class="inlineDescription_17uy">-- <span>
-<p>The dictionary without the given values.</p>
+</div><div class="divider_3z1R"></div><h3 class="anchor anchorWithStickyNavbar_31ik" id="copyDeep"><code style="text-decoration:none">copyDeep</code><a aria-hidden="true" class="hash-link" href="#copyDeep" title="Direct link to heading">​</a></h3><div class="repositoryDetailsContainer_1UH0"><a class="sourceButton_2aE5" href="https://github.com/csqrl/sift/blob/main/src/Dictionary/copyDeep.lua#L20"><div class="sourceButtonText_monK">&lt;/&gt;</div></a></div><div class="memberString_P8-X"><code>Dictionary<!-- -->.</code><code class="green_3LnD">copyDeep</code><code>(</code><div class="inset_2cJr"><div><code>dictionary<!-- -->: </code><code class="blue_2Afy">T</code><span class="inlineDescription_17uy">-- <span>
+<p>The dictionary to copy.</p>
+</span></span></div></div><code>) → </code><code class="blue_2Afy">T</code><span class="inlineDescription_17uy">-- <span>
+<p>The copied dictionary.</p>
 </span></span></div><div>
-<p>Removes the given values from the given dictionary.</p>
-<pre class="language-lua"><code class="language-lua"><span class="token keyword">local</span> dictionary <span class="token operator">=</span> <span class="token punctuation">{</span> hello <span class="token operator">=</span> <span class="token string">"world"</span><span class="token punctuation">,</span> cat <span class="token operator">=</span> <span class="token string">"meow"</span><span class="token punctuation">,</span> unicorn <span class="token operator">=</span> <span class="token string">"rainbow"</span><span class="token punctuation">,</span> goodbye <span class="token operator">=</span> <span class="token string">"world"</span> <span class="token punctuation">}</span>
+<p>Copies a dictionary recursively.</p>
+<pre class="language-lua"><code class="language-lua"><span class="token keyword">local</span> dictionary <span class="token operator">=</span> <span class="token punctuation">{</span> hello <span class="token operator">=</span> <span class="token punctuation">{</span> world <span class="token operator">=</span> <span class="token string">"goodbye"</span> <span class="token punctuation">}</span> <span class="token punctuation">}</span>
 
-<span class="token keyword">local</span> withoutWorld <span class="token operator">=</span> <span class="token function">RemoveValues</span><span class="token punctuation">(</span>dictionary<span class="token punctuation">,</span> <span class="token string">"world"</span><span class="token punctuation">)</span> <span class="token comment">-- { cat = "meow", unicorn = "rainbow" }</span>
-<span class="token keyword">local</span> onlyWorld <span class="token operator">=</span> <span class="token function">RemoveValues</span><span class="token punctuation">(</span>dictionary<span class="token punctuation">,</span> <span class="token string">"meow"</span><span class="token punctuation">,</span> <span class="token string">"rainbow"</span><span class="token punctuation">)</span> <span class="token comment">-- { hello = "world", goodbye = "world" }</span>
-</code></pre>
-</div><div class="divider_3z1R"></div><h3 class="anchor anchorWithStickyNavbar_31ik" id="fromEntries"><code style="text-decoration:none">fromEntries</code><a aria-hidden="true" class="hash-link" href="#fromEntries" title="Direct link to heading">​</a></h3><div class="repositoryDetailsContainer_1UH0"><a class="sourceButton_2aE5" href="https://github.com/csqrl/sift/blob/main/src/Dictionary/fromEntries.lua#L17"><div class="sourceButtonText_monK">&lt;/&gt;</div></a></div><div class="memberString_P8-X"><code>Dictionary<!-- -->.</code><code class="green_3LnD">fromEntries</code><code>(</code><div class="inset_2cJr"><div><code>entries<!-- -->: </code><code class="purple__nFc">{</code><code class="green_3LnD">{</code><div class="inset_2cJr"><code class="blue_2Afy">K</code><code class="green_3LnD">,</code></div><div class="inset_2cJr"><code class="blue_2Afy">V</code></div><code class="green_3LnD">}</code><code class="purple__nFc">}</code><span class="inlineDescription_17uy">-- <span>
-<p>An array of key-value pairs.</p>
-</span></span></div></div><code>) → </code><code class="purple__nFc">{</code><span><code>[</code><code class="blue_2Afy">K</code><code>]</code></span><code>: </code><code class="blue_2Afy">V</code><code class="purple__nFc">}</code><span class="inlineDescription_17uy">-- <span>
-<p>A dictionary composed of the given key-value pairs.</p>
-</span></span></div><div>
-<p>Creates a dictionary from the given key-value pairs.</p>
-<pre class="language-lua"><code class="language-lua"><span class="token keyword">local</span> entries <span class="token operator">=</span> <span class="token punctuation">{</span> <span class="token punctuation">{</span> <span class="token string">"hello"</span><span class="token punctuation">,</span> <span class="token string">"roblox"</span> <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">{</span> <span class="token string">"goodbye"</span><span class="token punctuation">,</span> <span class="token string">"world"</span> <span class="token punctuation">}</span> <span class="token punctuation">}</span>
+<span class="token keyword">local</span> new <span class="token operator">=</span> <span class="token function">CopyDeep</span><span class="token punctuation">(</span>dictionary<span class="token punctuation">)</span> <span class="token comment">-- { hello = { world = "goodbye" } }</span>
 
-<span class="token keyword">local</span> dictionary <span class="token operator">=</span> <span class="token function">FromEntries</span><span class="token punctuation">(</span>entries<span class="token punctuation">)</span> <span class="token comment">-- { hello = "roblox", goodbye = "world" }</span>
+<span class="token function">print</span><span class="token punctuation">(</span>new <span class="token operator">==</span> dictionary<span class="token punctuation">)</span> <span class="token comment">-- false</span>
+<span class="token function">print</span><span class="token punctuation">(</span>new<span class="token punctuation">.</span>hello <span class="token operator">==</span> dictionary<span class="token punctuation">.</span>hello<span class="token punctuation">)</span> <span class="token comment">-- false</span>
 </code></pre>
-</div><div class="divider_3z1R"></div><h3 class="anchor anchorWithStickyNavbar_31ik" id="every"><code style="text-decoration:none">every</code><a aria-hidden="true" class="hash-link" href="#every" title="Direct link to heading">​</a></h3><div class="repositoryDetailsContainer_1UH0"><a class="sourceButton_2aE5" href="https://github.com/csqrl/sift/blob/main/src/Dictionary/every.lua#L24"><div class="sourceButtonText_monK">&lt;/&gt;</div></a></div><div class="memberString_P8-X"><code>Dictionary<!-- -->.</code><code class="green_3LnD">every</code><code>(</code><div class="inset_2cJr"><div><code>dictionary<!-- -->: </code><code class="purple__nFc">{</code><span><code>[</code><code class="blue_2Afy">K</code><code>]</code></span><code>: </code><code class="blue_2Afy">V</code><code class="purple__nFc">}</code><code>,</code><span class="inlineDescription_17uy">-- <span>
-<p>The dictionary to check.</p>
-</span></span></div><div><code>predicate<!-- -->: </code><code class="purple__nFc">(</code><div class="inset_2cJr"><code>value<!-- -->: </code><code class="blue_2Afy">V</code><code class="purple__nFc">,</code></div><div class="inset_2cJr"><code>key<!-- -->: </code><code class="blue_2Afy">K</code><code class="purple__nFc">,</code></div><div class="inset_2cJr"><code>dictionary<!-- -->: </code><code class="green_3LnD">{</code><span><code>[</code><code class="blue_2Afy">K</code><code>]</code></span><code>: </code><code class="blue_2Afy">V</code><code class="green_3LnD">}</code></div><code class="purple__nFc">)</code><code class="purple__nFc"> → </code><code class="blue_2Afy">any</code><span class="inlineDescription_17uy">-- <span>
-<p>The predicate to use to check the dictionary.</p>
-</span></span></div></div><code>) → </code><code class="blue_2Afy">boolean</code><span class="inlineDescription_17uy">-- <span>
-<p>Whether every item in the dictionary passes the predicate.</p>
+</div><div class="divider_3z1R"></div><h3 class="anchor anchorWithStickyNavbar_31ik" id="removeValue"><code style="text-decoration:none">removeValue</code><a aria-hidden="true" class="hash-link" href="#removeValue" title="Direct link to heading">​</a></h3><div class="repositoryDetailsContainer_1UH0"><a class="sourceButton_2aE5" href="https://github.com/csqrl/sift/blob/main/src/Dictionary/removeValue.lua#L19"><div class="sourceButtonText_monK">&lt;/&gt;</div></a></div><div class="memberString_P8-X"><code>Dictionary<!-- -->.</code><code class="green_3LnD">removeValue</code><code>(</code><div class="inset_2cJr"><div><code>dictionary<!-- -->: </code><code class="purple__nFc">{</code><span><code>[</code><code class="blue_2Afy">K</code><code>]</code></span><code>: </code><code class="blue_2Afy">V</code><code class="purple__nFc">}</code><code>,</code><span class="inlineDescription_17uy">-- <span>
+<p>The dictionary to remove the value from.</p>
+</span></span></div><div><code>value<!-- -->: </code><code class="blue_2Afy">V</code><span class="inlineDescription_17uy">-- <span>
+<p>The value to remove.</p>
+</span></span></div></div><code>) → </code><code class="purple__nFc">{</code><span><code>[</code><code class="blue_2Afy">K</code><code>]</code></span><code>: </code><code class="blue_2Afy">V</code><code class="purple__nFc">}</code><span class="inlineDescription_17uy">-- <span>
+<p>The dictionary without the given value.</p>
 </span></span></div><div>
-<p>Checks whether every item in the dictionary passes the predicate.</p>
+<p>Removes the given value from the given dictionary.</p>
+<pre class="language-lua"><code class="language-lua"><span class="token keyword">local</span> dictionary <span class="token operator">=</span> <span class="token punctuation">{</span> hello <span class="token operator">=</span> <span class="token string">"roblox"</span><span class="token punctuation">,</span> goodbye <span class="token operator">=</span> <span class="token string">"world"</span> <span class="token punctuation">}</span>
+
+<span class="token keyword">local</span> withoutHello <span class="token operator">=</span> <span class="token function">RemoveValue</span><span class="token punctuation">(</span>dictionary<span class="token punctuation">,</span> <span class="token string">"roblox"</span><span class="token punctuation">)</span> <span class="token comment">-- { goodbye = "world" }</span>
+<span class="token keyword">local</span> withoutGoodbye <span class="token operator">=</span> <span class="token function">RemoveValue</span><span class="token punctuation">(</span>dictionary<span class="token punctuation">,</span> <span class="token string">"world"</span><span class="token punctuation">)</span> <span class="token comment">-- { hello = "roblox" }</span>
+</code></pre>
+</div><div class="divider_3z1R"></div><h3 class="anchor anchorWithStickyNavbar_31ik" id="count"><code style="text-decoration:none">count</code><a aria-hidden="true" class="hash-link" href="#count" title="Direct link to heading">​</a></h3><div class="repositoryDetailsContainer_1UH0"><a class="sourceButton_2aE5" href="https://github.com/csqrl/sift/blob/main/src/Dictionary/count.lua#L25"><div class="sourceButtonText_monK">&lt;/&gt;</div></a></div><div class="memberString_P8-X"><code>Dictionary<!-- -->.</code><code class="green_3LnD">count</code><code>(</code><div class="inset_2cJr"><div><code>dictionary<!-- -->: </code><code class="blue_2Afy">T</code><code>,</code><span class="inlineDescription_17uy">-- <span>
+<p>The dictionary to count.</p>
+</span></span></div><div><code>predicate?<!-- -->: </code><code class="purple__nFc">(</code><div class="inset_2cJr"><code>value<!-- -->: </code><code class="blue_2Afy">T</code><code class="purple__nFc">,</code></div><div class="inset_2cJr"><code>key<!-- -->: </code><code class="blue_2Afy">K</code><code class="purple__nFc">,</code></div><div class="inset_2cJr"><code>dictionary<!-- -->: </code><code class="blue_2Afy">T</code></div><code class="purple__nFc">)</code><code class="purple__nFc"> → </code><code class="blue_2Afy">any</code><span class="inlineDescription_17uy">-- <span>
+<p>The predicate to use to filter the dictionary.</p>
+</span></span></div></div><code>) → </code><code class="blue_2Afy">number</code><span class="inlineDescription_17uy">-- <span>
+<p>The number of items in the dictionary.</p>
+</span></span></div><div>
+<p>Counts the number of items in a dictionary.</p>
 <pre class="language-lua"><code class="language-lua"><span class="token keyword">local</span> dictionary <span class="token operator">=</span> <span class="token punctuation">{</span> hello <span class="token operator">=</span> <span class="token string">"world"</span><span class="token punctuation">,</span> goodbye <span class="token operator">=</span> <span class="token string">"world"</span> <span class="token punctuation">}</span>
 
-<span class="token keyword">local</span> value <span class="token operator">=</span> <span class="token function">Every</span><span class="token punctuation">(</span>dictionary<span class="token punctuation">,</span> <span class="token keyword">function</span><span class="token punctuation">(</span>value<span class="token punctuation">,</span> key<span class="token punctuation">)</span>
-  <span class="token keyword">return</span> value <span class="token operator">==</span> <span class="token string">"world"</span>
-<span class="token keyword">end</span><span class="token punctuation">)</span> <span class="token comment">-- true</span>
-
-<span class="token keyword">local</span> value <span class="token operator">=</span> <span class="token function">Every</span><span class="token punctuation">(</span>dictionary<span class="token punctuation">,</span> <span class="token keyword">function</span><span class="token punctuation">(</span>value<span class="token punctuation">,</span> key<span class="token punctuation">)</span>
-  <span class="token keyword">return</span> value <span class="token operator">==</span> <span class="token string">"hello"</span>
-<span class="token keyword">end</span><span class="token punctuation">)</span> <span class="token comment">-- false</span>
+<span class="token keyword">local</span> value <span class="token operator">=</span> <span class="token function">Count</span><span class="token punctuation">(</span>dictionary<span class="token punctuation">)</span> <span class="token comment">-- 2</span>
+<span class="token keyword">local</span> value <span class="token operator">=</span> <span class="token function">Count</span><span class="token punctuation">(</span>dictionary<span class="token punctuation">,</span> <span class="token keyword">function</span><span class="token punctuation">(</span>item<span class="token punctuation">,</span> key<span class="token punctuation">)</span>
+  <span class="token keyword">return</span> item <span class="token operator">==</span> <span class="token string">"world"</span>
+<span class="token keyword">end</span><span class="token punctuation">)</span> <span class="token comment">-- 1</span>
 </code></pre>
-</div><div class="divider_3z1R"></div><h3 class="anchor anchorWithStickyNavbar_31ik" id="set"><code style="text-decoration:none">set</code><a aria-hidden="true" class="hash-link" href="#set" title="Direct link to heading">​</a></h3><div class="repositoryDetailsContainer_1UH0"><a class="sourceButton_2aE5" href="https://github.com/csqrl/sift/blob/main/src/Dictionary/set.lua#L21"><div class="sourceButtonText_monK">&lt;/&gt;</div></a></div><div class="memberString_P8-X"><code>Dictionary<!-- -->.</code><code class="green_3LnD">set</code><code>(</code><div class="inset_2cJr"><div><code>dictionary<!-- -->: </code><code class="purple__nFc">{</code><span><code>[</code><code class="blue_2Afy">K</code><code>]</code></span><code>: </code><code class="blue_2Afy">V</code><code class="purple__nFc">}</code><code>,</code><span class="inlineDescription_17uy">-- <span>
-<p>The dictionary to set the value in.</p>
-</span></span></div><div><code>key<!-- -->: </code><code class="blue_2Afy">K</code><code>,</code><span class="inlineDescription_17uy">-- <span>
-<p>The key to set the value in.</p>
+</div><div class="divider_3z1R"></div><h3 class="anchor anchorWithStickyNavbar_31ik" id="removeKeys"><code style="text-decoration:none">removeKeys</code><a aria-hidden="true" class="hash-link" href="#removeKeys" title="Direct link to heading">​</a></h3><div class="repositoryDetailsContainer_1UH0"><a class="sourceButton_2aE5" href="https://github.com/csqrl/sift/blob/main/src/Dictionary/removeKeys.lua#L20"><div class="sourceButtonText_monK">&lt;/&gt;</div></a></div><div class="memberString_P8-X"><code>Dictionary<!-- -->.</code><code class="green_3LnD">removeKeys</code><code>(</code><div class="inset_2cJr"><div><code>dictionary<!-- -->: </code><code class="purple__nFc">{</code><span><code>[</code><code class="blue_2Afy">K</code><code>]</code></span><code>: </code><code class="blue_2Afy">V</code><code class="purple__nFc">}</code><code>,</code><span class="inlineDescription_17uy">-- <span>
+<p>The dictionary to remove the keys from.</p>
+</span></span></div><div><code>keys<!-- -->: </code><code class="blue_2Afy">...K</code><span class="inlineDescription_17uy">-- <span>
+<p>The keys to remove.</p>
+</span></span></div></div><code>) → </code><code class="purple__nFc">{</code><span><code>[</code><code class="blue_2Afy">K</code><code>]</code></span><code>: </code><code class="blue_2Afy">V</code><code class="purple__nFc">}</code><span class="inlineDescription_17uy">-- <span>
+<p>The dictionary without the given keys.</p>
+</span></span></div><div>
+<p>Removes the given keys from the given dictionary.</p>
+<pre class="language-lua"><code class="language-lua"><span class="token keyword">local</span> dictionary <span class="token operator">=</span> <span class="token punctuation">{</span> hello <span class="token operator">=</span> <span class="token string">"world"</span><span class="token punctuation">,</span> cat <span class="token operator">=</span> <span class="token string">"meow"</span><span class="token punctuation">,</span> dog <span class="token operator">=</span> <span class="token string">"woof"</span><span class="token punctuation">,</span> unicorn <span class="token operator">=</span> <span class="token string">"rainbow"</span> <span class="token punctuation">}</span>
+
+<span class="token keyword">local</span> withoutCatDog <span class="token operator">=</span> <span class="token function">RemoveKeys</span><span class="token punctuation">(</span>dictionary<span class="token punctuation">,</span> <span class="token string">"cat"</span><span class="token punctuation">,</span> <span class="token string">"dog"</span><span class="token punctuation">)</span> <span class="token comment">-- { hello = "world", unicorn = "rainbow" }</span>
+</code></pre>
+</div><div class="divider_3z1R"></div><h3 class="anchor anchorWithStickyNavbar_31ik" id="includes"><code style="text-decoration:none">includes</code><a aria-hidden="true" class="hash-link" href="#includes" title="Direct link to heading">​</a></h3><div class="repositoryDetailsContainer_1UH0"><a class="sourceButton_2aE5" href="https://github.com/csqrl/sift/blob/main/src/Dictionary/includes.lua#L19"><div class="sourceButtonText_monK">&lt;/&gt;</div></a></div><div class="memberString_P8-X"><code>Dictionary<!-- -->.</code><code class="green_3LnD">includes</code><code>(</code><div class="inset_2cJr"><div><code>dictionary<!-- -->: </code><code class="purple__nFc">{</code><span><code>[</code><code class="blue_2Afy">K</code><code>]</code></span><code>: </code><code class="blue_2Afy">V</code><code class="purple__nFc">}</code><code>,</code><span class="inlineDescription_17uy">-- <span>
+<p>The dictionary to check.</p>
 </span></span></div><div><code>value<!-- -->: </code><code class="blue_2Afy">V</code><span class="inlineDescription_17uy">-- <span>
-<p>The value to set.</p>
-</span></span></div></div><code>) → </code><code class="purple__nFc">{</code><span><code>[</code><code class="blue_2Afy">K</code><code>]</code></span><code>: </code><code class="blue_2Afy">V</code><code class="purple__nFc">}</code><span class="inlineDescription_17uy">-- <span>
-<p>The dictionary with the given value set.</p>
+<p>The value to check for.</p>
+</span></span></div></div><code>) → </code><code class="blue_2Afy">boolean</code><span class="inlineDescription_17uy">-- <span>
+<p>Whether or not the dictionary includes the given value.</p>
 </span></span></div><div>
-<p>Sets the given value in the given dictionary.</p>
-<pre class="language-lua"><code class="language-lua"><span class="token keyword">local</span> dictionary <span class="token operator">=</span> <span class="token punctuation">{</span> hello <span class="token operator">=</span> <span class="token string">"world"</span><span class="token punctuation">,</span> cat <span class="token operator">=</span> <span class="token string">"meow"</span><span class="token punctuation">,</span> unicorn <span class="token operator">=</span> <span class="token string">"rainbow"</span> <span class="token punctuation">}</span>
+<p>Checks whether or not the given dictionary includes the given value.</p>
+<pre class="language-lua"><code class="language-lua"><span class="token keyword">local</span> dictionary <span class="token operator">=</span> <span class="token punctuation">{</span> hello <span class="token operator">=</span> <span class="token string">"roblox"</span><span class="token punctuation">,</span> goodbye <span class="token operator">=</span> <span class="token string">"world"</span> <span class="token punctuation">}</span>
 
-<span class="token keyword">local</span> setCat <span class="token operator">=</span> <span class="token function">Set</span><span class="token punctuation">(</span>dictionary<span class="token punctuation">,</span> <span class="token string">"cat"</span><span class="token punctuation">,</span> <span class="token string">"woof"</span><span class="token punctuation">)</span> <span class="token comment">-- { hello = "world", cat = "woof", unicorn = "rainbow" }</span>
+<span class="token keyword">local</span> includesRoblox <span class="token operator">=</span> <span class="token function">Includes</span><span class="token punctuation">(</span>dictionary<span class="token punctuation">,</span> <span class="token string">"roblox"</span><span class="token punctuation">)</span> <span class="token comment">-- true</span>
+<span class="token keyword">local</span> includesCat <span class="token operator">=</span> <span class="token function">Includes</span><span class="token punctuation">(</span>dictionary<span class="token punctuation">,</span> <span class="token string">"cat"</span><span class="token punctuation">)</span> <span class="token comment">-- false</span>
 </code></pre>
-</div><div class="divider_3z1R"></div><h3 class="anchor anchorWithStickyNavbar_31ik" id="fromArrays"><code style="text-decoration:none">fromArrays</code><a aria-hidden="true" class="hash-link" href="#fromArrays" title="Direct link to heading">​</a></h3><div class="repositoryDetailsContainer_1UH0"><a class="sourceButton_2aE5" href="https://github.com/csqrl/sift/blob/main/src/Dictionary/fromArrays.lua#L20"><div class="sourceButtonText_monK">&lt;/&gt;</div></a></div><div class="memberString_P8-X"><code>Dictionary<!-- -->.</code><code class="green_3LnD">fromArrays</code><code>(</code><div class="inset_2cJr"><div><code>keys<!-- -->: </code><code class="purple__nFc">{</code><code class="blue_2Afy">K</code><code class="purple__nFc">}</code><code>,</code><span class="inlineDescription_17uy">-- <span>
-<p>An array containing values to be used as keys.</p>
-</span></span></div><div><code>values<!-- -->: </code><code class="purple__nFc">{</code><code class="blue_2Afy">V</code><code class="purple__nFc">}</code><span class="inlineDescription_17uy">-- <span>
-<p>An array containing values to be used as values.</p>
-</span></span></div></div><code>) → </code><code class="purple__nFc">{</code><span><code>[</code><code class="blue_2Afy">K</code><code>]</code></span><code>: </code><code class="blue_2Afy">V</code><code class="purple__nFc">}</code><span class="inlineDescription_17uy">-- <span>
-<p>A dictionary composed of the given keys and values.</p>
+</div><div class="divider_3z1R"></div><h3 class="anchor anchorWithStickyNavbar_31ik" id="equalsDeep"><code style="text-decoration:none">equalsDeep</code><a aria-hidden="true" class="hash-link" href="#equalsDeep" title="Direct link to heading">​</a></h3><div class="repositoryDetailsContainer_1UH0"><a class="sourceButton_2aE5" href="https://github.com/csqrl/sift/blob/main/src/Dictionary/equalsDeep.lua#L45"><div class="sourceButtonText_monK">&lt;/&gt;</div></a></div><div class="memberString_P8-X"><code>Dictionary<!-- -->.</code><code class="green_3LnD">equalsDeep</code><code>(</code><div class="inset_2cJr"><div><code>...<!-- -->: </code><code class="blue_2Afy">...</code><code class="purple__nFc">{</code><span><code>[</code><code class="blue_2Afy">any</code><code>]</code></span><code>: </code><code class="blue_2Afy">any</code><code class="purple__nFc">}</code><span class="inlineDescription_17uy">-- <span>
+<p>The dictionaries to compare.</p>
+</span></span></div></div><code>) → </code><code class="blue_2Afy">boolean</code><span class="inlineDescription_17uy">-- <span>
+<p>Whether the dictionaries are equal.</p>
 </span></span></div><div>
-<p>
-  Creates a dictionary from the given arrays, where the first array is used
-  as keys and the second array is used as values.
-</p>
-<pre class="language-lua"><code class="language-lua"><span class="token keyword">local</span> keys <span class="token operator">=</span> <span class="token punctuation">{</span> <span class="token string">"hello"</span><span class="token punctuation">,</span> <span class="token string">"goodbye"</span> <span class="token punctuation">}</span>
-<span class="token keyword">local</span> values <span class="token operator">=</span> <span class="token punctuation">{</span> <span class="token string">"roblox"</span><span class="token punctuation">,</span> <span class="token string">"world"</span> <span class="token punctuation">}</span>
+<p>Compares two dictionaries for equality using deep comparison.</p>
+<pre class="language-lua"><code class="language-lua"><span class="token keyword">local</span> dictionary <span class="token operator">=</span> <span class="token punctuation">{</span> hello <span class="token operator">=</span> <span class="token string">"world"</span><span class="token punctuation">,</span> goodbye <span class="token operator">=</span> <span class="token punctuation">{</span> world <span class="token operator">=</span> <span class="token string">"hello"</span> <span class="token punctuation">}</span> <span class="token punctuation">}</span>
+<span class="token keyword">local</span> other1 <span class="token operator">=</span> <span class="token punctuation">{</span> hello <span class="token operator">=</span> <span class="token string">"world"</span><span class="token punctuation">,</span> goodbye <span class="token operator">=</span> <span class="token punctuation">{</span> world <span class="token operator">=</span> <span class="token string">"hello"</span> <span class="token punctuation">}</span> <span class="token punctuation">}</span>
+<span class="token keyword">local</span> other2 <span class="token operator">=</span> <span class="token punctuation">{</span> hello <span class="token operator">=</span> <span class="token string">"hello"</span><span class="token punctuation">,</span> world <span class="token operator">=</span> <span class="token string">"goodbye"</span> <span class="token punctuation">}</span>
 
-<span class="token keyword">local</span> dictionary <span class="token operator">=</span> <span class="token function">FromArrays</span><span class="token punctuation">(</span>keys<span class="token punctuation">,</span> values<span class="token punctuation">)</span> <span class="token comment">-- { hello = "roblox", goodbye = "world" }</span>
+<span class="token keyword">local</span> value <span class="token operator">=</span> <span class="token function">EqualsDeep</span><span class="token punctuation">(</span>dictionary<span class="token punctuation">,</span> other1<span class="token punctuation">)</span> <span class="token comment">-- true</span>
+<span class="token keyword">local</span> value <span class="token operator">=</span> <span class="token function">EqualsDeep</span><span class="token punctuation">(</span>dictionary<span class="token punctuation">,</span> other1<span class="token punctuation">,</span> other2<span class="token punctuation">)</span> <span class="token comment">-- false</span>
 </code></pre>
-</div><div class="divider_3z1R"></div><h3 class="anchor anchorWithStickyNavbar_31ik" id="merge"><code style="text-decoration:none">merge</code><a aria-hidden="true" class="hash-link" href="#merge" title="Direct link to heading">​</a></h3><div class="repositoryDetailsContainer_1UH0"><a class="sourceButton_2aE5" href="https://github.com/csqrl/sift/blob/main/src/Dictionary/merge.lua#L27"><div class="sourceButtonText_monK">&lt;/&gt;</div></a></div><div class="memberString_P8-X"><code>Dictionary<!-- -->.</code><code class="green_3LnD">merge</code><code>(</code><div class="inset_2cJr"><div><code>dictionaries?<!-- -->: </code><code class="blue_2Afy">...U</code><span class="inlineDescription_17uy">-- <span>
+</div><div class="divider_3z1R"></div><h3 class="anchor anchorWithStickyNavbar_31ik" id="mergeDeep"><code style="text-decoration:none">mergeDeep</code><a aria-hidden="true" class="hash-link" href="#mergeDeep" title="Direct link to heading">​</a></h3><div class="repositoryDetailsContainer_1UH0"><a class="sourceButton_2aE5" href="https://github.com/csqrl/sift/blob/main/src/Dictionary/mergeDeep.lua#L28"><div class="sourceButtonText_monK">&lt;/&gt;</div></a></div><div class="memberString_P8-X"><code>Dictionary<!-- -->.</code><code class="green_3LnD">mergeDeep</code><code>(</code><div class="inset_2cJr"><div><code>dictionaries?<!-- -->: </code><code class="blue_2Afy">...any</code><span class="inlineDescription_17uy">-- <span>
 <p>The dictionaries to merge.</p>
 </span></span></div></div><code>) → </code><code class="blue_2Afy">T</code><span class="inlineDescription_17uy">-- <span>
 <p>The merged dictionary.</p>
 </span></span></div><div>
 <p>
   Merges the given dictionaries into a single dictionary. If the
-  value is <code>None</code>, it will be removed from the result. The
-  parameters may be any number of dictionaries or <code>nil</code>.
-  Non-dictonaries will be ignored.
+  value is <code>None</code>, it will be removed from the result. This is
+  recursive. The parameters may be any number of dictionaries or
+  <code>nil</code>. Non-dictonaries will be ignored.
 </p>
-<p>Aliases: <code>join</code></p>
-<pre class="language-lua"><code class="language-lua"><span class="token keyword">local</span> dictionary1 <span class="token operator">=</span> <span class="token punctuation">{</span> hello <span class="token operator">=</span> <span class="token string">"roblox"</span><span class="token punctuation">,</span> goodbye <span class="token operator">=</span> <span class="token string">"world"</span> <span class="token punctuation">}</span>
-<span class="token keyword">local</span> dictionary2 <span class="token operator">=</span> <span class="token punctuation">{</span> goodbye <span class="token operator">=</span> <span class="token string">"goodbye"</span> <span class="token punctuation">}</span>
+<p>Aliases: <code>joinDeep</code></p>
+<pre class="language-lua"><code class="language-lua"><span class="token keyword">local</span> dictionary1 <span class="token operator">=</span> <span class="token punctuation">{</span> hello <span class="token operator">=</span> <span class="token string">"roblox"</span><span class="token punctuation">,</span> goodbye <span class="token operator">=</span> <span class="token punctuation">{</span> world <span class="token operator">=</span> <span class="token string">"goodbye"</span> <span class="token punctuation">}</span> <span class="token punctuation">}</span>
+<span class="token keyword">local</span> dictionary2 <span class="token operator">=</span> <span class="token punctuation">{</span> goodbye <span class="token operator">=</span> <span class="token punctuation">{</span> world <span class="token operator">=</span> <span class="token string">"world"</span> <span class="token punctuation">}</span> <span class="token punctuation">}</span>
 
-<span class="token keyword">local</span> merged <span class="token operator">=</span> <span class="token function">Merge</span><span class="token punctuation">(</span>dictionary1<span class="token punctuation">,</span> dictionary2<span class="token punctuation">)</span> <span class="token comment">-- { hello = "roblox", goodbye = "goodbye" }</span>
-</code></pre>
-</div><div class="divider_3z1R"></div><h3 class="anchor anchorWithStickyNavbar_31ik" id="has"><code style="text-decoration:none">has</code><a aria-hidden="true" class="hash-link" href="#has" title="Direct link to heading">​</a></h3><div class="repositoryDetailsContainer_1UH0"><a class="sourceButton_2aE5" href="https://github.com/csqrl/sift/blob/main/src/Dictionary/has.lua#L21"><div class="sourceButtonText_monK">&lt;/&gt;</div></a></div><div class="memberString_P8-X"><code>Dictionary<!-- -->.</code><code class="green_3LnD">has</code><code>(</code><div class="inset_2cJr"><div><code>dictionary<!-- -->: </code><code class="purple__nFc">{</code><span><code>[</code><code class="blue_2Afy">K</code><code>]</code></span><code>: </code><code class="blue_2Afy">V</code><code class="purple__nFc">}</code><code>,</code><span class="inlineDescription_17uy">-- <span>
-<p>The dictionary to check.</p>
-</span></span></div><div><code>key<!-- -->: </code><code class="blue_2Afy">any</code><span class="inlineDescription_17uy">-- <span>
-<p>The key to check for.</p>
-</span></span></div></div><code>) → </code><code class="blue_2Afy">boolean</code><span class="inlineDescription_17uy">-- <span>
-<p>Whether or not the dictionary has the given key.</p>
-</span></span></div><div>
-<p>Checks whether or not the given dictionary has the given key.</p>
-<pre class="language-lua"><code class="language-lua"><span class="token keyword">local</span> dictionary <span class="token operator">=</span> <span class="token punctuation">{</span> hello <span class="token operator">=</span> <span class="token string">"roblox"</span><span class="token punctuation">,</span> goodbye <span class="token operator">=</span> <span class="token string">"world"</span> <span class="token punctuation">}</span>
-
-<span class="token keyword">local</span> hasHello <span class="token operator">=</span> <span class="token function">Has</span><span class="token punctuation">(</span>dictionary<span class="token punctuation">,</span> <span class="token string">"hello"</span><span class="token punctuation">)</span> <span class="token comment">-- true</span>
-<span class="token keyword">local</span> hasCat <span class="token operator">=</span> <span class="token function">Has</span><span class="token punctuation">(</span>dictionary<span class="token punctuation">,</span> <span class="token string">"cat"</span><span class="token punctuation">)</span> <span class="token comment">-- false</span>
+<span class="token keyword">local</span> merged <span class="token operator">=</span> <span class="token function">MergeDeep</span><span class="token punctuation">(</span>dictionary1<span class="token punctuation">,</span> dictionary2<span class="token punctuation">)</span> <span class="token comment">-- { hello = "roblox", goodbye = { world = "world" } }</span>
 </code></pre>
 </div><div class="divider_3z1R"></div><h3 class="anchor anchorWithStickyNavbar_31ik" id="update"><code style="text-decoration:none">update</code><a aria-hidden="true" class="hash-link" href="#update" title="Direct link to heading">​</a></h3><div class="repositoryDetailsContainer_1UH0"><a class="sourceButton_2aE5" href="https://github.com/csqrl/sift/blob/main/src/Dictionary/update.lua#L42"><div class="sourceButtonText_monK">&lt;/&gt;</div></a></div><div class="memberString_P8-X"><code>Dictionary<!-- -->.</code><code class="green_3LnD">update</code><code>(</code><div class="inset_2cJr"><div><code>dictionary<!-- -->: </code><code class="purple__nFc">{</code><span><code>[</code><code class="blue_2Afy">K</code><code>]</code></span><code>: </code><code class="blue_2Afy">V</code><code class="purple__nFc">}</code><code>,</code><span class="inlineDescription_17uy">-- <span>
 <p>The dictionary to update.</p>
@@ -194,25 +167,23 @@ print(dictionary.cats) -- 2
   <span class="token keyword">return</span> <span class="token number">1</span>
 <span class="token keyword">end</span><span class="token punctuation">)</span> <span class="token comment">-- { cats = 3, dogs = 1 }</span>
 </code></pre>
-</div><div class="divider_3z1R"></div><h3 class="anchor anchorWithStickyNavbar_31ik" id="flip"><code style="text-decoration:none">flip</code><a aria-hidden="true" class="hash-link" href="#flip" title="Direct link to heading">​</a></h3><div class="repositoryDetailsContainer_1UH0"><a class="sourceButton_2aE5" href="https://github.com/csqrl/sift/blob/main/src/Dictionary/flip.lua#L17"><div class="sourceButtonText_monK">&lt;/&gt;</div></a></div><div class="memberString_P8-X"><code>Dictionary<!-- -->.</code><code class="green_3LnD">flip</code><code>(</code><div class="inset_2cJr"><div><code>dictionary<!-- -->: </code><code class="purple__nFc">{</code><span><code>[</code><code class="blue_2Afy">K</code><code>]</code></span><code>: </code><code class="blue_2Afy">V</code><code class="purple__nFc">}</code><span class="inlineDescription_17uy">-- <span>
-<p>The dictionary to flip.</p>
-</span></span></div></div><code>) → </code><code class="purple__nFc">{</code><span><code>[</code><code class="blue_2Afy">V</code><code>]</code></span><code>: </code><code class="blue_2Afy">K</code><code class="purple__nFc">}</code><span class="inlineDescription_17uy">-- <span>
-<p>The flipped dictionary.</p>
+</div><div class="divider_3z1R"></div><h3 class="anchor anchorWithStickyNavbar_31ik" id="some"><code style="text-decoration:none">some</code><a aria-hidden="true" class="hash-link" href="#some" title="Direct link to heading">​</a></h3><div class="repositoryDetailsContainer_1UH0"><a class="sourceButton_2aE5" href="https://github.com/csqrl/sift/blob/main/src/Dictionary/some.lua#L24"><div class="sourceButtonText_monK">&lt;/&gt;</div></a></div><div class="memberString_P8-X"><code>Dictionary<!-- -->.</code><code class="green_3LnD">some</code><code>(</code><div class="inset_2cJr"><div><code>dictionary<!-- -->: </code><code class="purple__nFc">{</code><span><code>[</code><code class="blue_2Afy">K</code><code>]</code></span><code>: </code><code class="blue_2Afy">V</code><code class="purple__nFc">}</code><code>,</code><span class="inlineDescription_17uy">-- <span>
+<p>The dictionary to check.</p>
+</span></span></div><div><code>predicate<!-- -->: </code><code class="purple__nFc">(</code><div class="inset_2cJr"><code>value<!-- -->: </code><code class="blue_2Afy">V</code><code class="purple__nFc">,</code></div><div class="inset_2cJr"><code>key<!-- -->: </code><code class="blue_2Afy">K</code><code class="purple__nFc">,</code></div><div class="inset_2cJr"><code>dictionary<!-- -->: </code><code class="green_3LnD">{</code><span><code>[</code><code class="blue_2Afy">K</code><code>]</code></span><code>: </code><code class="blue_2Afy">V</code><code class="green_3LnD">}</code></div><code class="purple__nFc">)</code><code class="purple__nFc"> → </code><code class="blue_2Afy">any</code><span class="inlineDescription_17uy">-- <span>
+<p>The predicate to check against.</p>
+</span></span></div></div><code>) → </code><code class="blue_2Afy">boolean</code><span class="inlineDescription_17uy">-- <span>
+<p>Whether or not the predicate returned true for any value.</p>
 </span></span></div><div>
-<p>Flips a dictionary. Keys become values and values become keys.</p>
-<pre class="language-lua"><code class="language-lua"><span class="token keyword">local</span> dictionary <span class="token operator">=</span> <span class="token punctuation">{</span> hello <span class="token operator">=</span> <span class="token string">"roblox"</span><span class="token punctuation">,</span> goodbye <span class="token operator">=</span> <span class="token string">"world"</span> <span class="token punctuation">}</span>
+<p>Checks whether or not the predicate returned true for any value in the dictionary.</p>
+<pre class="language-lua"><code class="language-lua"><span class="token keyword">local</span> dictionary <span class="token operator">=</span> <span class="token punctuation">{</span> hello <span class="token operator">=</span> <span class="token string">"world"</span><span class="token punctuation">,</span> cat <span class="token operator">=</span> <span class="token string">"meow"</span><span class="token punctuation">,</span> unicorn <span class="token operator">=</span> <span class="token string">"rainbow"</span> <span class="token punctuation">}</span>
 
-<span class="token keyword">local</span> new <span class="token operator">=</span> <span class="token function">Flip</span><span class="token punctuation">(</span>dictionary<span class="token punctuation">)</span> <span class="token comment">-- { world = "goodbye", roblox = "hello" }</span>
-</code></pre>
-</div><div class="divider_3z1R"></div><h3 class="anchor anchorWithStickyNavbar_31ik" id="entries"><code style="text-decoration:none">entries</code><a aria-hidden="true" class="hash-link" href="#entries" title="Direct link to heading">​</a></h3><div class="repositoryDetailsContainer_1UH0"><a class="sourceButton_2aE5" href="https://github.com/csqrl/sift/blob/main/src/Dictionary/entries.lua#L17"><div class="sourceButtonText_monK">&lt;/&gt;</div></a></div><div class="memberString_P8-X"><code>Dictionary<!-- -->.</code><code class="green_3LnD">entries</code><code>(</code><div class="inset_2cJr"><div><code>dictionary<!-- -->: </code><code class="purple__nFc">{</code><span><code>[</code><code class="blue_2Afy">K</code><code>]</code></span><code>: </code><code class="blue_2Afy">V</code><code class="purple__nFc">}</code><span class="inlineDescription_17uy">-- <span>
-<p>The dictionary to get the entries from.</p>
-</span></span></div></div><code>) → </code><code class="purple__nFc">{</code><code class="green_3LnD">{</code><div class="inset_2cJr"><code class="blue_2Afy">K</code><code class="green_3LnD">,</code></div><div class="inset_2cJr"><code class="blue_2Afy">V</code></div><code class="green_3LnD">}</code><code class="purple__nFc">}</code><span class="inlineDescription_17uy">-- <span>
-<p>The entries in the dictionary.</p>
-</span></span></div><div>
-<p>Returns the entries in the given dictionary as an array of key-value pairs.</p>
-<pre class="language-lua"><code class="language-lua"><span class="token keyword">local</span> dictionary <span class="token operator">=</span> <span class="token punctuation">{</span> hello <span class="token operator">=</span> <span class="token string">"roblox"</span><span class="token punctuation">,</span> goodbye <span class="token operator">=</span> <span class="token string">"world"</span> <span class="token punctuation">}</span>
+<span class="token keyword">local</span> hasMeow <span class="token operator">=</span> <span class="token function">Some</span><span class="token punctuation">(</span>dictionary<span class="token punctuation">,</span> <span class="token keyword">function</span><span class="token punctuation">(</span>value<span class="token punctuation">)</span>
+  <span class="token keyword">return</span> value <span class="token operator">==</span> <span class="token string">"meow"</span>
+<span class="token keyword">end</span><span class="token punctuation">)</span> <span class="token comment">-- true</span>
 
-<span class="token keyword">local</span> entries <span class="token operator">=</span> <span class="token function">Entries</span><span class="token punctuation">(</span>dictionary<span class="token punctuation">)</span> <span class="token comment">-- { { "hello", "roblox" }, { "goodbye", "world" } }</span>
+<span class="token keyword">local</span> hasDog <span class="token operator">=</span> <span class="token function">Some</span><span class="token punctuation">(</span>dictionary<span class="token punctuation">,</span> <span class="token keyword">function</span><span class="token punctuation">(</span>_<span class="token punctuation">,</span> key<span class="token punctuation">)</span>
+  <span class="token keyword">return</span> key <span class="token operator">==</span> <span class="token string">"dog"</span>
+<span class="token keyword">end</span><span class="token punctuation">)</span> <span class="token comment">-- false</span>
 </code></pre>
 </div><div class="divider_3z1R"></div><h3 class="anchor anchorWithStickyNavbar_31ik" id="filter"><code style="text-decoration:none">filter</code><a aria-hidden="true" class="hash-link" href="#filter" title="Direct link to heading">​</a></h3><div class="repositoryDetailsContainer_1UH0"><a class="sourceButton_2aE5" href="https://github.com/csqrl/sift/blob/main/src/Dictionary/filter.lua#L24"><div class="sourceButtonText_monK">&lt;/&gt;</div></a></div><div class="memberString_P8-X"><code>Dictionary<!-- -->.</code><code class="green_3LnD">filter</code><code>(</code><div class="inset_2cJr"><div><code>dictionary<!-- -->: </code><code class="purple__nFc">{</code><span><code>[</code><code class="blue_2Afy">K</code><code>]</code></span><code>: </code><code class="blue_2Afy">V</code><code class="purple__nFc">}</code><code>,</code><span class="inlineDescription_17uy">-- <span>
 <p>The dictionary to filter.</p>
@@ -228,6 +199,132 @@ print(dictionary.cats) -- 2
   <span class="token keyword">return</span> value <span class="token operator">==</span> <span class="token string">"world"</span>
 <span class="token keyword">end</span><span class="token punctuation">)</span> <span class="token comment">-- { hello = "world" }</span>
 </code></pre>
+</div><div class="divider_3z1R"></div><h3 class="anchor anchorWithStickyNavbar_31ik" id="removeKey"><code style="text-decoration:none">removeKey</code><a aria-hidden="true" class="hash-link" href="#removeKey" title="Direct link to heading">​</a></h3><div class="repositoryDetailsContainer_1UH0"><a class="sourceButton_2aE5" href="https://github.com/csqrl/sift/blob/main/src/Dictionary/removeKey.lua#L21"><div class="sourceButtonText_monK">&lt;/&gt;</div></a></div><div class="memberString_P8-X"><code>Dictionary<!-- -->.</code><code class="green_3LnD">removeKey</code><code>(</code><div class="inset_2cJr"><div><code>dictionary<!-- -->: </code><code class="purple__nFc">{</code><span><code>[</code><code class="blue_2Afy">K</code><code>]</code></span><code>: </code><code class="blue_2Afy">V</code><code class="purple__nFc">}</code><code>,</code><span class="inlineDescription_17uy">-- <span>
+<p>The dictionary to remove the key from.</p>
+</span></span></div><div><code>key<!-- -->: </code><code class="blue_2Afy">K</code><span class="inlineDescription_17uy">-- <span>
+<p>The key to remove.</p>
+</span></span></div></div><code>) → </code><code class="purple__nFc">{</code><span><code>[</code><code class="blue_2Afy">K</code><code>]</code></span><code>: </code><code class="blue_2Afy">V</code><code class="purple__nFc">}</code><span class="inlineDescription_17uy">-- <span>
+<p>The dictionary without the given key.</p>
+</span></span></div><div>
+<p>Removes the given key from the given dictionary.</p>
+<pre class="language-lua"><code class="language-lua"><span class="token keyword">local</span> dictionary <span class="token operator">=</span> <span class="token punctuation">{</span> hello <span class="token operator">=</span> <span class="token string">"roblox"</span><span class="token punctuation">,</span> goodbye <span class="token operator">=</span> <span class="token string">"world"</span> <span class="token punctuation">}</span>
+
+<span class="token keyword">local</span> withoutHello <span class="token operator">=</span> <span class="token function">RemoveKey</span><span class="token punctuation">(</span>dictionary<span class="token punctuation">,</span> <span class="token string">"hello"</span><span class="token punctuation">)</span> <span class="token comment">-- { goodbye = "world" }</span>
+<span class="token keyword">local</span> withoutGoodbye <span class="token operator">=</span> <span class="token function">RemoveKey</span><span class="token punctuation">(</span>dictionary<span class="token punctuation">,</span> <span class="token string">"goodbye"</span><span class="token punctuation">)</span> <span class="token comment">-- { hello = "roblox" }</span>
+</code></pre>
+</div><div class="divider_3z1R"></div><h3 class="anchor anchorWithStickyNavbar_31ik" id="every"><code style="text-decoration:none">every</code><a aria-hidden="true" class="hash-link" href="#every" title="Direct link to heading">​</a></h3><div class="repositoryDetailsContainer_1UH0"><a class="sourceButton_2aE5" href="https://github.com/csqrl/sift/blob/main/src/Dictionary/every.lua#L24"><div class="sourceButtonText_monK">&lt;/&gt;</div></a></div><div class="memberString_P8-X"><code>Dictionary<!-- -->.</code><code class="green_3LnD">every</code><code>(</code><div class="inset_2cJr"><div><code>dictionary<!-- -->: </code><code class="purple__nFc">{</code><span><code>[</code><code class="blue_2Afy">K</code><code>]</code></span><code>: </code><code class="blue_2Afy">V</code><code class="purple__nFc">}</code><code>,</code><span class="inlineDescription_17uy">-- <span>
+<p>The dictionary to check.</p>
+</span></span></div><div><code>predicate<!-- -->: </code><code class="purple__nFc">(</code><div class="inset_2cJr"><code>value<!-- -->: </code><code class="blue_2Afy">V</code><code class="purple__nFc">,</code></div><div class="inset_2cJr"><code>key<!-- -->: </code><code class="blue_2Afy">K</code><code class="purple__nFc">,</code></div><div class="inset_2cJr"><code>dictionary<!-- -->: </code><code class="green_3LnD">{</code><span><code>[</code><code class="blue_2Afy">K</code><code>]</code></span><code>: </code><code class="blue_2Afy">V</code><code class="green_3LnD">}</code></div><code class="purple__nFc">)</code><code class="purple__nFc"> → </code><code class="blue_2Afy">any</code><span class="inlineDescription_17uy">-- <span>
+<p>The predicate to use to check the dictionary.</p>
+</span></span></div></div><code>) → </code><code class="blue_2Afy">boolean</code><span class="inlineDescription_17uy">-- <span>
+<p>Whether every item in the dictionary passes the predicate.</p>
+</span></span></div><div>
+<p>Checks whether every item in the dictionary passes the predicate.</p>
+<pre class="language-lua"><code class="language-lua"><span class="token keyword">local</span> dictionary <span class="token operator">=</span> <span class="token punctuation">{</span> hello <span class="token operator">=</span> <span class="token string">"world"</span><span class="token punctuation">,</span> goodbye <span class="token operator">=</span> <span class="token string">"world"</span> <span class="token punctuation">}</span>
+
+<span class="token keyword">local</span> value <span class="token operator">=</span> <span class="token function">Every</span><span class="token punctuation">(</span>dictionary<span class="token punctuation">,</span> <span class="token keyword">function</span><span class="token punctuation">(</span>value<span class="token punctuation">,</span> key<span class="token punctuation">)</span>
+  <span class="token keyword">return</span> value <span class="token operator">==</span> <span class="token string">"world"</span>
+<span class="token keyword">end</span><span class="token punctuation">)</span> <span class="token comment">-- true</span>
+
+<span class="token keyword">local</span> value <span class="token operator">=</span> <span class="token function">Every</span><span class="token punctuation">(</span>dictionary<span class="token punctuation">,</span> <span class="token keyword">function</span><span class="token punctuation">(</span>value<span class="token punctuation">,</span> key<span class="token punctuation">)</span>
+  <span class="token keyword">return</span> value <span class="token operator">==</span> <span class="token string">"hello"</span>
+<span class="token keyword">end</span><span class="token punctuation">)</span> <span class="token comment">-- false</span>
+</code></pre>
+</div><div class="divider_3z1R"></div><h3 class="anchor anchorWithStickyNavbar_31ik" id="flip"><code style="text-decoration:none">flip</code><a aria-hidden="true" class="hash-link" href="#flip" title="Direct link to heading">​</a></h3><div class="repositoryDetailsContainer_1UH0"><a class="sourceButton_2aE5" href="https://github.com/csqrl/sift/blob/main/src/Dictionary/flip.lua#L17"><div class="sourceButtonText_monK">&lt;/&gt;</div></a></div><div class="memberString_P8-X"><code>Dictionary<!-- -->.</code><code class="green_3LnD">flip</code><code>(</code><div class="inset_2cJr"><div><code>dictionary<!-- -->: </code><code class="purple__nFc">{</code><span><code>[</code><code class="blue_2Afy">K</code><code>]</code></span><code>: </code><code class="blue_2Afy">V</code><code class="purple__nFc">}</code><span class="inlineDescription_17uy">-- <span>
+<p>The dictionary to flip.</p>
+</span></span></div></div><code>) → </code><code class="purple__nFc">{</code><span><code>[</code><code class="blue_2Afy">V</code><code>]</code></span><code>: </code><code class="blue_2Afy">K</code><code class="purple__nFc">}</code><span class="inlineDescription_17uy">-- <span>
+<p>The flipped dictionary.</p>
+</span></span></div><div>
+<p>Flips a dictionary. Keys become values and values become keys.</p>
+<pre class="language-lua"><code class="language-lua"><span class="token keyword">local</span> dictionary <span class="token operator">=</span> <span class="token punctuation">{</span> hello <span class="token operator">=</span> <span class="token string">"roblox"</span><span class="token punctuation">,</span> goodbye <span class="token operator">=</span> <span class="token string">"world"</span> <span class="token punctuation">}</span>
+
+<span class="token keyword">local</span> new <span class="token operator">=</span> <span class="token function">Flip</span><span class="token punctuation">(</span>dictionary<span class="token punctuation">)</span> <span class="token comment">-- { world = "goodbye", roblox = "hello" }</span>
+</code></pre>
+</div><div class="divider_3z1R"></div><h3 class="anchor anchorWithStickyNavbar_31ik" id="flatten"><code style="text-decoration:none">flatten</code><a aria-hidden="true" class="hash-link" href="#flatten" title="Direct link to heading">​</a></h3><div class="repositoryDetailsContainer_1UH0"><a class="sourceButton_2aE5" href="https://github.com/csqrl/sift/blob/main/src/Dictionary/flatten.lua#L30"><div class="sourceButtonText_monK">&lt;/&gt;</div></a></div><div class="memberString_P8-X"><code>Dictionary<!-- -->.</code><code class="green_3LnD">flatten</code><code>(</code><div class="inset_2cJr"><div><code>dictionary<!-- -->: </code><code class="blue_2Afy">T</code><code>,</code><span class="inlineDescription_17uy">-- <span>
+<p>The dictionary to flatten.</p>
+</span></span></div><div><code>depth?<!-- -->: </code><code class="blue_2Afy">number</code><span class="inlineDescription_17uy">-- <span>
+<p>The depth to flatten the dictionary to.</p>
+</span></span></div></div><code>) → </code><code class="blue_2Afy">T</code><span class="inlineDescription_17uy">-- <span>
+<p>The flattened dictionary.</p>
+</span></span></div><div>
+<p>Flattens a dictionary. If depth is not specified, it will flatten the dictionary as far as it can go.</p>
+<pre class="language-lua"><code class="language-lua"><span class="token keyword">local</span> dictionary <span class="token operator">=</span> <span class="token punctuation">{</span>
+  hello <span class="token operator">=</span> <span class="token string">"world"</span><span class="token punctuation">,</span>
+  goodbye <span class="token operator">=</span> <span class="token punctuation">{</span>
+    world <span class="token operator">=</span> <span class="token string">"hello"</span><span class="token punctuation">,</span>
+    roblox <span class="token operator">=</span> <span class="token punctuation">{</span>
+      yes <span class="token operator">=</span> <span class="token string">"no"</span><span class="token punctuation">,</span>
+      no <span class="token operator">=</span> <span class="token string">"yes"</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">local</span> new <span class="token operator">=</span> <span class="token function">Flatten</span><span class="token punctuation">(</span>dictionary<span class="token punctuation">)</span> <span class="token comment">-- { hello = "world", world = "hello", yes = "no", no = "yes" }</span>
+<span class="token keyword">local</span> new <span class="token operator">=</span> <span class="token function">Flatten</span><span class="token punctuation">(</span>dictionary<span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token comment">-- { hello = "world", world = "hello", roblox = { yes = "no", no = "yes" } }</span>
+</code></pre>
+</div><div class="divider_3z1R"></div><h3 class="anchor anchorWithStickyNavbar_31ik" id="equals"><code style="text-decoration:none">equals</code><a aria-hidden="true" class="hash-link" href="#equals" title="Direct link to heading">​</a></h3><div class="repositoryDetailsContainer_1UH0"><a class="sourceButton_2aE5" href="https://github.com/csqrl/sift/blob/main/src/Dictionary/equals.lua#L45"><div class="sourceButtonText_monK">&lt;/&gt;</div></a></div><div class="memberString_P8-X"><code>Dictionary<!-- -->.</code><code class="green_3LnD">equals</code><code>(</code><div class="inset_2cJr"><div><code>...<!-- -->: </code><code class="blue_2Afy">...</code><code class="purple__nFc">{</code><span><code>[</code><code class="blue_2Afy">any</code><code>]</code></span><code>: </code><code class="blue_2Afy">any</code><code class="purple__nFc">}</code><span class="inlineDescription_17uy">-- <span>
+<p>The dictionaries to compare.</p>
+</span></span></div></div><code>) → </code><code class="blue_2Afy">boolean</code><span class="inlineDescription_17uy">-- <span>
+<p>Whether the dictionaries are equal.</p>
+</span></span></div><div>
+<p>Compares two dictionaries for equality.</p>
+<pre class="language-lua"><code class="language-lua"><span class="token keyword">local</span> dictionary <span class="token operator">=</span> <span class="token punctuation">{</span> hello <span class="token operator">=</span> <span class="token string">"world"</span><span class="token punctuation">,</span> goodbye <span class="token operator">=</span> <span class="token string">"world"</span> <span class="token punctuation">}</span>
+<span class="token keyword">local</span> other1 <span class="token operator">=</span> <span class="token punctuation">{</span> hello <span class="token operator">=</span> <span class="token string">"world"</span><span class="token punctuation">,</span> goodbye <span class="token operator">=</span> <span class="token string">"world"</span> <span class="token punctuation">}</span>
+<span class="token keyword">local</span> other2 <span class="token operator">=</span> <span class="token punctuation">{</span> hello <span class="token operator">=</span> <span class="token string">"hello"</span><span class="token punctuation">,</span> world <span class="token operator">=</span> <span class="token string">"goodbye"</span> <span class="token punctuation">}</span>
+
+<span class="token keyword">local</span> value <span class="token operator">=</span> <span class="token function">Equals</span><span class="token punctuation">(</span>dictionary<span class="token punctuation">,</span> other1<span class="token punctuation">)</span> <span class="token comment">-- true</span>
+<span class="token keyword">local</span> value <span class="token operator">=</span> <span class="token function">Equals</span><span class="token punctuation">(</span>dictionary<span class="token punctuation">,</span> other1<span class="token punctuation">,</span> other2<span class="token punctuation">)</span> <span class="token comment">-- false</span>
+</code></pre>
+</div><div class="divider_3z1R"></div><h3 class="anchor anchorWithStickyNavbar_31ik" id="entries"><code style="text-decoration:none">entries</code><a aria-hidden="true" class="hash-link" href="#entries" title="Direct link to heading">​</a></h3><div class="repositoryDetailsContainer_1UH0"><a class="sourceButton_2aE5" href="https://github.com/csqrl/sift/blob/main/src/Dictionary/entries.lua#L17"><div class="sourceButtonText_monK">&lt;/&gt;</div></a></div><div class="memberString_P8-X"><code>Dictionary<!-- -->.</code><code class="green_3LnD">entries</code><code>(</code><div class="inset_2cJr"><div><code>dictionary<!-- -->: </code><code class="purple__nFc">{</code><span><code>[</code><code class="blue_2Afy">K</code><code>]</code></span><code>: </code><code class="blue_2Afy">V</code><code class="purple__nFc">}</code><span class="inlineDescription_17uy">-- <span>
+<p>The dictionary to get the entries from.</p>
+</span></span></div></div><code>) → </code><code class="purple__nFc">{</code><code class="green_3LnD">{</code><div class="inset_2cJr"><code class="blue_2Afy">K</code><code class="green_3LnD">,</code></div><div class="inset_2cJr"><code class="blue_2Afy">V</code></div><code class="green_3LnD">}</code><code class="purple__nFc">}</code><span class="inlineDescription_17uy">-- <span>
+<p>The entries in the dictionary.</p>
+</span></span></div><div>
+<p>Returns the entries in the given dictionary as an array of key-value pairs.</p>
+<pre class="language-lua"><code class="language-lua"><span class="token keyword">local</span> dictionary <span class="token operator">=</span> <span class="token punctuation">{</span> hello <span class="token operator">=</span> <span class="token string">"roblox"</span><span class="token punctuation">,</span> goodbye <span class="token operator">=</span> <span class="token string">"world"</span> <span class="token punctuation">}</span>
+
+<span class="token keyword">local</span> entries <span class="token operator">=</span> <span class="token function">Entries</span><span class="token punctuation">(</span>dictionary<span class="token punctuation">)</span> <span class="token comment">-- { { "hello", "roblox" }, { "goodbye", "world" } }</span>
+</code></pre>
+</div><div class="divider_3z1R"></div><h3 class="anchor anchorWithStickyNavbar_31ik" id="freezeDeep"><code style="text-decoration:none">freezeDeep</code><a aria-hidden="true" class="hash-link" href="#freezeDeep" title="Direct link to heading">​</a></h3><div class="repositoryDetailsContainer_1UH0"><a class="sourceButton_2aE5" href="https://github.com/csqrl/sift/blob/main/src/Dictionary/freezeDeep.lua#L22"><div class="sourceButtonText_monK">&lt;/&gt;</div></a></div><div class="memberString_P8-X"><code>Dictionary<!-- -->.</code><code class="green_3LnD">freezeDeep</code><code>(</code><div class="inset_2cJr"><div><code>dictionary<!-- -->: </code><code class="blue_2Afy">T</code><span class="inlineDescription_17uy">-- <span>
+<p>The dictionary to freeze.</p>
+</span></span></div></div><code>) → </code><code class="blue_2Afy">T</code><span class="inlineDescription_17uy">-- <span>
+<p>The frozen dictionary.</p>
+</span></span></div><div>
+<p>Freezes the entire dictionary, making it read-only, including all nested dictionaries.</p>
+<pre class="language-lua"><code class="language-lua"><span class="token keyword">local</span> dictionary <span class="token operator">=</span> <span class="token punctuation">{</span> hello <span class="token operator">=</span> <span class="token string">"roblox"</span><span class="token punctuation">,</span> goodbye <span class="token operator">=</span> <span class="token punctuation">{</span> world <span class="token operator">=</span> <span class="token string">"world"</span> <span class="token punctuation">}</span> <span class="token punctuation">}</span>
+
+<span class="token keyword">local</span> new <span class="token operator">=</span> <span class="token function">FreezeDeep</span><span class="token punctuation">(</span>dictionary<span class="token punctuation">)</span>
+
+new<span class="token punctuation">.</span>hello <span class="token operator">=</span> <span class="token string">"world"</span> <span class="token comment">-- error!</span>
+new<span class="token punctuation">.</span>goodbye<span class="token punctuation">.</span>world <span class="token operator">=</span> <span class="token string">"hello"</span> <span class="token comment">-- error!</span>
+</code></pre>
+</div><div class="divider_3z1R"></div><h3 class="anchor anchorWithStickyNavbar_31ik" id="has"><code style="text-decoration:none">has</code><a aria-hidden="true" class="hash-link" href="#has" title="Direct link to heading">​</a></h3><div class="repositoryDetailsContainer_1UH0"><a class="sourceButton_2aE5" href="https://github.com/csqrl/sift/blob/main/src/Dictionary/has.lua#L21"><div class="sourceButtonText_monK">&lt;/&gt;</div></a></div><div class="memberString_P8-X"><code>Dictionary<!-- -->.</code><code class="green_3LnD">has</code><code>(</code><div class="inset_2cJr"><div><code>dictionary<!-- -->: </code><code class="purple__nFc">{</code><span><code>[</code><code class="blue_2Afy">K</code><code>]</code></span><code>: </code><code class="blue_2Afy">V</code><code class="purple__nFc">}</code><code>,</code><span class="inlineDescription_17uy">-- <span>
+<p>The dictionary to check.</p>
+</span></span></div><div><code>key<!-- -->: </code><code class="blue_2Afy">any</code><span class="inlineDescription_17uy">-- <span>
+<p>The key to check for.</p>
+</span></span></div></div><code>) → </code><code class="blue_2Afy">boolean</code><span class="inlineDescription_17uy">-- <span>
+<p>Whether or not the dictionary has the given key.</p>
+</span></span></div><div>
+<p>Checks whether or not the given dictionary has the given key.</p>
+<pre class="language-lua"><code class="language-lua"><span class="token keyword">local</span> dictionary <span class="token operator">=</span> <span class="token punctuation">{</span> hello <span class="token operator">=</span> <span class="token string">"roblox"</span><span class="token punctuation">,</span> goodbye <span class="token operator">=</span> <span class="token string">"world"</span> <span class="token punctuation">}</span>
+
+<span class="token keyword">local</span> hasHello <span class="token operator">=</span> <span class="token function">Has</span><span class="token punctuation">(</span>dictionary<span class="token punctuation">,</span> <span class="token string">"hello"</span><span class="token punctuation">)</span> <span class="token comment">-- true</span>
+<span class="token keyword">local</span> hasCat <span class="token operator">=</span> <span class="token function">Has</span><span class="token punctuation">(</span>dictionary<span class="token punctuation">,</span> <span class="token string">"cat"</span><span class="token punctuation">)</span> <span class="token comment">-- false</span>
+</code></pre>
+</div><div class="divider_3z1R"></div><h3 class="anchor anchorWithStickyNavbar_31ik" id="set"><code style="text-decoration:none">set</code><a aria-hidden="true" class="hash-link" href="#set" title="Direct link to heading">​</a></h3><div class="repositoryDetailsContainer_1UH0"><a class="sourceButton_2aE5" href="https://github.com/csqrl/sift/blob/main/src/Dictionary/set.lua#L21"><div class="sourceButtonText_monK">&lt;/&gt;</div></a></div><div class="memberString_P8-X"><code>Dictionary<!-- -->.</code><code class="green_3LnD">set</code><code>(</code><div class="inset_2cJr"><div><code>dictionary<!-- -->: </code><code class="purple__nFc">{</code><span><code>[</code><code class="blue_2Afy">K</code><code>]</code></span><code>: </code><code class="blue_2Afy">V</code><code class="purple__nFc">}</code><code>,</code><span class="inlineDescription_17uy">-- <span>
+<p>The dictionary to set the value in.</p>
+</span></span></div><div><code>key<!-- -->: </code><code class="blue_2Afy">K</code><code>,</code><span class="inlineDescription_17uy">-- <span>
+<p>The key to set the value in.</p>
+</span></span></div><div><code>value<!-- -->: </code><code class="blue_2Afy">V</code><span class="inlineDescription_17uy">-- <span>
+<p>The value to set.</p>
+</span></span></div></div><code>) → </code><code class="purple__nFc">{</code><span><code>[</code><code class="blue_2Afy">K</code><code>]</code></span><code>: </code><code class="blue_2Afy">V</code><code class="purple__nFc">}</code><span class="inlineDescription_17uy">-- <span>
+<p>The dictionary with the given value set.</p>
+</span></span></div><div>
+<p>Sets the given value in the given dictionary.</p>
+<pre class="language-lua"><code class="language-lua"><span class="token keyword">local</span> dictionary <span class="token operator">=</span> <span class="token punctuation">{</span> hello <span class="token operator">=</span> <span class="token string">"world"</span><span class="token punctuation">,</span> cat <span class="token operator">=</span> <span class="token string">"meow"</span><span class="token punctuation">,</span> unicorn <span class="token operator">=</span> <span class="token string">"rainbow"</span> <span class="token punctuation">}</span>
+
+<span class="token keyword">local</span> setCat <span class="token operator">=</span> <span class="token function">Set</span><span class="token punctuation">(</span>dictionary<span class="token punctuation">,</span> <span class="token string">"cat"</span><span class="token punctuation">,</span> <span class="token string">"woof"</span><span class="token punctuation">)</span> <span class="token comment">-- { hello = "world", cat = "woof", unicorn = "rainbow" }</span>
+</code></pre>
 </div><div class="divider_3z1R"></div><h3 class="anchor anchorWithStickyNavbar_31ik" id="values"><code style="text-decoration:none">values</code><a aria-hidden="true" class="hash-link" href="#values" title="Direct link to heading">​</a></h3><div class="repositoryDetailsContainer_1UH0"><a class="sourceButton_2aE5" href="https://github.com/csqrl/sift/blob/main/src/Dictionary/values.lua#L17"><div class="sourceButtonText_monK">&lt;/&gt;</div></a></div><div class="memberString_P8-X"><code>Dictionary<!-- -->.</code><code class="green_3LnD">values</code><code>(</code><div class="inset_2cJr"><div><code>dictionary<!-- -->: </code><code class="purple__nFc">{</code><span><code>[</code><code class="blue_2Afy">K</code><code>]</code></span><code>: </code><code class="blue_2Afy">V</code><code class="purple__nFc">}</code><span class="inlineDescription_17uy">-- <span>
 <p>The dictionary to get the values from.</p>
 </span></span></div></div><code>) → </code><code class="purple__nFc">{</code><code class="blue_2Afy">V</code><code class="purple__nFc">}</code><span class="inlineDescription_17uy">-- <span>
@@ -238,18 +335,87 @@ print(dictionary.cats) -- 2
 
 <span class="token keyword">local</span> values <span class="token operator">=</span> <span class="token function">Values</span><span class="token punctuation">(</span>dictionary<span class="token punctuation">)</span> <span class="token comment">-- { "roblox", "world" }</span>
 </code></pre>
-</div><div class="divider_3z1R"></div><h3 class="anchor anchorWithStickyNavbar_31ik" id="equalsDeep"><code style="text-decoration:none">equalsDeep</code><a aria-hidden="true" class="hash-link" href="#equalsDeep" title="Direct link to heading">​</a></h3><div class="repositoryDetailsContainer_1UH0"><a class="sourceButton_2aE5" href="https://github.com/csqrl/sift/blob/main/src/Dictionary/equalsDeep.lua#L45"><div class="sourceButtonText_monK">&lt;/&gt;</div></a></div><div class="memberString_P8-X"><code>Dictionary<!-- -->.</code><code class="green_3LnD">equalsDeep</code><code>(</code><div class="inset_2cJr"><div><code>...<!-- -->: </code><code class="blue_2Afy">...</code><code class="purple__nFc">{</code><span><code>[</code><code class="blue_2Afy">any</code><code>]</code></span><code>: </code><code class="blue_2Afy">any</code><code class="purple__nFc">}</code><span class="inlineDescription_17uy">-- <span>
-<p>The dictionaries to compare.</p>
-</span></span></div></div><code>) → </code><code class="blue_2Afy">boolean</code><span class="inlineDescription_17uy">-- <span>
-<p>Whether the dictionaries are equal.</p>
+</div><div class="divider_3z1R"></div><h3 class="anchor anchorWithStickyNavbar_31ik" id="merge"><code style="text-decoration:none">merge</code><a aria-hidden="true" class="hash-link" href="#merge" title="Direct link to heading">​</a></h3><div class="repositoryDetailsContainer_1UH0"><a class="sourceButton_2aE5" href="https://github.com/csqrl/sift/blob/main/src/Dictionary/merge.lua#L27"><div class="sourceButtonText_monK">&lt;/&gt;</div></a></div><div class="memberString_P8-X"><code>Dictionary<!-- -->.</code><code class="green_3LnD">merge</code><code>(</code><div class="inset_2cJr"><div><code>dictionaries?<!-- -->: </code><code class="blue_2Afy">...any</code><span class="inlineDescription_17uy">-- <span>
+<p>The dictionaries to merge.</p>
+</span></span></div></div><code>) → </code><code class="blue_2Afy">T</code><span class="inlineDescription_17uy">-- <span>
+<p>The merged dictionary.</p>
 </span></span></div><div>
-<p>Compares two dictionaries for equality using deep comparison.</p>
-<pre class="language-lua"><code class="language-lua"><span class="token keyword">local</span> dictionary <span class="token operator">=</span> <span class="token punctuation">{</span> hello <span class="token operator">=</span> <span class="token string">"world"</span><span class="token punctuation">,</span> goodbye <span class="token operator">=</span> <span class="token punctuation">{</span> world <span class="token operator">=</span> <span class="token string">"hello"</span> <span class="token punctuation">}</span> <span class="token punctuation">}</span>
-<span class="token keyword">local</span> other1 <span class="token operator">=</span> <span class="token punctuation">{</span> hello <span class="token operator">=</span> <span class="token string">"world"</span><span class="token punctuation">,</span> goodbye <span class="token operator">=</span> <span class="token punctuation">{</span> world <span class="token operator">=</span> <span class="token string">"hello"</span> <span class="token punctuation">}</span> <span class="token punctuation">}</span>
-<span class="token keyword">local</span> other2 <span class="token operator">=</span> <span class="token punctuation">{</span> hello <span class="token operator">=</span> <span class="token string">"hello"</span><span class="token punctuation">,</span> world <span class="token operator">=</span> <span class="token string">"goodbye"</span> <span class="token punctuation">}</span>
+<p>
+  Merges the given dictionaries into a single dictionary. If the
+  value is <code>None</code>, it will be removed from the result. The
+  parameters may be any number of dictionaries or <code>nil</code>.
+  Non-dictonaries will be ignored.
+</p>
+<p>Aliases: <code>join</code></p>
+<pre class="language-lua"><code class="language-lua"><span class="token keyword">local</span> dictionary1 <span class="token operator">=</span> <span class="token punctuation">{</span> hello <span class="token operator">=</span> <span class="token string">"roblox"</span><span class="token punctuation">,</span> goodbye <span class="token operator">=</span> <span class="token string">"world"</span> <span class="token punctuation">}</span>
+<span class="token keyword">local</span> dictionary2 <span class="token operator">=</span> <span class="token punctuation">{</span> goodbye <span class="token operator">=</span> <span class="token string">"goodbye"</span> <span class="token punctuation">}</span>
 
-<span class="token keyword">local</span> value <span class="token operator">=</span> <span class="token function">EqualsDeep</span><span class="token punctuation">(</span>dictionary<span class="token punctuation">,</span> other1<span class="token punctuation">)</span> <span class="token comment">-- true</span>
-<span class="token keyword">local</span> value <span class="token operator">=</span> <span class="token function">EqualsDeep</span><span class="token punctuation">(</span>dictionary<span class="token punctuation">,</span> other1<span class="token punctuation">,</span> other2<span class="token punctuation">)</span> <span class="token comment">-- false</span>
+<span class="token keyword">local</span> merged <span class="token operator">=</span> <span class="token function">Merge</span><span class="token punctuation">(</span>dictionary1<span class="token punctuation">,</span> dictionary2<span class="token punctuation">)</span> <span class="token comment">-- { hello = "roblox", goodbye = "goodbye" }</span>
+</code></pre>
+</div><div class="divider_3z1R"></div><h3 class="anchor anchorWithStickyNavbar_31ik" id="freeze"><code style="text-decoration:none">freeze</code><a aria-hidden="true" class="hash-link" href="#freeze" title="Direct link to heading">​</a></h3><div class="repositoryDetailsContainer_1UH0"><a class="sourceButton_2aE5" href="https://github.com/csqrl/sift/blob/main/src/Dictionary/freeze.lua#L23"><div class="sourceButtonText_monK">&lt;/&gt;</div></a></div><div class="memberString_P8-X"><code>Dictionary<!-- -->.</code><code class="green_3LnD">freeze</code><code>(</code><div class="inset_2cJr"><div><code>dictionary<!-- -->: </code><code class="blue_2Afy">T</code><span class="inlineDescription_17uy">-- <span>
+<p>The dictionary to freeze.</p>
+</span></span></div></div><code>) → </code><code class="blue_2Afy">T</code><span class="inlineDescription_17uy">-- <span>
+<p>The frozen dictionary.</p>
+</span></span></div><div>
+<p>Freezes the given dictionary at the top level, making it read-only.</p>
+<pre class="language-lua"><code class="language-lua"><span class="token keyword">local</span> dictionary <span class="token operator">=</span> <span class="token punctuation">{</span> hello <span class="token operator">=</span> <span class="token string">"roblox"</span><span class="token punctuation">,</span> goodbye <span class="token operator">=</span> <span class="token punctuation">{</span> world <span class="token operator">=</span> <span class="token string">"world"</span> <span class="token punctuation">}</span> <span class="token punctuation">}</span>
+
+<span class="token keyword">local</span> new <span class="token operator">=</span> <span class="token function">Freeze</span><span class="token punctuation">(</span>dictionary<span class="token punctuation">)</span>
+
+new<span class="token punctuation">.</span>hello <span class="token operator">=</span> <span class="token string">"world"</span> <span class="token comment">-- error!</span>
+new<span class="token punctuation">.</span>goodbye<span class="token punctuation">.</span>world <span class="token operator">=</span> <span class="token string">"hello"</span> <span class="token comment">-- still works!</span>
+</code></pre>
+</div><div class="divider_3z1R"></div><h3 class="anchor anchorWithStickyNavbar_31ik" id="fromEntries"><code style="text-decoration:none">fromEntries</code><a aria-hidden="true" class="hash-link" href="#fromEntries" title="Direct link to heading">​</a></h3><div class="repositoryDetailsContainer_1UH0"><a class="sourceButton_2aE5" href="https://github.com/csqrl/sift/blob/main/src/Dictionary/fromEntries.lua#L17"><div class="sourceButtonText_monK">&lt;/&gt;</div></a></div><div class="memberString_P8-X"><code>Dictionary<!-- -->.</code><code class="green_3LnD">fromEntries</code><code>(</code><div class="inset_2cJr"><div><code>entries<!-- -->: </code><code class="purple__nFc">{</code><code class="green_3LnD">{</code><div class="inset_2cJr"><code class="blue_2Afy">K</code><code class="green_3LnD">,</code></div><div class="inset_2cJr"><code class="blue_2Afy">V</code></div><code class="green_3LnD">}</code><code class="purple__nFc">}</code><span class="inlineDescription_17uy">-- <span>
+<p>An array of key-value pairs.</p>
+</span></span></div></div><code>) → </code><code class="purple__nFc">{</code><span><code>[</code><code class="blue_2Afy">K</code><code>]</code></span><code>: </code><code class="blue_2Afy">V</code><code class="purple__nFc">}</code><span class="inlineDescription_17uy">-- <span>
+<p>A dictionary composed of the given key-value pairs.</p>
+</span></span></div><div>
+<p>Creates a dictionary from the given key-value pairs.</p>
+<pre class="language-lua"><code class="language-lua"><span class="token keyword">local</span> entries <span class="token operator">=</span> <span class="token punctuation">{</span> <span class="token punctuation">{</span> <span class="token string">"hello"</span><span class="token punctuation">,</span> <span class="token string">"roblox"</span> <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">{</span> <span class="token string">"goodbye"</span><span class="token punctuation">,</span> <span class="token string">"world"</span> <span class="token punctuation">}</span> <span class="token punctuation">}</span>
+
+<span class="token keyword">local</span> dictionary <span class="token operator">=</span> <span class="token function">FromEntries</span><span class="token punctuation">(</span>entries<span class="token punctuation">)</span> <span class="token comment">-- { hello = "roblox", goodbye = "world" }</span>
+</code></pre>
+</div><div class="divider_3z1R"></div><h3 class="anchor anchorWithStickyNavbar_31ik" id="fromArrays"><code style="text-decoration:none">fromArrays</code><a aria-hidden="true" class="hash-link" href="#fromArrays" title="Direct link to heading">​</a></h3><div class="repositoryDetailsContainer_1UH0"><a class="sourceButton_2aE5" href="https://github.com/csqrl/sift/blob/main/src/Dictionary/fromArrays.lua#L20"><div class="sourceButtonText_monK">&lt;/&gt;</div></a></div><div class="memberString_P8-X"><code>Dictionary<!-- -->.</code><code class="green_3LnD">fromArrays</code><code>(</code><div class="inset_2cJr"><div><code>keys<!-- -->: </code><code class="purple__nFc">{</code><code class="blue_2Afy">K</code><code class="purple__nFc">}</code><code>,</code><span class="inlineDescription_17uy">-- <span>
+<p>An array containing values to be used as keys.</p>
+</span></span></div><div><code>values<!-- -->: </code><code class="purple__nFc">{</code><code class="blue_2Afy">V</code><code class="purple__nFc">}</code><span class="inlineDescription_17uy">-- <span>
+<p>An array containing values to be used as values.</p>
+</span></span></div></div><code>) → </code><code class="purple__nFc">{</code><span><code>[</code><code class="blue_2Afy">K</code><code>]</code></span><code>: </code><code class="blue_2Afy">V</code><code class="purple__nFc">}</code><span class="inlineDescription_17uy">-- <span>
+<p>A dictionary composed of the given keys and values.</p>
+</span></span></div><div>
+<p>
+  Creates a dictionary from the given arrays, where the first array is used
+  as keys and the second array is used as values.
+</p>
+<pre class="language-lua"><code class="language-lua"><span class="token keyword">local</span> keys <span class="token operator">=</span> <span class="token punctuation">{</span> <span class="token string">"hello"</span><span class="token punctuation">,</span> <span class="token string">"goodbye"</span> <span class="token punctuation">}</span>
+<span class="token keyword">local</span> values <span class="token operator">=</span> <span class="token punctuation">{</span> <span class="token string">"roblox"</span><span class="token punctuation">,</span> <span class="token string">"world"</span> <span class="token punctuation">}</span>
+
+<span class="token keyword">local</span> dictionary <span class="token operator">=</span> <span class="token function">FromArrays</span><span class="token punctuation">(</span>keys<span class="token punctuation">,</span> values<span class="token punctuation">)</span> <span class="token comment">-- { hello = "roblox", goodbye = "world" }</span>
+</code></pre>
+</div><div class="divider_3z1R"></div><h3 class="anchor anchorWithStickyNavbar_31ik" id="copy"><code style="text-decoration:none">copy</code><a aria-hidden="true" class="hash-link" href="#copy" title="Direct link to heading">​</a></h3><div class="repositoryDetailsContainer_1UH0"><a class="sourceButton_2aE5" href="https://github.com/csqrl/sift/blob/main/src/Dictionary/copy.lua#L20"><div class="sourceButtonText_monK">&lt;/&gt;</div></a></div><div class="memberString_P8-X"><code>Dictionary<!-- -->.</code><code class="green_3LnD">copy</code><code>(</code><div class="inset_2cJr"><div><code>dictionary<!-- -->: </code><code class="blue_2Afy">T</code><span class="inlineDescription_17uy">-- <span>
+<p>The dictionary to copy.</p>
+</span></span></div></div><code>) → </code><code class="blue_2Afy">T</code><span class="inlineDescription_17uy">-- <span>
+<p>The copied dictionary.</p>
+</span></span></div><div>
+<p>Copies a dictionary.</p>
+<pre class="language-lua"><code class="language-lua"><span class="token keyword">local</span> dictionary <span class="token operator">=</span> <span class="token punctuation">{</span> hello <span class="token operator">=</span> <span class="token string">"world"</span> <span class="token punctuation">}</span>
+
+<span class="token keyword">local</span> new <span class="token operator">=</span> <span class="token function">Copy</span><span class="token punctuation">(</span>dictionary<span class="token punctuation">)</span> <span class="token comment">-- { hello = "world" }</span>
+
+<span class="token function">print</span><span class="token punctuation">(</span>new <span class="token operator">==</span> dictionary<span class="token punctuation">)</span> <span class="token comment">-- false</span>
+<span class="token function">print</span><span class="token punctuation">(</span>new<span class="token punctuation">.</span>hello <span class="token operator">==</span> dictionary<span class="token punctuation">.</span>hello<span class="token punctuation">)</span> <span class="token comment">-- true</span>
+</code></pre>
+</div><div class="divider_3z1R"></div><h3 class="anchor anchorWithStickyNavbar_31ik" id="removeValues"><code style="text-decoration:none">removeValues</code><a aria-hidden="true" class="hash-link" href="#removeValues" title="Direct link to heading">​</a></h3><div class="repositoryDetailsContainer_1UH0"><a class="sourceButton_2aE5" href="https://github.com/csqrl/sift/blob/main/src/Dictionary/removeValues.lua#L23"><div class="sourceButtonText_monK">&lt;/&gt;</div></a></div><div class="memberString_P8-X"><code>Dictionary<!-- -->.</code><code class="green_3LnD">removeValues</code><code>(</code><div class="inset_2cJr"><div><code>dictionary<!-- -->: </code><code class="purple__nFc">{</code><span><code>[</code><code class="blue_2Afy">K</code><code>]</code></span><code>: </code><code class="blue_2Afy">V</code><code class="purple__nFc">}</code><code>,</code><span class="inlineDescription_17uy">-- <span>
+<p>The dictionary to remove the values from.</p>
+</span></span></div><div><code>values<!-- -->: </code><code class="blue_2Afy">...V</code><span class="inlineDescription_17uy">-- <span>
+<p>The values to remove.</p>
+</span></span></div></div><code>) → </code><code class="purple__nFc">{</code><span><code>[</code><code class="blue_2Afy">K</code><code>]</code></span><code>: </code><code class="blue_2Afy">V</code><code class="purple__nFc">}</code><span class="inlineDescription_17uy">-- <span>
+<p>The dictionary without the given values.</p>
+</span></span></div><div>
+<p>Removes the given values from the given dictionary.</p>
+<pre class="language-lua"><code class="language-lua"><span class="token keyword">local</span> dictionary <span class="token operator">=</span> <span class="token punctuation">{</span> hello <span class="token operator">=</span> <span class="token string">"world"</span><span class="token punctuation">,</span> cat <span class="token operator">=</span> <span class="token string">"meow"</span><span class="token punctuation">,</span> unicorn <span class="token operator">=</span> <span class="token string">"rainbow"</span><span class="token punctuation">,</span> goodbye <span class="token operator">=</span> <span class="token string">"world"</span> <span class="token punctuation">}</span>
+
+<span class="token keyword">local</span> withoutWorld <span class="token operator">=</span> <span class="token function">RemoveValues</span><span class="token punctuation">(</span>dictionary<span class="token punctuation">,</span> <span class="token string">"world"</span><span class="token punctuation">)</span> <span class="token comment">-- { cat = "meow", unicorn = "rainbow" }</span>
+<span class="token keyword">local</span> onlyWorld <span class="token operator">=</span> <span class="token function">RemoveValues</span><span class="token punctuation">(</span>dictionary<span class="token punctuation">,</span> <span class="token string">"meow"</span><span class="token punctuation">,</span> <span class="token string">"rainbow"</span><span class="token punctuation">)</span> <span class="token comment">-- { hello = "world", goodbye = "world" }</span>
 </code></pre>
 </div><div class="divider_3z1R"></div><h3 class="anchor anchorWithStickyNavbar_31ik" id="map"><code style="text-decoration:none">map</code><a aria-hidden="true" class="hash-link" href="#map" title="Direct link to heading">​</a></h3><div class="repositoryDetailsContainer_1UH0"><a class="sourceButton_2aE5" href="https://github.com/csqrl/sift/blob/main/src/Dictionary/map.lua#L26"><div class="sourceButtonText_monK">&lt;/&gt;</div></a></div><div class="memberString_P8-X"><code>Dictionary<!-- -->.</code><code class="green_3LnD">map</code><code>(</code><div class="inset_2cJr"><div><code>dictionary<!-- -->: </code><code class="purple__nFc">{</code><span><code>[</code><code class="blue_2Afy">K</code><code>]</code></span><code>: </code><code class="blue_2Afy">V</code><code class="purple__nFc">}</code><code>,</code><span class="inlineDescription_17uy">-- <span>
 <p>The dictionary to map.</p>
@@ -273,201 +439,8 @@ print(dictionary.cats) -- 2
   <span class="token keyword">return</span> value <span class="token operator">*</span> <span class="token number">10</span>
 <span class="token keyword">end</span><span class="token punctuation">)</span> <span class="token comment">-- { hello = 100, goodbye = 200 }</span>
 </code></pre>
-</div><div class="divider_3z1R"></div><h3 class="anchor anchorWithStickyNavbar_31ik" id="freeze"><code style="text-decoration:none">freeze</code><a aria-hidden="true" class="hash-link" href="#freeze" title="Direct link to heading">​</a></h3><div class="repositoryDetailsContainer_1UH0"><a class="sourceButton_2aE5" href="https://github.com/csqrl/sift/blob/main/src/Dictionary/freeze.lua#L23"><div class="sourceButtonText_monK">&lt;/&gt;</div></a></div><div class="memberString_P8-X"><code>Dictionary<!-- -->.</code><code class="green_3LnD">freeze</code><code>(</code><div class="inset_2cJr"><div><code>dictionary<!-- -->: </code><code class="blue_2Afy">T</code><span class="inlineDescription_17uy">-- <span>
-<p>The dictionary to freeze.</p>
-</span></span></div></div><code>) → </code><code class="blue_2Afy">T</code><span class="inlineDescription_17uy">-- <span>
-<p>The frozen dictionary.</p>
-</span></span></div><div>
-<p>Freezes the given dictionary at the top level, making it read-only.</p>
-<pre class="language-lua"><code class="language-lua"><span class="token keyword">local</span> dictionary <span class="token operator">=</span> <span class="token punctuation">{</span> hello <span class="token operator">=</span> <span class="token string">"roblox"</span><span class="token punctuation">,</span> goodbye <span class="token operator">=</span> <span class="token punctuation">{</span> world <span class="token operator">=</span> <span class="token string">"world"</span> <span class="token punctuation">}</span> <span class="token punctuation">}</span>
-
-<span class="token keyword">local</span> new <span class="token operator">=</span> <span class="token function">Freeze</span><span class="token punctuation">(</span>dictionary<span class="token punctuation">)</span>
-
-new<span class="token punctuation">.</span>hello <span class="token operator">=</span> <span class="token string">"world"</span> <span class="token comment">-- error!</span>
-new<span class="token punctuation">.</span>goodbye<span class="token punctuation">.</span>world <span class="token operator">=</span> <span class="token string">"hello"</span> <span class="token comment">-- still works!</span>
-</code></pre>
-</div><div class="divider_3z1R"></div><h3 class="anchor anchorWithStickyNavbar_31ik" id="includes"><code style="text-decoration:none">includes</code><a aria-hidden="true" class="hash-link" href="#includes" title="Direct link to heading">​</a></h3><div class="repositoryDetailsContainer_1UH0"><a class="sourceButton_2aE5" href="https://github.com/csqrl/sift/blob/main/src/Dictionary/includes.lua#L19"><div class="sourceButtonText_monK">&lt;/&gt;</div></a></div><div class="memberString_P8-X"><code>Dictionary<!-- -->.</code><code class="green_3LnD">includes</code><code>(</code><div class="inset_2cJr"><div><code>dictionary<!-- -->: </code><code class="purple__nFc">{</code><span><code>[</code><code class="blue_2Afy">K</code><code>]</code></span><code>: </code><code class="blue_2Afy">V</code><code class="purple__nFc">}</code><code>,</code><span class="inlineDescription_17uy">-- <span>
-<p>The dictionary to check.</p>
-</span></span></div><div><code>value<!-- -->: </code><code class="blue_2Afy">V</code><span class="inlineDescription_17uy">-- <span>
-<p>The value to check for.</p>
-</span></span></div></div><code>) → </code><code class="blue_2Afy">boolean</code><span class="inlineDescription_17uy">-- <span>
-<p>Whether or not the dictionary includes the given value.</p>
-</span></span></div><div>
-<p>Checks whether or not the given dictionary includes the given value.</p>
-<pre class="language-lua"><code class="language-lua"><span class="token keyword">local</span> dictionary <span class="token operator">=</span> <span class="token punctuation">{</span> hello <span class="token operator">=</span> <span class="token string">"roblox"</span><span class="token punctuation">,</span> goodbye <span class="token operator">=</span> <span class="token string">"world"</span> <span class="token punctuation">}</span>
-
-<span class="token keyword">local</span> includesRoblox <span class="token operator">=</span> <span class="token function">Includes</span><span class="token punctuation">(</span>dictionary<span class="token punctuation">,</span> <span class="token string">"roblox"</span><span class="token punctuation">)</span> <span class="token comment">-- true</span>
-<span class="token keyword">local</span> includesCat <span class="token operator">=</span> <span class="token function">Includes</span><span class="token punctuation">(</span>dictionary<span class="token punctuation">,</span> <span class="token string">"cat"</span><span class="token punctuation">)</span> <span class="token comment">-- false</span>
-</code></pre>
-</div><div class="divider_3z1R"></div><h3 class="anchor anchorWithStickyNavbar_31ik" id="count"><code style="text-decoration:none">count</code><a aria-hidden="true" class="hash-link" href="#count" title="Direct link to heading">​</a></h3><div class="repositoryDetailsContainer_1UH0"><a class="sourceButton_2aE5" href="https://github.com/csqrl/sift/blob/main/src/Dictionary/count.lua#L25"><div class="sourceButtonText_monK">&lt;/&gt;</div></a></div><div class="memberString_P8-X"><code>Dictionary<!-- -->.</code><code class="green_3LnD">count</code><code>(</code><div class="inset_2cJr"><div><code>dictionary<!-- -->: </code><code class="blue_2Afy">T</code><code>,</code><span class="inlineDescription_17uy">-- <span>
-<p>The dictionary to count.</p>
-</span></span></div><div><code>predicate?<!-- -->: </code><code class="purple__nFc">(</code><div class="inset_2cJr"><code>value<!-- -->: </code><code class="blue_2Afy">T</code><code class="purple__nFc">,</code></div><div class="inset_2cJr"><code>key<!-- -->: </code><code class="blue_2Afy">K</code><code class="purple__nFc">,</code></div><div class="inset_2cJr"><code>dictionary<!-- -->: </code><code class="blue_2Afy">T</code></div><code class="purple__nFc">)</code><code class="purple__nFc"> → </code><code class="blue_2Afy">any</code><span class="inlineDescription_17uy">-- <span>
-<p>The predicate to use to filter the dictionary.</p>
-</span></span></div></div><code>) → </code><code class="blue_2Afy">number</code><span class="inlineDescription_17uy">-- <span>
-<p>The number of items in the dictionary.</p>
-</span></span></div><div>
-<p>Counts the number of items in a dictionary.</p>
-<pre class="language-lua"><code class="language-lua"><span class="token keyword">local</span> dictionary <span class="token operator">=</span> <span class="token punctuation">{</span> hello <span class="token operator">=</span> <span class="token string">"world"</span><span class="token punctuation">,</span> goodbye <span class="token operator">=</span> <span class="token string">"world"</span> <span class="token punctuation">}</span>
-
-<span class="token keyword">local</span> value <span class="token operator">=</span> <span class="token function">Count</span><span class="token punctuation">(</span>dictionary<span class="token punctuation">)</span> <span class="token comment">-- 2</span>
-<span class="token keyword">local</span> value <span class="token operator">=</span> <span class="token function">Count</span><span class="token punctuation">(</span>dictionary<span class="token punctuation">,</span> <span class="token keyword">function</span><span class="token punctuation">(</span>item<span class="token punctuation">,</span> key<span class="token punctuation">)</span>
-  <span class="token keyword">return</span> item <span class="token operator">==</span> <span class="token string">"world"</span>
-<span class="token keyword">end</span><span class="token punctuation">)</span> <span class="token comment">-- 1</span>
-</code></pre>
-</div><div class="divider_3z1R"></div><h3 class="anchor anchorWithStickyNavbar_31ik" id="removeKey"><code style="text-decoration:none">removeKey</code><a aria-hidden="true" class="hash-link" href="#removeKey" title="Direct link to heading">​</a></h3><div class="repositoryDetailsContainer_1UH0"><a class="sourceButton_2aE5" href="https://github.com/csqrl/sift/blob/main/src/Dictionary/removeKey.lua#L21"><div class="sourceButtonText_monK">&lt;/&gt;</div></a></div><div class="memberString_P8-X"><code>Dictionary<!-- -->.</code><code class="green_3LnD">removeKey</code><code>(</code><div class="inset_2cJr"><div><code>dictionary<!-- -->: </code><code class="purple__nFc">{</code><span><code>[</code><code class="blue_2Afy">K</code><code>]</code></span><code>: </code><code class="blue_2Afy">V</code><code class="purple__nFc">}</code><code>,</code><span class="inlineDescription_17uy">-- <span>
-<p>The dictionary to remove the key from.</p>
-</span></span></div><div><code>key<!-- -->: </code><code class="blue_2Afy">K</code><span class="inlineDescription_17uy">-- <span>
-<p>The key to remove.</p>
-</span></span></div></div><code>) → </code><code class="purple__nFc">{</code><span><code>[</code><code class="blue_2Afy">K</code><code>]</code></span><code>: </code><code class="blue_2Afy">V</code><code class="purple__nFc">}</code><span class="inlineDescription_17uy">-- <span>
-<p>The dictionary without the given key.</p>
-</span></span></div><div>
-<p>Removes the given key from the given dictionary.</p>
-<pre class="language-lua"><code class="language-lua"><span class="token keyword">local</span> dictionary <span class="token operator">=</span> <span class="token punctuation">{</span> hello <span class="token operator">=</span> <span class="token string">"roblox"</span><span class="token punctuation">,</span> goodbye <span class="token operator">=</span> <span class="token string">"world"</span> <span class="token punctuation">}</span>
-
-<span class="token keyword">local</span> withoutHello <span class="token operator">=</span> <span class="token function">RemoveKey</span><span class="token punctuation">(</span>dictionary<span class="token punctuation">,</span> <span class="token string">"hello"</span><span class="token punctuation">)</span> <span class="token comment">-- { goodbye = "world" }</span>
-<span class="token keyword">local</span> withoutGoodbye <span class="token operator">=</span> <span class="token function">RemoveKey</span><span class="token punctuation">(</span>dictionary<span class="token punctuation">,</span> <span class="token string">"goodbye"</span><span class="token punctuation">)</span> <span class="token comment">-- { hello = "roblox" }</span>
-</code></pre>
-</div><div class="divider_3z1R"></div><h3 class="anchor anchorWithStickyNavbar_31ik" id="removeKeys"><code style="text-decoration:none">removeKeys</code><a aria-hidden="true" class="hash-link" href="#removeKeys" title="Direct link to heading">​</a></h3><div class="repositoryDetailsContainer_1UH0"><a class="sourceButton_2aE5" href="https://github.com/csqrl/sift/blob/main/src/Dictionary/removeKeys.lua#L20"><div class="sourceButtonText_monK">&lt;/&gt;</div></a></div><div class="memberString_P8-X"><code>Dictionary<!-- -->.</code><code class="green_3LnD">removeKeys</code><code>(</code><div class="inset_2cJr"><div><code>dictionary<!-- -->: </code><code class="purple__nFc">{</code><span><code>[</code><code class="blue_2Afy">K</code><code>]</code></span><code>: </code><code class="blue_2Afy">V</code><code class="purple__nFc">}</code><code>,</code><span class="inlineDescription_17uy">-- <span>
-<p>The dictionary to remove the keys from.</p>
-</span></span></div><div><code>keys<!-- -->: </code><code class="blue_2Afy">...K</code><span class="inlineDescription_17uy">-- <span>
-<p>The keys to remove.</p>
-</span></span></div></div><code>) → </code><code class="purple__nFc">{</code><span><code>[</code><code class="blue_2Afy">K</code><code>]</code></span><code>: </code><code class="blue_2Afy">V</code><code class="purple__nFc">}</code><span class="inlineDescription_17uy">-- <span>
-<p>The dictionary without the given keys.</p>
-</span></span></div><div>
-<p>Removes the given keys from the given dictionary.</p>
-<pre class="language-lua"><code class="language-lua"><span class="token keyword">local</span> dictionary <span class="token operator">=</span> <span class="token punctuation">{</span> hello <span class="token operator">=</span> <span class="token string">"world"</span><span class="token punctuation">,</span> cat <span class="token operator">=</span> <span class="token string">"meow"</span><span class="token punctuation">,</span> dog <span class="token operator">=</span> <span class="token string">"woof"</span><span class="token punctuation">,</span> unicorn <span class="token operator">=</span> <span class="token string">"rainbow"</span> <span class="token punctuation">}</span>
-
-<span class="token keyword">local</span> withoutCatDog <span class="token operator">=</span> <span class="token function">RemoveKeys</span><span class="token punctuation">(</span>dictionary<span class="token punctuation">,</span> <span class="token string">"cat"</span><span class="token punctuation">,</span> <span class="token string">"dog"</span><span class="token punctuation">)</span> <span class="token comment">-- { hello = "world", unicorn = "rainbow" }</span>
-</code></pre>
-</div><div class="divider_3z1R"></div><h3 class="anchor anchorWithStickyNavbar_31ik" id="removeValue"><code style="text-decoration:none">removeValue</code><a aria-hidden="true" class="hash-link" href="#removeValue" title="Direct link to heading">​</a></h3><div class="repositoryDetailsContainer_1UH0"><a class="sourceButton_2aE5" href="https://github.com/csqrl/sift/blob/main/src/Dictionary/removeValue.lua#L19"><div class="sourceButtonText_monK">&lt;/&gt;</div></a></div><div class="memberString_P8-X"><code>Dictionary<!-- -->.</code><code class="green_3LnD">removeValue</code><code>(</code><div class="inset_2cJr"><div><code>dictionary<!-- -->: </code><code class="purple__nFc">{</code><span><code>[</code><code class="blue_2Afy">K</code><code>]</code></span><code>: </code><code class="blue_2Afy">V</code><code class="purple__nFc">}</code><code>,</code><span class="inlineDescription_17uy">-- <span>
-<p>The dictionary to remove the value from.</p>
-</span></span></div><div><code>value<!-- -->: </code><code class="blue_2Afy">V</code><span class="inlineDescription_17uy">-- <span>
-<p>The value to remove.</p>
-</span></span></div></div><code>) → </code><code class="purple__nFc">{</code><span><code>[</code><code class="blue_2Afy">K</code><code>]</code></span><code>: </code><code class="blue_2Afy">V</code><code class="purple__nFc">}</code><span class="inlineDescription_17uy">-- <span>
-<p>The dictionary without the given value.</p>
-</span></span></div><div>
-<p>Removes the given value from the given dictionary.</p>
-<pre class="language-lua"><code class="language-lua"><span class="token keyword">local</span> dictionary <span class="token operator">=</span> <span class="token punctuation">{</span> hello <span class="token operator">=</span> <span class="token string">"roblox"</span><span class="token punctuation">,</span> goodbye <span class="token operator">=</span> <span class="token string">"world"</span> <span class="token punctuation">}</span>
-
-<span class="token keyword">local</span> withoutHello <span class="token operator">=</span> <span class="token function">RemoveValue</span><span class="token punctuation">(</span>dictionary<span class="token punctuation">,</span> <span class="token string">"roblox"</span><span class="token punctuation">)</span> <span class="token comment">-- { goodbye = "world" }</span>
-<span class="token keyword">local</span> withoutGoodbye <span class="token operator">=</span> <span class="token function">RemoveValue</span><span class="token punctuation">(</span>dictionary<span class="token punctuation">,</span> <span class="token string">"world"</span><span class="token punctuation">)</span> <span class="token comment">-- { hello = "roblox" }</span>
-</code></pre>
-</div><div class="divider_3z1R"></div><h3 class="anchor anchorWithStickyNavbar_31ik" id="freezeDeep"><code style="text-decoration:none">freezeDeep</code><a aria-hidden="true" class="hash-link" href="#freezeDeep" title="Direct link to heading">​</a></h3><div class="repositoryDetailsContainer_1UH0"><a class="sourceButton_2aE5" href="https://github.com/csqrl/sift/blob/main/src/Dictionary/freezeDeep.lua#L22"><div class="sourceButtonText_monK">&lt;/&gt;</div></a></div><div class="memberString_P8-X"><code>Dictionary<!-- -->.</code><code class="green_3LnD">freezeDeep</code><code>(</code><div class="inset_2cJr"><div><code>dictionary<!-- -->: </code><code class="blue_2Afy">T</code><span class="inlineDescription_17uy">-- <span>
-<p>The dictionary to freeze.</p>
-</span></span></div></div><code>) → </code><code class="blue_2Afy">T</code><span class="inlineDescription_17uy">-- <span>
-<p>The frozen dictionary.</p>
-</span></span></div><div>
-<p>Freezes the entire dictionary, making it read-only, including all nested dictionaries.</p>
-<pre class="language-lua"><code class="language-lua"><span class="token keyword">local</span> dictionary <span class="token operator">=</span> <span class="token punctuation">{</span> hello <span class="token operator">=</span> <span class="token string">"roblox"</span><span class="token punctuation">,</span> goodbye <span class="token operator">=</span> <span class="token punctuation">{</span> world <span class="token operator">=</span> <span class="token string">"world"</span> <span class="token punctuation">}</span> <span class="token punctuation">}</span>
-
-<span class="token keyword">local</span> new <span class="token operator">=</span> <span class="token function">FreezeDeep</span><span class="token punctuation">(</span>dictionary<span class="token punctuation">)</span>
-
-new<span class="token punctuation">.</span>hello <span class="token operator">=</span> <span class="token string">"world"</span> <span class="token comment">-- error!</span>
-new<span class="token punctuation">.</span>goodbye<span class="token punctuation">.</span>world <span class="token operator">=</span> <span class="token string">"hello"</span> <span class="token comment">-- error!</span>
-</code></pre>
-</div><div class="divider_3z1R"></div><h3 class="anchor anchorWithStickyNavbar_31ik" id="equals"><code style="text-decoration:none">equals</code><a aria-hidden="true" class="hash-link" href="#equals" title="Direct link to heading">​</a></h3><div class="repositoryDetailsContainer_1UH0"><a class="sourceButton_2aE5" href="https://github.com/csqrl/sift/blob/main/src/Dictionary/equals.lua#L45"><div class="sourceButtonText_monK">&lt;/&gt;</div></a></div><div class="memberString_P8-X"><code>Dictionary<!-- -->.</code><code class="green_3LnD">equals</code><code>(</code><div class="inset_2cJr"><div><code>...<!-- -->: </code><code class="blue_2Afy">...</code><code class="purple__nFc">{</code><span><code>[</code><code class="blue_2Afy">any</code><code>]</code></span><code>: </code><code class="blue_2Afy">any</code><code class="purple__nFc">}</code><span class="inlineDescription_17uy">-- <span>
-<p>The dictionaries to compare.</p>
-</span></span></div></div><code>) → </code><code class="blue_2Afy">boolean</code><span class="inlineDescription_17uy">-- <span>
-<p>Whether the dictionaries are equal.</p>
-</span></span></div><div>
-<p>Compares two dictionaries for equality.</p>
-<pre class="language-lua"><code class="language-lua"><span class="token keyword">local</span> dictionary <span class="token operator">=</span> <span class="token punctuation">{</span> hello <span class="token operator">=</span> <span class="token string">"world"</span><span class="token punctuation">,</span> goodbye <span class="token operator">=</span> <span class="token string">"world"</span> <span class="token punctuation">}</span>
-<span class="token keyword">local</span> other1 <span class="token operator">=</span> <span class="token punctuation">{</span> hello <span class="token operator">=</span> <span class="token string">"world"</span><span class="token punctuation">,</span> goodbye <span class="token operator">=</span> <span class="token string">"world"</span> <span class="token punctuation">}</span>
-<span class="token keyword">local</span> other2 <span class="token operator">=</span> <span class="token punctuation">{</span> hello <span class="token operator">=</span> <span class="token string">"hello"</span><span class="token punctuation">,</span> world <span class="token operator">=</span> <span class="token string">"goodbye"</span> <span class="token punctuation">}</span>
-
-<span class="token keyword">local</span> value <span class="token operator">=</span> <span class="token function">Equals</span><span class="token punctuation">(</span>dictionary<span class="token punctuation">,</span> other1<span class="token punctuation">)</span> <span class="token comment">-- true</span>
-<span class="token keyword">local</span> value <span class="token operator">=</span> <span class="token function">Equals</span><span class="token punctuation">(</span>dictionary<span class="token punctuation">,</span> other1<span class="token punctuation">,</span> other2<span class="token punctuation">)</span> <span class="token comment">-- false</span>
-</code></pre>
-</div><div class="divider_3z1R"></div><h3 class="anchor anchorWithStickyNavbar_31ik" id="some"><code style="text-decoration:none">some</code><a aria-hidden="true" class="hash-link" href="#some" title="Direct link to heading">​</a></h3><div class="repositoryDetailsContainer_1UH0"><a class="sourceButton_2aE5" href="https://github.com/csqrl/sift/blob/main/src/Dictionary/some.lua#L24"><div class="sourceButtonText_monK">&lt;/&gt;</div></a></div><div class="memberString_P8-X"><code>Dictionary<!-- -->.</code><code class="green_3LnD">some</code><code>(</code><div class="inset_2cJr"><div><code>dictionary<!-- -->: </code><code class="purple__nFc">{</code><span><code>[</code><code class="blue_2Afy">K</code><code>]</code></span><code>: </code><code class="blue_2Afy">V</code><code class="purple__nFc">}</code><code>,</code><span class="inlineDescription_17uy">-- <span>
-<p>The dictionary to check.</p>
-</span></span></div><div><code>predicate<!-- -->: </code><code class="purple__nFc">(</code><div class="inset_2cJr"><code>value<!-- -->: </code><code class="blue_2Afy">V</code><code class="purple__nFc">,</code></div><div class="inset_2cJr"><code>key<!-- -->: </code><code class="blue_2Afy">K</code><code class="purple__nFc">,</code></div><div class="inset_2cJr"><code>dictionary<!-- -->: </code><code class="green_3LnD">{</code><span><code>[</code><code class="blue_2Afy">K</code><code>]</code></span><code>: </code><code class="blue_2Afy">V</code><code class="green_3LnD">}</code></div><code class="purple__nFc">)</code><code class="purple__nFc"> → </code><code class="blue_2Afy">any</code><span class="inlineDescription_17uy">-- <span>
-<p>The predicate to check against.</p>
-</span></span></div></div><code>) → </code><code class="blue_2Afy">boolean</code><span class="inlineDescription_17uy">-- <span>
-<p>Whether or not the predicate returned true for any value.</p>
-</span></span></div><div>
-<p>Checks whether or not the predicate returned true for any value in the dictionary.</p>
-<pre class="language-lua"><code class="language-lua"><span class="token keyword">local</span> dictionary <span class="token operator">=</span> <span class="token punctuation">{</span> hello <span class="token operator">=</span> <span class="token string">"world"</span><span class="token punctuation">,</span> cat <span class="token operator">=</span> <span class="token string">"meow"</span><span class="token punctuation">,</span> unicorn <span class="token operator">=</span> <span class="token string">"rainbow"</span> <span class="token punctuation">}</span>
-
-<span class="token keyword">local</span> hasMeow <span class="token operator">=</span> <span class="token function">Some</span><span class="token punctuation">(</span>dictionary<span class="token punctuation">,</span> <span class="token keyword">function</span><span class="token punctuation">(</span>value<span class="token punctuation">)</span>
-  <span class="token keyword">return</span> value <span class="token operator">==</span> <span class="token string">"meow"</span>
-<span class="token keyword">end</span><span class="token punctuation">)</span> <span class="token comment">-- true</span>
-
-<span class="token keyword">local</span> hasDog <span class="token operator">=</span> <span class="token function">Some</span><span class="token punctuation">(</span>dictionary<span class="token punctuation">,</span> <span class="token keyword">function</span><span class="token punctuation">(</span>_<span class="token punctuation">,</span> key<span class="token punctuation">)</span>
-  <span class="token keyword">return</span> key <span class="token operator">==</span> <span class="token string">"dog"</span>
-<span class="token keyword">end</span><span class="token punctuation">)</span> <span class="token comment">-- false</span>
-</code></pre>
-</div><div class="divider_3z1R"></div><h3 class="anchor anchorWithStickyNavbar_31ik" id="copyDeep"><code style="text-decoration:none">copyDeep</code><a aria-hidden="true" class="hash-link" href="#copyDeep" title="Direct link to heading">​</a></h3><div class="repositoryDetailsContainer_1UH0"><a class="sourceButton_2aE5" href="https://github.com/csqrl/sift/blob/main/src/Dictionary/copyDeep.lua#L20"><div class="sourceButtonText_monK">&lt;/&gt;</div></a></div><div class="memberString_P8-X"><code>Dictionary<!-- -->.</code><code class="green_3LnD">copyDeep</code><code>(</code><div class="inset_2cJr"><div><code>dictionary<!-- -->: </code><code class="blue_2Afy">T</code><span class="inlineDescription_17uy">-- <span>
-<p>The dictionary to copy.</p>
-</span></span></div></div><code>) → </code><code class="blue_2Afy">T</code><span class="inlineDescription_17uy">-- <span>
-<p>The copied dictionary.</p>
-</span></span></div><div>
-<p>Copies a dictionary recursively.</p>
-<pre class="language-lua"><code class="language-lua"><span class="token keyword">local</span> dictionary <span class="token operator">=</span> <span class="token punctuation">{</span> hello <span class="token operator">=</span> <span class="token punctuation">{</span> world <span class="token operator">=</span> <span class="token string">"goodbye"</span> <span class="token punctuation">}</span> <span class="token punctuation">}</span>
-
-<span class="token keyword">local</span> new <span class="token operator">=</span> <span class="token function">CopyDeep</span><span class="token punctuation">(</span>dictionary<span class="token punctuation">)</span> <span class="token comment">-- { hello = { world = "goodbye" } }</span>
-
-<span class="token function">print</span><span class="token punctuation">(</span>new <span class="token operator">==</span> dictionary<span class="token punctuation">)</span> <span class="token comment">-- false</span>
-<span class="token function">print</span><span class="token punctuation">(</span>new<span class="token punctuation">.</span>hello <span class="token operator">==</span> dictionary<span class="token punctuation">.</span>hello<span class="token punctuation">)</span> <span class="token comment">-- false</span>
-</code></pre>
-</div><div class="divider_3z1R"></div><h3 class="anchor anchorWithStickyNavbar_31ik" id="copy"><code style="text-decoration:none">copy</code><a aria-hidden="true" class="hash-link" href="#copy" title="Direct link to heading">​</a></h3><div class="repositoryDetailsContainer_1UH0"><a class="sourceButton_2aE5" href="https://github.com/csqrl/sift/blob/main/src/Dictionary/copy.lua#L20"><div class="sourceButtonText_monK">&lt;/&gt;</div></a></div><div class="memberString_P8-X"><code>Dictionary<!-- -->.</code><code class="green_3LnD">copy</code><code>(</code><div class="inset_2cJr"><div><code>dictionary<!-- -->: </code><code class="blue_2Afy">T</code><span class="inlineDescription_17uy">-- <span>
-<p>The dictionary to copy.</p>
-</span></span></div></div><code>) → </code><code class="blue_2Afy">T</code><span class="inlineDescription_17uy">-- <span>
-<p>The copied dictionary.</p>
-</span></span></div><div>
-<p>Copies a dictionary.</p>
-<pre class="language-lua"><code class="language-lua"><span class="token keyword">local</span> dictionary <span class="token operator">=</span> <span class="token punctuation">{</span> hello <span class="token operator">=</span> <span class="token string">"world"</span> <span class="token punctuation">}</span>
-
-<span class="token keyword">local</span> new <span class="token operator">=</span> <span class="token function">Copy</span><span class="token punctuation">(</span>dictionary<span class="token punctuation">)</span> <span class="token comment">-- { hello = "world" }</span>
-
-<span class="token function">print</span><span class="token punctuation">(</span>new <span class="token operator">==</span> dictionary<span class="token punctuation">)</span> <span class="token comment">-- false</span>
-<span class="token function">print</span><span class="token punctuation">(</span>new<span class="token punctuation">.</span>hello <span class="token operator">==</span> dictionary<span class="token punctuation">.</span>hello<span class="token punctuation">)</span> <span class="token comment">-- true</span>
-</code></pre>
-</div><div class="divider_3z1R"></div><h3 class="anchor anchorWithStickyNavbar_31ik" id="mergeDeep"><code style="text-decoration:none">mergeDeep</code><a aria-hidden="true" class="hash-link" href="#mergeDeep" title="Direct link to heading">​</a></h3><div class="repositoryDetailsContainer_1UH0"><a class="sourceButton_2aE5" href="https://github.com/csqrl/sift/blob/main/src/Dictionary/mergeDeep.lua#L28"><div class="sourceButtonText_monK">&lt;/&gt;</div></a></div><div class="memberString_P8-X"><code>Dictionary<!-- -->.</code><code class="green_3LnD">mergeDeep</code><code>(</code><div class="inset_2cJr"><div><code>dictionaries?<!-- -->: </code><code class="blue_2Afy">...U</code><span class="inlineDescription_17uy">-- <span>
-<p>The dictionaries to merge.</p>
-</span></span></div></div><code>) → </code><code class="blue_2Afy">T</code><span class="inlineDescription_17uy">-- <span>
-<p>The merged dictionary.</p>
-</span></span></div><div>
-<p>
-  Merges the given dictionaries into a single dictionary. If the
-  value is <code>None</code>, it will be removed from the result. This is
-  recursive. The parameters may be any number of dictionaries or
-  <code>nil</code>. Non-dictonaries will be ignored.
-</p>
-<p>Aliases: <code>joinDeep</code></p>
-<pre class="language-lua"><code class="language-lua"><span class="token keyword">local</span> dictionary1 <span class="token operator">=</span> <span class="token punctuation">{</span> hello <span class="token operator">=</span> <span class="token string">"roblox"</span><span class="token punctuation">,</span> goodbye <span class="token operator">=</span> <span class="token punctuation">{</span> world <span class="token operator">=</span> <span class="token string">"goodbye"</span> <span class="token punctuation">}</span> <span class="token punctuation">}</span>
-<span class="token keyword">local</span> dictionary2 <span class="token operator">=</span> <span class="token punctuation">{</span> goodbye <span class="token operator">=</span> <span class="token punctuation">{</span> world <span class="token operator">=</span> <span class="token string">"world"</span> <span class="token punctuation">}</span> <span class="token punctuation">}</span>
-
-<span class="token keyword">local</span> merged <span class="token operator">=</span> <span class="token function">MergeDeep</span><span class="token punctuation">(</span>dictionary1<span class="token punctuation">,</span> dictionary2<span class="token punctuation">)</span> <span class="token comment">-- { hello = "roblox", goodbye = { world = "world" } }</span>
-</code></pre>
 </div></div></article></div><details><summary>Show raw api</summary><pre style="max-width:100%;white-space:pre-wrap">{
     &quot;functions&quot;: [
-        {
-            &quot;name&quot;: &quot;flatten&quot;,
-            &quot;desc&quot;: &quot;Flattens a dictionary. If depth is not specified, it will flatten the dictionary as far as it can go.\n\n```lua\nlocal dictionary = {\n  hello = \&quot;world\&quot;,\n  goodbye = {\n    world = \&quot;hello\&quot;,\n    roblox = {\n      yes = \&quot;no\&quot;,\n      no = \&quot;yes\&quot;,\n    }\n  }\n}\n\nlocal new = Flatten(dictionary) -- { hello = \&quot;world\&quot;, world = \&quot;hello\&quot;, yes = \&quot;no\&quot;, no = \&quot;yes\&quot; }\nlocal new = Flatten(dictionary, 1) -- { hello = \&quot;world\&quot;, world = \&quot;hello\&quot;, roblox = { yes = \&quot;no\&quot;, no = \&quot;yes\&quot; } }\n```&quot;,
-            &quot;params&quot;: [
-                {
-                    &quot;name&quot;: &quot;dictionary&quot;,
-                    &quot;desc&quot;: &quot;The dictionary to flatten.&quot;,
-                    &quot;lua_type&quot;: &quot;T&quot;
-                },
-                {
-                    &quot;name&quot;: &quot;depth?&quot;,
-                    &quot;desc&quot;: &quot;The depth to flatten the dictionary to.&quot;,
-                    &quot;lua_type&quot;: &quot;number&quot;
-                }
-            ],
-            &quot;returns&quot;: [
-                {
-                    &quot;desc&quot;: &quot;The flattened dictionary.&quot;,
-                    &quot;lua_type&quot;: &quot;T&quot;
-                }
-            ],
-            &quot;function_type&quot;: &quot;static&quot;,
-            &quot;source&quot;: {
-                &quot;line&quot;: 30,
-                &quot;path&quot;: &quot;src/Dictionary/flatten.lua&quot;
-            }
-        },
         {
             &quot;name&quot;: &quot;keys&quot;,
             &quot;desc&quot;: &quot;Gets the keys of the given dictionary as an array.\n\n```lua\nlocal dictionary = { hello = \&quot;roblox\&quot;, goodbye = \&quot;world\&quot; }\n\nlocal keys = Keys(dictionary) -- { \&quot;hello\&quot;, \&quot;goodbye\&quot; }\n```&quot;,
@@ -491,57 +464,111 @@ new<span class="token punctuation">.</span>goodbye<span class="token punctuation
             }
         },
         {
-            &quot;name&quot;: &quot;removeValues&quot;,
-            &quot;desc&quot;: &quot;Removes the given values from the given dictionary.\n\n```lua\nlocal dictionary = { hello = \&quot;world\&quot;, cat = \&quot;meow\&quot;, unicorn = \&quot;rainbow\&quot;, goodbye = \&quot;world\&quot; }\n\nlocal withoutWorld = RemoveValues(dictionary, \&quot;world\&quot;) -- { cat = \&quot;meow\&quot;, unicorn = \&quot;rainbow\&quot; }\nlocal onlyWorld = RemoveValues(dictionary, \&quot;meow\&quot;, \&quot;rainbow\&quot;) -- { hello = \&quot;world\&quot;, goodbye = \&quot;world\&quot; }\n```&quot;,
+            &quot;name&quot;: &quot;copyDeep&quot;,
+            &quot;desc&quot;: &quot;Copies a dictionary recursively.\n\n```lua\nlocal dictionary = { hello = { world = \&quot;goodbye\&quot; } }\n\nlocal new = CopyDeep(dictionary) -- { hello = { world = \&quot;goodbye\&quot; } }\n\nprint(new == dictionary) -- false\nprint(new.hello == dictionary.hello) -- false\n```&quot;,
             &quot;params&quot;: [
                 {
                     &quot;name&quot;: &quot;dictionary&quot;,
-                    &quot;desc&quot;: &quot;The dictionary to remove the values from.&quot;,
+                    &quot;desc&quot;: &quot;The dictionary to copy.&quot;,
+                    &quot;lua_type&quot;: &quot;T&quot;
+                }
+            ],
+            &quot;returns&quot;: [
+                {
+                    &quot;desc&quot;: &quot;The copied dictionary.&quot;,
+                    &quot;lua_type&quot;: &quot;T&quot;
+                }
+            ],
+            &quot;function_type&quot;: &quot;static&quot;,
+            &quot;source&quot;: {
+                &quot;line&quot;: 20,
+                &quot;path&quot;: &quot;src/Dictionary/copyDeep.lua&quot;
+            }
+        },
+        {
+            &quot;name&quot;: &quot;removeValue&quot;,
+            &quot;desc&quot;: &quot;Removes the given value from the given dictionary.\n\n```lua\nlocal dictionary = { hello = \&quot;roblox\&quot;, goodbye = \&quot;world\&quot; }\n\nlocal withoutHello = RemoveValue(dictionary, \&quot;roblox\&quot;) -- { goodbye = \&quot;world\&quot; }\nlocal withoutGoodbye = RemoveValue(dictionary, \&quot;world\&quot;) -- { hello = \&quot;roblox\&quot; }\n```&quot;,
+            &quot;params&quot;: [
+                {
+                    &quot;name&quot;: &quot;dictionary&quot;,
+                    &quot;desc&quot;: &quot;The dictionary to remove the value from.&quot;,
                     &quot;lua_type&quot;: &quot;{[K]: V}&quot;
                 },
                 {
-                    &quot;name&quot;: &quot;values&quot;,
-                    &quot;desc&quot;: &quot;The values to remove.&quot;,
-                    &quot;lua_type&quot;: &quot;...V&quot;
+                    &quot;name&quot;: &quot;value&quot;,
+                    &quot;desc&quot;: &quot;The value to remove.&quot;,
+                    &quot;lua_type&quot;: &quot;V&quot;
                 }
             ],
             &quot;returns&quot;: [
                 {
-                    &quot;desc&quot;: &quot;The dictionary without the given values.&quot;,
+                    &quot;desc&quot;: &quot;The dictionary without the given value.&quot;,
                     &quot;lua_type&quot;: &quot;{[K]: V}&quot;
                 }
             ],
             &quot;function_type&quot;: &quot;static&quot;,
             &quot;source&quot;: {
-                &quot;line&quot;: 23,
-                &quot;path&quot;: &quot;src/Dictionary/removeValues.lua&quot;
+                &quot;line&quot;: 19,
+                &quot;path&quot;: &quot;src/Dictionary/removeValue.lua&quot;
             }
         },
         {
-            &quot;name&quot;: &quot;fromEntries&quot;,
-            &quot;desc&quot;: &quot;Creates a dictionary from the given key-value pairs.\n\n```lua\nlocal entries = { { \&quot;hello\&quot;, \&quot;roblox\&quot; }, { \&quot;goodbye\&quot;, \&quot;world\&quot; } }\n\nlocal dictionary = FromEntries(entries) -- { hello = \&quot;roblox\&quot;, goodbye = \&quot;world\&quot; }\n```&quot;,
+            &quot;name&quot;: &quot;count&quot;,
+            &quot;desc&quot;: &quot;Counts the number of items in a dictionary.\n\n```lua\nlocal dictionary = { hello = \&quot;world\&quot;, goodbye = \&quot;world\&quot; }\n\nlocal value = Count(dictionary) -- 2\nlocal value = Count(dictionary, function(item, key)\n  return item == \&quot;world\&quot;\nend) -- 1\n```&quot;,
             &quot;params&quot;: [
                 {
-                    &quot;name&quot;: &quot;entries&quot;,
-                    &quot;desc&quot;: &quot;An array of key-value pairs.&quot;,
-                    &quot;lua_type&quot;: &quot;{{ K, V }}&quot;
+                    &quot;name&quot;: &quot;dictionary&quot;,
+                    &quot;desc&quot;: &quot;The dictionary to count.&quot;,
+                    &quot;lua_type&quot;: &quot;T&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;predicate?&quot;,
+                    &quot;desc&quot;: &quot;The predicate to use to filter the dictionary.&quot;,
+                    &quot;lua_type&quot;: &quot;(value: T, key: K, dictionary: T) -&gt; any&quot;
                 }
             ],
             &quot;returns&quot;: [
                 {
-                    &quot;desc&quot;: &quot;A dictionary composed of the given key-value pairs.&quot;,
+                    &quot;desc&quot;: &quot;The number of items in the dictionary.&quot;,
+                    &quot;lua_type&quot;: &quot;number&quot;
+                }
+            ],
+            &quot;function_type&quot;: &quot;static&quot;,
+            &quot;source&quot;: {
+                &quot;line&quot;: 25,
+                &quot;path&quot;: &quot;src/Dictionary/count.lua&quot;
+            }
+        },
+        {
+            &quot;name&quot;: &quot;removeKeys&quot;,
+            &quot;desc&quot;: &quot;Removes the given keys from the given dictionary.\n\n```lua\nlocal dictionary = { hello = \&quot;world\&quot;, cat = \&quot;meow\&quot;, dog = \&quot;woof\&quot;, unicorn = \&quot;rainbow\&quot; }\n\nlocal withoutCatDog = RemoveKeys(dictionary, \&quot;cat\&quot;, \&quot;dog\&quot;) -- { hello = \&quot;world\&quot;, unicorn = \&quot;rainbow\&quot; }\n```&quot;,
+            &quot;params&quot;: [
+                {
+                    &quot;name&quot;: &quot;dictionary&quot;,
+                    &quot;desc&quot;: &quot;The dictionary to remove the keys from.&quot;,
+                    &quot;lua_type&quot;: &quot;{[K]: V}&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;keys&quot;,
+                    &quot;desc&quot;: &quot;The keys to remove.&quot;,
+                    &quot;lua_type&quot;: &quot;...K&quot;
+                }
+            ],
+            &quot;returns&quot;: [
+                {
+                    &quot;desc&quot;: &quot;The dictionary without the given keys.&quot;,
                     &quot;lua_type&quot;: &quot;{[K]: V}&quot;
                 }
             ],
             &quot;function_type&quot;: &quot;static&quot;,
             &quot;source&quot;: {
-                &quot;line&quot;: 17,
-                &quot;path&quot;: &quot;src/Dictionary/fromEntries.lua&quot;
+                &quot;line&quot;: 20,
+                &quot;path&quot;: &quot;src/Dictionary/removeKeys.lua&quot;
             }
         },
         {
-            &quot;name&quot;: &quot;every&quot;,
-            &quot;desc&quot;: &quot;Checks whether every item in the dictionary passes the predicate.\n\n```lua\nlocal dictionary = { hello = \&quot;world\&quot;, goodbye = \&quot;world\&quot; }\n\nlocal value = Every(dictionary, function(value, key)\n  return value == \&quot;world\&quot;\nend) -- true\n\nlocal value = Every(dictionary, function(value, key)\n  return value == \&quot;hello\&quot;\nend) -- false\n```&quot;,
+            &quot;name&quot;: &quot;includes&quot;,
+            &quot;desc&quot;: &quot;Checks whether or not the given dictionary includes the given value.\n\n```lua\nlocal dictionary = { hello = \&quot;roblox\&quot;, goodbye = \&quot;world\&quot; }\n\nlocal includesRoblox = Includes(dictionary, \&quot;roblox\&quot;) -- true\nlocal includesCat = Includes(dictionary, \&quot;cat\&quot;) -- false\n```&quot;,
             &quot;params&quot;: [
                 {
                     &quot;name&quot;: &quot;dictionary&quot;,
@@ -549,90 +576,53 @@ new<span class="token punctuation">.</span>goodbye<span class="token punctuation
                     &quot;lua_type&quot;: &quot;{[K]: V}&quot;
                 },
                 {
-                    &quot;name&quot;: &quot;predicate&quot;,
-                    &quot;desc&quot;: &quot;The predicate to use to check the dictionary.&quot;,
-                    &quot;lua_type&quot;: &quot;(value: V, key: K, dictionary: {[K]: V}) -&gt; any&quot;
-                }
-            ],
-            &quot;returns&quot;: [
-                {
-                    &quot;desc&quot;: &quot;Whether every item in the dictionary passes the predicate.&quot;,
-                    &quot;lua_type&quot;: &quot;boolean&quot;
-                }
-            ],
-            &quot;function_type&quot;: &quot;static&quot;,
-            &quot;source&quot;: {
-                &quot;line&quot;: 24,
-                &quot;path&quot;: &quot;src/Dictionary/every.lua&quot;
-            }
-        },
-        {
-            &quot;name&quot;: &quot;set&quot;,
-            &quot;desc&quot;: &quot;Sets the given value in the given dictionary.\n\n```lua\nlocal dictionary = { hello = \&quot;world\&quot;, cat = \&quot;meow\&quot;, unicorn = \&quot;rainbow\&quot; }\n\nlocal setCat = Set(dictionary, \&quot;cat\&quot;, \&quot;woof\&quot;) -- { hello = \&quot;world\&quot;, cat = \&quot;woof\&quot;, unicorn = \&quot;rainbow\&quot; }\n```&quot;,
-            &quot;params&quot;: [
-                {
-                    &quot;name&quot;: &quot;dictionary&quot;,
-                    &quot;desc&quot;: &quot;The dictionary to set the value in.&quot;,
-                    &quot;lua_type&quot;: &quot;{[K]: V}&quot;
-                },
-                {
-                    &quot;name&quot;: &quot;key&quot;,
-                    &quot;desc&quot;: &quot;The key to set the value in.&quot;,
-                    &quot;lua_type&quot;: &quot;K&quot;
-                },
-                {
                     &quot;name&quot;: &quot;value&quot;,
-                    &quot;desc&quot;: &quot;The value to set.&quot;,
+                    &quot;desc&quot;: &quot;The value to check for.&quot;,
                     &quot;lua_type&quot;: &quot;V&quot;
                 }
             ],
             &quot;returns&quot;: [
                 {
-                    &quot;desc&quot;: &quot;The dictionary with the given value set.&quot;,
-                    &quot;lua_type&quot;: &quot;{[K]: V}&quot;
+                    &quot;desc&quot;: &quot;Whether or not the dictionary includes the given value.&quot;,
+                    &quot;lua_type&quot;: &quot;boolean&quot;
                 }
             ],
             &quot;function_type&quot;: &quot;static&quot;,
             &quot;source&quot;: {
-                &quot;line&quot;: 21,
-                &quot;path&quot;: &quot;src/Dictionary/set.lua&quot;
+                &quot;line&quot;: 19,
+                &quot;path&quot;: &quot;src/Dictionary/includes.lua&quot;
             }
         },
         {
-            &quot;name&quot;: &quot;fromArrays&quot;,
-            &quot;desc&quot;: &quot;Creates a dictionary from the given arrays, where the first array is used\nas keys and the second array is used as values.\n\n```lua\nlocal keys = { \&quot;hello\&quot;, \&quot;goodbye\&quot; }\nlocal values = { \&quot;roblox\&quot;, \&quot;world\&quot; }\n\nlocal dictionary = FromArrays(keys, values) -- { hello = \&quot;roblox\&quot;, goodbye = \&quot;world\&quot; }\n```&quot;,
+            &quot;name&quot;: &quot;equalsDeep&quot;,
+            &quot;desc&quot;: &quot;Compares two dictionaries for equality using deep comparison.\n\n```lua\nlocal dictionary = { hello = \&quot;world\&quot;, goodbye = { world = \&quot;hello\&quot; } }\nlocal other1 = { hello = \&quot;world\&quot;, goodbye = { world = \&quot;hello\&quot; } }\nlocal other2 = { hello = \&quot;hello\&quot;, world = \&quot;goodbye\&quot; }\n\nlocal value = EqualsDeep(dictionary, other1) -- true\nlocal value = EqualsDeep(dictionary, other1, other2) -- false\n```&quot;,
             &quot;params&quot;: [
                 {
-                    &quot;name&quot;: &quot;keys&quot;,
-                    &quot;desc&quot;: &quot;An array containing values to be used as keys.&quot;,
-                    &quot;lua_type&quot;: &quot;{K}&quot;
-                },
-                {
-                    &quot;name&quot;: &quot;values&quot;,
-                    &quot;desc&quot;: &quot;An array containing values to be used as values.&quot;,
-                    &quot;lua_type&quot;: &quot;{V}&quot;
+                    &quot;name&quot;: &quot;...&quot;,
+                    &quot;desc&quot;: &quot;The dictionaries to compare.&quot;,
+                    &quot;lua_type&quot;: &quot;...{ [any]: any }&quot;
                 }
             ],
             &quot;returns&quot;: [
                 {
-                    &quot;desc&quot;: &quot;A dictionary composed of the given keys and values.&quot;,
-                    &quot;lua_type&quot;: &quot;{[K]: V}&quot;
+                    &quot;desc&quot;: &quot;Whether the dictionaries are equal.&quot;,
+                    &quot;lua_type&quot;: &quot;boolean&quot;
                 }
             ],
             &quot;function_type&quot;: &quot;static&quot;,
             &quot;source&quot;: {
-                &quot;line&quot;: 20,
-                &quot;path&quot;: &quot;src/Dictionary/fromArrays.lua&quot;
+                &quot;line&quot;: 45,
+                &quot;path&quot;: &quot;src/Dictionary/equalsDeep.lua&quot;
             }
         },
         {
-            &quot;name&quot;: &quot;merge&quot;,
-            &quot;desc&quot;: &quot;Merges the given dictionaries into a single dictionary. If the\nvalue is `None`, it will be removed from the result. The\nparameters may be any number of dictionaries or `nil`.\nNon-dictonaries will be ignored.\n\nAliases: `join`\n\n```lua\nlocal dictionary1 = { hello = \&quot;roblox\&quot;, goodbye = \&quot;world\&quot; }\nlocal dictionary2 = { goodbye = \&quot;goodbye\&quot; }\n\nlocal merged = Merge(dictionary1, dictionary2) -- { hello = \&quot;roblox\&quot;, goodbye = \&quot;goodbye\&quot; }\n```&quot;,
+            &quot;name&quot;: &quot;mergeDeep&quot;,
+            &quot;desc&quot;: &quot;Merges the given dictionaries into a single dictionary. If the\nvalue is `None`, it will be removed from the result. This is\nrecursive. The parameters may be any number of dictionaries or\n`nil`. Non-dictonaries will be ignored.\n\nAliases: `joinDeep`\n\n```lua\nlocal dictionary1 = { hello = \&quot;roblox\&quot;, goodbye = { world = \&quot;goodbye\&quot; } }\nlocal dictionary2 = { goodbye = { world = \&quot;world\&quot; } }\n\nlocal merged = MergeDeep(dictionary1, dictionary2) -- { hello = \&quot;roblox\&quot;, goodbye = { world = \&quot;world\&quot; } }\n```&quot;,
             &quot;params&quot;: [
                 {
                     &quot;name&quot;: &quot;dictionaries?&quot;,
                     &quot;desc&quot;: &quot;The dictionaries to merge.&quot;,
-                    &quot;lua_type&quot;: &quot;...U&quot;
+                    &quot;lua_type&quot;: &quot;...any&quot;
                 }
             ],
             &quot;returns&quot;: [
@@ -643,35 +633,8 @@ new<span class="token punctuation">.</span>goodbye<span class="token punctuation
             ],
             &quot;function_type&quot;: &quot;static&quot;,
             &quot;source&quot;: {
-                &quot;line&quot;: 27,
-                &quot;path&quot;: &quot;src/Dictionary/merge.lua&quot;
-            }
-        },
-        {
-            &quot;name&quot;: &quot;has&quot;,
-            &quot;desc&quot;: &quot;Checks whether or not the given dictionary has the given key.\n\n```lua\nlocal dictionary = { hello = \&quot;roblox\&quot;, goodbye = \&quot;world\&quot; }\n\nlocal hasHello = Has(dictionary, \&quot;hello\&quot;) -- true\nlocal hasCat = Has(dictionary, \&quot;cat\&quot;) -- false\n```&quot;,
-            &quot;params&quot;: [
-                {
-                    &quot;name&quot;: &quot;dictionary&quot;,
-                    &quot;desc&quot;: &quot;The dictionary to check.&quot;,
-                    &quot;lua_type&quot;: &quot;{[K]: V}&quot;
-                },
-                {
-                    &quot;name&quot;: &quot;key&quot;,
-                    &quot;desc&quot;: &quot;The key to check for.&quot;,
-                    &quot;lua_type&quot;: &quot;any&quot;
-                }
-            ],
-            &quot;returns&quot;: [
-                {
-                    &quot;desc&quot;: &quot;Whether or not the dictionary has the given key.&quot;,
-                    &quot;lua_type&quot;: &quot;boolean&quot;
-                }
-            ],
-            &quot;function_type&quot;: &quot;static&quot;,
-            &quot;source&quot;: {
-                &quot;line&quot;: 21,
-                &quot;path&quot;: &quot;src/Dictionary/has.lua&quot;
+                &quot;line&quot;: 28,
+                &quot;path&quot;: &quot;src/Dictionary/mergeDeep.lua&quot;
             }
         },
         {
@@ -712,47 +675,30 @@ new<span class="token punctuation">.</span>goodbye<span class="token punctuation
             }
         },
         {
-            &quot;name&quot;: &quot;flip&quot;,
-            &quot;desc&quot;: &quot;Flips a dictionary. Keys become values and values become keys.\n\n```lua\nlocal dictionary = { hello = \&quot;roblox\&quot;, goodbye = \&quot;world\&quot; }\n\nlocal new = Flip(dictionary) -- { world = \&quot;goodbye\&quot;, roblox = \&quot;hello\&quot; }\n```&quot;,
+            &quot;name&quot;: &quot;some&quot;,
+            &quot;desc&quot;: &quot;Checks whether or not the predicate returned true for any value in the dictionary.\n\n```lua\nlocal dictionary = { hello = \&quot;world\&quot;, cat = \&quot;meow\&quot;, unicorn = \&quot;rainbow\&quot; }\n\nlocal hasMeow = Some(dictionary, function(value)\n  return value == \&quot;meow\&quot;\nend) -- true\n\nlocal hasDog = Some(dictionary, function(_, key)\n  return key == \&quot;dog\&quot;\nend) -- false\n```&quot;,
             &quot;params&quot;: [
                 {
                     &quot;name&quot;: &quot;dictionary&quot;,
-                    &quot;desc&quot;: &quot;The dictionary to flip.&quot;,
-                    &quot;lua_type&quot;: &quot;{ [K]: V }&quot;
-                }
-            ],
-            &quot;returns&quot;: [
-                {
-                    &quot;desc&quot;: &quot;The flipped dictionary.&quot;,
-                    &quot;lua_type&quot;: &quot;{ [V]: K }&quot;
-                }
-            ],
-            &quot;function_type&quot;: &quot;static&quot;,
-            &quot;source&quot;: {
-                &quot;line&quot;: 17,
-                &quot;path&quot;: &quot;src/Dictionary/flip.lua&quot;
-            }
-        },
-        {
-            &quot;name&quot;: &quot;entries&quot;,
-            &quot;desc&quot;: &quot;Returns the entries in the given dictionary as an array of key-value pairs.\n\n```lua\nlocal dictionary = { hello = \&quot;roblox\&quot;, goodbye = \&quot;world\&quot; }\n\nlocal entries = Entries(dictionary) -- { { \&quot;hello\&quot;, \&quot;roblox\&quot; }, { \&quot;goodbye\&quot;, \&quot;world\&quot; } }\n```&quot;,
-            &quot;params&quot;: [
-                {
-                    &quot;name&quot;: &quot;dictionary&quot;,
-                    &quot;desc&quot;: &quot;The dictionary to get the entries from.&quot;,
+                    &quot;desc&quot;: &quot;The dictionary to check.&quot;,
                     &quot;lua_type&quot;: &quot;{[K]: V}&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;predicate&quot;,
+                    &quot;desc&quot;: &quot;The predicate to check against.&quot;,
+                    &quot;lua_type&quot;: &quot;(value: V, key: K, dictionary: { [K]: V }) -&gt; any&quot;
                 }
             ],
             &quot;returns&quot;: [
                 {
-                    &quot;desc&quot;: &quot;The entries in the dictionary.&quot;,
-                    &quot;lua_type&quot;: &quot;{{ K, V }}&quot;
+                    &quot;desc&quot;: &quot;Whether or not the predicate returned true for any value.&quot;,
+                    &quot;lua_type&quot;: &quot;boolean&quot;
                 }
             ],
             &quot;function_type&quot;: &quot;static&quot;,
             &quot;source&quot;: {
-                &quot;line&quot;: 17,
-                &quot;path&quot;: &quot;src/Dictionary/entries.lua&quot;
+                &quot;line&quot;: 24,
+                &quot;path&quot;: &quot;src/Dictionary/some.lua&quot;
             }
         },
         {
@@ -783,6 +729,234 @@ new<span class="token punctuation">.</span>goodbye<span class="token punctuation
             }
         },
         {
+            &quot;name&quot;: &quot;removeKey&quot;,
+            &quot;desc&quot;: &quot;Removes the given key from the given dictionary.\n\n```lua\nlocal dictionary = { hello = \&quot;roblox\&quot;, goodbye = \&quot;world\&quot; }\n\nlocal withoutHello = RemoveKey(dictionary, \&quot;hello\&quot;) -- { goodbye = \&quot;world\&quot; }\nlocal withoutGoodbye = RemoveKey(dictionary, \&quot;goodbye\&quot;) -- { hello = \&quot;roblox\&quot; }\n```&quot;,
+            &quot;params&quot;: [
+                {
+                    &quot;name&quot;: &quot;dictionary&quot;,
+                    &quot;desc&quot;: &quot;The dictionary to remove the key from.&quot;,
+                    &quot;lua_type&quot;: &quot;{[K]: V}&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;key&quot;,
+                    &quot;desc&quot;: &quot;The key to remove.&quot;,
+                    &quot;lua_type&quot;: &quot;K&quot;
+                }
+            ],
+            &quot;returns&quot;: [
+                {
+                    &quot;desc&quot;: &quot;The dictionary without the given key.&quot;,
+                    &quot;lua_type&quot;: &quot;{[K]: V}&quot;
+                }
+            ],
+            &quot;function_type&quot;: &quot;static&quot;,
+            &quot;source&quot;: {
+                &quot;line&quot;: 21,
+                &quot;path&quot;: &quot;src/Dictionary/removeKey.lua&quot;
+            }
+        },
+        {
+            &quot;name&quot;: &quot;every&quot;,
+            &quot;desc&quot;: &quot;Checks whether every item in the dictionary passes the predicate.\n\n```lua\nlocal dictionary = { hello = \&quot;world\&quot;, goodbye = \&quot;world\&quot; }\n\nlocal value = Every(dictionary, function(value, key)\n  return value == \&quot;world\&quot;\nend) -- true\n\nlocal value = Every(dictionary, function(value, key)\n  return value == \&quot;hello\&quot;\nend) -- false\n```&quot;,
+            &quot;params&quot;: [
+                {
+                    &quot;name&quot;: &quot;dictionary&quot;,
+                    &quot;desc&quot;: &quot;The dictionary to check.&quot;,
+                    &quot;lua_type&quot;: &quot;{[K]: V}&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;predicate&quot;,
+                    &quot;desc&quot;: &quot;The predicate to use to check the dictionary.&quot;,
+                    &quot;lua_type&quot;: &quot;(value: V, key: K, dictionary: {[K]: V}) -&gt; any&quot;
+                }
+            ],
+            &quot;returns&quot;: [
+                {
+                    &quot;desc&quot;: &quot;Whether every item in the dictionary passes the predicate.&quot;,
+                    &quot;lua_type&quot;: &quot;boolean&quot;
+                }
+            ],
+            &quot;function_type&quot;: &quot;static&quot;,
+            &quot;source&quot;: {
+                &quot;line&quot;: 24,
+                &quot;path&quot;: &quot;src/Dictionary/every.lua&quot;
+            }
+        },
+        {
+            &quot;name&quot;: &quot;flip&quot;,
+            &quot;desc&quot;: &quot;Flips a dictionary. Keys become values and values become keys.\n\n```lua\nlocal dictionary = { hello = \&quot;roblox\&quot;, goodbye = \&quot;world\&quot; }\n\nlocal new = Flip(dictionary) -- { world = \&quot;goodbye\&quot;, roblox = \&quot;hello\&quot; }\n```&quot;,
+            &quot;params&quot;: [
+                {
+                    &quot;name&quot;: &quot;dictionary&quot;,
+                    &quot;desc&quot;: &quot;The dictionary to flip.&quot;,
+                    &quot;lua_type&quot;: &quot;{ [K]: V }&quot;
+                }
+            ],
+            &quot;returns&quot;: [
+                {
+                    &quot;desc&quot;: &quot;The flipped dictionary.&quot;,
+                    &quot;lua_type&quot;: &quot;{ [V]: K }&quot;
+                }
+            ],
+            &quot;function_type&quot;: &quot;static&quot;,
+            &quot;source&quot;: {
+                &quot;line&quot;: 17,
+                &quot;path&quot;: &quot;src/Dictionary/flip.lua&quot;
+            }
+        },
+        {
+            &quot;name&quot;: &quot;flatten&quot;,
+            &quot;desc&quot;: &quot;Flattens a dictionary. If depth is not specified, it will flatten the dictionary as far as it can go.\n\n```lua\nlocal dictionary = {\n  hello = \&quot;world\&quot;,\n  goodbye = {\n    world = \&quot;hello\&quot;,\n    roblox = {\n      yes = \&quot;no\&quot;,\n      no = \&quot;yes\&quot;,\n    }\n  }\n}\n\nlocal new = Flatten(dictionary) -- { hello = \&quot;world\&quot;, world = \&quot;hello\&quot;, yes = \&quot;no\&quot;, no = \&quot;yes\&quot; }\nlocal new = Flatten(dictionary, 1) -- { hello = \&quot;world\&quot;, world = \&quot;hello\&quot;, roblox = { yes = \&quot;no\&quot;, no = \&quot;yes\&quot; } }\n```&quot;,
+            &quot;params&quot;: [
+                {
+                    &quot;name&quot;: &quot;dictionary&quot;,
+                    &quot;desc&quot;: &quot;The dictionary to flatten.&quot;,
+                    &quot;lua_type&quot;: &quot;T&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;depth?&quot;,
+                    &quot;desc&quot;: &quot;The depth to flatten the dictionary to.&quot;,
+                    &quot;lua_type&quot;: &quot;number&quot;
+                }
+            ],
+            &quot;returns&quot;: [
+                {
+                    &quot;desc&quot;: &quot;The flattened dictionary.&quot;,
+                    &quot;lua_type&quot;: &quot;T&quot;
+                }
+            ],
+            &quot;function_type&quot;: &quot;static&quot;,
+            &quot;source&quot;: {
+                &quot;line&quot;: 30,
+                &quot;path&quot;: &quot;src/Dictionary/flatten.lua&quot;
+            }
+        },
+        {
+            &quot;name&quot;: &quot;equals&quot;,
+            &quot;desc&quot;: &quot;Compares two dictionaries for equality.\n\n```lua\nlocal dictionary = { hello = \&quot;world\&quot;, goodbye = \&quot;world\&quot; }\nlocal other1 = { hello = \&quot;world\&quot;, goodbye = \&quot;world\&quot; }\nlocal other2 = { hello = \&quot;hello\&quot;, world = \&quot;goodbye\&quot; }\n\nlocal value = Equals(dictionary, other1) -- true\nlocal value = Equals(dictionary, other1, other2) -- false\n```&quot;,
+            &quot;params&quot;: [
+                {
+                    &quot;name&quot;: &quot;...&quot;,
+                    &quot;desc&quot;: &quot;The dictionaries to compare.&quot;,
+                    &quot;lua_type&quot;: &quot;...{ [any]: any }&quot;
+                }
+            ],
+            &quot;returns&quot;: [
+                {
+                    &quot;desc&quot;: &quot;Whether the dictionaries are equal.&quot;,
+                    &quot;lua_type&quot;: &quot;boolean&quot;
+                }
+            ],
+            &quot;function_type&quot;: &quot;static&quot;,
+            &quot;source&quot;: {
+                &quot;line&quot;: 45,
+                &quot;path&quot;: &quot;src/Dictionary/equals.lua&quot;
+            }
+        },
+        {
+            &quot;name&quot;: &quot;entries&quot;,
+            &quot;desc&quot;: &quot;Returns the entries in the given dictionary as an array of key-value pairs.\n\n```lua\nlocal dictionary = { hello = \&quot;roblox\&quot;, goodbye = \&quot;world\&quot; }\n\nlocal entries = Entries(dictionary) -- { { \&quot;hello\&quot;, \&quot;roblox\&quot; }, { \&quot;goodbye\&quot;, \&quot;world\&quot; } }\n```&quot;,
+            &quot;params&quot;: [
+                {
+                    &quot;name&quot;: &quot;dictionary&quot;,
+                    &quot;desc&quot;: &quot;The dictionary to get the entries from.&quot;,
+                    &quot;lua_type&quot;: &quot;{[K]: V}&quot;
+                }
+            ],
+            &quot;returns&quot;: [
+                {
+                    &quot;desc&quot;: &quot;The entries in the dictionary.&quot;,
+                    &quot;lua_type&quot;: &quot;{{ K, V }}&quot;
+                }
+            ],
+            &quot;function_type&quot;: &quot;static&quot;,
+            &quot;source&quot;: {
+                &quot;line&quot;: 17,
+                &quot;path&quot;: &quot;src/Dictionary/entries.lua&quot;
+            }
+        },
+        {
+            &quot;name&quot;: &quot;freezeDeep&quot;,
+            &quot;desc&quot;: &quot;Freezes the entire dictionary, making it read-only, including all nested dictionaries.\n\n```lua\nlocal dictionary = { hello = \&quot;roblox\&quot;, goodbye = { world = \&quot;world\&quot; } }\n\nlocal new = FreezeDeep(dictionary)\n\nnew.hello = \&quot;world\&quot; -- error!\nnew.goodbye.world = \&quot;hello\&quot; -- error!\n```&quot;,
+            &quot;params&quot;: [
+                {
+                    &quot;name&quot;: &quot;dictionary&quot;,
+                    &quot;desc&quot;: &quot;The dictionary to freeze.&quot;,
+                    &quot;lua_type&quot;: &quot;T&quot;
+                }
+            ],
+            &quot;returns&quot;: [
+                {
+                    &quot;desc&quot;: &quot;The frozen dictionary.&quot;,
+                    &quot;lua_type&quot;: &quot;T&quot;
+                }
+            ],
+            &quot;function_type&quot;: &quot;static&quot;,
+            &quot;source&quot;: {
+                &quot;line&quot;: 22,
+                &quot;path&quot;: &quot;src/Dictionary/freezeDeep.lua&quot;
+            }
+        },
+        {
+            &quot;name&quot;: &quot;has&quot;,
+            &quot;desc&quot;: &quot;Checks whether or not the given dictionary has the given key.\n\n```lua\nlocal dictionary = { hello = \&quot;roblox\&quot;, goodbye = \&quot;world\&quot; }\n\nlocal hasHello = Has(dictionary, \&quot;hello\&quot;) -- true\nlocal hasCat = Has(dictionary, \&quot;cat\&quot;) -- false\n```&quot;,
+            &quot;params&quot;: [
+                {
+                    &quot;name&quot;: &quot;dictionary&quot;,
+                    &quot;desc&quot;: &quot;The dictionary to check.&quot;,
+                    &quot;lua_type&quot;: &quot;{[K]: V}&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;key&quot;,
+                    &quot;desc&quot;: &quot;The key to check for.&quot;,
+                    &quot;lua_type&quot;: &quot;any&quot;
+                }
+            ],
+            &quot;returns&quot;: [
+                {
+                    &quot;desc&quot;: &quot;Whether or not the dictionary has the given key.&quot;,
+                    &quot;lua_type&quot;: &quot;boolean&quot;
+                }
+            ],
+            &quot;function_type&quot;: &quot;static&quot;,
+            &quot;source&quot;: {
+                &quot;line&quot;: 21,
+                &quot;path&quot;: &quot;src/Dictionary/has.lua&quot;
+            }
+        },
+        {
+            &quot;name&quot;: &quot;set&quot;,
+            &quot;desc&quot;: &quot;Sets the given value in the given dictionary.\n\n```lua\nlocal dictionary = { hello = \&quot;world\&quot;, cat = \&quot;meow\&quot;, unicorn = \&quot;rainbow\&quot; }\n\nlocal setCat = Set(dictionary, \&quot;cat\&quot;, \&quot;woof\&quot;) -- { hello = \&quot;world\&quot;, cat = \&quot;woof\&quot;, unicorn = \&quot;rainbow\&quot; }\n```&quot;,
+            &quot;params&quot;: [
+                {
+                    &quot;name&quot;: &quot;dictionary&quot;,
+                    &quot;desc&quot;: &quot;The dictionary to set the value in.&quot;,
+                    &quot;lua_type&quot;: &quot;{[K]: V}&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;key&quot;,
+                    &quot;desc&quot;: &quot;The key to set the value in.&quot;,
+                    &quot;lua_type&quot;: &quot;K&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;value&quot;,
+                    &quot;desc&quot;: &quot;The value to set.&quot;,
+                    &quot;lua_type&quot;: &quot;V&quot;
+                }
+            ],
+            &quot;returns&quot;: [
+                {
+                    &quot;desc&quot;: &quot;The dictionary with the given value set.&quot;,
+                    &quot;lua_type&quot;: &quot;{[K]: V}&quot;
+                }
+            ],
+            &quot;function_type&quot;: &quot;static&quot;,
+            &quot;source&quot;: {
+                &quot;line&quot;: 21,
+                &quot;path&quot;: &quot;src/Dictionary/set.lua&quot;
+            }
+        },
+        {
             &quot;name&quot;: &quot;values&quot;,
             &quot;desc&quot;: &quot;Gets the values in the given dictionary.\n\n```lua\nlocal dictionary = { hello = \&quot;roblox\&quot;, goodbye = \&quot;world\&quot; }\n\nlocal values = Values(dictionary) -- { \&quot;roblox\&quot;, \&quot;world\&quot; }\n```&quot;,
             &quot;params&quot;: [
@@ -805,25 +979,145 @@ new<span class="token punctuation">.</span>goodbye<span class="token punctuation
             }
         },
         {
-            &quot;name&quot;: &quot;equalsDeep&quot;,
-            &quot;desc&quot;: &quot;Compares two dictionaries for equality using deep comparison.\n\n```lua\nlocal dictionary = { hello = \&quot;world\&quot;, goodbye = { world = \&quot;hello\&quot; } }\nlocal other1 = { hello = \&quot;world\&quot;, goodbye = { world = \&quot;hello\&quot; } }\nlocal other2 = { hello = \&quot;hello\&quot;, world = \&quot;goodbye\&quot; }\n\nlocal value = EqualsDeep(dictionary, other1) -- true\nlocal value = EqualsDeep(dictionary, other1, other2) -- false\n```&quot;,
+            &quot;name&quot;: &quot;merge&quot;,
+            &quot;desc&quot;: &quot;Merges the given dictionaries into a single dictionary. If the\nvalue is `None`, it will be removed from the result. The\nparameters may be any number of dictionaries or `nil`.\nNon-dictonaries will be ignored.\n\nAliases: `join`\n\n```lua\nlocal dictionary1 = { hello = \&quot;roblox\&quot;, goodbye = \&quot;world\&quot; }\nlocal dictionary2 = { goodbye = \&quot;goodbye\&quot; }\n\nlocal merged = Merge(dictionary1, dictionary2) -- { hello = \&quot;roblox\&quot;, goodbye = \&quot;goodbye\&quot; }\n```&quot;,
             &quot;params&quot;: [
                 {
-                    &quot;name&quot;: &quot;...&quot;,
-                    &quot;desc&quot;: &quot;The dictionaries to compare.&quot;,
-                    &quot;lua_type&quot;: &quot;...{ [any]: any }&quot;
+                    &quot;name&quot;: &quot;dictionaries?&quot;,
+                    &quot;desc&quot;: &quot;The dictionaries to merge.&quot;,
+                    &quot;lua_type&quot;: &quot;...any&quot;
                 }
             ],
             &quot;returns&quot;: [
                 {
-                    &quot;desc&quot;: &quot;Whether the dictionaries are equal.&quot;,
-                    &quot;lua_type&quot;: &quot;boolean&quot;
+                    &quot;desc&quot;: &quot;The merged dictionary.&quot;,
+                    &quot;lua_type&quot;: &quot;T&quot;
                 }
             ],
             &quot;function_type&quot;: &quot;static&quot;,
             &quot;source&quot;: {
-                &quot;line&quot;: 45,
-                &quot;path&quot;: &quot;src/Dictionary/equalsDeep.lua&quot;
+                &quot;line&quot;: 27,
+                &quot;path&quot;: &quot;src/Dictionary/merge.lua&quot;
+            }
+        },
+        {
+            &quot;name&quot;: &quot;freeze&quot;,
+            &quot;desc&quot;: &quot;Freezes the given dictionary at the top level, making it read-only.\n\n```lua\nlocal dictionary = { hello = \&quot;roblox\&quot;, goodbye = { world = \&quot;world\&quot; } }\n\nlocal new = Freeze(dictionary)\n\nnew.hello = \&quot;world\&quot; -- error!\nnew.goodbye.world = \&quot;hello\&quot; -- still works!\n```&quot;,
+            &quot;params&quot;: [
+                {
+                    &quot;name&quot;: &quot;dictionary&quot;,
+                    &quot;desc&quot;: &quot;The dictionary to freeze.&quot;,
+                    &quot;lua_type&quot;: &quot;T&quot;
+                }
+            ],
+            &quot;returns&quot;: [
+                {
+                    &quot;desc&quot;: &quot;The frozen dictionary.&quot;,
+                    &quot;lua_type&quot;: &quot;T&quot;
+                }
+            ],
+            &quot;function_type&quot;: &quot;static&quot;,
+            &quot;source&quot;: {
+                &quot;line&quot;: 23,
+                &quot;path&quot;: &quot;src/Dictionary/freeze.lua&quot;
+            }
+        },
+        {
+            &quot;name&quot;: &quot;fromEntries&quot;,
+            &quot;desc&quot;: &quot;Creates a dictionary from the given key-value pairs.\n\n```lua\nlocal entries = { { \&quot;hello\&quot;, \&quot;roblox\&quot; }, { \&quot;goodbye\&quot;, \&quot;world\&quot; } }\n\nlocal dictionary = FromEntries(entries) -- { hello = \&quot;roblox\&quot;, goodbye = \&quot;world\&quot; }\n```&quot;,
+            &quot;params&quot;: [
+                {
+                    &quot;name&quot;: &quot;entries&quot;,
+                    &quot;desc&quot;: &quot;An array of key-value pairs.&quot;,
+                    &quot;lua_type&quot;: &quot;{{ K, V }}&quot;
+                }
+            ],
+            &quot;returns&quot;: [
+                {
+                    &quot;desc&quot;: &quot;A dictionary composed of the given key-value pairs.&quot;,
+                    &quot;lua_type&quot;: &quot;{[K]: V}&quot;
+                }
+            ],
+            &quot;function_type&quot;: &quot;static&quot;,
+            &quot;source&quot;: {
+                &quot;line&quot;: 17,
+                &quot;path&quot;: &quot;src/Dictionary/fromEntries.lua&quot;
+            }
+        },
+        {
+            &quot;name&quot;: &quot;fromArrays&quot;,
+            &quot;desc&quot;: &quot;Creates a dictionary from the given arrays, where the first array is used\nas keys and the second array is used as values.\n\n```lua\nlocal keys = { \&quot;hello\&quot;, \&quot;goodbye\&quot; }\nlocal values = { \&quot;roblox\&quot;, \&quot;world\&quot; }\n\nlocal dictionary = FromArrays(keys, values) -- { hello = \&quot;roblox\&quot;, goodbye = \&quot;world\&quot; }\n```&quot;,
+            &quot;params&quot;: [
+                {
+                    &quot;name&quot;: &quot;keys&quot;,
+                    &quot;desc&quot;: &quot;An array containing values to be used as keys.&quot;,
+                    &quot;lua_type&quot;: &quot;{K}&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;values&quot;,
+                    &quot;desc&quot;: &quot;An array containing values to be used as values.&quot;,
+                    &quot;lua_type&quot;: &quot;{V}&quot;
+                }
+            ],
+            &quot;returns&quot;: [
+                {
+                    &quot;desc&quot;: &quot;A dictionary composed of the given keys and values.&quot;,
+                    &quot;lua_type&quot;: &quot;{[K]: V}&quot;
+                }
+            ],
+            &quot;function_type&quot;: &quot;static&quot;,
+            &quot;source&quot;: {
+                &quot;line&quot;: 20,
+                &quot;path&quot;: &quot;src/Dictionary/fromArrays.lua&quot;
+            }
+        },
+        {
+            &quot;name&quot;: &quot;copy&quot;,
+            &quot;desc&quot;: &quot;Copies a dictionary.\n\n```lua\nlocal dictionary = { hello = \&quot;world\&quot; }\n\nlocal new = Copy(dictionary) -- { hello = \&quot;world\&quot; }\n\nprint(new == dictionary) -- false\nprint(new.hello == dictionary.hello) -- true\n```&quot;,
+            &quot;params&quot;: [
+                {
+                    &quot;name&quot;: &quot;dictionary&quot;,
+                    &quot;desc&quot;: &quot;The dictionary to copy.&quot;,
+                    &quot;lua_type&quot;: &quot;T&quot;
+                }
+            ],
+            &quot;returns&quot;: [
+                {
+                    &quot;desc&quot;: &quot;The copied dictionary.&quot;,
+                    &quot;lua_type&quot;: &quot;T&quot;
+                }
+            ],
+            &quot;function_type&quot;: &quot;static&quot;,
+            &quot;source&quot;: {
+                &quot;line&quot;: 20,
+                &quot;path&quot;: &quot;src/Dictionary/copy.lua&quot;
+            }
+        },
+        {
+            &quot;name&quot;: &quot;removeValues&quot;,
+            &quot;desc&quot;: &quot;Removes the given values from the given dictionary.\n\n```lua\nlocal dictionary = { hello = \&quot;world\&quot;, cat = \&quot;meow\&quot;, unicorn = \&quot;rainbow\&quot;, goodbye = \&quot;world\&quot; }\n\nlocal withoutWorld = RemoveValues(dictionary, \&quot;world\&quot;) -- { cat = \&quot;meow\&quot;, unicorn = \&quot;rainbow\&quot; }\nlocal onlyWorld = RemoveValues(dictionary, \&quot;meow\&quot;, \&quot;rainbow\&quot;) -- { hello = \&quot;world\&quot;, goodbye = \&quot;world\&quot; }\n```&quot;,
+            &quot;params&quot;: [
+                {
+                    &quot;name&quot;: &quot;dictionary&quot;,
+                    &quot;desc&quot;: &quot;The dictionary to remove the values from.&quot;,
+                    &quot;lua_type&quot;: &quot;{[K]: V}&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;values&quot;,
+                    &quot;desc&quot;: &quot;The values to remove.&quot;,
+                    &quot;lua_type&quot;: &quot;...V&quot;
+                }
+            ],
+            &quot;returns&quot;: [
+                {
+                    &quot;desc&quot;: &quot;The dictionary without the given values.&quot;,
+                    &quot;lua_type&quot;: &quot;{[K]: V}&quot;
+                }
+            ],
+            &quot;function_type&quot;: &quot;static&quot;,
+            &quot;source&quot;: {
+                &quot;line&quot;: 23,
+                &quot;path&quot;: &quot;src/Dictionary/removeValues.lua&quot;
             }
         },
         {
@@ -852,300 +1146,6 @@ new<span class="token punctuation">.</span>goodbye<span class="token punctuation
                 &quot;line&quot;: 26,
                 &quot;path&quot;: &quot;src/Dictionary/map.lua&quot;
             }
-        },
-        {
-            &quot;name&quot;: &quot;freeze&quot;,
-            &quot;desc&quot;: &quot;Freezes the given dictionary at the top level, making it read-only.\n\n```lua\nlocal dictionary = { hello = \&quot;roblox\&quot;, goodbye = { world = \&quot;world\&quot; } }\n\nlocal new = Freeze(dictionary)\n\nnew.hello = \&quot;world\&quot; -- error!\nnew.goodbye.world = \&quot;hello\&quot; -- still works!\n```&quot;,
-            &quot;params&quot;: [
-                {
-                    &quot;name&quot;: &quot;dictionary&quot;,
-                    &quot;desc&quot;: &quot;The dictionary to freeze.&quot;,
-                    &quot;lua_type&quot;: &quot;T&quot;
-                }
-            ],
-            &quot;returns&quot;: [
-                {
-                    &quot;desc&quot;: &quot;The frozen dictionary.&quot;,
-                    &quot;lua_type&quot;: &quot;T&quot;
-                }
-            ],
-            &quot;function_type&quot;: &quot;static&quot;,
-            &quot;source&quot;: {
-                &quot;line&quot;: 23,
-                &quot;path&quot;: &quot;src/Dictionary/freeze.lua&quot;
-            }
-        },
-        {
-            &quot;name&quot;: &quot;includes&quot;,
-            &quot;desc&quot;: &quot;Checks whether or not the given dictionary includes the given value.\n\n```lua\nlocal dictionary = { hello = \&quot;roblox\&quot;, goodbye = \&quot;world\&quot; }\n\nlocal includesRoblox = Includes(dictionary, \&quot;roblox\&quot;) -- true\nlocal includesCat = Includes(dictionary, \&quot;cat\&quot;) -- false\n```&quot;,
-            &quot;params&quot;: [
-                {
-                    &quot;name&quot;: &quot;dictionary&quot;,
-                    &quot;desc&quot;: &quot;The dictionary to check.&quot;,
-                    &quot;lua_type&quot;: &quot;{[K]: V}&quot;
-                },
-                {
-                    &quot;name&quot;: &quot;value&quot;,
-                    &quot;desc&quot;: &quot;The value to check for.&quot;,
-                    &quot;lua_type&quot;: &quot;V&quot;
-                }
-            ],
-            &quot;returns&quot;: [
-                {
-                    &quot;desc&quot;: &quot;Whether or not the dictionary includes the given value.&quot;,
-                    &quot;lua_type&quot;: &quot;boolean&quot;
-                }
-            ],
-            &quot;function_type&quot;: &quot;static&quot;,
-            &quot;source&quot;: {
-                &quot;line&quot;: 19,
-                &quot;path&quot;: &quot;src/Dictionary/includes.lua&quot;
-            }
-        },
-        {
-            &quot;name&quot;: &quot;count&quot;,
-            &quot;desc&quot;: &quot;Counts the number of items in a dictionary.\n\n```lua\nlocal dictionary = { hello = \&quot;world\&quot;, goodbye = \&quot;world\&quot; }\n\nlocal value = Count(dictionary) -- 2\nlocal value = Count(dictionary, function(item, key)\n  return item == \&quot;world\&quot;\nend) -- 1\n```&quot;,
-            &quot;params&quot;: [
-                {
-                    &quot;name&quot;: &quot;dictionary&quot;,
-                    &quot;desc&quot;: &quot;The dictionary to count.&quot;,
-                    &quot;lua_type&quot;: &quot;T&quot;
-                },
-                {
-                    &quot;name&quot;: &quot;predicate?&quot;,
-                    &quot;desc&quot;: &quot;The predicate to use to filter the dictionary.&quot;,
-                    &quot;lua_type&quot;: &quot;(value: T, key: K, dictionary: T) -&gt; any&quot;
-                }
-            ],
-            &quot;returns&quot;: [
-                {
-                    &quot;desc&quot;: &quot;The number of items in the dictionary.&quot;,
-                    &quot;lua_type&quot;: &quot;number&quot;
-                }
-            ],
-            &quot;function_type&quot;: &quot;static&quot;,
-            &quot;source&quot;: {
-                &quot;line&quot;: 25,
-                &quot;path&quot;: &quot;src/Dictionary/count.lua&quot;
-            }
-        },
-        {
-            &quot;name&quot;: &quot;removeKey&quot;,
-            &quot;desc&quot;: &quot;Removes the given key from the given dictionary.\n\n```lua\nlocal dictionary = { hello = \&quot;roblox\&quot;, goodbye = \&quot;world\&quot; }\n\nlocal withoutHello = RemoveKey(dictionary, \&quot;hello\&quot;) -- { goodbye = \&quot;world\&quot; }\nlocal withoutGoodbye = RemoveKey(dictionary, \&quot;goodbye\&quot;) -- { hello = \&quot;roblox\&quot; }\n```&quot;,
-            &quot;params&quot;: [
-                {
-                    &quot;name&quot;: &quot;dictionary&quot;,
-                    &quot;desc&quot;: &quot;The dictionary to remove the key from.&quot;,
-                    &quot;lua_type&quot;: &quot;{[K]: V}&quot;
-                },
-                {
-                    &quot;name&quot;: &quot;key&quot;,
-                    &quot;desc&quot;: &quot;The key to remove.&quot;,
-                    &quot;lua_type&quot;: &quot;K&quot;
-                }
-            ],
-            &quot;returns&quot;: [
-                {
-                    &quot;desc&quot;: &quot;The dictionary without the given key.&quot;,
-                    &quot;lua_type&quot;: &quot;{[K]: V}&quot;
-                }
-            ],
-            &quot;function_type&quot;: &quot;static&quot;,
-            &quot;source&quot;: {
-                &quot;line&quot;: 21,
-                &quot;path&quot;: &quot;src/Dictionary/removeKey.lua&quot;
-            }
-        },
-        {
-            &quot;name&quot;: &quot;removeKeys&quot;,
-            &quot;desc&quot;: &quot;Removes the given keys from the given dictionary.\n\n```lua\nlocal dictionary = { hello = \&quot;world\&quot;, cat = \&quot;meow\&quot;, dog = \&quot;woof\&quot;, unicorn = \&quot;rainbow\&quot; }\n\nlocal withoutCatDog = RemoveKeys(dictionary, \&quot;cat\&quot;, \&quot;dog\&quot;) -- { hello = \&quot;world\&quot;, unicorn = \&quot;rainbow\&quot; }\n```&quot;,
-            &quot;params&quot;: [
-                {
-                    &quot;name&quot;: &quot;dictionary&quot;,
-                    &quot;desc&quot;: &quot;The dictionary to remove the keys from.&quot;,
-                    &quot;lua_type&quot;: &quot;{[K]: V}&quot;
-                },
-                {
-                    &quot;name&quot;: &quot;keys&quot;,
-                    &quot;desc&quot;: &quot;The keys to remove.&quot;,
-                    &quot;lua_type&quot;: &quot;...K&quot;
-                }
-            ],
-            &quot;returns&quot;: [
-                {
-                    &quot;desc&quot;: &quot;The dictionary without the given keys.&quot;,
-                    &quot;lua_type&quot;: &quot;{[K]: V}&quot;
-                }
-            ],
-            &quot;function_type&quot;: &quot;static&quot;,
-            &quot;source&quot;: {
-                &quot;line&quot;: 20,
-                &quot;path&quot;: &quot;src/Dictionary/removeKeys.lua&quot;
-            }
-        },
-        {
-            &quot;name&quot;: &quot;removeValue&quot;,
-            &quot;desc&quot;: &quot;Removes the given value from the given dictionary.\n\n```lua\nlocal dictionary = { hello = \&quot;roblox\&quot;, goodbye = \&quot;world\&quot; }\n\nlocal withoutHello = RemoveValue(dictionary, \&quot;roblox\&quot;) -- { goodbye = \&quot;world\&quot; }\nlocal withoutGoodbye = RemoveValue(dictionary, \&quot;world\&quot;) -- { hello = \&quot;roblox\&quot; }\n```&quot;,
-            &quot;params&quot;: [
-                {
-                    &quot;name&quot;: &quot;dictionary&quot;,
-                    &quot;desc&quot;: &quot;The dictionary to remove the value from.&quot;,
-                    &quot;lua_type&quot;: &quot;{[K]: V}&quot;
-                },
-                {
-                    &quot;name&quot;: &quot;value&quot;,
-                    &quot;desc&quot;: &quot;The value to remove.&quot;,
-                    &quot;lua_type&quot;: &quot;V&quot;
-                }
-            ],
-            &quot;returns&quot;: [
-                {
-                    &quot;desc&quot;: &quot;The dictionary without the given value.&quot;,
-                    &quot;lua_type&quot;: &quot;{[K]: V}&quot;
-                }
-            ],
-            &quot;function_type&quot;: &quot;static&quot;,
-            &quot;source&quot;: {
-                &quot;line&quot;: 19,
-                &quot;path&quot;: &quot;src/Dictionary/removeValue.lua&quot;
-            }
-        },
-        {
-            &quot;name&quot;: &quot;freezeDeep&quot;,
-            &quot;desc&quot;: &quot;Freezes the entire dictionary, making it read-only, including all nested dictionaries.\n\n```lua\nlocal dictionary = { hello = \&quot;roblox\&quot;, goodbye = { world = \&quot;world\&quot; } }\n\nlocal new = FreezeDeep(dictionary)\n\nnew.hello = \&quot;world\&quot; -- error!\nnew.goodbye.world = \&quot;hello\&quot; -- error!\n```&quot;,
-            &quot;params&quot;: [
-                {
-                    &quot;name&quot;: &quot;dictionary&quot;,
-                    &quot;desc&quot;: &quot;The dictionary to freeze.&quot;,
-                    &quot;lua_type&quot;: &quot;T&quot;
-                }
-            ],
-            &quot;returns&quot;: [
-                {
-                    &quot;desc&quot;: &quot;The frozen dictionary.&quot;,
-                    &quot;lua_type&quot;: &quot;T&quot;
-                }
-            ],
-            &quot;function_type&quot;: &quot;static&quot;,
-            &quot;source&quot;: {
-                &quot;line&quot;: 22,
-                &quot;path&quot;: &quot;src/Dictionary/freezeDeep.lua&quot;
-            }
-        },
-        {
-            &quot;name&quot;: &quot;equals&quot;,
-            &quot;desc&quot;: &quot;Compares two dictionaries for equality.\n\n```lua\nlocal dictionary = { hello = \&quot;world\&quot;, goodbye = \&quot;world\&quot; }\nlocal other1 = { hello = \&quot;world\&quot;, goodbye = \&quot;world\&quot; }\nlocal other2 = { hello = \&quot;hello\&quot;, world = \&quot;goodbye\&quot; }\n\nlocal value = Equals(dictionary, other1) -- true\nlocal value = Equals(dictionary, other1, other2) -- false\n```&quot;,
-            &quot;params&quot;: [
-                {
-                    &quot;name&quot;: &quot;...&quot;,
-                    &quot;desc&quot;: &quot;The dictionaries to compare.&quot;,
-                    &quot;lua_type&quot;: &quot;...{ [any]: any }&quot;
-                }
-            ],
-            &quot;returns&quot;: [
-                {
-                    &quot;desc&quot;: &quot;Whether the dictionaries are equal.&quot;,
-                    &quot;lua_type&quot;: &quot;boolean&quot;
-                }
-            ],
-            &quot;function_type&quot;: &quot;static&quot;,
-            &quot;source&quot;: {
-                &quot;line&quot;: 45,
-                &quot;path&quot;: &quot;src/Dictionary/equals.lua&quot;
-            }
-        },
-        {
-            &quot;name&quot;: &quot;some&quot;,
-            &quot;desc&quot;: &quot;Checks whether or not the predicate returned true for any value in the dictionary.\n\n```lua\nlocal dictionary = { hello = \&quot;world\&quot;, cat = \&quot;meow\&quot;, unicorn = \&quot;rainbow\&quot; }\n\nlocal hasMeow = Some(dictionary, function(value)\n  return value == \&quot;meow\&quot;\nend) -- true\n\nlocal hasDog = Some(dictionary, function(_, key)\n  return key == \&quot;dog\&quot;\nend) -- false\n```&quot;,
-            &quot;params&quot;: [
-                {
-                    &quot;name&quot;: &quot;dictionary&quot;,
-                    &quot;desc&quot;: &quot;The dictionary to check.&quot;,
-                    &quot;lua_type&quot;: &quot;{[K]: V}&quot;
-                },
-                {
-                    &quot;name&quot;: &quot;predicate&quot;,
-                    &quot;desc&quot;: &quot;The predicate to check against.&quot;,
-                    &quot;lua_type&quot;: &quot;(value: V, key: K, dictionary: { [K]: V }) -&gt; any&quot;
-                }
-            ],
-            &quot;returns&quot;: [
-                {
-                    &quot;desc&quot;: &quot;Whether or not the predicate returned true for any value.&quot;,
-                    &quot;lua_type&quot;: &quot;boolean&quot;
-                }
-            ],
-            &quot;function_type&quot;: &quot;static&quot;,
-            &quot;source&quot;: {
-                &quot;line&quot;: 24,
-                &quot;path&quot;: &quot;src/Dictionary/some.lua&quot;
-            }
-        },
-        {
-            &quot;name&quot;: &quot;copyDeep&quot;,
-            &quot;desc&quot;: &quot;Copies a dictionary recursively.\n\n```lua\nlocal dictionary = { hello = { world = \&quot;goodbye\&quot; } }\n\nlocal new = CopyDeep(dictionary) -- { hello = { world = \&quot;goodbye\&quot; } }\n\nprint(new == dictionary) -- false\nprint(new.hello == dictionary.hello) -- false\n```&quot;,
-            &quot;params&quot;: [
-                {
-                    &quot;name&quot;: &quot;dictionary&quot;,
-                    &quot;desc&quot;: &quot;The dictionary to copy.&quot;,
-                    &quot;lua_type&quot;: &quot;T&quot;
-                }
-            ],
-            &quot;returns&quot;: [
-                {
-                    &quot;desc&quot;: &quot;The copied dictionary.&quot;,
-                    &quot;lua_type&quot;: &quot;T&quot;
-                }
-            ],
-            &quot;function_type&quot;: &quot;static&quot;,
-            &quot;source&quot;: {
-                &quot;line&quot;: 20,
-                &quot;path&quot;: &quot;src/Dictionary/copyDeep.lua&quot;
-            }
-        },
-        {
-            &quot;name&quot;: &quot;copy&quot;,
-            &quot;desc&quot;: &quot;Copies a dictionary.\n\n```lua\nlocal dictionary = { hello = \&quot;world\&quot; }\n\nlocal new = Copy(dictionary) -- { hello = \&quot;world\&quot; }\n\nprint(new == dictionary) -- false\nprint(new.hello == dictionary.hello) -- true\n```&quot;,
-            &quot;params&quot;: [
-                {
-                    &quot;name&quot;: &quot;dictionary&quot;,
-                    &quot;desc&quot;: &quot;The dictionary to copy.&quot;,
-                    &quot;lua_type&quot;: &quot;T&quot;
-                }
-            ],
-            &quot;returns&quot;: [
-                {
-                    &quot;desc&quot;: &quot;The copied dictionary.&quot;,
-                    &quot;lua_type&quot;: &quot;T&quot;
-                }
-            ],
-            &quot;function_type&quot;: &quot;static&quot;,
-            &quot;source&quot;: {
-                &quot;line&quot;: 20,
-                &quot;path&quot;: &quot;src/Dictionary/copy.lua&quot;
-            }
-        },
-        {
-            &quot;name&quot;: &quot;mergeDeep&quot;,
-            &quot;desc&quot;: &quot;Merges the given dictionaries into a single dictionary. If the\nvalue is `None`, it will be removed from the result. This is\nrecursive. The parameters may be any number of dictionaries or\n`nil`. Non-dictonaries will be ignored.\n\nAliases: `joinDeep`\n\n```lua\nlocal dictionary1 = { hello = \&quot;roblox\&quot;, goodbye = { world = \&quot;goodbye\&quot; } }\nlocal dictionary2 = { goodbye = { world = \&quot;world\&quot; } }\n\nlocal merged = MergeDeep(dictionary1, dictionary2) -- { hello = \&quot;roblox\&quot;, goodbye = { world = \&quot;world\&quot; } }\n```&quot;,
-            &quot;params&quot;: [
-                {
-                    &quot;name&quot;: &quot;dictionaries?&quot;,
-                    &quot;desc&quot;: &quot;The dictionaries to merge.&quot;,
-                    &quot;lua_type&quot;: &quot;...U&quot;
-                }
-            ],
-            &quot;returns&quot;: [
-                {
-                    &quot;desc&quot;: &quot;The merged dictionary.&quot;,
-                    &quot;lua_type&quot;: &quot;T&quot;
-                }
-            ],
-            &quot;function_type&quot;: &quot;static&quot;,
-            &quot;source&quot;: {
-                &quot;line&quot;: 28,
-                &quot;path&quot;: &quot;src/Dictionary/mergeDeep.lua&quot;
-            }
         }
     ],
     &quot;properties&quot;: [],
@@ -1157,7 +1157,7 @@ new<span class="token punctuation">.</span>goodbye<span class="token punctuation
         &quot;path&quot;: &quot;src/Dictionary/init.lua&quot;
     }
 }</pre></details></div><div class="col col--3"><div class="tableOfContents_35-E thin-scrollbar"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#types" class="table-of-contents__link toc-highlight">Types</a></li><li><a href="#properties" class="table-of-contents__link toc-highlight">Properties</a></li><li><a href="#functions" class="table-of-contents__link toc-highlight">Functions</a><ul><li><a href="#copy" class="table-of-contents__link toc-highlight">.copy</a></li><li><a href="#copyDeep" class="table-of-contents__link toc-highlight">.copyDeep</a></li><li><a href="#count" class="table-of-contents__link toc-highlight">.count</a></li><li><a href="#entries" class="table-of-contents__link toc-highlight">.entries</a></li><li><a href="#equals" class="table-of-contents__link toc-highlight">.equals</a></li><li><a href="#equalsDeep" class="table-of-contents__link toc-highlight">.equalsDeep</a></li><li><a href="#every" class="table-of-contents__link toc-highlight">.every</a></li><li><a href="#filter" class="table-of-contents__link toc-highlight">.filter</a></li><li><a href="#flatten" class="table-of-contents__link toc-highlight">.flatten</a></li><li><a href="#flip" class="table-of-contents__link toc-highlight">.flip</a></li><li><a href="#freeze" class="table-of-contents__link toc-highlight">.freeze</a></li><li><a href="#freezeDeep" class="table-of-contents__link toc-highlight">.freezeDeep</a></li><li><a href="#fromArrays" class="table-of-contents__link toc-highlight">.fromArrays</a></li><li><a href="#fromEntries" class="table-of-contents__link toc-highlight">.fromEntries</a></li><li><a href="#has" class="table-of-contents__link toc-highlight">.has</a></li><li><a href="#includes" class="table-of-contents__link toc-highlight">.includes</a></li><li><a href="#keys" class="table-of-contents__link toc-highlight">.keys</a></li><li><a href="#map" class="table-of-contents__link toc-highlight">.map</a></li><li><a href="#merge" class="table-of-contents__link toc-highlight">.merge</a></li><li><a href="#mergeDeep" class="table-of-contents__link toc-highlight">.mergeDeep</a></li><li><a href="#removeKey" class="table-of-contents__link toc-highlight">.removeKey</a></li><li><a href="#removeKeys" class="table-of-contents__link toc-highlight">.removeKeys</a></li><li><a href="#removeValue" class="table-of-contents__link toc-highlight">.removeValue</a></li><li><a href="#removeValues" class="table-of-contents__link toc-highlight">.removeValues</a></li><li><a href="#set" class="table-of-contents__link toc-highlight">.set</a></li><li><a href="#some" class="table-of-contents__link toc-highlight">.some</a></li><li><a href="#update" class="table-of-contents__link toc-highlight">.update</a></li><li><a href="#values" class="table-of-contents__link toc-highlight">.values</a></li></ul></li></ul></div></div></div></div></main></div></div><footer class="footer footer--dark"><div class="container"><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2022 csqrl. Built with Moonwave and Docusaurus.</div></div></div></footer></div>
-<script src="/sift/assets/js/runtime~main.afe0435f.js"></script>
-<script src="/sift/assets/js/main.4a6bc6ca.js"></script>
+<script src="/sift/assets/js/runtime~main.67ed33ce.js"></script>
+<script src="/sift/assets/js/main.c46f0ce1.js"></script>
 </body>
 </html>
