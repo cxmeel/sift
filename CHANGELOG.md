@@ -1,5 +1,16 @@
 # Changelog
 
+## [0.0.2]
+
+### Changed
+
+- Fixed a bug where `Array.concat(Deep)`, `Dictionary.merge(Deep)` and `Set.merge` would not accept holes (`nil` values) in their arguments. This would cause the function to stop processing further arguments once it found a `nil` value.
+- Fixed a bug where `Array.insert` would not insert the element at the correct index. An index of `0` will now insert the element at the end of the array. `length+1` will also insert the element at the end of the array. `length+2` (or greater) will be ignored, and the original array will be returned.
+- Bumped tooling versions:
+  - rojo to v7.1.1
+  - stylua to v0.13.1
+  - selene to v0.17.0
+
 ## [0.0.1]
 
 ### Added
