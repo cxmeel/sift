@@ -10,6 +10,8 @@
 
   Inserts the given values into an array at the given index, shifting all values after it to the right. If the index is negative (or 0), it is counted from the end of the array.
 
+	If the index to insert at is out of range, the array is not modified.
+
   ```lua
   local array = { 1, 2, 3 }
 
@@ -20,7 +22,16 @@ local function insert<T>(array: { T }, index: number, ...: T): { T }
 	local length = #array
 
 	if index < 1 then
-		index += length
+		index += length + 1
+	end
+
+	if index > length then
+		if index > length + 1 then
+			return array
+		end
+
+		index = length + 1
+		length += 1
 	end
 
 	local result = {}
