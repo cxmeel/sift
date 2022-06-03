@@ -31,11 +31,17 @@ return function()
 		local dictionary1 = { hello = "roblox", goodbye = { world = "world" } }
 
 		local merged = MergeDeep(dictionary1, nil)
+		local merged2 = MergeDeep(nil, dictionary1)
 
 		expect(merged).to.be.a("table")
 
 		expect(merged.hello).to.equal("roblox")
 		expect(merged.goodbye.world).to.equal("world")
+
+		expect(merged2).to.be.a("table")
+
+		expect(merged2.hello).to.equal("roblox")
+		expect(merged2.goodbye.world).to.equal("world")
 	end)
 
 	it("should remove values set to None", function()

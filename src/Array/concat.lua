@@ -23,10 +23,12 @@ local None = require(Sift.None)
 	local new = Concat(table1, table2) -- { 1, 2, 3, 4, 5, 6 }
 	```
 ]=]
-local function concat<T>(...: { T }): { T }
+local function concat<T>(...: any): { T }
 	local result = {}
 
-	for _, array in ipairs({ ... }) do
+	for arrayIndex = 1, select("#", ...) do
+		local array = select(arrayIndex, ...)
+
 		if type(array) ~= "table" then
 			continue
 		end

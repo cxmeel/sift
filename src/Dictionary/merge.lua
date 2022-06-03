@@ -24,10 +24,12 @@ local None = require(Sift.None)
   local merged = Merge(dictionary1, dictionary2) -- { hello = "roblox", goodbye = "goodbye" }
   ```
 ]=]
-local function merge<T>(...: { [any]: any }?): T
+local function merge<T>(...: any): T
 	local result = {}
 
-	for _, dictionary in ipairs({ ... }) do
+	for dictionaryIndex = 1, select("#", ...) do
+		local dictionary = select(dictionaryIndex, ...)
+
 		if type(dictionary) ~= "table" then
 			continue
 		end
