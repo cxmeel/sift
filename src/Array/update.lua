@@ -18,7 +18,7 @@ end
 	@within Array
 
 	@param array {T} -- The array to update.
-	@param index {number} -- The index to update.
+	@param index number -- The index to update.
 	@param updater? (value: T, index: number) -> T -- The updater function.
 	@param callback? (index: number) -> T -- The callback function.
 	@return {T} -- The updated array.
