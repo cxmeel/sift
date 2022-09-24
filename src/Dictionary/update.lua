@@ -50,7 +50,7 @@ local function update<K, V, U, C>(
 		end
 	else
 		if callback then
-			result[key] = if callback then call(callback, key) else nil
+			result[key] = call(callback, key)
 		end
 	end
 
