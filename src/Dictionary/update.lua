@@ -1,7 +1,4 @@
 --!strict
-local Sift = script.Parent.Parent
-
-local Util = require(Sift.Util)
 local copy = require(script.Parent.copy)
 
 type Callback<K, V> = (key: K) -> V
@@ -47,14 +44,14 @@ local function update<K, V, U, C>(
 ): { [K]: V & U & C }
 	local result = copy(dictionary)
 
-	updater = if type(updater) == "function" then updater else Util.func.returned
-
-	callback = if type(callback) == "function" then callback else Util.func.returned
-
 	if result[key] ~= nil then
-		result[key] = updater(result[key], key)
+		if updater then
+			result[key] = updater(result[key], key)
+		end
 	else
-		result[key] = call(callback, key)
+		if callback then
+			result[key] = if callback then call(callback, key) else nil
+		end
 	end
 
 	return result
