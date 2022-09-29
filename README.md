@@ -66,7 +66,7 @@ Wally is a CLI package manager (much like NPM, Yarn or Cargo) for Roblox by @Upl
 # wally.toml
 
 [dependencies]
-Sift = "csqrl/sift@=0.0.2"
+Sift = "csqrl/sift@0.0.3"
 ```
 
 ```shell

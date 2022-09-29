@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.0.3]
+
+### Changed
+
+- If `update` is called with a key that doesn't exist in the specified dictionary, the key's value is **set to the key itself**. Fix by [@reselim](https://github.com/Reselim) in [PR #7](https://github.com/csqrl/sift/pull/7).
+- Added `aftman.toml` and switched GitHub workflows over to use aftman.
+
 ## [0.0.2]
 
 ### Changed

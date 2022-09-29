@@ -44,4 +44,14 @@ return function()
 		expect(new.cats).to.equal(2)
 		expect(new.dogs).to.equal(1)
 	end)
+
+	it("should not create a key if it doesn't exist and no callback is specified", function()
+		local dictionary = { cats = 2 }
+
+		local new = Update(dictionary, "dogs", function()
+			return 1
+		end)
+
+		expect(new.dogs).to.equal(nil)
+	end)
 end
