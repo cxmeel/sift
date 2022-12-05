@@ -31,8 +31,8 @@ corresponding submodule/method&#x27;s documentation.
 See the individual submodule pages for full documentation.
 
 The Luau types `Dictionary&lt;K, V&gt;`, `Array&lt;T&gt;` (aliased as `List&lt;T&gt;`) and `Set&lt;T&gt;` are exported from the Sift module (e.g. they can be used via `Sift.Array&lt;string&gt;`), but are also available from [Sift.Types]."><link data-rh="true" rel="canonical" href="https://csqrl.github.io/sift/api/Sift"><link data-rh="true" rel="alternate" href="https://csqrl.github.io/sift/api/Sift" hreflang="en"><link data-rh="true" rel="alternate" href="https://csqrl.github.io/sift/api/Sift" hreflang="x-default"><link rel="stylesheet" href="/sift/assets/css/styles.59a51795.css">
-<link rel="preload" href="/sift/assets/js/runtime~main.e36e9ba4.js" as="script">
-<link rel="preload" href="/sift/assets/js/main.7ebde9d4.js" as="script">
+<link rel="preload" href="/sift/assets/js/runtime~main.33f8bedd.js" as="script">
+<link rel="preload" href="/sift/assets/js/main.6abaeed2.js" as="script">
 </head>
 <body class="navigation-with-keyboard">
 <script>!function(){function e(e){document.documentElement.setAttribute("data-theme",e)}var t=function(){var e=null;try{e=localStorage.getItem("theme")}catch(e){}return e}();null!==t?e(t):window.matchMedia("(prefers-color-scheme: dark)").matches?e("dark"):(window.matchMedia("(prefers-color-scheme: light)").matches,e("light"))}()</script><div id="__docusaurus">
@@ -59,7 +59,18 @@ The Luau types `Dictionary&lt;K, V&gt;`, `Array&lt;T&gt;` (aliased as `List&lt;T
   constant is used to represent a non-existent value. It can be used in methods
   like <code>Array.Concat</code> or <code>Dictionary.Merge</code> to remove the value from the result.
 </p>
-</div><h2 class="anchor anchorWithStickyNavbar_LWe7" id="functions">Functions<a class="hash-link" href="#functions" title="Direct link to heading">​</a></h2><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="isEmpty"><code style="text-decoration:none">isEmpty</code><a class="hash-link" href="#isEmpty" title="Direct link to heading">​</a></h3><div class="repositoryDetailsContainer_BPdw"><span class="releaseVersion_EonW">since <!-- -->v0.0.1</span><a class="sourceButton_sEho" href="https://github.com/csqrl/sift/blob/main/src/Util/isEmpty.lua#L22"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>Sift<!-- -->.</code><code class="green_DgR4">isEmpty</code><code>(</code><div class="inset_uKQm"><div><code>table<!-- -->: </code><code class="blue_P4bS">table</code><span class="inlineDescription_G7Er">-- <span>
+</div><h2 class="anchor anchorWithStickyNavbar_LWe7" id="functions">Functions<a class="hash-link" href="#functions" title="Direct link to heading">​</a></h2><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="equalObjects"><code style="text-decoration:none">equalObjects</code><a class="hash-link" href="#equalObjects" title="Direct link to heading">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/csqrl/sift/blob/main/src/Util/equalObjects.lua#L20"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>Sift<!-- -->.</code><code class="green_DgR4">equalObjects</code><code>(</code><div class="inset_uKQm"><div><code>...<!-- -->: </code><code class="blue_P4bS">...table</code><span class="inlineDescription_G7Er">-- <span>
+<p>The tables to compare.</p>
+</span></span></div></div><code>) → </code><code class="blue_P4bS">boolean</code><span class="inlineDescription_G7Er">-- <span>
+<p>Whether or not the tables are equal.</p>
+</span></span></div><div>
+<p>Compares two or more tables to see if they are equal.</p>
+<pre class="language-lua"><code class="language-lua"><span class="token keyword">local</span> a <span class="token operator">=</span> <span class="token punctuation">{</span> hello <span class="token operator">=</span> <span class="token string">"world"</span> <span class="token punctuation">}</span>
+<span class="token keyword">local</span> b <span class="token operator">=</span> <span class="token punctuation">{</span> hello <span class="token operator">=</span> <span class="token string">"world"</span> <span class="token punctuation">}</span>
+
+<span class="token keyword">local</span> equal <span class="token operator">=</span> <span class="token function">EqualObjects</span><span class="token punctuation">(</span>a<span class="token punctuation">,</span> b<span class="token punctuation">)</span> <span class="token comment">-- true</span>
+</code></pre>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="isEmpty"><code style="text-decoration:none">isEmpty</code><a class="hash-link" href="#isEmpty" title="Direct link to heading">​</a></h3><div class="repositoryDetailsContainer_BPdw"><span class="releaseVersion_EonW">since <!-- -->v0.0.1</span><a class="sourceButton_sEho" href="https://github.com/csqrl/sift/blob/main/src/Util/isEmpty.lua#L22"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>Sift<!-- -->.</code><code class="green_DgR4">isEmpty</code><code>(</code><div class="inset_uKQm"><div><code>table<!-- -->: </code><code class="blue_P4bS">table</code><span class="inlineDescription_G7Er">-- <span>
 <p>The table to check.</p>
 </span></span></div></div><code>) → </code><code class="blue_P4bS">boolean</code><span class="inlineDescription_G7Er">-- <span>
 <p>Whether or not the table is empty.</p>
@@ -71,19 +82,30 @@ The Luau types `Dictionary&lt;K, V&gt;`, `Array&lt;T&gt;` (aliased as `List&lt;T
 <span class="token keyword">local</span> value <span class="token operator">=</span> <span class="token function">isEmpty</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span> <span class="token comment">-- true</span>
 <span class="token keyword">local</span> value <span class="token operator">=</span> <span class="token function">isEmpty</span><span class="token punctuation">(</span>b<span class="token punctuation">)</span> <span class="token comment">-- false</span>
 </code></pre>
-</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="equalObjects"><code style="text-decoration:none">equalObjects</code><a class="hash-link" href="#equalObjects" title="Direct link to heading">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/csqrl/sift/blob/main/src/Util/equalObjects.lua#L20"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>Sift<!-- -->.</code><code class="green_DgR4">equalObjects</code><code>(</code><div class="inset_uKQm"><div><code>...<!-- -->: </code><code class="blue_P4bS">...table</code><span class="inlineDescription_G7Er">-- <span>
-<p>The tables to compare.</p>
-</span></span></div></div><code>) → </code><code class="blue_P4bS">boolean</code><span class="inlineDescription_G7Er">-- <span>
-<p>Whether or not the tables are equal.</p>
-</span></span></div><div>
-<p>Compares two or more tables to see if they are equal.</p>
-<pre class="language-lua"><code class="language-lua"><span class="token keyword">local</span> a <span class="token operator">=</span> <span class="token punctuation">{</span> hello <span class="token operator">=</span> <span class="token string">"world"</span> <span class="token punctuation">}</span>
-<span class="token keyword">local</span> b <span class="token operator">=</span> <span class="token punctuation">{</span> hello <span class="token operator">=</span> <span class="token string">"world"</span> <span class="token punctuation">}</span>
-
-<span class="token keyword">local</span> equal <span class="token operator">=</span> <span class="token function">EqualObjects</span><span class="token punctuation">(</span>a<span class="token punctuation">,</span> b<span class="token punctuation">)</span> <span class="token comment">-- true</span>
-</code></pre>
 </div></div></article></div><details><summary>Show raw api</summary><pre style="max-width:100%;white-space:pre-wrap">{
     &quot;functions&quot;: [
+        {
+            &quot;name&quot;: &quot;equalObjects&quot;,
+            &quot;desc&quot;: &quot;Compares two or more tables to see if they are equal.\n\n```lua\nlocal a = { hello = \&quot;world\&quot; }\nlocal b = { hello = \&quot;world\&quot; }\n\nlocal equal = EqualObjects(a, b) -- true\n```&quot;,
+            &quot;params&quot;: [
+                {
+                    &quot;name&quot;: &quot;...&quot;,
+                    &quot;desc&quot;: &quot;The tables to compare.&quot;,
+                    &quot;lua_type&quot;: &quot;...table&quot;
+                }
+            ],
+            &quot;returns&quot;: [
+                {
+                    &quot;desc&quot;: &quot;Whether or not the tables are equal.&quot;,
+                    &quot;lua_type&quot;: &quot;boolean&quot;
+                }
+            ],
+            &quot;function_type&quot;: &quot;static&quot;,
+            &quot;source&quot;: {
+                &quot;line&quot;: 20,
+                &quot;path&quot;: &quot;src/Util/equalObjects.lua&quot;
+            }
+        },
         {
             &quot;name&quot;: &quot;isEmpty&quot;,
             &quot;desc&quot;: &quot;Checks whether or not a table is empty.\n\n```lua\nlocal a = {}\nlocal b = { hello = \&quot;world\&quot; }\n\nlocal value = isEmpty(a) -- true\nlocal value = isEmpty(b) -- false\n```&quot;,
@@ -105,28 +127,6 @@ The Luau types `Dictionary&lt;K, V&gt;`, `Array&lt;T&gt;` (aliased as `List&lt;T
             &quot;source&quot;: {
                 &quot;line&quot;: 22,
                 &quot;path&quot;: &quot;src/Util/isEmpty.lua&quot;
-            }
-        },
-        {
-            &quot;name&quot;: &quot;equalObjects&quot;,
-            &quot;desc&quot;: &quot;Compares two or more tables to see if they are equal.\n\n```lua\nlocal a = { hello = \&quot;world\&quot; }\nlocal b = { hello = \&quot;world\&quot; }\n\nlocal equal = EqualObjects(a, b) -- true\n```&quot;,
-            &quot;params&quot;: [
-                {
-                    &quot;name&quot;: &quot;...&quot;,
-                    &quot;desc&quot;: &quot;The tables to compare.&quot;,
-                    &quot;lua_type&quot;: &quot;...table&quot;
-                }
-            ],
-            &quot;returns&quot;: [
-                {
-                    &quot;desc&quot;: &quot;Whether or not the tables are equal.&quot;,
-                    &quot;lua_type&quot;: &quot;boolean&quot;
-                }
-            ],
-            &quot;function_type&quot;: &quot;static&quot;,
-            &quot;source&quot;: {
-                &quot;line&quot;: 20,
-                &quot;path&quot;: &quot;src/Util/equalObjects.lua&quot;
             }
         }
     ],
@@ -207,7 +207,7 @@ The Luau types `Dictionary&lt;K, V&gt;`, `Array&lt;T&gt;` (aliased as `List&lt;T
         &quot;path&quot;: &quot;src/init.lua&quot;
     }
 }</pre></details></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#types" class="table-of-contents__link toc-highlight">Types</a><ul><li><a href="#None" class="table-of-contents__link toc-highlight">None</a></li></ul></li><li><a href="#properties" class="table-of-contents__link toc-highlight">Properties</a><ul><li><a href="#Array" class="table-of-contents__link toc-highlight">Array</a></li><li><a href="#Dictionary" class="table-of-contents__link toc-highlight">Dictionary</a></li><li><a href="#List" class="table-of-contents__link toc-highlight">List</a></li><li><a href="#None" class="table-of-contents__link toc-highlight">None</a></li><li><a href="#Set" class="table-of-contents__link toc-highlight">Set</a></li><li><a href="#Types" class="table-of-contents__link toc-highlight">Types</a></li></ul></li><li><a href="#functions" class="table-of-contents__link toc-highlight">Functions</a><ul><li><a href="#equalObjects" class="table-of-contents__link toc-highlight">.equalObjects</a></li><li><a href="#isEmpty" class="table-of-contents__link toc-highlight">.isEmpty</a></li></ul></li></ul></div></div></div></div></main></div></div><footer class="footer footer--dark"><div class="container container-fluid"><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2022 csqrl. Built with Moonwave and Docusaurus.</div></div></div></footer></div>
-<script src="/sift/assets/js/runtime~main.e36e9ba4.js"></script>
-<script src="/sift/assets/js/main.7ebde9d4.js"></script>
+<script src="/sift/assets/js/runtime~main.33f8bedd.js"></script>
+<script src="/sift/assets/js/main.6abaeed2.js"></script>
 </body>
 </html>
