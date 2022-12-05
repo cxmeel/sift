@@ -1,4 +1,4 @@
-import type { AnySet } from "Util"
+import type { AnySet } from "./Util"
 
 declare namespace SiftSet {
   export function add<T, I>(set: Set<T>, ...values: I[]): Set<T | I>

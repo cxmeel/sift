@@ -5,7 +5,7 @@ import {
   ObjectKey,
   ReadonlyDeep,
   TryIndex,
-} from "Util"
+} from "./Util"
 
 declare namespace SiftDictionary {
   export function copy<T extends object>(dictionary: T): T
