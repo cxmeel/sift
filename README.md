@@ -109,6 +109,7 @@ As per the recommendations in [Llama's README][freddylist/llama], the following 
 - `at`: Get an element at a specific index (negative indices are supported).
 - `freeze`: Freeze an array.
 - `freezeDeep`: Freeze an array and all nested arrays.
+- `is`: Check if the passed value is an array.
 - `shuffle`: Shuffle the elements of an array to a random order.
 
 ### Dictionaries
