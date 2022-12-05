@@ -40,6 +40,7 @@ local Array = {
 	freezeDeep = require(script.freezeDeep),
 	includes = require(script.includes),
 	insert = require(script.insert),
+	is = require(script.is),
 	last = require(script.last),
 	map = require(script.map),
 	pop = require(script.pop),
@@ -74,5 +75,6 @@ Array.prepend = Array.unshift
 Array.indexOf = Array.find
 Array.has = Array.includes
 Array.contains = Array.includes
+Array.isArray = Array.is
 
 return Array
