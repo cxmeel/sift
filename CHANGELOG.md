@@ -1,5 +1,9 @@
 # Changelog
 
+## [0.0.4]
+
+- Implemented `Array.is: (value: any) -> boolean` to check if a given value is an array.
+
 ## [0.0.3]
 
 ### Changed
