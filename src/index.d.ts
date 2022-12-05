@@ -1,4 +1,4 @@
-import type { SiftNone } from "Util"
+import type { SiftNone } from "./Util"
 
 import SiftArray from "./Array"
 import SiftDictionary from "./Dictionary"

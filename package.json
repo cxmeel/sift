@@ -1,6 +1,6 @@
 {
   "name": "@rbxts/sift",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Immutable data library for Luau",
   "main": "out/init.lua",
   "types": "out/index.d.ts",

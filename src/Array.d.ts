@@ -1,4 +1,4 @@
-import type { ObjectKey, ReadonlyDeep, ReplaceType, SiftNone } from "Util"
+import type { ReadonlyDeep, ReplaceType, SiftNone } from "./Util"
 
 declare namespace SiftArray {
   export function at<V extends unknown>(
@@ -70,6 +70,8 @@ declare namespace SiftArray {
   export function includes<T>(array: T[], value: T, from?: number): boolean
 
   export function insert<T>(array: T[], index: number, ...values: T[]): T[]
+
+  export function is(value: any): boolean
 
   export function last<T>(array: T[]): T
 
@@ -174,6 +176,7 @@ declare namespace SiftArray {
     includes as has,
     push as append,
     unshift as prepend,
+    is as isArray,
   }
 }
 
