@@ -10,6 +10,10 @@ declare namespace SiftSet {
     predicate?: (item: T) => unknown
   ): number
 
+  export function difference<T>(set: Set<T>, ...sets: Set<T>[]): Set<T>
+
+  export function differenceSymmetric<T>(set: Set<T>, ...sets: Set<T>[]): Set<T>
+
   export function filter<T, S extends Set<T>>(
     set: S,
     predicate: (item: T, set: Readonly<S>) => unknown
