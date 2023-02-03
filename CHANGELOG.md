@@ -1,5 +1,16 @@
 # Changelog
 
+## [0.0.5]
+
+### Added
+
+- `Array.difference` and `Array.differenceSymmetric` to find the difference between two or more arrays.
+- `Set.difference` and `Set.differenceSymmetric` to find the difference between two or more sets.
+
+### Fixed
+
+- Typings for `Array.concat`, which previously returned `T[][]` instead of `T[]`.
+
 ## [0.0.4]
 
 - Implemented `Array.is: (value: any) -> boolean` to check if a given value is an array.

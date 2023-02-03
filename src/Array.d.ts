@@ -6,7 +6,7 @@ declare namespace SiftArray {
     index: number
   ): V | undefined
 
-  export function concat<T>(...arrays: T[]): T[]
+  export function concat<T>(...arrays: T[]): T
 
   export function concatDeep<T>(...arrays: T[]): T
 
