@@ -66,7 +66,7 @@ Wally is a CLI package manager (much like NPM, Yarn or Cargo) for Roblox by @Upl
 # wally.toml
 
 [dependencies]
-Sift = "csqrl/sift@0.0.3"
+Sift = "csqrl/sift@0.0.X" # Replace with current version number
 ```
 
 ```shell
@@ -107,6 +107,8 @@ As per the recommendations in [Llama's README][freddylist/llama], the following 
 ### Arrays (Lists)
 
 - `at`: Get an element at a specific index (negative indices are supported).
+- `difference`: Returns an array of values that are in the first array, but not in the other arrays.
+- `differenceSymmetric`: Returns an array of values that are in the first array, but not in the other arrays, and vice versa.
 - `freeze`: Freeze an array.
 - `freezeDeep`: Freeze an array and all nested arrays.
 - `is`: Check if the passed value is an array.
@@ -122,3 +124,5 @@ As per the recommendations in [Llama's README][freddylist/llama], the following 
 ### Sets
 
 - `count`: Get the number of elements in a set.
+- `difference`: Returns a set of values that are in the first set, but not in the other sets.
+- `differenceSymmetric`: Returns a set of values that are in the first set, but not in the other sets, and vice versa.
