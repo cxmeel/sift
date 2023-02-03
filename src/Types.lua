@@ -1,3 +1,4 @@
+--selene: allow(unused_variable)
 local None = require(script.Parent.None)
 
 --[=[
