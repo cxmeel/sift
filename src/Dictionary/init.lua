@@ -42,6 +42,7 @@ local Dictionary = {
 	some = require(script.some),
 	update = require(script.update),
 	values = require(script.values),
+	withKeys = require(script.withKeys),
 }
 
 Dictionary.join = Dictionary.merge
