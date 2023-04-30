@@ -4,7 +4,7 @@ import {
   ObjectFromKeyValueArrays,
   ObjectKey,
   ReadonlyDeep,
-  TryIndex,
+  TryIndex
 } from "./Util"
 
 declare namespace SiftDictionary {
@@ -153,6 +153,11 @@ declare namespace SiftDictionary {
       }) & { [key in K]: X }
 
   export function values<T extends object>(dictionary: T): T[keyof T][]
+
+  export function withKeys<T extends object, K extends keyof T>(
+    dictionary: T,
+    ...keys: K[]
+  ): Pick<T, K>
 
   // Aliases
   export { merge as join, mergeDeep as joinDeep }

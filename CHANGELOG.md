@@ -1,5 +1,11 @@
 # Changelog
 
+## [0.0.6]
+
+### Added
+
+- `Dictionary.withKeys` by @sasial-dev to restrict what keys can appear in a given dictionary.
+
 ## [0.0.5]
 
 ### Added
