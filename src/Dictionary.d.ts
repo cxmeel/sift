@@ -77,14 +77,14 @@ declare namespace SiftDictionary {
       value: T[K],
       key: K,
       dictionary: Readonly<T>
-    ) => LuaTuple<[newValue: MV, newKey: MK]>
+    ) => LuaTuple<[newValue: MV, newKey: MK]> | undefined
   ): {
     [key in MK]: MV
   }
 
   export function map<T extends object, K extends keyof T, MV>(
     dictionary: T,
-    mapper: (value: T[K], key: K, dictionary: Readonly<T>) => MV
+    mapper: (value: T[K], key: K, dictionary: Readonly<T>) => MV | undefined
   ): {
     [key in K]: MV
   }

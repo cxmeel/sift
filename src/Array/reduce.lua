@@ -32,7 +32,7 @@ local function reduce<T, U>(
 	local result = initReduction
 	local start = 1
 
-	if not result then
+	if result == nil then
 		result = array[1]
 		start = 2
 	end

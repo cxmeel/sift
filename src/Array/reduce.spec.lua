@@ -20,4 +20,14 @@ return function()
 
 		expect(reduced).to.equal(-4)
 	end)
+
+	it("should reduce the array, even if the array has a falsy initial value", function()
+		local array = { true, false, false }
+
+		local reduced = Reduce(array, function(accumulator, value)
+			return accumulator or value
+		end, false)
+
+		expect(reduced).to.equal(true)
+	end)
 end

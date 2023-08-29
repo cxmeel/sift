@@ -33,7 +33,7 @@ local function reduceRight<T, U>(
 	local result = initReduction
 	local start = #array
 
-	if not result then
+	if result == nil then
 		result = array[start]
 		start -= 1
 	end
