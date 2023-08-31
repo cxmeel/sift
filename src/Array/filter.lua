@@ -23,7 +23,10 @@ local Util = require(Sift.Util)
 	end) -- { 2, 3 }
 	```
 ]=]
-local function filter<T>(array: { T }, predicate: ((value: T, index: number, array: { T }) -> boolean?)?): { T }
+local function filter<T>(
+	array: { T },
+	predicate: ((value: T, index: number, array: { T }) -> boolean?)?
+): { T }
 	local result = {}
 
 	predicate = if type(predicate) == "function" then predicate else Util.func.truthy

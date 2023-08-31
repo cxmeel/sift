@@ -21,7 +21,10 @@ local Util = require(Sift.Util)
   end) -- { world = true }
   ```
 ]=]
-local function filter<T>(set: { [T]: boolean }, predicate: ((T, { [T]: boolean }) -> any)?): { [T]: boolean }
+local function filter<T>(
+	set: { [T]: boolean },
+	predicate: ((T, { [T]: boolean }) -> any)?
+): { [T]: boolean }
 	local result = {}
 
 	predicate = if type(predicate) == "function" then predicate else Util.func.truthy
