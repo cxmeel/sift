@@ -9,8 +9,8 @@ classOrder = ["Sift"]
 includeReadme = true
 
 [[navbar.items]]
-label = "Itch.io"
-href = "https://csqrl.itch.io/sift"
+label = "Sponsor"
+href = "https://github.com/sponsors/csqrl"
 position = "right"
 
 [docusaurus.themeConfig.colorMode]
