@@ -20,9 +20,9 @@
 local function copyDeep<T>(array: { T }): { T }
 	local result = table.clone(array)
 
-	for _, value in ipairs(array) do
+	for index, value in array do
 		if type(value) == "table" then
-			table.insert(result, copyDeep(value))
+			result[index] = copyDeep(value) :: any
 		end
 	end
 
