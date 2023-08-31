@@ -22,7 +22,10 @@ local Util = require(Sift.Util)
 	end) -- 1
 	```
 ]=]
-local function count<T>(array: { T }, predicate: ((value: T, index: number, array: { T }) -> any)?): number
+local function count<T>(
+	array: { T },
+	predicate: ((value: T, index: number, array: { T }) -> any)?
+): number
 	local counter = 0
 
 	predicate = if type(predicate) == "function" then predicate else Util.func.truthy

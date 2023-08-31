@@ -17,13 +17,16 @@ return function()
 		end)).never.to.be.ok()
 	end)
 
-	it("should return the last element that matches the predicate, given a starting index", function()
-		local array = { 1, 2, 3, 4, 5 }
+	it(
+		"should return the last element that matches the predicate, given a starting index",
+		function()
+			local array = { 1, 2, 3, 4, 5 }
 
-		expect(FindWhereLast(array, function(value)
-			return value % 2 == 0
-		end, 2)).to.equal(2)
-	end)
+			expect(FindWhereLast(array, function(value)
+				return value % 2 == 0
+			end, 2)).to.equal(2)
+		end
+	)
 
 	it("should return nil if no element matches the predicate, given a starting index", function()
 		local array = { 1, 2, 3, 4, 5 }

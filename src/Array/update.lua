@@ -41,7 +41,12 @@ end
 	end) -- { 1, 2, 3, 10 }
 	```
 ]=]
-local function update<T>(array: { T }, index: number, updater: Updater<T>?, callback: Callback<T>?): { T }
+local function update<T>(
+	array: { T },
+	index: number,
+	updater: Updater<T>?,
+	callback: Callback<T>?
+): { T }
 	local length = #array
 	local result = Copy(array)
 

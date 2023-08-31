@@ -2,17 +2,20 @@ return function()
 	local MergeDeep = require(script.Parent.mergeDeep)
 	local None = require(script.Parent.Parent.None)
 
-	it("should combine two or more dictionaries, where the last value overrides previous, recursively", function()
-		local dictionary1 = { hello = "roblox", goodbye = { world = "world" } }
-		local dictionary2 = { goodbye = { world = "hello" } }
+	it(
+		"should combine two or more dictionaries, where the last value overrides previous, recursively",
+		function()
+			local dictionary1 = { hello = "roblox", goodbye = { world = "world" } }
+			local dictionary2 = { goodbye = { world = "hello" } }
 
-		local merged = MergeDeep(dictionary1, dictionary2)
+			local merged = MergeDeep(dictionary1, dictionary2)
 
-		expect(merged).to.be.a("table")
+			expect(merged).to.be.a("table")
 
-		expect(merged.hello).to.equal("roblox")
-		expect(merged.goodbye.world).to.equal("hello")
-	end)
+			expect(merged.hello).to.equal("roblox")
+			expect(merged.goodbye.world).to.equal("hello")
+		end
+	)
 
 	it("should not modify the original dictionaries", function()
 		local dictionary1 = { hello = "roblox", goodbye = { world = "world" } }
