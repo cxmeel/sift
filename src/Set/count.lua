@@ -22,7 +22,10 @@ local Util = require(Sift.Util)
   end) -- 1
   ```
 ]=]
-local function count<T>(set: { [T]: boolean }, predicate: ((item: T, set: { [T]: boolean }) -> boolean?)?): number
+local function count<T>(
+	set: { [T]: boolean },
+	predicate: ((item: T, set: { [T]: boolean }) -> boolean?)?
+): number
 	local counter = 0
 
 	predicate = if type(predicate) == "function" then predicate else Util.func.truthy

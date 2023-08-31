@@ -22,7 +22,7 @@
 local function push<T>(array: { T }, ...: T): { T }
 	local result = {}
 
-	for index, value in ipairs(array) do
+	for _, value in ipairs(array) do
 		table.insert(result, value)
 	end
 

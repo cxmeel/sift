@@ -18,7 +18,7 @@
 local function removeValue<T>(array: { T }, value: T): { T }
 	local result = {}
 
-	for index, arrValue in ipairs(array) do
+	for _, arrValue in ipairs(array) do
 		if arrValue ~= value then
 			table.insert(result, arrValue)
 		end

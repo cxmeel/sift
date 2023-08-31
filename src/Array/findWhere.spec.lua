@@ -34,13 +34,16 @@ return function()
 		end
 	)
 
-	it("should return nil if no element matches the given predicate, given a starting index", function()
-		local array = { 1, 2, 3 }
+	it(
+		"should return nil if no element matches the given predicate, given a starting index",
+		function()
+			local array = { 1, 2, 3 }
 
-		local result = FindWhere(array, function(value)
-			return value == 1
-		end, 2)
+			local result = FindWhere(array, function(value)
+				return value == 1
+			end, 2)
 
-		expect(result).never.to.be.ok()
-	end)
+			expect(result).never.to.be.ok()
+		end
+	)
 end
