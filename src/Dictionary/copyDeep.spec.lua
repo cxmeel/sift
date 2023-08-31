@@ -31,4 +31,22 @@ return function()
 
 		expect(new.hello.world).to.equal("goodbye")
 	end)
+
+	it("should copy metatables", function()
+		local meta = setmetatable({}, { __index = function() end })
+		local dictionary = {
+			hello = {},
+			world = {},
+			meta = meta,
+		}
+
+		local new = CopyDeep(dictionary)
+
+		expect(new).to.be.a("table")
+		expect(new).never.to.equal(dictionary)
+
+		expect(function()
+			return getmetatable(new[3])
+		end).to.be.a("function")
+	end)
 end
