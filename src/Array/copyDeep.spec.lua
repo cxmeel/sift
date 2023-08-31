@@ -26,4 +26,18 @@ return function()
 		expect(new[2]).to.equal(2)
 		expect(new[3]).never.to.equal(array[3])
 	end)
+
+	it("should copy metatables", function()
+		local meta = setmetatable({}, { __index = function() end })
+		local array = { { 1, 2, 3 }, { 4, 5, 6 }, meta }
+
+		local new = CopyDeep(array)
+
+		expect(new).to.be.a("table")
+		expect(new).never.to.equal(array)
+
+		expect(function()
+			return getmetatable(new[3])
+		end).to.be.a("function")
+	end)
 end
