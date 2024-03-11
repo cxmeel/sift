@@ -1,9 +1,13 @@
-*.rbx*
-*.env
+/*.rbx*
+.env
+.env.*
 *.tsbuildinfo
 
-packages/
-node_modules/
-out/
-include/
-build/
+/Packages
+/DevPackages
+/ServerPackages
+/temp
+/node_modules
+/out
+/include
+/build

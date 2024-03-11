@@ -1,6 +1,9 @@
 {
   "name": "Sift",
   "tree": {
-    "$path": "src"
+    "$path": "src",
+    "Metadata": {
+      "$path": "wally.toml"
+    }
   }
 }

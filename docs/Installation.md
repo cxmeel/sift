@@ -4,11 +4,11 @@ sidebar_position: 2
 
 <!-- Links -->
 
-[sift]: https://github.com/csqrl/sift
-[sift/releases]: https://github.com/csqrl/sift/releases
-[sift/wally]: https://wally.run/package/csqrl/sift
+[sift]: https://github.com/cxmeel/sift
+[sift/releases]: https://github.com/cxmeel/sift/releases
+[sift/wally]: https://wally.run/package/cxmeel/sift
 [sift/roblox]: https://www.roblox.com/library/9486684823
-[sift/itch.io]: https://csqrl.itch.io/sift
+[sift/itch.io]: https://cxmeel.itch.io/sift
 [sift/npm]: https://npmjs.com/package/@rbxts/sift
 
 Sift is available from [Wally][sift/wally], [Itch.io][sift/itch.io], the [Roblox Library][sift/roblox], and [GitHub releases][sift/releases].
@@ -23,7 +23,7 @@ Wally is a CLI package manager (much like NPM, Yarn or Cargo) for Roblox by @Upl
 # wally.toml
 
 [dependencies]
-Sift = "csqrl/sift@=0.0.1"
+Sift = "cxmeel/sift@=0.0.1"
 ```
 
 ```shell

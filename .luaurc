@@ -1,0 +1,8 @@
+{
+    "languageMode": "strict",
+    "lint": { "*": false },
+    "aliases": {
+        "Pkg": "Packages",
+        "DevPkg": "DevPackages"
+    }
+}

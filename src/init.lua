@@ -29,6 +29,8 @@ local Sift = {
 
 	equalObjects = require(script.Util.equalObjects),
 	isEmpty = require(script.Util.isEmpty),
+
+	meta = require(script.Metadata),
 }
 
 Sift.List = Sift.Array

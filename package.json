@@ -15,7 +15,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/csqrl/sift.git"
+    "url": "git+https://github.com/cxmeel/sift.git"
   },
   "keywords": [
     "array",
@@ -29,9 +29,9 @@
   ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/csqrl/sift/issues"
+    "url": "https://github.com/cxmeel/sift/issues"
   },
-  "homepage": "https://csqrl.github.io/sift",
+  "homepage": "https://cxmeel.github.io/sift",
   "files": [
     "out",
     "!**/*.tsbuildinfo"
@@ -42,7 +42,6 @@
     "rbxts-transform-debug": "^1.0.0-rc.1",
     "rbxts-transform-env": "^1.0.0-rc.0",
     "typescript": "^4.3.5",
-    "roblox-ts": "^1.2.7",
-    "husky": "^8.0.0"
+    "roblox-ts": "^1.2.7"
   }
 }

@@ -1,12 +1,12 @@
 [package]
 name = "csqrl/sift"
 description = "Immutable data library for Luau"
-version = "0.0.8"
-license = "MIT"
-author = "csqrl (https://csqrl.dev)"
+version = "0.0.9"
 registry = "https://github.com/upliftgames/wally-index"
-homepage = "https://csqrl.github.io/sift"
-repo = "https://github.com/csqrl/sift"
 realm = "shared"
 exclude = ["**"]
 include = ["src", "src/**", "wally.toml", "wally.lock", "default.project.json"]
+
+[dev-dependencies]
+Jest = "jsdotlua/jest@3.6.1-rc.2"
+JestGlobals = "jsdotlua/jest-globals@3.6.1-rc.2"

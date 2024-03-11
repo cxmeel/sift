@@ -3,30 +3,29 @@
 [freddylist/llama]: https://github.com/freddylist/llama
 [osyrisrblx/t]: https://github.com/osyrisrblx/t
 [upliftgames/moonwave]: https://github.com/upliftgames/moonwave
-[upliftgames/wally]: https://github.com/upliftgames/wally
-[sift]: https://github.com/csqrl/sift
-[sift/releases]: https://github.com/csqrl/sift/releases
-[sift/wally]: https://wally.run/package/csqrl/sift
+[sift]: https://github.com/cxmeel/sift
+[sift/releases]: https://github.com/cxmeel/sift/releases
+[sift/wally]: https://wally.run/package/cxmeel/sift
 [sift/roblox]: https://www.roblox.com/library/9486684823
-[sift/itch.io]: https://csqrl.itch.io/sift
+[sift/itch.io]: https://cxmeel.itch.io/sift
 [sift/npm]: https://npmjs.com/package/@rbxts/sift
 
 <!-- Shields -->
 
-[shields/github-release]: https://img.shields.io/github/v/release/csqrl/sift?label=latest+release&style=flat
-[shields/wally]: https://img.shields.io/endpoint?url=https://runkit.io/clockworksquirrel/wally-version-shield/branches/master/csqrl/sift&color=blue&label=wally&style=flat
+[shields/github-release]: https://img.shields.io/github/v/release/cxmeel/sift?label=latest+release&style=flat
+[shields/wally]: https://img.shields.io/endpoint?url=https://runkit.io/clockworksquirrel/wally-version-shield/branches/master/cxmeel/sift&color=blue&label=wally&style=flat
 [shields/npm]: https://img.shields.io/npm/v/@rbxts/sift?style=flat
 
 <!-- Badges -->
 
-[badges/github]: https://raw.githubusercontent.com/gist/csqrl/56c5f18b229ca1e61feb6eb5fb149f43/raw/githubSource.svg
-[badges/itch]: https://raw.githubusercontent.com/gist/csqrl/56c5f18b229ca1e61feb6eb5fb149f43/raw/itch.svg
-[badges/npm]: https://raw.githubusercontent.com/gist/csqrl/56c5f18b229ca1e61feb6eb5fb149f43/raw/npm.svg
-[badges/roblox]: https://raw.githubusercontent.com/gist/csqrl/56c5f18b229ca1e61feb6eb5fb149f43/raw/roblox.svg
-[badges/roblox-small]: https://raw.githubusercontent.com/gist/csqrl/56c5f18b229ca1e61feb6eb5fb149f43/raw/robloxSmall.svg
+[badges/github]: https://raw.githubusercontent.com/gist/cxmeel/56c5f18b229ca1e61feb6eb5fb149f43/raw/githubSource.svg
+[badges/itch]: https://raw.githubusercontent.com/gist/cxmeel/56c5f18b229ca1e61feb6eb5fb149f43/raw/itch.svg
+[badges/npm]: https://raw.githubusercontent.com/gist/cxmeel/56c5f18b229ca1e61feb6eb5fb149f43/raw/npm.svg
+[badges/roblox]: https://raw.githubusercontent.com/gist/cxmeel/56c5f18b229ca1e61feb6eb5fb149f43/raw/roblox.svg
 
 # Sift
 
+<!-- markdownlint-disable-next-line MD033 -->
 <div align="center">
 
 [![Source code][badges/github]][sift] [![NPM Package][badges/npm]][sift/npm] [![Itch.io store page][badges/itch]][sift/itch.io] [![Roblox library][badges/roblox]][sift/roblox]
@@ -41,7 +40,7 @@ Heavily based on [@freddylist's Llama][freddylist/llama] library, which is no lo
 
 ## Documentation
 
-Documentation, powered by [moonwave][upliftgames/moonwave], is available at https://csqrl.github.io/sift.
+Documentation, powered by [moonwave][upliftgames/moonwave], is available at <https://cxmeel.github.io/sift>.
 
 ## v0.x
 
@@ -60,17 +59,17 @@ While Sift is 100% free and open source, if you feel like sponsoring, Sift is al
 
 ### Wally
 
-Wally is a CLI package manager (much like NPM, Yarn or Cargo) for Roblox by @UpliftGames. Find out more at https://github.com/upliftgames/wally.
+Wally is a CLI package manager (much like NPM, Yarn or Cargo) for Roblox by @UpliftGames. Find out more at <https://github.com/upliftgames/wally>.
 
 ```toml
 # wally.toml
 
 [dependencies]
-Sift = "csqrl/sift@0.0.X" # Replace with current version number
+Sift = "cxmeel/sift@0.0.X" # Replace with current version number
 ```
 
 ```shell
-$ wally install
+wally install
 ```
 
 ### TypeScript
@@ -78,7 +77,7 @@ $ wally install
 v0.0.1 of Sift includes TypeScript typings. This means Sift is now compatible with roblox-ts. Refer to the Luau docs for API details.
 
 ```shell
-$ npm install @rbxts/sift
+npm install @rbxts/sift
 ```
 
 ```ts
