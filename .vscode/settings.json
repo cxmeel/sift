@@ -11,5 +11,9 @@
   },
   "[typescript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "luau-lsp.require.directoryAliases": {
+    "@Pkg": "Packages",
+    "@DevPkg": "DevPackages"
   }
 }
