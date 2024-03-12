@@ -12,7 +12,10 @@
     -- odd: { 1, 3, 5 }
     ```
 ]=]
-local function partition<T>(array: { T }, filterer: (value: T, index: number) -> boolean)
+local function partition<T>(
+	array: { T },
+	filterer: (value: T, index: number) -> boolean
+): ({ T }, { T })
 	local pass = {}
 	local fail = {}
 

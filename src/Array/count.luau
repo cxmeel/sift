@@ -17,7 +17,7 @@ local function count<T>(array: { T }, predicate: ((value: T, index: number) -> b
 
 	for index, value in array do
 		if not predicate or predicate(value, index) then
-			counter = counter + 1
+			counter += 1
 		end
 	end
 
