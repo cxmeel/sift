@@ -2,4 +2,4 @@
 * text=auto
 
 # Highlight Luau as Lua files
-*.lua linguist-language=Luau
+*.luau linguist-language=Lua
