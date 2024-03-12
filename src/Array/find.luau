@@ -1,31 +1,22 @@
---!strict
 --[=[
-	@function find
-	@within Array
+    @within Array
 
-	@param array {T} -- The array to search.
-	@param value? any -- The value to search for.
-	@param from? number -- The index to start searching from.
-	@return number? -- The index of the first item in the array that matches the value.
+    Returns the index of the first occurrence of a value in an array, or `nil` if the value is not found. The search starts at the optional `from` index. If `from` is negative, it is treated as an offset from the end of the array.
 
-	Finds the index of the first item in the array that matches the value. This is
-	mostly a wrapper around `table.find`, with the ability to specify a negative
-	number as the start index (to search relative to the end of the array).
+    ```lua
+    local array = { "a", "b", "c", "a", "b" }
 
-	#### Aliases
-	`indexOf`
-
-	```lua
-	local array = { "hello", "world", "hello" }
-
-	local index = Find(array, "hello") -- 1
-	local index = Find(array, "hello", 2) -- 3
-	```
+    find(array, "a") -- 1
+    find(array, "a", 2) -- 4
+    find(array, "b", -2) -- 5
+    ```
 ]=]
-local function find<T>(array: { T }, value: any?, from: number?): number?
-	local length = #array
-
-	from = if type(from) == "number" then if from < 1 then length + from else from else 1
+local function find<T>(array: { T }, value: T, from: number?): number?
+	if from == 0 then
+		from = 1
+	elseif from and from < 0 then
+		from += #array + 1
+	end
 
 	return table.find(array, value, from)
 end

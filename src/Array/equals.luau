@@ -1,21 +1,16 @@
---!strict
-local Sift = script.Parent.Parent
+local Util = require("@Sift/Util")
 
-local Util = require(Sift.Util)
-
-local function compare(a, b)
-	if type(a) ~= "table" or type(b) ~= "table" then
+local function compare(a: any, b: any)
+	if typeof(a) ~= "table" or typeof(b) ~= "table" then
 		return a == b
 	end
 
-	local aLength = #a
-
-	if #b ~= aLength then
+	if #a ~= #b then
 		return false
 	end
 
-	for i = 1, aLength do
-		if a[i] ~= b[i] then
+	for index, value in a do
+		if value ~= b[index] then
 			return false
 		end
 	end
@@ -24,35 +19,27 @@ local function compare(a, b)
 end
 
 --[=[
-	@function equals
-	@within Array
+    @within Array
 
-	@param ... ...{any} -- The arrays to compare.
-	@return boolean -- Whether the arrays are equal.
+    Returns whether or not all of the given arrays are equal to each other.
 
-	Compares two arrays for equality.
+    ```lua
+    local array1 = { 1, 2, 3 }
+    local array2 = { 1, 2, 3 }
 
-	```lua
-	local array = { 1, 2, 3 }
-	local other = { 1, 2, 3 }
-
-	local value = Equals(array, other) -- true
-	local value = Equals(array, other, { 1, 2, 3 }) -- true
-	local value = Equals(array, other, { 1, 2, 4 }) -- false
-	```
+    equals(array1, array2) -- true
+    ```
 ]=]
-local function equals<T>(...: { T }): boolean
-	if Util.equalObjects(...) then
+local function equals(...: any): boolean
+	if Util.areEqual(...) then
 		return true
 	end
 
-	local totalArgs = select("#", ...)
-	local firstItem = select(1, ...)
+	local args = { ... }
+	local first = table.remove(args, 1)
 
-	for i = 2, totalArgs do
-		local item = select(i, ...)
-
-		if not compare(firstItem, item) then
+	for _, array in args do
+		if not compare(first, array) then
 			return false
 		end
 	end

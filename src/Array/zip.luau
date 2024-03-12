@@ -1,47 +1,41 @@
---!strict
-local Reduce = require(script.Parent.reduce)
+local reduce = require("./reduce")
 
 --[=[
-	@function zip
-	@within Array
+    @within Array
 
-	@param ... {any} -- The arrays to zip together.
-	@return {any} -- The zipped array.
+    Links together the values of multiple arrays into a single array of arrays, where each index of the new array contains the values of the original arrays at that index. If the arrays are of different lengths, the new array will be the length of the shortest array.
 
-	Zips multiple arrays together into a single array.
+    ```lua
+    local array1 = { "a", "b", "c", "d" }
+    local array2 = { 1, 2, 3 }
 
-	```lua
-	local table1 = { 1, 2, 3 }
-	local table2 = { "hello", "world", "goodbye" }
-
-	local new = Zip(table1, table2) -- { { 1, "hello" }, { 2, "world" }, { 3, "goodbye" } }
-	```
+    zip(array1, array2)
+	-- { { "a", 1 }, { "b", 2 }, { "c", 3 } }
+    ```
 ]=]
-local function zip<T>(...: { any }): T
-	local argCount = select("#", ...)
-	local arguments = { ... }
-
-	local result = {}
-
-	if argCount == 0 then
-		return result
+local function zip(...: { any }): { { any } }
+	if select("#", ...) == 0 then
+		return {}
 	end
 
-	local minLength: number = Reduce(arguments, function(acc, val)
-		return math.min(acc, #val)
-	end, #arguments[1])
+	local arrays = { ... }
+	local length = reduce(arrays, function(acc, array)
+		return math.min(acc, #array)
+	end, math.huge)
 
-	for index = 1, minLength do
+	local out = {}
+
+	for index = 1, length do
 		local values = {}
 
-		for _, argArray in ipairs(arguments) do
-			table.insert(values, argArray[index])
+		for _, array in arrays do
+			table.insert(values, array[index])
 		end
 
-		table.insert(result, values)
+		table.insert(out, values)
 	end
 
-	return result
+	return out
 end
 
 return zip

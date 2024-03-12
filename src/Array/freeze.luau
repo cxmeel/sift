@@ -1,30 +1,21 @@
---!strict
-local Copy = require(script.Parent.copy)
+local copy = require("./copy")
 
 --[=[
-  @function freeze
-  @within Array
+    @within Array
 
-  @param array {T} -- The array to freeze.
-  @return {T} -- The frozen array.
+    Returns a shallow copy of the array that is frozen. This means that the array cannot be modified in any way; i.e. it is read-only. Use [Array.freezeDeep] to freeze nested arrays as well.
 
-  Freezes the top level of the array, making it read-only.
+    ```lua
+    local frozen = freeze({ "anna", "elsa", "kristoff" })
 
-  ```lua
-  local array = { 1, 2, 3, { 4, 5, 6 } }
-
-  local new = Freeze(array)
-
-  new[1] = 4 -- error!
-  new[4][1] = 7 -- still works!
-  ```
+    table.insert(frozen, "olaf") -- error!
+    frozen[4] = "jorgen" -- error!
+    frozen[2] = "sven" -- error!
+    ```
 ]=]
 local function freeze<T>(array: { T }): { T }
-	local new = Copy(array)
-
-	table.freeze(new)
-
-	return new
+	local out = copy(array)
+	return table.freeze(out)
 end
 
 return freeze

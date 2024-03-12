@@ -1,52 +1,31 @@
---!strict
+local copy = require("./copy")
+
 --[=[
-	@function insert
-	@within Array
+    @within Array
 
-	@param array {T} -- The array to insert the value into.
-	@param index number -- The index to insert the value at (can be negative).
-	@param values ...T -- The values to insert.
-	@return {T} -- The array with the value inserted.
+    Inserts the given values into the array at the specified index.
 
-	Inserts the given values into an array at the given index, shifting all values after it to the right. If the index is negative (or 0), it is counted from the end of the array.
+    ```lua
+    local array = { "a", "b", "c" }
 
-	If the index to insert at is out of range, the array is not modified.
-
-	```lua
-	local array = { 1, 2, 3 }
-
-	local newArray = Insert(array, 2, 4) -- { 1, 4, 2, 3 }
-	```
+    insert(array, 2, "x", "y") -- { "a", "x", "y", "b", "c" }
+    insert(array, -1, "x", "y") -- { "a", "b", "x", "y", "c" }
+    ```
 ]=]
 local function insert<T>(array: { T }, index: number, ...: T): { T }
-	local length = #array
-
-	if index < 1 then
-		index += length + 1
+	if index == 0 then
+		index = 1
+	elseif index < 0 then
+		index += #array + 1
 	end
 
-	if index > length then
-		if index > length + 1 then
-			return array
-		end
+	local out = copy(array)
 
-		index = length + 1
-		length += 1
+	for i = 1, select("#", ...) do
+		table.insert(out, index + i - 1, select(i, ...))
 	end
 
-	local result = {}
-
-	for i = 1, length do
-		if i == index then
-			for _, value in ipairs({ ... }) do
-				table.insert(result, value)
-			end
-		end
-
-		table.insert(result, array[i])
-	end
-
-	return result
+	return out
 end
 
 return insert

@@ -1,46 +1,25 @@
---!strict
-local Sift = script.Parent.Parent
-
-local None = require(Sift.None)
-
 --[=[
-	@function concat
-	@within Array
+    @within Array
 
-	@param ... ...any -- The arrays to concatenate.
-	@return {T} -- The concatenated array.
+    Concatenates the elements of the given arrays into a new array.
 
-	Joins multiple arrays together into a single array.
+    ```lua
+    local array1 = { 1, 2, 3 }
+    local array2 = { 4, 5, 6 }
 
-	#### Aliases
-
-	`join`, `merge`
-
-	```lua
-	local table1 = { 1, 2, 3 }
-	local table2 = { 4, 5, 6 }
-
-	local new = Concat(table1, table2) -- { 1, 2, 3, 4, 5, 6 }
-	```
+    concat(array1, array2) -- {1, 2, 3, 4, 5, 6}
+    ```
 ]=]
-local function concat<T>(...: any): { T }
-	local result = {}
+local function concat<T>(...: { T })
+	local out = {}
 
-	for arrayIndex = 1, select("#", ...) do
-		local array = select(arrayIndex, ...)
-
-		if type(array) ~= "table" then
-			continue
-		end
-
-		for _, item in ipairs(array) do
-			if item ~= None then
-				table.insert(result, item)
-			end
+	for _, array in { ... } do
+		for _, value in array do
+			table.insert(out, value)
 		end
 	end
 
-	return result
+	return out
 end
 
 return concat

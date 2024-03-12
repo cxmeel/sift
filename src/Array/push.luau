@@ -1,36 +1,16 @@
---!strict
+local insert = require("./insert")
+
 --[=[
-	@function push
-	@within Array
+    @within Array
 
-	@param array {T} -- The array to push an element to.
-	@param ... ...T -- The elements to push.
-	@return {T} -- The array with the pushed elements.
+    Returns a new array with the provided values appended to the end.
 
-	Adds elements to the end of the array.
-
-	#### Aliases
-
-	`append`
-
-	```lua
-	local array = { 1, 2, 3 }
-
-	local new = Push(array, 4, 5, 6) -- { 1, 2, 3, 4, 5, 6 }
-	```
+    ```lua
+    push({ 1, 2, 3 }, 4, 5) -- {1, 2, 3, 4, 5}
+    ```
 ]=]
 local function push<T>(array: { T }, ...: T): { T }
-	local result = {}
-
-	for _, value in ipairs(array) do
-		table.insert(result, value)
-	end
-
-	for _, value in ipairs({ ... }) do
-		table.insert(result, value)
-	end
-
-	return result
+	return insert(array, #array + 1, ...)
 end
 
 return push

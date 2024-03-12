@@ -1,21 +1,16 @@
---!strict
-local Sift = script.Parent.Parent
+local Util = require("@Sift/Util")
 
-local Util = require(Sift.Util)
-
-local function compareDeep(a, b)
-	if type(a) ~= "table" or type(b) ~= "table" then
+local function compare(a: any, b: any)
+	if typeof(a) ~= "table" or typeof(b) ~= "table" then
 		return a == b
 	end
 
-	local aLength = #a
-
-	if #b ~= aLength then
+	if #a ~= #b then
 		return false
 	end
 
-	for i = 1, aLength do
-		if not compareDeep(a[i], b[i]) then
+	for index, value in a do
+		if not compare(value, b[index]) then
 			return false
 		end
 	end
@@ -24,35 +19,27 @@ local function compareDeep(a, b)
 end
 
 --[=[
-	@function equalsDeep
-	@within Array
+    @within Array
 
-	@param ... ...{any} -- The arrays to compare.
-	@return boolean -- Whether the arrays are equal.
+    Returns whether or not all of the provided values are deeply equal to each other. Use this function to compare nested arrays.
 
-	Compares two arrays for equality using deep comparison.
+    ```lua
+    local array1 = {{ 1, 2 }, { 3, 4 }}
+    local array2 = {{ 1, 2 }, { 4, 5 }}
 
-	```lua
-	local array = { 1, 2, 3, { 4, 5 } }
-	local other = { 1, 2, 3, { 4, 5 } }
-
-	local value = EqualsDeep(array, other) -- true
-	local value = EqualsDeep(array, other, { 1, 2, 3, { 4, 5 } }) -- true
-	local value = EqualsDeep(array, other, { 1, 2, 3, { 4, 6 } }) -- false
-	```
+    equalsDeep(array1, array2) -- false
+    ```
 ]=]
-local function equalsDeep<T>(...: { T }): boolean
-	if Util.equalObjects(...) then
+local function equalsDeep(...: any): boolean
+	if Util.areEqual(...) then
 		return true
 	end
 
-	local totalArgs = select("#", ...)
-	local firstItem = select(1, ...)
+	local args = { ... }
+	local first = table.remove(args, 1)
 
-	for i = 2, totalArgs do
-		local item = select(i, ...)
-
-		if not compareDeep(firstItem, item) then
+	for _, value in args do
+		if not compare(first, value) then
 			return false
 		end
 	end

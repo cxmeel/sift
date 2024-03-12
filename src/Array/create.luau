@@ -1,19 +1,15 @@
---!strict
 --[=[
-  @function create
-  @within Array
+    @within Array
+    @function create
+    @param count number
+    @param value T?
+    @return { T }
 
-  @param length number -- The length of the array to create.
-  @param value? T -- The value to fill the array with.
-  @return {T} -- The created array.
+    Creates a new array with `count` elements, each initialized to `value`.
 
-  Creates an array of the given length, filled with the given value.
-  This is just a wrapper around `table.create`.
-
-  ```lua
-  local array = Create(3, "Hello")
-
-  print(array) -- { "Hello", "Hello", "Hello" }
-  ```
+    ```lua
+    create(3) -- { nil, nil, nil }
+    create(3, true) -- { true, true, true }
+    ```
 ]=]
 return table.create

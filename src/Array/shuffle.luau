@@ -1,34 +1,28 @@
---!strict
-local Copy = require(script.Parent.copy)
+local copy = require("./copy")
 
 --[=[
-	@function shuffle
-	@within Array
+    @within Array
 
-	@param array {T} -- The array to shuffle.
-	@return {T} -- The shuffled array.
+    Copies an array with a randomized order.
 
-	Randomises the order of the items in an array.
-
-	```lua
-	local array = { 1, 2, 3 }
-
-	local new = Shuffle(array) -- { 2, 3, 1 }
-	```
+    ```lua
+    shuffle({ "a", "b", "c" }) -- { "c", "a", "b" }
+    ```
 ]=]
-local function shuffle<T>(array: { T }): { T }
-	local random = Random.new(os.time() * #array)
-	local result = Copy(array)
+local function shuffle<T>(array: { T }, seed: number?): { T }
+	math.randomseed(seed or os.clock() * #array)
 
-	for index = #result, 1, -1 do
-		local randomIndex = random:NextInteger(1, index)
-		local temp = result[index]
+	local out = copy(array)
 
-		result[index] = result[randomIndex]
-		result[randomIndex] = temp
+	for index = #out, 1, -1 do
+		local randomIndex = math.random(1, index)
+		local temp = out[index]
+
+		out[index] = out[randomIndex]
+		out[randomIndex] = temp
 	end
 
-	return result
+	return out
 end
 
 return shuffle

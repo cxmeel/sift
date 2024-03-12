@@ -1,39 +1,29 @@
---!strict
+local copy = require("./copy")
+
 --[=[
-	@function set
-	@within Array
+    @within Array
 
-	@param array {T} -- The array to set the value on.
-	@param index number -- The index to set the value at (can be negative).
-	@param value T -- The value to set.
-	@return {T} -- The array with the value set.
+    Sets the value at the given index in the array and returns a new array.
 
-	Sets a value on an array at the given index.
+    ```lua
+    local array = { "a", "b", "c", "d" }
 
-	```lua
-	local array = { 1, 2, 3 }
-
-	local new = Set(array, 2, 4) -- { 1, 4, 3 }
-	local new = Set(array, -1, 4) -- { 1, 2, 4 }
-	```
+    set(array, 2, "z") -- { "a", "z", "c", "d" }
+    set(array, -1, "x") -- { "a", "b", "c", "x" }
+    ```
 ]=]
-local function set<T>(array: { T }, index: number, value: T?): { T }
-	local length = #array
-	local result = {}
+local function set<T>(array: { T }, index: number, value: T): { T }
+	local out = copy(array)
 
-	if index < 1 then
-		index += length
+	if index == 0 then
+		index = 1
+	elseif index < 0 then
+		index += #out + 1
 	end
 
-	for arrIndex, arrValue in ipairs(array) do
-		if arrIndex == index then
-			table.insert(result, value)
-		else
-			table.insert(result, arrValue)
-		end
-	end
+	out[index] = value
 
-	return result
+	return out
 end
 
 return set

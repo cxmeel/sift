@@ -1,34 +1,30 @@
---!strict
 --[=[
-	@function findLast
-	@within Array
+    @within Array
 
-	@param array {T} -- The array to search.
-	@param value? any -- The value to search for.
-	@param from? number -- The index to start searching from.
-	@return number? -- The index of the last item in the array that matches the value.
+    Returns the last index at which a given element can be found in the array, or `nil` if it is not present. The array is searched backwards, starting at the optional `from` index. If `from` is negative, it is used as the offset from the end of the array.
 
-	Finds the index of the last item in the array that matches the value.
+    ```lua
+    local array = { "a", "b", "c", "a", "b" }
 
-	```lua
-	local array = { "hello", "world", "hello" }
-
-	local index = FindLast(array, "hello") -- 3
-	local index = FindLast(array, "hello", 2) -- 1
-	```
+    findLast(array, "b") -- 5
+    findLast(array, "b", 3) -- 2
+    findLast(array, "b", -3) -- 2
+    ```
 ]=]
-local function findLast<T>(array: { T }, value: any?, from: number?): number?
-	local length = #array
+local function findLast<T>(array: { T }, value: T, from: number?): number?
+	if from == 0 then
+		from = 1
+	elseif from and from < 0 then
+		from += #array + 1
+	end
 
-	from = if type(from) == "number" then if from < 1 then length + from else from else length
-
-	for index = from, 1, -1 do
-		if array[index] == value then
-			return index
+	for i = from or #array, 1, -1 do
+		if array[i] == value then
+			return i
 		end
 	end
 
-	return
+	return nil
 end
 
 return findLast

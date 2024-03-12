@@ -1,32 +1,17 @@
---!strict
 --[=[
-	@function some
-	@within Array
+    @within Array
 
-	@param array {T} -- The array to check.
-	@param predicate (value: T, index: number, array: {T}) -> any -- The predicate to use to check the array.
-	@return boolean -- Whether some item in the array passes the predicate.
+    Returns `true` if at least one element in the array satisfies the provided testing function. Otherwise, `false` is returned.
 
-	Checks whether some item in the array passes the predicate.
-
-	```lua
-	local array = { 1, 2, 3 }
-
-	local value = Some(array, function(item, index)
-		return item > 1
-	end) -- true
-
-	local value = Some(array, function(item, index)
-		return item > 3
-	end) -- false
-	```
+    ```lua
+    some({ 1, 2, 3, 4, 5 }, function(value)
+        return value % 2 == 0
+    end) -- true
+    ```
 ]=]
-local function some<T>(
-	array: { T },
-	predicate: (value: T, index: number, array: { T }) -> any
-): boolean
-	for index, value in ipairs(array) do
-		if predicate(value, index, array) then
+local function some<T>(array: { T }, predicate: (value: T, index: number) -> boolean): boolean
+	for index, value in array do
+		if predicate(value, index) then
 			return true
 		end
 	end

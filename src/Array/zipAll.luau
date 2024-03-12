@@ -1,51 +1,43 @@
---!strict
-local Sift = script.Parent.Parent
-
-local Reduce = require(script.Parent.reduce)
-local None = require(Sift.None)
+local None = require("@Sift/None")
+local reduce = require("./reduce")
 
 --[=[
-	@function zipAll
-	@within Array
+    @within Array
 
-	@param ... ...{any} -- The arrays to zip.
-	@return {any} -- The zipped array.
+    Links together the values of multiple arrays into a single array of arrays, where each index of the new array contains the values of the original arrays at that index. If the arrays are of different lengths, the shorter arrays will be padded with `None`.
 
-	Zips multiple arrays together into a single array, filling
-	in missing values with `None`.
+    ```lua
+    local array1 = { 1, 2, 3 }
+    local array2 = { "a", "b", "c", "d" }
 
-	```lua
-	local table1 = { 1, 2, 3, 4 }
-	local table2 = { "hello", "world", "goodbye" }
-
-	local new = ZipAll(table1, table2) -- { { 1, "hello" }, { 2, "world" }, { 3, "goodbye" }, { 4, None } }
-	```
+    zipAll(array1, array2)
+    -- { { 1, "a" }, { 2, "b" }, { 3, "c" }, { None, "d" } }
+    ```
 ]=]
-local function zipAll<T>(...: { any }): T
-	local argCount = select("#", ...)
-	local arguments = { ... }
-	local result = {}
-
-	if argCount == 0 then
-		return result
+local function zipAll(...: { any }): { { any } }
+	if select("#", ...) == 0 then
+		return {}
 	end
 
-	local maxLength = Reduce(arguments, function(acc, val)
-		return math.max(acc, #val)
-	end, #arguments[1])
+	local arrays = { ... }
+	local length = reduce(arrays, function(acc, array)
+		return math.max(acc, #array)
+	end, 0)
 
-	for index = 1, maxLength do
+	local out = {}
+
+	for i = 1, length do
 		local values = {}
 
-		for _, argArray in ipairs(arguments) do
-			local value = argArray[index]
-			table.insert(values, if value == nil then None else value)
+		for _, array in arrays do
+			local value = if array[i] == nil then None else array[i]
+			table.insert(values, value)
 		end
 
-		table.insert(result, values)
+		table.insert(out, values)
 	end
 
-	return result
+	return out
 end
 
 return zipAll

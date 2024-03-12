@@ -1,39 +1,29 @@
---!strict
 --[=[
-	@function freezeDeep
-	@within Array
+    @within Array
 
-	@param array {T} -- The array to freeze.
-	@return {T} -- The frozen array.
+    Recursively freezes an array and its nested arrays. Using [Array.freeze] will only freeze the top level of the array, leaving nested arrays mutable.
 
-	Freezes the entire array, making it read-only, including all
-	nested arrays.
+    ```lua
+    local frozen = freezeDeep({ 1, 2, { 3, 4, { 5, 6 }}})
 
-	```lua
-	local array = { 1, 2, 3, { 4, 5, 6 } }
-
-	local new = FreezeDeep(array)
-
-	new[1] = 4 -- error!
-	new[4][1] = 7 -- error!
-	```
+    frozen[1] = 2 -- error!
+    frozen[3][1] = 4 -- error!
 ]=]
 local function freezeDeep<T>(array: { T }): { T }
-	local result = {}
+	local out: { T } = {}
 
-	for i = 1, #array do
-		local value = array[i]
+	for _, value in array do
+		if typeof(value) == "table" then
+			local nested: any = freezeDeep(value)
+			table.insert(out, nested)
 
-		if type(value) == "table" then
-			table.insert(result, freezeDeep(value))
-		else
-			table.insert(result, value)
+			continue
 		end
+
+		table.insert(out, value)
 	end
 
-	table.freeze(result)
-
-	return result
+	return table.freeze(out)
 end
 
 return freezeDeep

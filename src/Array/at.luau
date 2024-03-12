@@ -1,26 +1,19 @@
---!strict
 --[=[
-	@function at
-	@within Array
+    @within Array
 
-	@param array {T} -- The array to get the value from.
-	@param index number -- The index to get the value from (can be negative).
-	@return T -- The value at the given index.
+    Pick out a value from an array by index, with support for negative indices.
+    Negative indices are counted from the end of the array. Because Lua uses 1-based indexing, an index of 0 will be treated as 1.
 
-	Gets a value from an array at the given index.
-
-	```lua
-	local array = { 1, 2, 3 }
-
-	local value = At(array, 1) -- 1
-	local value = At(array, 0) -- 3
-	```
+    ```lua
+    at({ "a", "b", "c", "d", "e" }, 2) -- "b"
+    at({ "a", "b", "c", "d", "e" }, -1) -- "e"
+    ```
 ]=]
 local function at<T>(array: { T }, index: number): T
-	local length = #array
-
-	if index < 1 then
-		index += length
+	if index == 0 then
+		index = 1
+	elseif index < 0 then
+		index += #array + 1
 	end
 
 	return array[index]

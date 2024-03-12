@@ -1,28 +1,18 @@
---!strict
-local Copy = require(script.Parent.copy)
+local copy = require("./copy")
 
 --[=[
-	@function sort
-	@within Array
+    @within Array
 
-	@param array {T} -- The array to sort.
-	@param comparator? (a: T, b: T) -> boolean -- The comparator function.
-	@return {T} -- The sorted array.
+    Returns a new array with the elements sorted. The optional `comparer` function is used to compare elements. If not provided, the default comparer will be used (ascending order).
 
-	Sorts an array.
-
-	```lua
-	local array = { "a", "b", "c", "d", "e" }
-
-	local new = Sort(array, function(a, b)
-		return a > b
-	end) -- { "e", "d", "c", "b", "a" }
-	```
+    ```lua
+    sort({ 3, 1, 2 }) -- { 1, 2, 3 }
+    sort({ "c", "a", "b" }) -- { "a", "b", "c" }
+    ```
 ]=]
-local function sort<T>(array: { T }, comparator: ((firstValue: T, secondValue: T) -> boolean)?): { T }
-	local result = Copy(array)
-
-	table.sort(result, comparator)
+local function sort<T>(array: { T }, comparer: ((a: T, b: T) -> boolean)?): { T }
+	local result = copy(array)
+	table.sort(result, comparer)
 
 	return result
 end

@@ -1,34 +1,28 @@
---!strict
+local None = require("@Sift/None")
+
 --[=[
-	@function map
-	@within Array
+    @within Array
 
-	@param array {T} -- The array to map.
-	@param mapper (value: T, index: number, array: {T}) -> U? -- The mapper function.
-	@return {U} -- The mapped array.
+    Processes each element of an array with a mapper function and returns a new array with the results.
 
-	Maps the array using the mapper function.
-
-	```lua
-	local array = { 1, 2, 3 }
-
-	local new = Map(array, function(value, index)
-		return value * 2
-	end) -- { 2, 4, 6 }
-	```
+    ```lua
+    map({ 1, 2, 3, 4, 5 }, function(value)
+        return value * 2
+    end) -- { 2, 4, 6, 8, 10 }
+    ```
 ]=]
-local function map<T, U>(array: { T }, mapper: (value: T, index: number, array: { T }) -> U?): { U }
-	local mapped = {}
+local function map<T, U>(array: { T }, mapper: (value: T, index: number) -> U?): { U }
+	local out: { U } = {}
 
-	for index, value in ipairs(array) do
-		local mappedValue = mapper(value, index, array)
+	for index, value in array do
+		local mapped = mapper(value, index)
 
-		if mappedValue ~= nil then
-			table.insert(mapped, mappedValue)
+		if mapped ~= nil and mapped ~= None then
+			table.insert(out, mapped)
 		end
 	end
 
-	return mapped
+	return out
 end
 
 return map

@@ -2,6 +2,7 @@
 .env
 .env.*
 *.tsbuildinfo
+sourcemap.json
 
 /Packages
 /DevPackages

@@ -1,23 +1,16 @@
---!strict
-local At = require(script.Parent.at)
+local at = require("./at")
 
 --[=[
-	@function first
-	@within Array
+    @within Array
 
-	@param array {T} -- The array to get the first item from.
-	@return T -- The first item in the array.
+    Returns the first element of an array.
 
-	Gets the first item in the array.
-
-	```lua
-	local array = { 1, 2, 3 }
-
-	local value = First(array) -- 1
-	```
+    ```lua
+    first({ "a", "b", "c" }) -- "a"
+    ```
 ]=]
 local function first<T>(array: { T }): T
-	return At(array, 1)
+	return at(array, 1)
 end
 
 return first

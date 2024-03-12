@@ -1,33 +1,30 @@
---!strict
+local removeIndices = require("./removeIndices")
+
 --[=[
-	@function pop
-	@within Array
+    @within Array
 
-	@param array {T} -- The array to pop an element from.
-	@param count? number = 1 -- The number of elements to pop.
-	@return {T} -- An array with the popped elements removed.
+    Returns a new array with the last `count` elements removed. If `count` is not provided, it defaults to `1`.
 
-	Removes an element from the end of the array, and returns
-	the array with the popped elements removed.
+    ```lua
+    local array = { 1, 2, 3, 4, 5 }
 
-	```lua
-	local array = { 1, 2, 3 }
-
-	local new = Pop(array) -- { 1, 2 }
-	local new = Pop(array, 2) -- { 1 }
-	```
+    pop(array) -- { 1, 2, 3, 4 }
+    pop(array, 3) -- { 1, 2 }
+    ```
 ]=]
 local function pop<T>(array: { T }, count: number?): { T }
-	local length = #array
-	local result = {}
+	local useCount = count or 1
+	local indices = {}
 
-	count = if type(count) == "number" then count else 1
-
-	for i = 1, length - count do
-		table.insert(result, array[i])
+	if useCount > #array then
+		return {}
 	end
 
-	return result
+	for index = 1, useCount do
+		table.insert(indices, #array - index + 1)
+	end
+
+	return removeIndices(array, table.unpack(indices))
 end
 
 return pop

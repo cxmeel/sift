@@ -1,17 +1,16 @@
 {
   "name": "@rbxts/sift",
-  "version": "0.0.8",
+  "version": "0.1.0",
   "description": "Immutable data library for Luau",
   "main": "out/init.lua",
-  "types": "out/index.d.ts",
+  "types": "@types/index.d.ts",
   "publishConfig": {
     "access": "public"
   },
   "scripts": {
     "build": "rbxtsc --type=package --rojo=''",
     "watch": "rbxtsc -w",
-    "prepublishOnly": "npm run build",
-    "prepare": "husky install"
+    "prepublishOnly": "npm run build"
   },
   "repository": {
     "type": "git",

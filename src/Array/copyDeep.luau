@@ -1,32 +1,25 @@
---!strict
 --[=[
-	@function copyDeep
-	@within Array
+    @within Array
 
-	@param array {T} -- The array to copy.
-	@return {T} -- The copied array.
+    Returns a deep copy of the given array. This means that all tables within the array are also copied.
 
-	Copies an array, with deep copies of all nested arrays.
-
-	```lua
-	local array = { 1, 2, 3, { 4, 5 } }
-
-	local result = CopyDeep(array) -- { 1, 2, 3, { 4, 5 } }
-
-	print(result == array) -- false
-	print(result[4] == array[4]) -- false
-	```
+    ```lua
+    local array = {{ 1, 2 }, { 3, 4 }}
+    copyDeep(array) -- {{ 1, 2 }, { 3, 4 }}
+    ```
 ]=]
 local function copyDeep<T>(array: { T }): { T }
-	local result = table.clone(array)
+	local out: any = {}
 
-	for index, value in array do
-		if type(value) == "table" then
-			result[index] = copyDeep(value) :: any
+	for _, value in array do
+		if typeof(value) == "table" then
+			table.insert(out, copyDeep(value))
+		else
+			table.insert(out, value)
 		end
 	end
 
-	return result
+	return out
 end
 
 return copyDeep

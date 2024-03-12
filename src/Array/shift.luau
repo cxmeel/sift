@@ -1,33 +1,30 @@
---!strict
+local removeIndices = require("./removeIndices")
+
 --[=[
-	@function shift
-	@within Array
+    @within Array
 
-	@param array {T} -- The array to shift.
-	@param count? number -- The number of items to shift.
-	@return {T} -- The shifted array.
+    Returns a new array with the first `count` elements removed. If `count` is not provided, it defaults to `1`.
 
-	Removes the first item from an array and returns the array
-	with the item removed.
+    ```lua
+    local array = { "a", "b", "c", "d" }
 
-	```lua
-	local array = { 1, 2, 3 }
-
-	local new = Shift(array) -- { 2, 3 }
-	local new = Shift(array, 2) -- { 3 }
-	```
+    shift(array) -- { "b", "c", "d" }
+    shift(array, 2) -- { "c", "d" }
+    ```
 ]=]
 local function shift<T>(array: { T }, count: number?): { T }
-	local length = #array
-	local result = {}
+	local useCount = count or 1
+	local indices = {}
 
-	count = if type(count) == "number" then count + 1 else 2
-
-	for i = count, length do
-		table.insert(result, array[i])
+	if useCount > #array then
+		return {}
 	end
 
-	return result
+	for index = #array, useCount, -1 do
+		table.insert(indices, index)
+	end
+
+	return removeIndices(array, table.unpack(indices))
 end
 
 return shift

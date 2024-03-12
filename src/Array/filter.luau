@@ -1,43 +1,23 @@
---!strict
-local Sift = script.Parent.Parent
-
-local Util = require(Sift.Util)
-
 --[=[
-	@function filter
-	@within Array
+    @within Array
 
-	@param array {T} -- The array to filter.
-	@param filterer? (value: T, index: number, array: {T}) -> any -- The callback to use to filter the array.
-	@return {T} -- The filtered array.
+    Filters out elements from an array based on a filter function. The filter function should return `true` to keep the element, and `false` to remove it.
 
-	Filters an array using a filterer callback. Any items that do not pass the filterer will be removed from the array.
-
-	If no filterer is provided, all items will be kept.
-
-	```lua
-	local array = { 1, 2, 3 }
-
-	local result = Filter(array, function(item, index)
-		return item > 1
-	end) -- { 2, 3 }
-	```
+    ```lua
+    filter({ 1, 2, 3, 4, 5}, function(value)
+        return value > 3
+    end) -- { 4, 5 }
 ]=]
-local function filter<T>(
-	array: { T },
-	predicate: ((value: T, index: number, array: { T }) -> boolean?)?
-): { T }
-	local result = {}
+local function filter<T>(array: { T }, filterer: (value: T, index: number) -> boolean): { T }
+	local out = {}
 
-	predicate = if type(predicate) == "function" then predicate else Util.func.truthy
-
-	for index, value in ipairs(array) do
-		if predicate(value, index, array) then
-			table.insert(result, value)
+	for index, value in array do
+		if filterer(value, index) then
+			table.insert(out, value)
 		end
 	end
 
-	return result
+	return out
 end
 
 return filter

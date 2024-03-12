@@ -14,6 +14,10 @@
   },
   "luau-lsp.require.directoryAliases": {
     "@Pkg": "Packages",
-    "@DevPkg": "DevPackages"
-  }
+    "@DevPkg": "DevPackages",
+    "@Sift": "src"
+  },
+  "luau-lsp.types.roblox": false,
+  "luau-lsp.require.mode": "relativeToFile",
+  "luau-lsp.completion.imports.suggestRequires": false
 }

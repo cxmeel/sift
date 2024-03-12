@@ -1,44 +1,37 @@
---!strict
+local INF = newproxy(false)
+
 --[=[
-	@function flatten
-	@within Array
+    @within Array
 
-	@param array {T} -- The array to flatten.
-	@param depth? number -- The depth to flatten the array to.
-	@return {T} -- The flattened array.
+    Flattens an array of arrays into a single array. The `depth` parameter specifies the depth of the flattening. If `depth` is not specified, the array is flattened as much as possible.
 
-	Flattens an array. If depth is not specified, it will flatten
-	the array as far as it can go.
+    ```lua
+    local array = { 1, { 2, 3, { 4, 5 }}, 6 }
 
-	```lua
-	local array = {
-		{ 1, 2, 3 },
-		{ 4, 5, 6 },
-		{ 7, { 8, 9 } },
-	}
-
-	local new = Flatten(array) -- { 1, 2, 3, 4, 5, 6, 7, 8, 9 }
-	local new = Flatten(array, 1) -- { 1, 2, 3, 4, 5, 6, 7, { 8, 9 } }
-	```
+    flatten(array) -- { 1, 2, 3, 4, 5, 6 }
+    flatten(array, 1) -- { 1, 2, 3, { 4, 5 }, 6 }
+    ```
 ]=]
 local function flatten<T>(array: { T }, depth: number?): { T }
-	depth = if type(depth) == "number" then depth else math.huge
+	local withDepth = depth or INF
+	local out = {}
 
-	local result = {}
+	for _, value in array do
+		if typeof(value) == "table" and (withDepth == INF or withDepth > 0) then
+			local useDepth = withDepth == INF and INF or withDepth - 1
+			local nested = flatten(value, useDepth)
 
-	for _, value in ipairs(array) do
-		if type(value) == "table" and depth > 0 then
-			local nested = flatten(value, depth - 1)
-
-			for _, nestedValue in ipairs(nested) do
-				table.insert(result, nestedValue)
+			for _, nestedValue in nested do
+				table.insert(out, nestedValue)
 			end
-		else
-			table.insert(result, value)
+
+			continue
 		end
+
+		table.insert(out, value)
 	end
 
-	return result
+	return out
 end
 
 return flatten

@@ -1,33 +1,25 @@
---!strict
-local ToSet = require(script.Parent.toSet)
+local filter = require("./filter")
+local reduce = require("./reduce")
 
 --[=[
-	@function removeValues
-	@within Array
+    @within Array
 
-	@param array {T} -- The array to remove values from.
-	@param ... T -- The values to remove.
-	@return {T} -- The array with the values removed.
+    Removes all instances of the given values from the array.
 
-	Removes values from an array.
-
-	```lua
-	local array = { "a", "b", "c", "c", "d", "e" }
-
-	local new = RemoveValues(array, "c", "d") -- { "a", "b", "e" }
-	```
+    ```lua
+    removeValues({ "a", "a", "c", "b", "c", "a", "d" }, "a", "c")
+    -- { "b", "d" }
+    ```
 ]=]
 local function removeValues<T>(array: { T }, ...: T): { T }
-	local valueSet = ToSet({ ... })
-	local result = {}
+	local values = reduce({ ... }, function(acc, value)
+		acc[value] = true
+		return acc
+	end, {})
 
-	for _, value in ipairs(array) do
-		if not valueSet[value] then
-			table.insert(result, value)
-		end
-	end
-
-	return result
+	return filter(array, function(value)
+		return not values[value]
+	end)
 end
 
 return removeValues

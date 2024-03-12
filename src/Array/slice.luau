@@ -1,43 +1,39 @@
---!strict
 --[=[
-	@function slice
-	@within Array
+    @within Array
 
-	@param array {T} -- The array to slice.
-	@param from? number -- The index to start from (can be negative).
-	@param to? number -- The index to end at (can be negative).
-	@return {T} -- The sliced array.
+    Returns a slice of an array from `from` to `to` (inclusive). `from` and `to` can be negative, in which case they will be treated as an offset from the end of the array.
 
-	Slices an array.
+    ```lua
+    local array = { "a", "b", "c", "d", "e", "f" }
 
-	```lua
-	local array = { 1, 2, 3, 4, 5 }
-
-	local new = Slice(array, 2, 3) -- { 2, 3 }
-	local new = Slice(array, -2, -1) -- { 3, 4 }
-	local new = Slice(array, 3) -- { 3, 4, 5 }
-	```
+    slice(array, 2, 4) -- { "b", "c", "d" }
+    slice(array, 2, -2) -- { "b", "c", "d", "e" }
+    ```
 ]=]
 local function slice<T>(array: { T }, from: number?, to: number?): { T }
-	local length = #array
-	local result = {}
-
-	from = if type(from) == "number" then from else 1
-	to = if type(to) == "number" then to else length
-
-	if from < 1 then
-		from += length
+	if not from or from == 0 then
+		from = 1
+	elseif from < 0 then
+		from += #array + 1
 	end
 
-	if to < 1 then
-		to += length
+	if not to or to == 0 then
+		to = #array
+	elseif to < 0 then
+		to += #array + 1
 	end
 
-	for i = from, to do
-		table.insert(result, array[i])
+	if from == to then
+		return {}
 	end
 
-	return result
+	local out = {}
+
+	for index = from :: number, to :: number do
+		table.insert(out, array[index])
+	end
+
+	return out
 end
 
 return slice

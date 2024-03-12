@@ -1,32 +1,17 @@
---!strict
 --[=[
-	@function every
-	@within Array
+    @within Array
 
-	@param array {T} -- The array to check.
-	@param predicate (value: T, index: number, array: {T}) -> any -- The predicate to use to check the array.
-	@return boolean -- Whether every item in the array passes the predicate.
+    Returns `true` if every element in the array passes the test implemented by the provided function. Otherwise, it returns `false`.
 
-	Checks whether every item in the array passes the predicate.
-
-	```lua
-	local array = { 1, 2, 3 }
-
-	local value = Every(array, function(item, index)
-		return item > 0
-	end) -- true
-
-	local value = Every(array, function(item, index)
-		return item > 1
-	end) -- false
-	```
+    ```lua
+    every({ 1, 2, 3, 4, 5 }, function(value)
+        return value > 0
+    }) -- true
+    ```
 ]=]
-local function every<T>(
-	array: { T },
-	predicate: (value: T, index: number, array: { T }) -> any
-): boolean
-	for index, value in ipairs(array) do
-		if not predicate(value, index, array) then
+local function every<T>(array: { T }, predicate: (value: T, index: number) -> boolean): boolean
+	for index, value in array do
+		if not predicate(value, index) then
 			return false
 		end
 	end

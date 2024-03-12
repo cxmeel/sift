@@ -1,25 +1,17 @@
---!strict
 --[=[
-  @function is
-  @within Array
+    @within Array
 
-  @param object any -- The object to check.
-  @return boolean -- Whether the object is an array.
+    Checks if `value` is an array.
 
-  Checks if the given object is an array.
-
-  ```lua
-  local array = { 1, 2, 3 }
-  local dictionary = { hello = "world" }
-  local mixed = { 1, 2, hello = "world" }
-
-  Array.is(array) -- true
-  Array.is(dictionary) -- false
-  Array.is(mixed) -- false
-  ```
+    ```lua
+    is({ 1, 2, 3 }) -- true
+    is({ a = 1, b = 2, c = 3 }) -- false
+    is("hello") -- false
+    is({}) -- false
+    ```
 ]=]
-local function is(object: any): boolean
-	return typeof(object) == "table" and #object > 0 and next(object, #object) == nil
+local function is(value: any): boolean
+	return typeof(value) == "table" and #value > 0 and next(value, #value) == nil
 end
 
 return is

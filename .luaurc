@@ -3,6 +3,7 @@
     "lint": { "*": false },
     "aliases": {
         "Pkg": "Packages",
-        "DevPkg": "DevPackages"
+        "DevPkg": "DevPackages",
+        "Sift": "src"
     }
 }

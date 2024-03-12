@@ -1,52 +1,44 @@
---!strict
 --[=[
-	@function splice
-	@within Array
+    @within Array
 
-	@param array {T} -- The array to splice.
-	@param start? number -- The index to start splicing at (can be negative).
-	@param end? number -- The index to end splicing at (can be negative).
-	@param ... ...T -- The values to insert.
-	@return {T} -- The spliced array.
+    Returns a new array with elements removed and/or added. The `at` parameter specifies the index at which to start removing or adding elements. The `replaceCount` parameter specifies the number of elements to remove. Finally, the rest of the parameters are the elements to add to the array.
 
-	Splices an array.
+    ```lua
+    local array = { "a", "b", "c", "d" }
 
-	```lua
-	local array = { 1, 2, 3, 4, 5 }
-
-	local new = Splice(array, 3, 4, 6, 7) -- { 1, 2, 6, 7, 4, 5 }
-	local new = Splice(array, -1, 0, 6, 7) -- { 1, 2, 3, 4, 6, 7 }
-	local new = Splice(array, 4, -1, 6, 7) -- { 1, 2, 3, 6, 7, 5 }
-	```
+    splice(array, 2, 1, "x", "y", "z") -- { "a", "x", "y", "z", "c", "d" }
+    splice(array, 2, 0, "x", "y", "z") -- { "a", "x", "y", "z", "b", "c", "d" }
+    splice(array, 2, 1) -- { "a", "c", "d" }
+    ```
 ]=]
-local function splice<T>(array: { T }, from: number?, to: number?, ...: T?): { T }
-	local length = #array
-	local result = {}
+local function splice<T>(array: { T }, at: number?, replaceCount: number?, ...: T?): { T }
+	local useAt, useReplaceCount = 0, 0
 
-	from = if type(from) == "number" then from else 1
-	to = if type(to) == "number" then to else length
-
-	if from < 1 then
-		from += length
+	if not at or at == 0 then
+		useAt = 1
+	elseif at < 0 then
+		useAt = at + #array + 1
 	end
 
-	if to < 1 then
-		to += length
+	if not replaceCount or replaceCount < 0 then
+		useReplaceCount = 0
 	end
 
-	for index = 1, from - 1 do
-		table.insert(result, array[index])
+	local out = {}
+
+	for index = 1, useAt - 1 do
+		table.insert(out, array[index])
 	end
 
-	for _, value in ipairs({ ... }) do
-		table.insert(result, value)
+	for index = 1, select("#", ...) do
+		table.insert(out, select(index, ...))
 	end
 
-	for index = to + 1, length do
-		table.insert(result, array[index])
+	for index = useAt + useReplaceCount, #array do
+		table.insert(out, array[index])
 	end
 
-	return result
+	return out
 end
 
 return splice
