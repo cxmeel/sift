@@ -10,7 +10,8 @@ local find = require("./find")
     ```
 ]=]
 local function includes<T>(array: { T }, value: T, from: number?): boolean
-	return find(array, value, from) ~= nil
+	local index = find(array, value, from)
+	return index ~= nil
 end
 
 return includes
