@@ -3,3 +3,4 @@
 
 # Highlight Luau as Lua files
 *.luau linguist-language=Lua
+*.luau.todo linguist-language=Lua
