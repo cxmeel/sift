@@ -35,6 +35,7 @@ local array = {
 	last = require("./last"),
 	map = require("./map"),
 	partition = require("./partition"),
+	permutations = require("./permutations"),
 	pop = require("./pop"),
 	push = require("./push"),
 	reduce = require("./reduce"),
