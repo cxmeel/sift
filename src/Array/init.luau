@@ -9,6 +9,7 @@
 ]=]
 local array = {
 	at = require("./at"),
+	cartesian = require("./cartesian"),
 	concat = require("./concat"),
 	copy = require("./copy"),
 	copyDeep = require("./copyDeep"),
