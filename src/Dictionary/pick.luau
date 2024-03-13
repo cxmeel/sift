@@ -5,10 +5,10 @@
 
     ```lua
     local dict = { a = 1, b = 2, c = 3 }
-    withKeys(dict, "a", "c") -- { a = 1, c = 3 }
+    pick(dict, "a", "c") -- { a = 1, c = 3 }
     ```
 ]=]
-local function withKeys<K, V>(dictionary: { [K]: V }, ...: K): { [K]: V }
+local function pick<K, V>(dictionary: { [K]: V }, ...: K): { [K]: V }
 	local out = {}
 
 	for _, key in { ... } do
@@ -18,4 +18,4 @@ local function withKeys<K, V>(dictionary: { [K]: V }, ...: K): { [K]: V }
 	return out
 end
 
-return withKeys
+return pick

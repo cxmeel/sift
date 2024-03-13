@@ -45,7 +45,7 @@ local dictionary = {
 	some = require("./some"),
 	update = require("./update"),
 	values = require("./values"),
-	withKeys = require("./withKeys"),
+	pick = require("./pick"),
 }
 
 return dictionary
