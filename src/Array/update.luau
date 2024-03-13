@@ -31,9 +31,7 @@ local function update<T>(
 
 	if updater and out[index] ~= nil and out[index] ~= None then
 		out[index] = updater(out[index], index)
-	end
-
-	if adder and (out[index] == nil or out[index] == None) then
+	elseif adder and (out[index] == nil or out[index] == None) then
 		out[index] = adder(index)
 	end
 
