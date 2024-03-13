@@ -1,3 +1,5 @@
+local reduce = require("./reduce")
+
 --[=[
     @within Array
 
@@ -13,15 +15,13 @@
     ```
 ]=]
 local function count<T>(array: { T }, predicate: ((value: T, index: number) -> boolean)?): number
-	local counter = 0
-
-	for index, value in array do
+	return reduce(array, function(acc: number, value, index)
 		if not predicate or predicate(value, index) then
-			counter += 1
+			return acc + 1
 		end
-	end
 
-	return counter
+		return acc
+	end, 0)
 end
 
 return count

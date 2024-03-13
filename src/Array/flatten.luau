@@ -1,4 +1,4 @@
-local INF = newproxy(false)
+local INF = newproxy()
 
 --[=[
     @within Array

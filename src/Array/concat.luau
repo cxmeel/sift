@@ -10,7 +10,7 @@
     concat(array1, array2) -- {1, 2, 3, 4, 5, 6}
     ```
 ]=]
-local function concat<T>(...: { T })
+local function concat<T>(...: { any }): { T }
 	local out = {}
 
 	for _, array in { ... } do

@@ -4,8 +4,6 @@ description = "Immutable data library for Luau"
 version = "0.1.0"
 registry = "https://github.com/upliftgames/wally-index"
 realm = "shared"
-exclude = ["**"]
-include = ["src", "src/**", "wally.toml", "wally.lock", "default.project.json"]
 
 [dev-dependencies]
 Jest = "jsdotlua/jest@3.6.1-rc.2"
