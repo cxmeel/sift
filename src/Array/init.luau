@@ -52,6 +52,7 @@ local array = {
 	sort = require("./sort"),
 	splice = require("./splice"),
 	toSet = require("./toSet"),
+	unique = require("./unique"),
 	unshift = require("./unshift"),
 	update = require("./update"),
 	zip = require("./zip"),
