@@ -13,7 +13,7 @@ local isSubset = require("./isSubset")
     ```
 ]=]
 local function isSuperset<T>(superset: { [T]: boolean }, subset: { [T]: boolean }): boolean
-	return isSubset(subset, superset)
+    return isSubset(subset, superset)
 end
 
 return isSuperset

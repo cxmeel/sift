@@ -8,13 +8,13 @@
     ```
 ]=]
 local function keys<K, V>(dictionary: { [K]: V }): { K }
-	local out = {}
+    local out = {}
 
-	for key in dictionary do
-		table.insert(out, key)
-	end
+    for key in dictionary do
+        table.insert(out, key)
+    end
 
-	return out
+    return out
 end
 
 return keys

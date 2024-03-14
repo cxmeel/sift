@@ -1,9 +1,9 @@
 export type Operation = "add" | "remove" | "replace"
 
 export type Patch<K, V> = {
-	op: Operation,
-	path: { K },
-	value: V,
+    op: Operation,
+    path: { K },
+    value: V,
 }
 
 --[=[
@@ -44,53 +44,53 @@ export type Patch<K, V> = {
 	```
 ]=]
 local function patchDiff<K, V, T>(dictionary: { [K]: V }, other: { [K]: V }): { Patch<K, V> }
-	local out: { any } = {}
+    local out: { any } = {}
 
-	for key, value in dictionary do
-		if other[key] == nil then
-			table.insert(out, {
-				op = "remove",
-				path = { key },
-				value = value,
-			})
+    for key, value in dictionary do
+        if other[key] == nil then
+            table.insert(out, {
+                op = "remove",
+                path = { key },
+                value = value,
+            })
 
-			continue
-		end
+            continue
+        end
 
-		if typeof(value) == "table" then
-			local subpatches = patchDiff(value, other[key])
+        if typeof(value) == "table" then
+            local subpatches = patchDiff(value, other[key])
 
-			for _, patch in subpatches do
-				table.insert(out, {
-					op = patch.op :: any,
-					path = { key, table.unpack(patch.path) },
-					value = patch.value,
-				})
-			end
+            for _, patch in subpatches do
+                table.insert(out, {
+                    op = patch.op :: any,
+                    path = { key, table.unpack(patch.path) },
+                    value = patch.value,
+                })
+            end
 
-			continue
-		end
+            continue
+        end
 
-		if value ~= other[key] then
-			table.insert(out, {
-				op = "replace",
-				path = { key },
-				value = other[key],
-			})
-		end
-	end
+        if value ~= other[key] then
+            table.insert(out, {
+                op = "replace",
+                path = { key },
+                value = other[key],
+            })
+        end
+    end
 
-	for key, value in other do
-		if dictionary[key] == nil then
-			table.insert(out, {
-				op = "add",
-				path = { key },
-				value = value,
-			})
-		end
-	end
+    for key, value in other do
+        if dictionary[key] == nil then
+            table.insert(out, {
+                op = "add",
+                path = { key },
+                value = value,
+            })
+        end
+    end
 
-	return out
+    return out
 end
 
 return patchDiff

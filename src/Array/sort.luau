@@ -11,10 +11,10 @@ local copy = require("./copy")
     ```
 ]=]
 local function sort<T>(array: { T }, comparer: ((a: T, b: T) -> boolean)?): { T }
-	local result = copy(array)
-	table.sort(result, comparer)
+    local result = copy(array)
+    table.sort(result, comparer)
 
-	return result
+    return result
 end
 
 return sort

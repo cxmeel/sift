@@ -10,13 +10,13 @@
     ```
 ]=]
 local function at<T>(array: { T }, index: number): T
-	if index == 0 then
-		index = 1
-	elseif index < 0 then
-		index += #array + 1
-	end
+    if index == 0 then
+        index = 1
+    elseif index < 0 then
+        index += #array + 1
+    end
 
-	return array[index]
+    return array[index]
 end
 
 return at

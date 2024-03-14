@@ -10,7 +10,7 @@ local at = require("./at")
     ```
 ]=]
 local function last<T>(array: { T }): T
-	return at(array, -1)
+    return at(array, -1)
 end
 
 return last

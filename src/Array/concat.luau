@@ -11,15 +11,15 @@
     ```
 ]=]
 local function concat<T>(...: { any }): { T }
-	local out = {}
+    local out = {}
 
-	for _, array in { ... } do
-		for _, value in array do
-			table.insert(out, value)
-		end
-	end
+    for _, array in { ... } do
+        for _, value in array do
+            table.insert(out, value)
+        end
+    end
 
-	return out
+    return out
 end
 
 return concat

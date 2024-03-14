@@ -9,13 +9,13 @@
     ```
 ]=]
 local function pick<K, V>(dictionary: { [K]: V }, ...: K): { [K]: V }
-	local out = {}
+    local out = {}
 
-	for _, key in { ... } do
-		out[key] = dictionary[key]
-	end
+    for _, key in { ... } do
+        out[key] = dictionary[key]
+    end
 
-	return out
+    return out
 end
 
 return pick

@@ -19,24 +19,24 @@ local copy = require("./copy")
     ```
 ]=]
 local function permutations<T>(array: { T }): { { T } }
-	local out: { { T } } = {}
+    local out: { { T } } = {}
 
-	local function permute(arr, n)
-		if n == 0 then
-			table.insert(out, copy(arr))
-			return
-		end
+    local function permute(arr, n)
+        if n == 0 then
+            table.insert(out, copy(arr))
+            return
+        end
 
-		for i = 1, n do
-			arr[n], arr[i] = arr[i], arr[n]
-			permute(arr, n - 1)
-			arr[n], arr[i] = arr[i], arr[n]
-		end
-	end
+        for i = 1, n do
+            arr[n], arr[i] = arr[i], arr[n]
+            permute(arr, n - 1)
+            arr[n], arr[i] = arr[i], arr[n]
+        end
+    end
 
-	permute(array, #array)
+    permute(array, #array)
 
-	return out
+    return out
 end
 
 return permutations

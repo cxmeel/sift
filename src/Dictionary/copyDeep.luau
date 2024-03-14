@@ -9,17 +9,17 @@
     ```
 ]=]
 local function copyDeep<K, V>(dictionary: { [K]: V }): { [K]: V }
-	local out: { [K]: V } = {}
+    local out: { [K]: V } = {}
 
-	for key, value in dictionary do
-		if typeof(value) == "table" then
-			out[key] = copyDeep(value) :: any
-		else
-			out[key] = value
-		end
-	end
+    for key, value in dictionary do
+        if typeof(value) == "table" then
+            out[key] = copyDeep(value) :: any
+        else
+            out[key] = value
+        end
+    end
 
-	return out
+    return out
 end
 
 return copyDeep

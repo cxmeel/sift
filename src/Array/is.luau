@@ -11,7 +11,7 @@
     ```
 ]=]
 local function is(value: any): boolean
-	return typeof(value) == "table" and #value > 0 and next(value, #value) == nil
+    return typeof(value) == "table" and #value > 0 and next(value, #value) == nil
 end
 
 return is

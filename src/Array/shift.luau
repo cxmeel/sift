@@ -13,18 +13,18 @@ local removeIndices = require("./removeIndices")
     ```
 ]=]
 local function shift<T>(array: { T }, count: number?): { T }
-	local useCount = count or 1
-	local indices = {}
+    local useCount = count or 1
+    local indices = {}
 
-	if useCount > #array then
-		return {}
-	end
+    if useCount > #array then
+        return {}
+    end
 
-	for index = #array, useCount, -1 do
-		table.insert(indices, index)
-	end
+    for index = #array, useCount, -1 do
+        table.insert(indices, index)
+    end
 
-	return removeIndices(array, table.unpack(indices))
+    return removeIndices(array, table.unpack(indices))
 end
 
 return shift

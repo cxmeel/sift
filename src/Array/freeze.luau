@@ -14,8 +14,8 @@ local copy = require("./copy")
     ```
 ]=]
 local function freeze<T>(array: { T }): { T }
-	local out = copy(array)
-	return table.freeze(out)
+    local out = copy(array)
+    return table.freeze(out)
 end
 
 return freeze

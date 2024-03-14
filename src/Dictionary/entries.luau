@@ -9,13 +9,13 @@
     ```
 ]=]
 local function entries<K, V>(dictionary: { [K]: V }): { { K | V } }
-	local out = {}
+    local out = {}
 
-	for key, value in dictionary do
-		table.insert(out, { key, value :: any })
-	end
+    for key, value in dictionary do
+        table.insert(out, { key, value :: any })
+    end
 
-	return out
+    return out
 end
 
 return entries

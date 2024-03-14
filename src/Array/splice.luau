@@ -12,33 +12,33 @@
     ```
 ]=]
 local function splice<T>(array: { T }, at: number?, replaceCount: number?, ...: T?): { T }
-	local useAt, useReplaceCount = 0, 0
+    local useAt, useReplaceCount = 0, 0
 
-	if not at or at == 0 then
-		useAt = 1
-	elseif at < 0 then
-		useAt = at + #array + 1
-	end
+    if not at or at == 0 then
+        useAt = 1
+    elseif at < 0 then
+        useAt = at + #array + 1
+    end
 
-	if not replaceCount or replaceCount < 0 then
-		useReplaceCount = 0
-	end
+    if not replaceCount or replaceCount < 0 then
+        useReplaceCount = 0
+    end
 
-	local out = {}
+    local out = {}
 
-	for index = 1, useAt - 1 do
-		table.insert(out, array[index])
-	end
+    for index = 1, useAt - 1 do
+        table.insert(out, array[index])
+    end
 
-	for index = 1, select("#", ...) do
-		table.insert(out, select(index, ...))
-	end
+    for index = 1, select("#", ...) do
+        table.insert(out, select(index, ...))
+    end
 
-	for index = useAt + useReplaceCount, #array do
-		table.insert(out, array[index])
-	end
+    for index = useAt + useReplaceCount, #array do
+        table.insert(out, array[index])
+    end
 
-	return out
+    return out
 end
 
 return splice

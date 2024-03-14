@@ -10,19 +10,19 @@ local copy = require("./copy")
     ```
 ]=]
 local function shuffle<T>(array: { T }, seed: number?): { T }
-	math.randomseed(seed or os.clock() * #array)
+    math.randomseed(seed or os.clock() * #array)
 
-	local out = copy(array)
+    local out = copy(array)
 
-	for index = #out, 1, -1 do
-		local randomIndex = math.random(1, index)
-		local temp = out[index]
+    for index = #out, 1, -1 do
+        local randomIndex = math.random(1, index)
+        local temp = out[index]
 
-		out[index] = out[randomIndex]
-		out[randomIndex] = temp
-	end
+        out[index] = out[randomIndex]
+        out[randomIndex] = temp
+    end
 
-	return out
+    return out
 end
 
 return shuffle

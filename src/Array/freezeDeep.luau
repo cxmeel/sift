@@ -10,20 +10,20 @@
     frozen[3][1] = 4 -- error!
 ]=]
 local function freezeDeep<T>(array: { T }): { T }
-	local out: { T } = {}
+    local out: { T } = {}
 
-	for _, value in array do
-		if typeof(value) == "table" then
-			local nested: any = freezeDeep(value)
-			table.insert(out, nested)
+    for _, value in array do
+        if typeof(value) == "table" then
+            local nested: any = freezeDeep(value)
+            table.insert(out, nested)
 
-			continue
-		end
+            continue
+        end
 
-		table.insert(out, value)
-	end
+        table.insert(out, value)
+    end
 
-	return table.freeze(out)
+    return table.freeze(out)
 end
 
 return freezeDeep

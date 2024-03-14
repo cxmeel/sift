@@ -13,19 +13,19 @@ local copy = require("./copy")
     ```
 ]=]
 local function insert<T>(array: { T }, index: number, ...: T): { T }
-	if index == 0 then
-		index = 1
-	elseif index < 0 then
-		index += #array + 1
-	end
+    if index == 0 then
+        index = 1
+    elseif index < 0 then
+        index += #array + 1
+    end
 
-	local out = copy(array)
+    local out = copy(array)
 
-	for i = 1, select("#", ...) do
-		table.insert(out, index + i - 1, select(i, ...))
-	end
+    for i = 1, select("#", ...) do
+        table.insert(out, index + i - 1, select(i, ...))
+    end
 
-	return out
+    return out
 end
 
 return insert

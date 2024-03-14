@@ -12,21 +12,21 @@
     ```
 ]=]
 local function partition<T>(
-	set: { [T]: boolean },
-	predicate: (value: T) -> boolean
+    set: { [T]: boolean },
+    predicate: (value: T) -> boolean
 ): ({ [T]: boolean }, { [T]: boolean })
-	local pass = {}
-	local fail = {}
+    local pass = {}
+    local fail = {}
 
-	for value in set do
-		if predicate(value) then
-			pass[value] = true
-		else
-			fail[value] = true
-		end
-	end
+    for value in set do
+        if predicate(value) then
+            pass[value] = true
+        else
+            fail[value] = true
+        end
+    end
 
-	return pass, fail
+    return pass, fail
 end
 
 return partition

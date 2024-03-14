@@ -10,27 +10,27 @@ local reduce = require("./reduce")
     ```
 ]=]
 local function removeIndices<T>(array: { T }, ...: number): { T }
-	local indices = reduce({ ... }, function(acc, value)
-		if value == 0 then
-			value = 1
-		elseif value < 0 then
-			value += #array + 1
-		end
+    local indices = reduce({ ... }, function(acc, value)
+        if value == 0 then
+            value = 1
+        elseif value < 0 then
+            value += #array + 1
+        end
 
-		acc[value] = true
+        acc[value] = true
 
-		return acc
-	end, {})
+        return acc
+    end, {})
 
-	local out = {}
+    local out = {}
 
-	for index, value in array do
-		if not indices[index] then
-			table.insert(out, value)
-		end
-	end
+    for index, value in array do
+        if not indices[index] then
+            table.insert(out, value)
+        end
+    end
 
-	return out
+    return out
 end
 
 return removeIndices

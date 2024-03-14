@@ -12,13 +12,13 @@
     ```
 ]=]
 local function find<T>(array: { T }, value: T, from: number?): number?
-	if from == 0 then
-		from = 1
-	elseif from and from < 0 then
-		from += #array + 1
-	end
+    if from == 0 then
+        from = 1
+    elseif from and from < 0 then
+        from += #array + 1
+    end
 
-	return table.find(array, value, from)
+    return table.find(array, value, from)
 end
 
 return find

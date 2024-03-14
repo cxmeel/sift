@@ -15,30 +15,30 @@ local copyDeep = require("./copyDeep")
 	```
 ]=]
 local function mergeDeep<K, V>(...: { [any]: any }): { [K]: V }
-	local out: any = {}
+    local out: any = {}
 
-	for _, dictionary in { ... } do
-		for key, value in dictionary do
-			if value == None then
-				out[key] = nil
-				continue
-			end
+    for _, dictionary in { ... } do
+        for key, value in dictionary do
+            if value == None then
+                out[key] = nil
+                continue
+            end
 
-			if typeof(value) == "table" then
-				if out[key] == nil or typeof(out[key]) ~= "table" then
-					out[key] = copyDeep(value)
-					continue
-				end
+            if typeof(value) == "table" then
+                if out[key] == nil or typeof(out[key]) ~= "table" then
+                    out[key] = copyDeep(value)
+                    continue
+                end
 
-				out[key] = mergeDeep(out[key], value)
-				continue
-			end
+                out[key] = mergeDeep(out[key], value)
+                continue
+            end
 
-			out[key] = value
-		end
-	end
+            out[key] = value
+        end
+    end
 
-	return out
+    return out
 end
 
 return mergeDeep

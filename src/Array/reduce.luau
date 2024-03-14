@@ -12,23 +12,23 @@ local None = require("@Sift/None")
     ```
 ]=]
 local function reduce<T, U>(
-	array: { T },
-	reducer: (accumulator: U, value: T, index: number) -> U,
-	initAccumulator: U?
+    array: { T },
+    reducer: (accumulator: U, value: T, index: number) -> U,
+    initAccumulator: U?
 ): U
-	local out = initAccumulator :: U
-	local start = 1
+    local out = initAccumulator :: U
+    local start = 1
 
-	if out == nil or out == None then
-		out = array[1] :: any
-		start = 2
-	end
+    if out == nil or out == None then
+        out = array[1] :: any
+        start = 2
+    end
 
-	for index = start, #array do
-		out = reducer(out, array[index], index)
-	end
+    for index = start, #array do
+        out = reducer(out, array[index], index)
+    end
 
-	return out
+    return out
 end
 
 return reduce

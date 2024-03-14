@@ -10,7 +10,7 @@ local removeIndices = require("./removeIndices")
     ```
 ]=]
 local function removeIndex<T>(array: { T }, index: number): { T }
-	return removeIndices(array, index)
+    return removeIndices(array, index)
 end
 
 return removeIndex

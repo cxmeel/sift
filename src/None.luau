@@ -12,7 +12,7 @@
 local None: unknown = newproxy(true)
 
 getmetatable(None :: any).__tostring = function()
-	return "Sift.None"
+    return "Sift.None"
 end
 
 export type None = typeof(None)

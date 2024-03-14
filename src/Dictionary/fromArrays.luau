@@ -11,13 +11,13 @@
     ```
 ]=]
 local function fromArrays<K, V>(keys: { K }, values: { V }): { [K]: V }
-	local out = {}
+    local out = {}
 
-	for index, key in keys do
-		out[key] = values[index]
-	end
+    for index, key in keys do
+        out[key] = values[index]
+    end
 
-	return out
+    return out
 end
 
 return fromArrays

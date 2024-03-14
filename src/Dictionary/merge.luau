@@ -13,17 +13,17 @@ local None = require("@Sift/None")
     ```
 ]=]
 local function merge<K, V>(...: { [any]: any }): { [K]: V }
-	local out = {}
+    local out = {}
 
-	for _, dictionary in { ... } do
-		for key, value in dictionary do
-			if key ~= None and value ~= None then
-				out[key] = value
-			end
-		end
-	end
+    for _, dictionary in { ... } do
+        for key, value in dictionary do
+            if key ~= None and value ~= None then
+                out[key] = value
+            end
+        end
+    end
 
-	return out
+    return out
 end
 
 return merge

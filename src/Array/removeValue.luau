@@ -10,7 +10,7 @@ local removeValues = require("./removeValues")
     ```
 ]=]
 local function removeValue<T>(array: { T }, value: T): { T }
-	return removeValues(array, value)
+    return removeValues(array, value)
 end
 
 return removeValue

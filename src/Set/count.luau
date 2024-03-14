@@ -13,15 +13,15 @@
     ```
 ]=]
 local function count<T>(set: { [T]: boolean }, predicate: ((value: T) -> boolean)?): number
-	local counter = 0
+    local counter = 0
 
-	for value in set do
-		if not predicate or predicate(value) then
-			counter += 1
-		end
-	end
+    for value in set do
+        if not predicate or predicate(value) then
+            counter += 1
+        end
+    end
 
-	return counter
+    return counter
 end
 
 return count

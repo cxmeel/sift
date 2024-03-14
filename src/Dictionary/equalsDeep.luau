@@ -1,23 +1,23 @@
 local Util = require("@Sift/Util")
 
 local function compareDeep(a, b)
-	if typeof(a) ~= "table" or typeof(b) ~= "table" then
-		return a == b
-	end
+    if typeof(a) ~= "table" or typeof(b) ~= "table" then
+        return a == b
+    end
 
-	for key, value in a do
-		if not compareDeep(value, b[key]) then
-			return false
-		end
-	end
+    for key, value in a do
+        if not compareDeep(value, b[key]) then
+            return false
+        end
+    end
 
-	for key, value in b do
-		if not compareDeep(value, a[key]) then
-			return false
-		end
-	end
+    for key, value in b do
+        if not compareDeep(value, a[key]) then
+            return false
+        end
+    end
 
-	return true
+    return true
 end
 
 --[=[
@@ -35,20 +35,20 @@ end
   ```
 ]=]
 local function equalsDeep(...: { [any]: any }): boolean
-	if Util.areEqual(...) then
-		return true
-	end
+    if Util.areEqual(...) then
+        return true
+    end
 
-	local args = { ... }
-	local first = table.remove(args, 1) :: { [any]: any }
+    local args = { ... }
+    local first = table.remove(args, 1) :: { [any]: any }
 
-	for _, dictionary in args do
-		if not compareDeep(first, dictionary) then
-			return false
-		end
-	end
+    for _, dictionary in args do
+        if not compareDeep(first, dictionary) then
+            return false
+        end
+    end
 
-	return true
+    return true
 end
 
 return equalsDeep

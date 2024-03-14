@@ -10,13 +10,13 @@
     ```
 ]=]
 local function every<T>(array: { T }, predicate: (value: T, index: number) -> boolean): boolean
-	for index, value in array do
-		if not predicate(value, index) then
-			return false
-		end
-	end
+    for index, value in array do
+        if not predicate(value, index) then
+            return false
+        end
+    end
 
-	return true
+    return true
 end
 
 return every

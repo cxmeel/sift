@@ -19,20 +19,20 @@ local copy = require("./copy")
 	```
 ]=]
 local function update<K, V, T>(
-	dictionary: { [K]: V },
-	key: K,
-	updater: ((value: V, key: K) -> T)?,
-	adder: ((key: K) -> T)?
+    dictionary: { [K]: V },
+    key: K,
+    updater: ((value: V, key: K) -> T)?,
+    adder: ((key: K) -> T)?
 ): { [K]: T }
-	local out: { [K]: any } = copy(dictionary)
+    local out: { [K]: any } = copy(dictionary)
 
-	if updater and out[key] ~= nil and out[key] ~= None then
-		out[key] = updater(out[key], key) :: any
-	elseif adder and (out[key] == nil or out[key] == None) then
-		out[key] = adder(key) :: any
-	end
+    if updater and out[key] ~= nil and out[key] ~= None then
+        out[key] = updater(out[key], key) :: any
+    elseif adder and (out[key] == nil or out[key] == None) then
+        out[key] = adder(key) :: any
+    end
 
-	return out
+    return out
 end
 
 return update

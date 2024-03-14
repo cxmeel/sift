@@ -15,15 +15,15 @@ local toSet = require("./toSet")
 	```
 ]=]
 local function difference<T>(array: { T }, ...: { T }): { T }
-	local arraySet = toSet(array)
-	local otherSets = {}
+    local arraySet = toSet(array)
+    local otherSets = {}
 
-	for _, other in { ... } do
-		table.insert(otherSets, toSet(other))
-	end
+    for _, other in { ... } do
+        table.insert(otherSets, toSet(other))
+    end
 
-	local differenceSet = setDifference(arraySet, unpack(otherSets))
-	return toArray(differenceSet)
+    local differenceSet = setDifference(arraySet, unpack(otherSets))
+    return toArray(differenceSet)
 end
 
 return difference

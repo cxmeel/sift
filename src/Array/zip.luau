@@ -14,28 +14,28 @@ local reduce = require("./reduce")
     ```
 ]=]
 local function zip(...: { any }): { { any } }
-	if select("#", ...) == 0 then
-		return {}
-	end
+    if select("#", ...) == 0 then
+        return {}
+    end
 
-	local arrays = { ... }
-	local length = reduce(arrays, function(acc, array)
-		return math.min(acc, #array)
-	end, math.huge)
+    local arrays = { ... }
+    local length = reduce(arrays, function(acc, array)
+        return math.min(acc, #array)
+    end, math.huge)
 
-	local out = {}
+    local out = {}
 
-	for index = 1, length do
-		local values = {}
+    for index = 1, length do
+        local values = {}
 
-		for _, array in arrays do
-			table.insert(values, array[index])
-		end
+        for _, array in arrays do
+            table.insert(values, array[index])
+        end
 
-		table.insert(out, values)
-	end
+        table.insert(out, values)
+    end
 
-	return out
+    return out
 end
 
 return zip

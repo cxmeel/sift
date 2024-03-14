@@ -13,35 +13,35 @@ local copy = require("./copy")
     ```
 ]=]
 local function set<K, V>(
-	dictionary: { [K]: V },
-	key: K,
-	value: V,
-	separated: (string | boolean)?
+    dictionary: { [K]: V },
+    key: K,
+    value: V,
+    separated: (string | boolean)?
 ): { [K]: V }
-	local out = copy(dictionary)
+    local out = copy(dictionary)
 
-	if not separated then
-		out[key] = value
-		return out
-	end
+    if not separated then
+        out[key] = value
+        return out
+    end
 
-	local separator = type(separated) == "string" and separated or "."
-	local parts: { K } = (key :: any):split(separator)
-	local current: any = out
+    local separator = type(separated) == "string" and separated or "."
+    local parts: { K } = (key :: any):split(separator)
+    local current: any = out
 
-	while #parts > 1 do
-		local part = table.remove(parts, 1) :: K
+    while #parts > 1 do
+        local part = table.remove(parts, 1) :: K
 
-		if not current[part] then
-			current[part] = {}
-		end
+        if not current[part] then
+            current[part] = {}
+        end
 
-		current = current[part]
-	end
+        current = current[part]
+    end
 
-	current[parts[1]] = value
+    current[parts[1]] = value
 
-	return out
+    return out
 end
 
 return set

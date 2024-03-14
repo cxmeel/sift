@@ -9,13 +9,13 @@
     ```
 ]=]
 local function fromArray<T>(array: { T }): { [T]: boolean }
-	local out = {}
+    local out = {}
 
-	for _, value in array do
-		out[value] = true
-	end
+    for _, value in array do
+        out[value] = true
+    end
 
-	return out
+    return out
 end
 
 return fromArray

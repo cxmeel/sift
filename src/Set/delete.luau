@@ -11,11 +11,11 @@ local filter = require("./filter")
     ```
 ]=]
 local function delete<T>(set: { [T]: boolean }, ...: T): { [T]: boolean }
-	local values = { ... }
+    local values = { ... }
 
-	return filter(set, function(value: T): boolean
-		return table.find(values, value) == nil
-	end)
+    return filter(set, function(value: T): boolean
+        return table.find(values, value) == nil
+    end)
 end
 
 return delete

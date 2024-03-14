@@ -13,18 +13,18 @@ local removeIndices = require("./removeIndices")
     ```
 ]=]
 local function pop<T>(array: { T }, count: number?): { T }
-	local useCount = count or 1
-	local indices = {}
+    local useCount = count or 1
+    local indices = {}
 
-	if useCount > #array then
-		return {}
-	end
+    if useCount > #array then
+        return {}
+    end
 
-	for index = 1, useCount do
-		table.insert(indices, #array - index + 1)
-	end
+    for index = 1, useCount do
+        table.insert(indices, #array - index + 1)
+    end
 
-	return removeIndices(array, table.unpack(indices))
+    return removeIndices(array, table.unpack(indices))
 end
 
 return pop

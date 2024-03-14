@@ -16,19 +16,19 @@ local None = require("@Sift/None")
     ```
 ]=]
 local function map<K, V, X, Y>(dictionary: { [K]: V }, mapper: (value: V, key: K) -> (Y, X)): { [X]: Y }
-	local out: { [X]: Y } = {}
+    local out: { [X]: Y } = {}
 
-	for key, value in dictionary do
-		local mappedValue, mappedKey = mapper(value, key)
+    for key, value in dictionary do
+        local mappedValue, mappedKey = mapper(value, key)
 
-		if mappedKey == None or mappedValue == None then
-			continue
-		end
+        if mappedKey == None or mappedValue == None then
+            continue
+        end
 
-		out[mappedKey or key :: any] = mappedValue
-	end
+        out[mappedKey or key :: any] = mappedValue
+    end
 
-	return out
+    return out
 end
 
 return map

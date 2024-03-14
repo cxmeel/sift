@@ -11,13 +11,13 @@
     ```
 ]=]
 local function isSubset<T>(subset: { [T]: boolean }, superset: { [T]: boolean }): boolean
-	for value in subset do
-		if not superset[value] then
-			return false
-		end
-	end
+    for value in subset do
+        if not superset[value] then
+            return false
+        end
+    end
 
-	return true
+    return true
 end
 
 return isSubset

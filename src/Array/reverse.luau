@@ -8,13 +8,13 @@
     ```
 ]=]
 local function reverse<T>(array: { T }): { T }
-	local out = {}
+    local out = {}
 
-	for index = #array, 1, -1 do
-		table.insert(out, array[index])
-	end
+    for index = #array, 1, -1 do
+        table.insert(out, array[index])
+    end
 
-	return out
+    return out
 end
 
 return reverse

@@ -13,17 +13,17 @@ local None = require("@Sift/None")
     ```
 ]=]
 local function merge<T>(...: { [T]: boolean }): { [T]: boolean }
-	local out = {}
+    local out = {}
 
-	for _, set in { ... } do
-		for value in set do
-			if value ~= None then
-				out[value] = true
-			end
-		end
-	end
+    for _, set in { ... } do
+        for value in set do
+            if value ~= None then
+                out[value] = true
+            end
+        end
+    end
 
-	return out
+    return out
 end
 
 return merge

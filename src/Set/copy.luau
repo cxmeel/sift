@@ -8,13 +8,13 @@
 	```
 ]=]
 local function copy<T>(set: { [T]: boolean }): { [T]: boolean }
-	local out = {}
+    local out = {}
 
-	for value in set do
-		out[value] = true
-	end
+    for value in set do
+        out[value] = true
+    end
 
-	return out
+    return out
 end
 
 return copy

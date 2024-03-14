@@ -11,24 +11,24 @@
     ```
 ]=]
 local function intersection<T>(set: { [T]: boolean }, ...: { [T]: boolean }): { [T]: boolean }
-	local out = {}
+    local out = {}
 
-	for value in set do
-		local intersects = true
+    for value in set do
+        local intersects = true
 
-		for _, other in { ... } do
-			if not other[value] then
-				intersects = false
-				break
-			end
-		end
+        for _, other in { ... } do
+            if not other[value] then
+                intersects = false
+                break
+            end
+        end
 
-		if intersects then
-			out[value] = true
-		end
-	end
+        if intersects then
+            out[value] = true
+        end
+    end
 
-	return out
+    return out
 end
 
 return intersection

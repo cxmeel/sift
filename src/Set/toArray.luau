@@ -9,13 +9,13 @@
     ```
 ]=]
 local function toArray<T>(set: { [T]: boolean }): { T }
-	local out = {}
+    local out = {}
 
-	for value in set do
-		table.insert(out, value)
-	end
+    for value in set do
+        table.insert(out, value)
+    end
 
-	return out
+    return out
 end
 
 return toArray

@@ -11,8 +11,8 @@ local toSet = require("./toSet")
     ```
 ]=]
 local function unique<T>(array: { T }): { T }
-	local set = toSet(array)
-	return toArray(set)
+    local set = toSet(array)
+    return toArray(set)
 end
 
 return unique

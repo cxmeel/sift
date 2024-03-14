@@ -13,8 +13,8 @@ local copy = require("./copy")
     ```
 ]=]
 local function freeze<K, V>(dictionary: { [K]: V }): { [K]: V }
-	local out = copy(dictionary)
-	return table.freeze(out)
+    local out = copy(dictionary)
+    return table.freeze(out)
 end
 
 return freeze

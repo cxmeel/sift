@@ -13,17 +13,17 @@ local copy = require("./copy")
     ```
 ]=]
 local function set<T>(array: { T }, index: number, value: T): { T }
-	local out = copy(array)
+    local out = copy(array)
 
-	if index == 0 then
-		index = 1
-	elseif index < 0 then
-		index += #out + 1
-	end
+    if index == 0 then
+        index = 1
+    elseif index < 0 then
+        index += #out + 1
+    end
 
-	out[index] = value
+    out[index] = value
 
-	return out
+    return out
 end
 
 return set

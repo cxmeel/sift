@@ -12,17 +12,17 @@ local None = require("@Sift/None")
     ```
 ]=]
 local function map<T, U>(set: { [T]: boolean }, mapper: (value: T) -> U): { [U]: boolean }
-	local out = {}
+    local out = {}
 
-	for value in set do
-		local mapped = mapper(value)
+    for value in set do
+        local mapped = mapper(value)
 
-		if mapped ~= nil and mapped ~= None then
-			out[mapped] = true
-		end
-	end
+        if mapped ~= nil and mapped ~= None then
+            out[mapped] = true
+        end
+    end
 
-	return out
+    return out
 end
 
 return map

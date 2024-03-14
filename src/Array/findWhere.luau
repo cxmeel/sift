@@ -10,23 +10,23 @@
     ```
 ]=]
 local function findWhere<T>(
-	array: { T },
-	predicate: (value: T, index: number) -> boolean,
-	from: number?
+    array: { T },
+    predicate: (value: T, index: number) -> boolean,
+    from: number?
 ): number?
-	if from == 0 then
-		from = 1
-	elseif from and from < 0 then
-		from += #array + 1
-	end
+    if from == 0 then
+        from = 1
+    elseif from and from < 0 then
+        from += #array + 1
+    end
 
-	for index = from or 1, #array do
-		if predicate(array[index], index) then
-			return index
-		end
-	end
+    for index = from or 1, #array do
+        if predicate(array[index], index) then
+            return index
+        end
+    end
 
-	return nil
+    return nil
 end
 
 return findWhere

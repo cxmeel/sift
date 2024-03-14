@@ -10,15 +10,15 @@
     ```
 ]=]
 local function filter<T>(set: { [T]: boolean }, filterer: (value: T) -> boolean): { [T]: boolean }
-	local out = {}
+    local out = {}
 
-	for value in set do
-		if filterer(value) then
-			out[value] = true
-		end
-	end
+    for value in set do
+        if filterer(value) then
+            out[value] = true
+        end
+    end
 
-	return out
+    return out
 end
 
 return filter

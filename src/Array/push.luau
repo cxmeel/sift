@@ -10,7 +10,7 @@ local insert = require("./insert")
     ```
 ]=]
 local function push<T>(array: { T }, ...: T): { T }
-	return insert(array, #array + 1, ...)
+    return insert(array, #array + 1, ...)
 end
 
 return push

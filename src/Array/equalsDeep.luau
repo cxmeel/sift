@@ -1,21 +1,21 @@
 local Util = require("@Sift/Util")
 
 local function compare(a: any, b: any)
-	if typeof(a) ~= "table" or typeof(b) ~= "table" then
-		return a == b
-	end
+    if typeof(a) ~= "table" or typeof(b) ~= "table" then
+        return a == b
+    end
 
-	if #a ~= #b then
-		return false
-	end
+    if #a ~= #b then
+        return false
+    end
 
-	for index, value in a do
-		if not compare(value, b[index]) then
-			return false
-		end
-	end
+    for index, value in a do
+        if not compare(value, b[index]) then
+            return false
+        end
+    end
 
-	return true
+    return true
 end
 
 --[=[
@@ -31,20 +31,20 @@ end
     ```
 ]=]
 local function equalsDeep(...: any): boolean
-	if Util.areEqual(...) then
-		return true
-	end
+    if Util.areEqual(...) then
+        return true
+    end
 
-	local args = { ... }
-	local first = table.remove(args, 1)
+    local args = { ... }
+    local first = table.remove(args, 1)
 
-	for _, value in args do
-		if not compare(first, value) then
-			return false
-		end
-	end
+    for _, value in args do
+        if not compare(first, value) then
+            return false
+        end
+    end
 
-	return true
+    return true
 end
 
 return equalsDeep

@@ -12,17 +12,17 @@ local None = require("@Sift/None")
     ```
 ]=]
 local function map<T, U>(array: { T }, mapper: (value: T, index: number) -> U?): { U }
-	local out: { U } = {}
+    local out: { U } = {}
 
-	for index, value in array do
-		local mapped = mapper(value, index)
+    for index, value in array do
+        local mapped = mapper(value, index)
 
-		if mapped ~= nil and mapped ~= None then
-			table.insert(out, mapped)
-		end
-	end
+        if mapped ~= nil and mapped ~= None then
+            table.insert(out, mapped)
+        end
+    end
 
-	return out
+    return out
 end
 
 return map

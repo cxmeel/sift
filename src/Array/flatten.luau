@@ -13,25 +13,25 @@ local INF = newproxy()
     ```
 ]=]
 local function flatten<T>(array: { T }, depth: number?): { T }
-	local withDepth = depth or INF
-	local out = {}
+    local withDepth = depth or INF
+    local out = {}
 
-	for _, value in array do
-		if typeof(value) == "table" and (withDepth == INF or withDepth > 0) then
-			local useDepth = withDepth == INF and INF or withDepth - 1
-			local nested = flatten(value, useDepth)
+    for _, value in array do
+        if typeof(value) == "table" and (withDepth == INF or withDepth > 0) then
+            local useDepth = withDepth == INF and INF or withDepth - 1
+            local nested = flatten(value, useDepth)
 
-			for _, nestedValue in nested do
-				table.insert(out, nestedValue)
-			end
+            for _, nestedValue in nested do
+                table.insert(out, nestedValue)
+            end
 
-			continue
-		end
+            continue
+        end
 
-		table.insert(out, value)
-	end
+        table.insert(out, value)
+    end
 
-	return out
+    return out
 end
 
 return flatten

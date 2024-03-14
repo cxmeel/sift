@@ -12,25 +12,25 @@
     ```
 ]=]
 local function differenceDeep<K, V>(dictionary: { [K]: V }, other: { [K]: V }): { [K]: V }
-	local out: { [K]: any } = {}
+    local out: { [K]: any } = {}
 
-	for key, value in dictionary do
-		if typeof(value) == "table" then
-			if typeof(other[key]) == "table" then
-				out[key] = differenceDeep(value, other[key])
-				continue
-			end
+    for key, value in dictionary do
+        if typeof(value) == "table" then
+            if typeof(other[key]) == "table" then
+                out[key] = differenceDeep(value, other[key])
+                continue
+            end
 
-			out[key] = value
-			continue
-		end
+            out[key] = value
+            continue
+        end
 
-		if other[key] == nil or other[key] ~= value then
-			out[key] = value
-		end
-	end
+        if other[key] == nil or other[key] ~= value then
+            out[key] = value
+        end
+    end
 
-	return out
+    return out
 end
 
 return differenceDeep

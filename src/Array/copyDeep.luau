@@ -9,17 +9,17 @@
     ```
 ]=]
 local function copyDeep<T>(array: { T }): { T }
-	local out: any = {}
+    local out: any = {}
 
-	for _, value in array do
-		if typeof(value) == "table" then
-			table.insert(out, copyDeep(value))
-		else
-			table.insert(out, value)
-		end
-	end
+    for _, value in array do
+        if typeof(value) == "table" then
+            table.insert(out, copyDeep(value))
+        else
+            table.insert(out, value)
+        end
+    end
 
-	return out
+    return out
 end
 
 return copyDeep

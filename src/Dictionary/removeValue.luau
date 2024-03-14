@@ -10,7 +10,7 @@ local removeValues = require("./removeValues")
     ```
 ]=]
 local function removeValue<K, V>(dictionary: { [K]: V }, value: V): { [K]: V }
-	return removeValues(dictionary, value)
+    return removeValues(dictionary, value)
 end
 
 return removeValue

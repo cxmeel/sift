@@ -11,7 +11,7 @@ local removeKeys = require("./removeKeys")
     ```
 ]=]
 local function removeKey<K, V>(dictionary: { [K]: V }, key: K): { [K]: V }
-	return removeKeys(dictionary, key)
+    return removeKeys(dictionary, key)
 end
 
 return removeKey

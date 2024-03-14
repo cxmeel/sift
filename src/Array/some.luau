@@ -10,13 +10,13 @@
     ```
 ]=]
 local function some<T>(array: { T }, predicate: (value: T, index: number) -> boolean): boolean
-	for index, value in array do
-		if predicate(value, index) then
-			return true
-		end
-	end
+    for index, value in array do
+        if predicate(value, index) then
+            return true
+        end
+    end
 
-	return false
+    return false
 end
 
 return some

@@ -18,24 +18,24 @@
 	```
 ]=]
 local function get<K, V>(dictionary: { [K]: V }, key: K, separated: (string | boolean)?): V?
-	if not separated then
-		return dictionary[key]
-	end
+    if not separated then
+        return dictionary[key]
+    end
 
-	local separator = type(separated) == "string" and separated or "."
-	local parts: { string } = (key :: any):split(separator)
-	local value: any = dictionary
+    local separator = type(separated) == "string" and separated or "."
+    local parts: { string } = (key :: any):split(separator)
+    local value: any = dictionary
 
-	while #parts > 0 do
-		local part = table.remove(parts, 1)
-		value = value[part]
+    while #parts > 0 do
+        local part = table.remove(parts, 1)
+        value = value[part]
 
-		if value == nil then
-			return nil
-		end
-	end
+        if value == nil then
+            return nil
+        end
+    end
 
-	return value
+    return value
 end
 
 return get

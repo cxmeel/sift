@@ -13,15 +13,15 @@ local copy = require("./copy")
     ```
 ]=]
 local function difference<T>(set: { [T]: boolean }, ...: { [T]: boolean }): { [T]: boolean }
-	local out = copy(set)
+    local out = copy(set)
 
-	for _, other in { ... } do
-		for value in other do
-			out[value] = nil
-		end
-	end
+    for _, other in { ... } do
+        for value in other do
+            out[value] = nil
+        end
+    end
 
-	return out
+    return out
 end
 
 return difference

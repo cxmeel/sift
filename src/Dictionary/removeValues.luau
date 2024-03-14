@@ -11,11 +11,11 @@ local filter = require("./filter")
     ```
 ]=]
 local function removeValues<K, V>(dictionary: { [K]: V }, ...: V): { [K]: V }
-	local values = { ... }
+    local values = { ... }
 
-	return filter(dictionary, function(value)
-		return table.find(values, value) == nil
-	end)
+    return filter(dictionary, function(value)
+        return table.find(values, value) == nil
+    end)
 end
 
 return removeValues

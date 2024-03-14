@@ -12,14 +12,14 @@ local reduce = require("./reduce")
     ```
 ]=]
 local function removeValues<T>(array: { T }, ...: T): { T }
-	local values = reduce({ ... }, function(acc, value)
-		acc[value] = true
-		return acc
-	end, {})
+    local values = reduce({ ... }, function(acc, value)
+        acc[value] = true
+        return acc
+    end, {})
 
-	return filter(array, function(value)
-		return not values[value]
-	end)
+    return filter(array, function(value)
+        return not values[value]
+    end)
 end
 
 return removeValues

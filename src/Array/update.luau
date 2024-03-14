@@ -21,21 +21,21 @@ local copy = require("./copy")
     ```
 ]=]
 local function update<T>(
-	array: { T },
-	index: number,
-	updater: ((value: T, index: number) -> T)?,
-	adder: ((index: number) -> T)?
+    array: { T },
+    index: number,
+    updater: ((value: T, index: number) -> T)?,
+    adder: ((index: number) -> T)?
 ): { T }
-	local out = copy(array)
-	index = Util.normalizeIndex(index, #array)
+    local out = copy(array)
+    index = Util.normalizeIndex(index, #array)
 
-	if updater and out[index] ~= nil and out[index] ~= None then
-		out[index] = updater(out[index], index)
-	elseif adder and (out[index] == nil or out[index] == None) then
-		out[index] = adder(index)
-	end
+    if updater and out[index] ~= nil and out[index] ~= None then
+        out[index] = updater(out[index], index)
+    elseif adder and (out[index] == nil or out[index] == None) then
+        out[index] = adder(index)
+    end
 
-	return out
+    return out
 end
 
 return update

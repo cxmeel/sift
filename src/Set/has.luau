@@ -8,7 +8,7 @@
     ```
 ]=]
 local function has<T>(set: { [T]: boolean }, value: T): boolean
-	return set[value] == true
+    return set[value] == true
 end
 
 return has

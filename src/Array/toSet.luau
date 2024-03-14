@@ -11,10 +11,10 @@ local reduce = require("./reduce")
     ```
 ]=]
 local function toSet<T>(array: { T }): { [T]: boolean }
-	return reduce(array, function(set, value)
-		set[value] = true
-		return set
-	end, {})
+    return reduce(array, function(set, value)
+        set[value] = true
+        return set
+    end, {})
 end
 
 return toSet

@@ -10,19 +10,19 @@
     ```
 ]=]
 local function group<T, K>(array: { T }, grouper: (value: T, index: number) -> K): { [K]: { T } }
-	local out = {}
+    local out = {}
 
-	for index, value in array do
-		local key = grouper(value, index)
+    for index, value in array do
+        local key = grouper(value, index)
 
-		if out[key] == nil then
-			out[key] = {}
-		end
+        if out[key] == nil then
+            out[key] = {}
+        end
 
-		table.insert(out[key], value)
-	end
+        table.insert(out[key], value)
+    end
 
-	return out
+    return out
 end
 
 return group

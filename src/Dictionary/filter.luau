@@ -10,18 +10,18 @@
     ```
 ]=]
 local function filter<K, V>(
-	dictionary: { [K]: V },
-	filterer: (value: V, key: K) -> boolean
+    dictionary: { [K]: V },
+    filterer: (value: V, key: K) -> boolean
 ): { [K]: V }
-	local out = {}
+    local out = {}
 
-	for key, value in dictionary do
-		if filterer(value, key) then
-			out[key] = value
-		end
-	end
+    for key, value in dictionary do
+        if filterer(value, key) then
+            out[key] = value
+        end
+    end
 
-	return out
+    return out
 end
 
 return filter

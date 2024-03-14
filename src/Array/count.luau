@@ -15,13 +15,13 @@ local reduce = require("./reduce")
     ```
 ]=]
 local function count<T>(array: { T }, predicate: ((value: T, index: number) -> boolean)?): number
-	return reduce(array, function(acc: number, value, index)
-		if not predicate or predicate(value, index) then
-			return acc + 1
-		end
+    return reduce(array, function(acc: number, value, index)
+        if not predicate or predicate(value, index) then
+            return acc + 1
+        end
 
-		return acc
-	end, 0)
+        return acc
+    end, 0)
 end
 
 return count

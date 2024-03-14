@@ -10,13 +10,13 @@
     ```
 ]=]
 local function some<K, V>(dictionary: { [K]: V }, predicate: (value: V, key: K) -> boolean): boolean
-	for key, value in dictionary do
-		if predicate(value, key) then
-			return true
-		end
-	end
+    for key, value in dictionary do
+        if predicate(value, key) then
+            return true
+        end
+    end
 
-	return false
+    return false
 end
 
 return some

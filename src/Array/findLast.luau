@@ -12,19 +12,19 @@
     ```
 ]=]
 local function findLast<T>(array: { T }, value: T, from: number?): number?
-	if from == 0 then
-		from = 1
-	elseif from and from < 0 then
-		from += #array + 1
-	end
+    if from == 0 then
+        from = 1
+    elseif from and from < 0 then
+        from += #array + 1
+    end
 
-	for i = from or #array, 1, -1 do
-		if array[i] == value then
-			return i
-		end
-	end
+    for i = from or #array, 1, -1 do
+        if array[i] == value then
+            return i
+        end
+    end
 
-	return nil
+    return nil
 end
 
 return findLast

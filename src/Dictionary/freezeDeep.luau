@@ -15,20 +15,20 @@
     ```
 ]=]
 local function freezeDeep<K, V>(dictionary: { [K]: V }): { [K]: V }
-	local out = {}
+    local out = {}
 
-	for key, value in dictionary do
-		if typeof(value) == "table" then
-			local nested: any = freezeDeep(value)
-			out[key] = nested
+    for key, value in dictionary do
+        if typeof(value) == "table" then
+            local nested: any = freezeDeep(value)
+            out[key] = nested
 
-			continue
-		end
+            continue
+        end
 
-		out[key] = value
-	end
+        out[key] = value
+    end
 
-	return table.freeze(out)
+    return table.freeze(out)
 end
 
 return freezeDeep

@@ -1,23 +1,23 @@
 local Util = require("@Sift/Util")
 
 local function compare(a, b)
-	if typeof(a) ~= "table" or typeof(b) ~= "table" then
-		return a == b
-	end
+    if typeof(a) ~= "table" or typeof(b) ~= "table" then
+        return a == b
+    end
 
-	for key, value in a do
-		if b[key] ~= value then
-			return false
-		end
-	end
+    for key, value in a do
+        if b[key] ~= value then
+            return false
+        end
+    end
 
-	for key, value in b do
-		if a[key] ~= value then
-			return false
-		end
-	end
+    for key, value in b do
+        if a[key] ~= value then
+            return false
+        end
+    end
 
-	return true
+    return true
 end
 
 --[=[
@@ -35,20 +35,20 @@ end
   ```
 ]=]
 local function equals(...: { [any]: any }): boolean
-	if Util.areEqual(...) then
-		return true
-	end
+    if Util.areEqual(...) then
+        return true
+    end
 
-	local args = { ... }
-	local first = table.remove(args, 1) :: { [any]: any }
+    local args = { ... }
+    local first = table.remove(args, 1) :: { [any]: any }
 
-	for _, dictionary in args do
-		if not compare(first, dictionary) then
-			return false
-		end
-	end
+    for _, dictionary in args do
+        if not compare(first, dictionary) then
+            return false
+        end
+    end
 
-	return true
+    return true
 end
 
 return equals

@@ -13,15 +13,15 @@ local Util = require("@Sift/Util")
     ```
 ]=]
 local function difference<K, V>(dictionary: { [K]: V }, other: { [K]: V }): { [K]: V }
-	local out = {}
+    local out = {}
 
-	for key, value in dictionary do
-		if not Util.areEqual(value, other[key]) then
-			out[key] = value
-		end
-	end
+    for key, value in dictionary do
+        if not Util.areEqual(value, other[key]) then
+            out[key] = value
+        end
+    end
 
-	return out
+    return out
 end
 
 return difference

@@ -11,10 +11,10 @@ local copy = require("./copy")
     ```
 ]=]
 local function add<T>(set: { [T]: boolean }, value: T): { [T]: boolean }
-	local newSet = copy(set)
-	newSet[value] = true
+    local newSet = copy(set)
+    newSet[value] = true
 
-	return newSet
+    return newSet
 end
 
 return add

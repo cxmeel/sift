@@ -10,13 +10,13 @@
     ```
 ]=]
 local function every<K, V>(dictionary: { [K]: V }, predicate: (value: V, key: K) -> boolean): boolean
-	for key, value in dictionary do
-		if not predicate(value, key) then
-			return false
-		end
-	end
+    for key, value in dictionary do
+        if not predicate(value, key) then
+            return false
+        end
+    end
 
-	return true
+    return true
 end
 
 return every

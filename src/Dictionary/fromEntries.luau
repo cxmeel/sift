@@ -9,13 +9,13 @@
     ```
 ]=]
 local function fromEntries<K, V>(entries: { { K | V } }): { [K]: V }
-	local out = {}
+    local out = {}
 
-	for _, entry in entries do
-		out[entry[1] :: K] = entry[2] :: V
-	end
+    for _, entry in entries do
+        out[entry[1] :: K] = entry[2] :: V
+    end
 
-	return out
+    return out
 end
 
 return fromEntries

@@ -8,7 +8,7 @@
     ```
 ]=]
 local function has<K, V>(dictionary: { [K]: V }, key: K): boolean
-	return dictionary[key] ~= nil
+    return dictionary[key] ~= nil
 end
 
 return has

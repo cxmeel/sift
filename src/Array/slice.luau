@@ -11,29 +11,29 @@
     ```
 ]=]
 local function slice<T>(array: { T }, from: number?, to: number?): { T }
-	if not from or from == 0 then
-		from = 1
-	elseif from < 0 then
-		from += #array + 1
-	end
+    if not from or from == 0 then
+        from = 1
+    elseif from < 0 then
+        from += #array + 1
+    end
 
-	if not to or to == 0 then
-		to = #array
-	elseif to < 0 then
-		to += #array + 1
-	end
+    if not to or to == 0 then
+        to = #array
+    elseif to < 0 then
+        to += #array + 1
+    end
 
-	if from == to then
-		return {}
-	end
+    if from == to then
+        return {}
+    end
 
-	local out = {}
+    local out = {}
 
-	for index = from :: number, to :: number do
-		table.insert(out, array[index])
-	end
+    for index = from :: number, to :: number do
+        table.insert(out, array[index])
+    end
 
-	return out
+    return out
 end
 
 return slice

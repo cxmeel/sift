@@ -9,13 +9,13 @@
     ```
 ]=]
 local function flip<K, V>(dictionary: { [K]: V }): { [V]: K }
-	local out = {}
+    local out = {}
 
-	for key, value in dictionary do
-		out[value] = key
-	end
+    for key, value in dictionary do
+        out[value] = key
+    end
 
-	return out
+    return out
 end
 
 return flip

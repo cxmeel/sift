@@ -13,18 +13,18 @@
     ```
 ]=]
 local function count<K, V>(
-	dictionary: { [K]: V },
-	predicate: ((value: V, key: K) -> boolean)?
+    dictionary: { [K]: V },
+    predicate: ((value: V, key: K) -> boolean)?
 ): number
-	local counter = 0
+    local counter = 0
 
-	for key, value in dictionary do
-		if not predicate or predicate(value, key) then
-			counter += 1
-		end
-	end
+    for key, value in dictionary do
+        if not predicate or predicate(value, key) then
+            counter += 1
+        end
+    end
 
-	return counter
+    return counter
 end
 
 return count

@@ -12,15 +12,15 @@
     ```
 ]=]
 local function cartesian<T, U>(array: { T }, other: { U }): { { T | U } }
-	local out = {}
+    local out = {}
 
-	for i = 1, #array do
-		for j = 1, #other do
-			table.insert(out, { array[i], other[j] :: any })
-		end
-	end
+    for i = 1, #array do
+        for j = 1, #other do
+            table.insert(out, { array[i], other[j] :: any })
+        end
+    end
 
-	return out
+    return out
 end
 
 return cartesian
