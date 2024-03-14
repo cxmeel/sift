@@ -8,9 +8,7 @@ Sift is a utility library for working with immutable data structures in Luau and
 
 ## Get Started
 
-- [Installation guide](/docs/Installation)
 - [**API Documentation**](/api)
-- [Examples](/docs/Examples)
 
 ## Why Immutable?
 
