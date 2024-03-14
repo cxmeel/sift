@@ -37,6 +37,17 @@ jobs:
       - name: Ensure tests exist
         run: lune run ensure-tests src
 
+      - name: Fetch version from package.json
+        id: current-version
+        run: jq -r '.version' package.json >> $GITHUB_ENV
+
+      - name: Get previous release version
+        id: previous-version
+        run: git describe --tags --abbrev=0 >> $GITHUB_ENV
+
+      - name: Ensure version has changed
+        run: ${{ steps.current-version.outputs.current-version != steps.previous-version.outputs.previous-version }}
+
   format:
     needs: perform-checks
     runs-on: ubuntu-latest
