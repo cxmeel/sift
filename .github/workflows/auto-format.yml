@@ -1,0 +1,30 @@
+name: auto-format
+
+on:
+    pull_request:
+        types:
+            - opened
+            - synchronize
+
+jobs:
+    format:
+        if: github.repository != github.event.pull_request.head.repo.full_name
+        runs-on: ubuntu-latest
+        timeout-minutes: 10
+
+        permissions:
+            contents: write
+
+        steps:
+            - uses: actions/checkout@v4
+
+            - uses: ok-nick/setup-aftman@v0.4.2
+              with:
+                cache: true
+
+            - name: Format files
+              run: lune run format-files src
+
+            - uses: stefanzweifel/git-auto-commit-action@v5
+              with:
+                commit_message: "Auto-format files"
