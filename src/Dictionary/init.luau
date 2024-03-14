@@ -49,4 +49,7 @@ local dictionary = {
     pick = require("./pick"),
 }
 
+dictionary.join = dictionary.merge
+dictionary.joinDeep = dictionary.mergeDeep
+
 return dictionary

@@ -27,4 +27,9 @@ local set = {
     toArray = require("./toArray"),
 }
 
+set.fromList = set.fromArray
+set.join = set.merge
+set.subtract = set.delete
+set.union = set.merge
+
 return set

@@ -1,9 +1,9 @@
 local Util = require("@Sift/Util")
 
 --[=[
-	@class Sift
+    @class Sift
 
-	Sift is a library for working with immutable data structures. It provides a collection of methods for working with arrays, dictionaries and sets.
+    Sift is a library for working with immutable data structures. It provides a collection of methods for working with arrays, dictionaries and sets.
 ]=]
 local sift = {
     None = require("@Sift/None"),
@@ -16,5 +16,16 @@ local sift = {
     isEmpty = Util.isEmpty,
     normalizeIndex = Util.normalizeIndex,
 }
+
+sift.List = sift.Array
+
+--- @prop Array Array
+--- @within Sift
+
+--- @prop Dictionary Dictionary
+--- @within Sift
+
+--- @prop Set Set
+--- @within Sift
 
 return sift

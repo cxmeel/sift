@@ -61,4 +61,13 @@ local array = {
     zipAll = require("./zipAll"),
 }
 
+array.join = array.concat
+array.merge = array.concat
+array.append = array.push
+array.prepend = array.unshift
+array.indexOf = array.find
+array.has = array.includes
+array.contains = array.includes
+array.isArray = array.is
+
 return array
