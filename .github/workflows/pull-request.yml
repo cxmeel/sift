@@ -4,11 +4,7 @@ concurrency:
   group: ${{ github.workflow }}-${{ github.event.pull_request.number }}
   cancel-in-progress: true
 
-on:
-  pull_request:
-    types:
-      - opened
-      - synchronize
+on: pull_request
 
 jobs:
   perform-checks:
