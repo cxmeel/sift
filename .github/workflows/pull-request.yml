@@ -34,16 +34,15 @@ jobs:
       - name: Ensure version parity
         run: lune run ensure-version-parity
 
-      - name: Fetch version from package.json
-        id: current-version
-        run: echo "current-version=$(jq -r .version package.json)" >> $GITHUB_ENV
-
-      - name: Get previous release version
-        id: previous-version
-        run: echo "previous-version=$(git describe --tags --abbrev=0)" >> $GITHUB_ENV
-
       - name: Ensure version has changed
-        run: ${{ steps.current-version.outputs.current-version != steps.previous-version.outputs.previous-version }}
+        run: |
+          current_version=$(jq -r .version package.json)
+          previous_version=$(git show origin/main:package.json | jq -r .version)
+
+          if [ "$current_version" == "$previous_version" ]; then
+            echo "Version has not changed"
+            exit 1
+          fi
 
       - name: Ensure tests exist
         run: lune run ensure-tests src
