@@ -44,7 +44,7 @@ local function main()
     local missing = 0
 
     for _, file in files do
-        if not file:match("%.luau$") or table.find(IGNORED_FILES, file) then
+        if not file:match("%.luau?$") or table.find(IGNORED_FILES, file) then
             continue
         end
 
