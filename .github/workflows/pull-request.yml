@@ -1,0 +1,55 @@
+name: auto-format
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
+
+on:
+  pull_request:
+    types:
+      - opened
+      - synchronize
+
+jobs:
+  perform-checks:
+    if: github.repository == github.event.pull_request.head.repo.full_name
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: ok-nick/setup-aftman@v0.4.2
+        with:
+          cache: true
+
+      - name: Lint
+        run: selene src
+
+      - name: Ensure tests exist
+        run: lune run ensure-tests src
+
+      - name: Ensure version parity
+        run: lune run ensure-version-parity
+
+  format:
+    needs: perform-checks
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    permissions:
+      contents: write
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: ok-nick/setup-aftman@v0.4.2
+        with:
+          cache: true
+
+      - name: Format files
+        run: lune run format-files src
+
+      - uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "Auto-format files"
