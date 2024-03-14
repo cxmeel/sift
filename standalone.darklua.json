@@ -1,0 +1,21 @@
+{
+  "bundle": {
+    "require_mode": {
+      "name": "path",
+      "sources": {
+        "@Pkg": "Packages",
+        "@DevPkg": "DevPackages",
+        "@Sift": "src"
+      }
+    }
+  },
+  "rules": [
+    "compute_expression",
+    "filter_after_early_return",
+    "remove_empty_do",
+    "remove_nil_declaration",
+    "remove_unused_if_branch",
+    "remove_unused_while"
+  ],
+  "generator": "dense"
+}
