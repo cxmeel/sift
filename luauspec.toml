@@ -1,4 +1,18 @@
 [package]
 name = "cxmeel/sift"
+# description = ""                  # pulled from `wally.toml`
+# version = ""                      # pulled from `wally.toml`
+# main = ""                         # pulled from `default.project.json`
+# registry = "https://github.com"   # not applicable right now
+
+[project.aliases]
+dependencies = "Pkg"
+dev-dependencies = "DevPkg"
 
 [dependencies]
+
+[dev-dependencies]
+# Crayon = "cxmeel/crayon@0.1.0"
+Jest = "jsdotlua/jest@3.6.1-rc.2"
+JestGlobals = "jsdotlua/jest-globals@3.6.1-rc.2"
+# Semver = "cxmeel/semver@0.1.0"
