@@ -1,2 +1,4 @@
-#! use("wally.toml")
+[package]
 name = "cxmeel/sift"
+
+[dependencies]
