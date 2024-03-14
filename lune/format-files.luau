@@ -29,7 +29,7 @@ end
 local function main()
     -- Replace tabs with spaces
     print(
-        crayon.label("INFO", crayon.bgCyan),
+        crayon.label("INFO", crayon.bgBlue),
         "scanning for files in",
         crayon.yellow(`"./{dir}"`)
     )

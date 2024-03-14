@@ -53,7 +53,7 @@ local function main()
 
         if not fs.isFile(testFilePath) then
             print(
-                crayon.label("MISSING", crayon.bgRed),
+                crayon.label("MISSING", crayon.bgRedBright),
                 "No test found for",
                 crayon.yellow(`"./{relativePath}"`)
             )
