@@ -26,11 +26,11 @@ jobs:
       - name: Lint
         run: selene src
 
-      - name: Ensure tests exist
-        run: lune run ensure-tests src
-
       - name: Ensure version parity
         run: lune run ensure-version-parity
+
+      - name: Ensure tests exist
+        run: lune run ensure-tests src
 
   format:
     needs: perform-checks
