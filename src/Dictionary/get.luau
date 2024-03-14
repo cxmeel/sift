@@ -1,21 +1,21 @@
 --[=[
     @within Dictionary
 
-	Retrieves a value from a dictionary using a key. If the key is a dot-separated string and the `separated` parameter is `true`, the function will traverse the dictionary using the parts of the string as keys. If `separated` is a string, it'll be used as the separator. If the key is not found, the function will return `nil`.
+    Retrieves a value from a dictionary using a key. If the key is a dot-separated string and the `separated` parameter is `true`, the function will traverse the dictionary using the parts of the string as keys. If `separated` is a string, it'll be used as the separator. If the key is not found, the function will return `nil`.
 
-	```lua
-	local dictionary = {
-		foo = {
-			bar = {
-				baz = "qux"
-			}
-		}
-	}
+    ```lua
+    local dictionary = {
+        foo = {
+            bar = {
+                baz = "qux"
+            }
+        }
+    }
 
-	get(dictionary, "foo.bar.baz") -- nil
-	get(dictionary, "foo.bar.baz", true) -- "qux"
-	get(dictionary, "foo$bar$baz", "$") -- "qux"
-	```
+    get(dictionary, "foo.bar.baz") -- nil
+    get(dictionary, "foo.bar.baz", true) -- "qux"
+    get(dictionary, "foo$bar$baz", "$") -- "qux"
+    ```
 ]=]
 local function get<K, V>(dictionary: { [K]: V }, key: K, separated: (string | boolean)?): V?
     if not separated then

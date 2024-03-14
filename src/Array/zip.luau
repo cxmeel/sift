@@ -10,7 +10,7 @@ local reduce = require("./reduce")
     local array2 = { 1, 2, 3 }
 
     zip(array1, array2)
-	-- { { "a", 1 }, { "b", 2 }, { "c", 3 } }
+    -- { { "a", 1 }, { "b", 2 }, { "c", 3 } }
     ```
 ]=]
 local function zip(...: { any }): { { any } }

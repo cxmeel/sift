@@ -7,12 +7,12 @@ local toSet = require("./toSet")
 
     Returns a new array containing only values that are in the first array and not in any of the other arrays.
 
-	```lua
-	local array1 = { 1, 2, 3 }
-	local array2 = { 2, 3, 4 }
+    ```lua
+    local array1 = { 1, 2, 3 }
+    local array2 = { 2, 3, 4 }
 
-	difference(array1, array2) -- { 1 }
-	```
+    difference(array1, array2) -- { 1 }
+    ```
 ]=]
 local function difference<T>(array: { T }, ...: { T }): { T }
     local arraySet = toSet(array)

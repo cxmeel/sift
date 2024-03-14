@@ -4,15 +4,15 @@ local copyDeep = require("./copyDeep")
 --[=[
     @within Dictionary
 
-	Combines multiple dictionaries into a single dictionary, including nested dictionaries.
+    Combines multiple dictionaries into a single dictionary, including nested dictionaries.
 
-	```lua
-	local dictionary1 = { foo = "bar", deep = { foo = "bar" } }
-	local dictionary2 = { deep = { foo = "baz" } }
+    ```lua
+    local dictionary1 = { foo = "bar", deep = { foo = "bar" } }
+    local dictionary2 = { deep = { foo = "baz" } }
 
-	mergeDeep(dictionary1, dictionary2)
-	-- { foo = "bar", deep = { foo = "baz" } }
-	```
+    mergeDeep(dictionary1, dictionary2)
+    -- { foo = "bar", deep = { foo = "baz" } }
+    ```
 ]=]
 local function mergeDeep<K, V>(...: { [any]: any }): { [K]: V }
     local out: any = {}

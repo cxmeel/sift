@@ -1,11 +1,11 @@
 --[=[
     @within Set
 
-	Returns a shallow copy of the set.
+    Returns a shallow copy of the set.
 
-	```lua
-	copy({ a = true, b = true }) -- { a = true, b = true }
-	```
+    ```lua
+    copy({ a = true, b = true }) -- { a = true, b = true }
+    ```
 ]=]
 local function copy<T>(set: { [T]: boolean }): { [T]: boolean }
     local out = {}

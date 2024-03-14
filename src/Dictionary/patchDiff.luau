@@ -9,39 +9,31 @@ export type Patch<K, V> = {
 --[=[
     @within Dictionary
 
-    Returns an array of patches that can be applied to `dictionary` to make it equal to `other`. This is a deep comparison. The patches are similar to those used in JSON Patch.
+    Returns an array of patches that can be applied to `dictionary` to make it equal to `other`. This is a deep comparison. The patches are similar to those used in [JSON Patch](https://jsonpatch.com/).
 
-	```lua
-	local dictionary1 = {
-		foo = "bar",
-		qux = {
-			baz = "quux",
-		},
-	}
+    ```lua
+    local dictionary1 = {
+        foo = "bar",
+        qux = {
+            baz = "quux",
+        },
+    }
 
-	local dictionary2 = {
-		foo = "bar",
-		qux = {
-			baz = "quuz",
-		},
-		baz = "quux",
-	}
+    local dictionary2 = {
+        foo = "bar",
+        qux = {
+            baz = "quuz",
+        },
+        baz = "quux",
+    }
 
-	patchDiff(dictionary1, dictionary2) --[[
-		{
-			{
-				op = "replace",
-				path = { "qux", "baz" },
-				value = "quuz",
-			},
-			{
-				op = "add",
-				path = { "baz" },
-				value = "quux",
-			},
-		}
-	]]
-	```
+    patchDiff(dictionary1, dictionary2) --[[
+        {
+            { op = "replace", path = { "qux", "baz" }, value = "quuz" },
+            { op = "add", path = { "baz" }, value = "quux" },
+        }
+    ]]
+    ```
 ]=]
 local function patchDiff<K, V, T>(dictionary: { [K]: V }, other: { [K]: V }): { Patch<K, V> }
     local out: { any } = {}

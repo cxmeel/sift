@@ -4,19 +4,19 @@ local copy = require("./copy")
 --[=[
     @within Dictionary
 
-	Updates a value in a dictionary with a given key. If the key does not exist, the value is added to the dictionary using the provided adder function.
+    Updates a value in a dictionary with a given key. If the key does not exist, the value is added to the dictionary using the provided adder function.
 
-	```lua
-	local dictionary = { a = 1, b = 2 }
+    ```lua
+    local dictionary = { a = 1, b = 2 }
 
-	update(dictionary, "b", function(value)
-		return value + 1
-	end) -- { a = 1, b = 3 }
+    update(dictionary, "b", function(value)
+        return value + 1
+    end) -- { a = 1, b = 3 }
 
-	update(dictionary, "c", nil, function()
-		return 3
-	end) -- { a = 1, b = 2, c = 3 }
-	```
+    update(dictionary, "c", nil, function()
+        return 3
+    end) -- { a = 1, b = 2, c = 3 }
+    ```
 ]=]
 local function update<K, V, T>(
     dictionary: { [K]: V },
