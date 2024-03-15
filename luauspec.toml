@@ -1,0 +1,20 @@
+[package]
+name = "cxmeel/sift"
+# version = "0.1.0" # Imported from wally.toml
+# description = "" # Imported from wally.toml
+# main = "" # Imported from default.project.json
+# registry = "https://github.com/..." # Not yet applicable
+
+[project.aliases]
+dependencies = "pkg"
+dev-dependencies = "dev"
+
+[project.paths]
+dependencies = "LuauPackages"
+dev-dependencies = "LuauDevPackages"
+
+[dependencies]
+# Crayon = "cxmeel/crayon@0.1.0"
+Jest = "jsdotlua/jest@3.6.1-rc.2"
+JestGlobals = "jsdotlua/jest-globals@3.6.1-rc.2"
+# Semver = "cxmeel/semver@0.1.0"
