@@ -23,6 +23,7 @@ local dictionary = {
     expandKeys = require("./expandKeys"),
     filter = require("./filter"),
     flatten = require("./flatten"),
+    flattenKeys = require("./flattenKeys"),
     flip = require("./flip"),
     freeze = require("./freeze"),
     freezeDeep = require("./freezeDeep"),
