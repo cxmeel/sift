@@ -40,6 +40,7 @@ local array = {
     is = require("./is"),
     last = require("./last"),
     map = require("./map"),
+    partition = require("./partition"),
     pop = require("./pop"),
     push = require("./push"),
     reduce = require("./reduce"),
