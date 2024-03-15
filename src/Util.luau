@@ -51,9 +51,9 @@ end
     Normalizes an index to be within the bounds of a given length. If the index is 0, it will be converted to 1. If the index is negative, it will be converted to a positive index.
 
     ```lua
-    resolveIndex(1, 5) -- 1
-    resolveIndex(0, 5) -- 1
-    resolveIndex(-1, 5) -- 5
+    resolveIndex(5, 1) -- 1
+    resolveIndex(5, 0) -- 1
+    resolveIndex(5, -1) -- 5
     ```
 ]=]
 local function resolveIndex(length: number, index: number): number
