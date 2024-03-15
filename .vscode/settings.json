@@ -1,20 +1,31 @@
 {
-  "[lua]": {
-    "editor.defaultFormatter": "JohnnyMorganz.stylua"
+  "[luau]": {
+    "editor.defaultFormatter": "JohnnyMorganz.stylua",
+    "editor.formatOnPaste": true,
+    "editor.formatOnSave": true
   },
   "[json]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnPaste": true,
+    "editor.formatOnSave": true
   },
   "[typescript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnPaste": true,
+    "editor.formatOnSave": true
   },
   "editor.codeActionsOnSave": {
-    "source.fixAll": true,
-    "source.organizeImports": true
+    "source.fixAll": "explicit",
+    "source.organizeImports": "explicit"
   },
-  "editor.formatOnSave": true,
-  "editor.formatOnPaste": true,
-  "editor.formatOnType": true,
-  "debug.toolBarLocation": "hidden",
+  "luau-lsp.require.directoryAliases": {
+    "@lune/": "~/.lune/.typedefs/0.8.0/",
+    "@pkg": "Packages/",
+    "@dev": "DevPackages/",
+    "@sift": "src/"
+  },
+  "luau-lsp.completion.imports.suggestRequires": false,
+  "luau-lsp.require.mode": "relativeToFile",
+  "luau-lsp.types.roblox": false,
   "files.eol": "\n"
 }
