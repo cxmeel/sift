@@ -46,7 +46,6 @@ local dictionary = {
     some = require("./some"),
     update = require("./update"),
     values = require("./values"),
-    withKeys = require("./withKeys"),
 }
 
 dictionary.clone = dictionary.copy
@@ -55,5 +54,6 @@ dictionary.diff = dictionary.difference
 dictionary.diffDeep = dictionary.differenceDeep
 dictionary.join = dictionary.merge
 dictionary.joinDeep = dictionary.mergeDeep
+dictionary.withKeys = dictionary.pick
 
 return dictionary
