@@ -3,12 +3,10 @@
 
 	Sets are a collection of values. They are used to store unique values.
 	They are essentially a dictionary, but each value is stored as a boolean.
-	This means that a value can only be in a set once.
+	This means that a value can only appear in a set once.
 
 	```lua
-	local set = { hello = true }
-
-	local newSet = Add(set, "world") -- { hello = true, world = true }
+	local set = { foo = true, bar = true }
 	```
 ]=]
 local set = {
@@ -29,6 +27,8 @@ local set = {
     toArray = require("./toArray"),
 }
 
+set.diff = set.difference
+set.symDiff = set.differenceSymmetric
 set.fromList = set.fromArray
 set.join = set.merge
 set.subtract = set.delete

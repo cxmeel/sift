@@ -1,21 +1,15 @@
 --[=[
-	@class Array
+    @class Array
 
-	An array is a table consisting of index-value pairs. You don't need to
-	manually specify the indices when you create an array.
+    An array is a collection of values, each identified by a numeric index. Luau arrays are 1-based, meaning the first element is at index 1, the second element is at index 2, and so on.
 
-	```lua
-	local array = {
-		"hello",
-		"world",
-	}
-	```
+    #### Aliases
 
-	<br><br>
+    `List`
 
-	#### Aliases
-
-	`List`
+    ```lua
+    local array = { 1, 2, 3 }
+    ```
 ]=]
 local array = {
     at = require("./at"),

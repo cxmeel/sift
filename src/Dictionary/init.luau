@@ -5,14 +5,12 @@
 
 	```lua
 	local dictionary = {
-		cats = 2,
-		dogs = 1
+		cats = true,
+		dogs = false,
 	}
-
-	print(dictionary.cats) -- 2
 	```
 ]=]
-local Dictionary = {
+local dictionary = {
     copy = require("./copy"),
     copyDeep = require("./copyDeep"),
     count = require("./count"),
@@ -44,7 +42,7 @@ local Dictionary = {
     withKeys = require("./withKeys"),
 }
 
-Dictionary.join = Dictionary.merge
-Dictionary.joinDeep = Dictionary.mergeDeep
+dictionary.join = dictionary.merge
+dictionary.joinDeep = dictionary.mergeDeep
 
-return Dictionary
+return dictionary
