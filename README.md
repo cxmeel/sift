@@ -1,12 +1,10 @@
 <!-- Links -->
 
-[freddylist/llama]: https://github.com/freddylist/llama
-[osyrisrblx/t]: https://github.com/osyrisrblx/t
 [upliftgames/moonwave]: https://github.com/upliftgames/moonwave
 [sift]: https://github.com/cxmeel/sift
 [sift/releases]: https://github.com/cxmeel/sift/releases
 [sift/wally]: https://wally.run/package/cxmeel/sift
-[sift/roblox]: https://www.roblox.com/library/9486684823
+[sift/roblox]: https://create.roblox.com/store/asset/9486684823/Sift
 [sift/npm]: https://npmjs.com/package/@rbxts/sift
 
 <!-- Shields -->
@@ -17,24 +15,22 @@
 
 <!-- Badges -->
 
-[badges/github]: https://raw.githubusercontent.com/gist/cxmeel/56c5f18b229ca1e61feb6eb5fb149f43/raw/githubSource.svg
-[badges/npm]: https://raw.githubusercontent.com/gist/cxmeel/56c5f18b229ca1e61feb6eb5fb149f43/raw/npm.svg
-[badges/roblox]: https://raw.githubusercontent.com/gist/cxmeel/56c5f18b229ca1e61feb6eb5fb149f43/raw/roblox.svg
+[badges/github]: https://gist.github.com/cxmeel/0dbc95191f239b631c3874f4ccf114e2/raw/github_source.svg
+[badges/npm]: https://gist.github.com/cxmeel/0dbc95191f239b631c3874f4ccf114e2/raw/npm.svg
+[badges/roblox]: https://gist.github.com/cxmeel/0dbc95191f239b631c3874f4ccf114e2/raw/roblox_dev.svg
 
 # Sift
 
 <!-- markdownlint-disable-next-line MD033 -->
 <div align="center">
 
-[![Source code][badges/github]][sift] [![NPM Package][badges/npm]][sift/npm] [![Roblox library][badges/roblox]][sift/roblox]
+[![Source code][badges/github]][sift] [![NPM Package][badges/npm]][sift/npm] [![Roblox Creator Store][badges/roblox]][sift/roblox]
 
 [![Latest GitHub version][shields/github-release]][sift/releases] [![Latest Wally version][shields/wally]][sift/wally] [![Latest NPM version][shields/npm]][sift/npm]
 
 </div>
 
 Immutable data library for Luau, Roblox and roblox-ts.
-
-Heavily based on [@freddylist's Llama][freddylist/llama] library, which is no longer maintained.
 
 ## Documentation
 
@@ -51,7 +47,7 @@ This will remain the same until v1.x.
 
 ## Quick Start
 
-Sift is available from [Wally][sift/wally], the [Roblox Library][sift/roblox] and [GitHub releases][sift/releases].
+Sift is available from [Wally][sift/wally], the [Roblox Creator Store][sift/roblox] and [GitHub releases][sift/releases].
 
 ### Wally
 
@@ -88,14 +84,4 @@ Dictionary.merge(
 
 ### Manual Installation
 
-Grab a copy [from the Roblox Library][sift/roblox] or [GitHub releases][sift/releases], and drop it into Studio. The Sift model file can be synced in using Rojo.
-
-## What's Changed?
-
-As per the recommendations in [Llama's README][freddylist/llama], the following changes have been made:
-
-- Sift utilises native Luau types. Llama used [@osyrisrblx/t][osyrisrblx/t] for type checking, which meant that types were only checked at runtime.
-  - Sift _will not_ check types at runtime. If you're using the library wrong, you'll get errors at runtime anyway!
-- Organised tests. `*.spec` files are now alongside their source files, making it easier to locate them.
-- Documentation is now generated using [@upliftgames' moonwave][upliftgames/moonwave] (Docusaurus). This makes it quick and easy to add new documentation, and provides a pleasant experience for the user.
-- Built-in TypeScript typings.
+Grab a copy [from the Roblox Creator Store][sift/roblox] or [GitHub releases][sift/releases], and drop it into Studio. The Sift model file can be synced in using Rojo.
