@@ -36,11 +36,12 @@
         "!**/*.tsbuildinfo"
     ],
     "devDependencies": {
-        "@rbxts/compiler-types": "^1.2.3-types.0",
-        "@rbxts/types": "^1.0.515",
-        "rbxts-transform-debug": "^1.0.0-rc.1",
-        "rbxts-transform-env": "^1.0.0-rc.0",
-        "typescript": "^4.3.5",
-        "roblox-ts": "^1.2.7"
+        "@rbxts/compiler-types": "^2.3.0-types.0",
+        "@rbxts/types": "^1.0.763",
+        "rbxts-transform-debug": "^2.2.0",
+        "rbxts-transform-env": "^2.2.0",
+        "roblox-ts": "^2.3.0",
+        "type-fest": "^4.12.0",
+        "typescript": "^5.4.2"
     }
 }
