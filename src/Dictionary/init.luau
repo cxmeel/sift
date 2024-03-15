@@ -20,6 +20,7 @@ local dictionary = {
     equals = require("./equals"),
     equalsDeep = require("./equalsDeep"),
     every = require("./every"),
+    expandKeys = require("./expandKeys"),
     filter = require("./filter"),
     flatten = require("./flatten"),
     flip = require("./flip"),
