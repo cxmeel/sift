@@ -1,27 +1,17 @@
---[=[
+local Util = require("@sift/Util")
 
+--[=[
 	@within Array
 
-
-
-	
-
-	Gets a value from an array at the given index.
+	Gets a value from an array at the given index. If the index is negative, it will be resolved from the end of the array.
 
 	```lua
-	local array = { 1, 2, 3 }
-
-	at(array, 1) -- 1
-	at(array, 0) -- 3
+	at({ 1, 2, 3 }, 2) -- 2
+    at({ 1, 2, 3 }, -1) -- 3
 	```
 ]=]
 local function at<T>(array: { T }, index: number): T
-    local length = #array
-
-    if index < 1 then
-        index += length
-    end
-
+    index = Util.resolveIndex(#array, index)
     return array[index]
 end
 
