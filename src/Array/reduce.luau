@@ -1,31 +1,17 @@
 --[=[
-
 	@within Array
 
-
-
-
-
-
-	Reduces the array using the given reducer and initial accumulator value.
-	If no `initialReduction` value is given, the first item in the array is used.
+	Reduces the array using the given reducer and initial accumulator value. If no `initialReduction` value is given, the first item in the array is used.
 
 	```lua
-	local array = { 1, 2, 3 }
-
-	local value = Reduce(array, function(accumulator, item, index)
-		return accumulator - item
-	end) -- -4
-
-	local value = Reduce(array, function(accumulator, item, index)
-		table.insert(accumulator, item)
-		return accumulator
-	end, {}) -- { 1, 2, 3 }
+	reduce({ 1, 2, 3 }, function(acc, value)
+		return acc + value
+	end) -- 6
 	```
 ]=]
 local function reduce<T, U>(
     array: { T },
-    reducer: (accumulator: U, value: T, index: number, array: { T }) -> U,
+    reducer: (acc: U, value: T, index: number, array: { T }) -> U,
     initReduction: U?
 ): U
     local result = initReduction

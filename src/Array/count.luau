@@ -1,27 +1,20 @@
 local Util = require("@sift/Util")
 
 --[=[
-
 	@within Array
-
-
-
-
 
 	Counts the number of items in an array.
 
 	```lua
-	local array = { 1, 2, 3 }
-
-	local value = Count(array) -- 3
-	local value = Count(array, function(item, index)
-		return item == 2
-	end) -- 1
+	count({ 1, 2, 3 }) -- 3
+	count({ 1, 2, 3 }, function(item, index)
+		return item > 1
+	end) -- 2
 	```
 ]=]
 local function count<T>(
     array: { T },
-    predicate: ((value: T, index: number, array: { T }) -> any)?
+    predicate: ((value: T, index: number, array: { T }) -> boolean)?
 ): number
     local counter = 0
 

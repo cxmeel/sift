@@ -1,20 +1,13 @@
 --[=[
-
   @within Array
 
-
-
-
-  Checks if the given object is an array.
+  Checks if the given object is an array. Empty tables are not considered arrays, as they could later be used as objects.
 
   ```lua
-  local array = { 1, 2, 3 }
-  local dictionary = { hello = "world" }
-  local mixed = { 1, 2, hello = "world" }
-
-  Array.is(array) -- true
-  Array.is(dictionary) -- false
-  Array.is(mixed) -- false
+  is({1, 2, 3}) -- true
+  is({a = 1, b = 2}) -- false
+  is({}) -- false
+  is("hello") -- false
   ```
 ]=]
 local function is(object: any): boolean

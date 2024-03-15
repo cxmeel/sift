@@ -1,26 +1,20 @@
 --[=[
-
 	@within Array
-
-
-
 
 	Reverses the order of the items in an array.
 
 	```lua
-	local array = { 1, 2, 3 }
-
-	local new = Reverse(array) -- { 3, 2, 1 }
+	reverse({ "a", "b", "c" }) -- { "c", "b", "a" }
 	```
 ]=]
 local function reverse<T>(array: { T }): { T }
-    local result = {}
+    local out = {}
 
     for index = #array, 1, -1 do
-        table.insert(result, array[index])
+        table.insert(out, array[index])
     end
 
-    return result
+    return out
 end
 
 return reverse

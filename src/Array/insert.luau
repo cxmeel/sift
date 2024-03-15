@@ -1,24 +1,19 @@
 --[=[
-
 	@within Array
-
-
-
-
-
 
 	Inserts the given values into an array at the given index, shifting all values after it to the right. If the index is negative (or 0), it is counted from the end of the array.
 
 	If the index to insert at is out of range, the array is not modified.
 
 	```lua
-	local array = { 1, 2, 3 }
-
-	local newArray = Insert(array, 2, 4) -- { 1, 4, 2, 3 }
+	insert({ "foo", "baz", "qux" }, 2, "bar")
+    -- { "foo", "bar", "baz", "qux" }
 	```
 ]=]
 local function insert<T>(array: { T }, index: number, ...: T): { T }
     local length = #array
+
+    updateme!
 
     if index < 1 then
         index += length + 1

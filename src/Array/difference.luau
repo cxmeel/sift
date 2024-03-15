@@ -7,15 +7,13 @@ local toSet = require("./toSet")
 
   Returns an array of values that are in the first array, but not in the other arrays.
 
-    #### Aliases
+  #### Aliases
 
-    `diff`
+  `diff`
 
   ```lua
-  local array1 = { "hello", "world" }
-  local array2 = { "cat", "dog", "hello" }
-
-  difference(array1, array2) -- { "world" }
+  difference({ "hello", "world" }, { "goodbye", "world" })
+  -- { "world" }
   ```
 ]=]
 local function difference<T>(...: { T }): { T }

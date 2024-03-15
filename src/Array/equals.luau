@@ -21,21 +21,17 @@ local function compare(a, b)
 end
 
 --[=[
-
 	@within Array
-
-
-
 
 	Compares two arrays for equality.
 
 	```lua
-	local array = { 1, 2, 3 }
-	local other = { 1, 2, 3 }
+	local array1 = { 1, 2, 3 }
+	local array2 = { 1, 2, 3 }
+    local array3 = { 4, 5, 6 }
 
-	local value = Equals(array, other) -- true
-	local value = Equals(array, other, { 1, 2, 3 }) -- true
-	local value = Equals(array, other, { 1, 2, 4 }) -- false
+	equals(array1, array2) -- true
+	equals(array1, array3) -- false
 	```
 ]=]
 local function equals<T>(...: { T }): boolean

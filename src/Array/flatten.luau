@@ -1,13 +1,8 @@
 --[=[
-
 	@within Array
 
-
-
-
-
 	Flattens an array. If depth is not specified, it will flatten
-	the array as far as it can go.
+	the array infinitely.
 
 	```lua
 	local array = {
@@ -16,8 +11,8 @@
 		{ 7, { 8, 9 } },
 	}
 
-	local new = Flatten(array) -- { 1, 2, 3, 4, 5, 6, 7, 8, 9 }
-	local new = Flatten(array, 1) -- { 1, 2, 3, 4, 5, 6, 7, { 8, 9 } }
+	flatten(array) -- { 1, 2, 3, 4, 5, 6, 7, 8, 9 }
+	flatten(array, 1) -- { 1, 2, 3, 4, 5, 6, 7, { 8, 9 } }
 	```
 ]=]
 local function flatten<T>(array: { T }, depth: number?): { T }

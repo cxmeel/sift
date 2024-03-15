@@ -1,24 +1,12 @@
 --[=[
-
 	@within Array
-
-
-
-
-
 
 	Finds the index of the last item in the array that passes the predicate.
 
 	```lua
-	local array = { "hello", "world", "hello" }
-
-	local index = FindWhereLast(array, function(item, index)
+	findWhereLast({ "hello", "world", "hello" }, function(item)
 		return item == "hello"
 	end) -- 3
-
-	local index = FindWhereLast(array, function(item, index)
-		return item == "hello"
-	end, 2) -- 1
 	```
 ]=]
 local function findWhereLast<T>(

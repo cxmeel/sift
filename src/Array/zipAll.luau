@@ -2,42 +2,42 @@ local None = require("@sift/None")
 local reduce = require("./reduce")
 
 --[=[
-	@within Array
+    @within Array
 
-	Zips multiple arrays together into a single array, filling
-	in missing values with `None`.
+    Links together the values of multiple arrays into a single array of arrays, where each index of the new array contains the values of the original arrays at that index. If the arrays are of different lengths, the shorter arrays will be padded with `None`.
 
-	```lua
-	local table1 = { 1, 2, 3, 4 }
-	local table2 = { "hello", "world", "goodbye" }
+    ```lua
+    local array1 = { 1, 2, 3 }
+    local array2 = { "a", "b", "c", "d" }
 
-	local new = ZipAll(table1, table2) -- { { 1, "hello" }, { 2, "world" }, { 3, "goodbye" }, { 4, None } }
-	```
+    zipAll(array1, array2)
+    -- { { 1, "a" }, { 2, "b" }, { 3, "c" }, { None, "d" } }
+    ```
 ]=]
-local function zipAll<T>(...: { any }): { T }
+local function zipAll(...: { any }): { { any } }
     if select("#", ...) == 0 then
-        return {} :: any
+        return {}
     end
 
-    local args = { ... }
-    local out = {}
-
-    local maxLength = reduce(args, function(acc, val)
-        return math.max(acc, #val)
+    local arrays = { ... }
+    local length = reduce(arrays, function(acc, array)
+        return math.max(acc, #array)
     end, 0)
 
-    for index = 1, maxLength do
+    local out = {}
+
+    for i = 1, length do
         local values = {}
 
-        for _, argArray in args do
-            local value = argArray[index]
-            table.insert(values, if value == nil then None else value)
+        for _, array in arrays do
+            local value = if array[i] == nil then None else array[i]
+            table.insert(values, value)
         end
 
         table.insert(out, values)
     end
 
-    return out :: any
+    return out
 end
 
 return zipAll

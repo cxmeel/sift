@@ -1,51 +1,32 @@
---[=[
+local Util = require("@sift/Util")
 
+--[=[
 	@within Array
 
-
-
-
-
-
-
-	Splices an array.
+    Splices a series of values into an array at a given index. If `deleteCount` is provided, it will overwrite that many values starting from `from`.
 
 	```lua
-	local array = { 1, 2, 3, 4, 5 }
-
-	local new = Splice(array, 3, 4, 6, 7) -- { 1, 2, 6, 7, 4, 5 }
-	local new = Splice(array, -1, 0, 6, 7) -- { 1, 2, 3, 4, 6, 7 }
-	local new = Splice(array, 4, -1, 6, 7) -- { 1, 2, 3, 6, 7, 5 }
+    splice({ "a", "b", "c" }, 2, 1, "d", "e")
+    -- { "a", "d", "e", "c" }
 	```
 ]=]
-local function splice<T>(array: { T }, from: number?, to: number?, ...: T?): { T }
-    local length = #array
-    local result = {}
+local function splice<T>(array: { T }, start: number?, deleteCount: number?, ...: T?): { T }
+    local useStart = Util.resolveIndex(#array, start or -1)
+    local out = {}
 
-    from = if typeof(from) == "number" then from else 1
-    to = if typeof(to) == "number" then to else length
-
-    if from < 1 then
-        from += length
+    for i = 1, useStart - 1 do
+        table.insert(out, array[i])
     end
 
-    if to < 1 then
-        to += length
+    for i = 1, select("#", ...) do
+        table.insert(out, (select(i, ...)))
     end
 
-    for index = 1, from - 1 do
-        table.insert(result, array[index])
+    for i = useStart + (deleteCount or 0) + 1, #array do
+        table.insert(out, array[i])
     end
 
-    for _, value in { ... } do
-        table.insert(result, value)
-    end
-
-    for index = to + 1, length do
-        table.insert(result, array[index])
-    end
-
-    return result
+    return out
 end
 
 return splice

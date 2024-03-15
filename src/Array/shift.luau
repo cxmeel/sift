@@ -1,32 +1,19 @@
---[=[
+local partition = require("./partition")
 
+--[=[
 	@within Array
 
-
-
-
-
-	Removes the first item from an array and returns the array
-	with the item removed.
+	Returns two arrays; one with the first `count` elements removed, and one with the removed elements.
 
 	```lua
-	local array = { 1, 2, 3 }
-
-	local new = Shift(array) -- { 2, 3 }
-	local new = Shift(array, 2) -- { 3 }
+	shift({ 1, 2, 3 }) -- { 2, 3 }, { 1 }
+    shift({ 1, 2, 3 }, 2) -- { 3 }, { 1, 2 }
 	```
 ]=]
-local function shift<T>(array: { T }, count: number?): { T }
-    local length = #array
-    local result = {}
-
-    count = if typeof(count) == "number" then count + 1 else 2
-
-    for i = count, length do
-        table.insert(result, array[i])
-    end
-
-    return result
+local function shift<T>(array: { T }, count: number?): ({ T }, { T })
+    return partition(array, function(_, index)
+        return index <= (count or 1)
+    end)
 end
 
 return shift

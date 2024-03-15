@@ -1,19 +1,14 @@
 --[=[
-
 	@within Array
-
-
-
-
-
 
 	Finds the index of the last item in the array that matches the value.
 
-	```lua
-	local array = { "hello", "world", "hello" }
+    #### Aliases
 
-	local index = FindLast(array, "hello") -- 3
-	local index = FindLast(array, "hello", 2) -- 1
+    `lastIndexOf`
+
+	```lua
+	findLast({ "hello", "world", "hello" }, "hello") -- 3
 	```
 ]=]
 local function findLast<T>(array: { T }, value: any?, from: number?): number?

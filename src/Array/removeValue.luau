@@ -1,17 +1,10 @@
 --[=[
-
 	@within Array
-
-
-
-
 
 	Removes a value from an array.
 
 	```lua
-	local array = { 1, 2, 3 }
-
-	local new = RemoveValue(array, 2) -- { 1, 3 }
+	removeValue({ "a", "b", "c" }, 2) -- { "a", "c" }
 	```
 ]=]
 local function removeValue<T>(array: { T }, value: T): { T }

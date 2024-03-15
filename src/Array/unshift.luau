@@ -1,10 +1,5 @@
 --[=[
-
 	@within Array
-
-
-
-
 
 	Inserts values to the beginning of an array.
 
@@ -13,9 +8,7 @@
 	`prepend`
 
 	```lua
-	local array = { 1, 2, 3 }
-
-	local new = Unshift(array, 4, 5) -- { 4, 5, 1, 2, 3 }
+	unshift({ 1, 2, 3 }, 0) -- { 0, 1, 2, 3 }
 	```
 ]=]
 local function unshift<T>(array: { T }, ...: T): { T }

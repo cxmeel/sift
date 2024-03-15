@@ -21,21 +21,17 @@ local function compareDeep(a, b)
 end
 
 --[=[
-
-	@within Array
-
-
-
+    @within Array
 
 	Compares two arrays for equality using deep comparison.
 
 	```lua
-	local array = { 1, 2, 3, { 4, 5 } }
-	local other = { 1, 2, 3, { 4, 5 } }
+	local array1 = { 1, 2, 3, { 4, 5 } }
+	local array2 = { 1, 2, 3, { 4, 5 } }
+    local array3 = { 1, 2, 3, { 4, 6 } }
 
-	local value = EqualsDeep(array, other) -- true
-	local value = EqualsDeep(array, other, { 1, 2, 3, { 4, 5 } }) -- true
-	local value = EqualsDeep(array, other, { 1, 2, 3, { 4, 6 } }) -- false
+	equalsDeep(array1, array2) -- true
+	equalsDeep(array1, array3) -- false
 	```
 ]=]
 local function equalsDeep<T>(...: { T }): boolean

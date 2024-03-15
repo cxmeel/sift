@@ -1,20 +1,20 @@
 --[=[
-
-	@within Array
-
-
-
+    @within Array
 
 	Freezes the entire array, making it read-only, including all
 	nested arrays.
 
 	```lua
-	local array = { 1, 2, 3, { 4, 5, 6 } }
+	local frozen = freezeDeep({
+        { 1, 2, 3 },
+        { 4, 5, 6 },
+    })
 
-	local new = FreezeDeep(array)
+	frozen[1][2] = 4 -- error!
+	frozen[2][1] = 7 -- error!
 
-	new[1] = 4 -- error!
-	new[4][1] = 7 -- error!
+    table.insert(frozen[1], 4) -- error!
+    table.remove(frozen[2], 7) -- error!
 	```
 ]=]
 local function freezeDeep<T>(array: { T }): { T }

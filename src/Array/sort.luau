@@ -1,32 +1,21 @@
-local Copy = require("./copy")
+local copy = require("./copy")
 
 --[=[
-
 	@within Array
 
-
-
-
-
-	Sorts an array.
+	Sorts an array using a custom sorting function. If no sorting function is provided, the array will be sorted in ascending order.
 
 	```lua
-	local array = { "a", "b", "c", "d", "e" }
-
-	local new = Sort(array, function(a, b)
-		return a > b
-	end) -- { "e", "d", "c", "b", "a" }
+    sort({ "a", "c", "b" }, function(a, b)
+        return a < b
+    }) -- { "a", "b", "c" }
 	```
 ]=]
-local function sort<T>(
-    array: { T },
-    comparator: ((firstValue: T, secondValue: T) -> boolean)?
-): { T }
-    local result = Copy(array)
+local function sort<T>(array: { T }, sorter: (a: T, b: T) -> boolean): { T }
+    local out = copy(array)
+    table.sort(out, sorter)
 
-    table.sort(result, comparator)
-
-    return result
+    return out
 end
 
 return sort

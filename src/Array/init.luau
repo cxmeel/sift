@@ -77,6 +77,7 @@ array.symDiff = array.differenceSymmetric
 array.append = array.push
 array.prepend = array.unshift
 array.indexOf = array.find
+array.lastIndexOf = array.findLast
 array.has = array.includes
 array.contains = array.includes
 array.isArray = array.is

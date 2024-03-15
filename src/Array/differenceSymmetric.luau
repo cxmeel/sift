@@ -5,17 +5,15 @@ local toSet = require("./toSet")
 --[=[
   @within Array
 
-  Returns an array of values that are in the first array, but not in the other arrays, and vice versa.
+  Returns an array of unique values across all given arrays; i.e. values that only appear once.
 
-    #### Aliases
+  #### Aliases
 
-    `symDiff`
+  `symDiff`
 
   ```lua
-  local array1 = { "hello", "world" }
-  local array2 = { "cat", "dog", "hello" }
-
-  differenceSymmetric(array1, array2) -- { "world", "cat", "dog" }
+  differenceSymmetric({ "hello", "world" }, { "goodbye", "world" })
+  -- { "hello", "goodbye" }
   ```
 ]=]
 local function differenceSymmetric<T>(...: { T }): { T }

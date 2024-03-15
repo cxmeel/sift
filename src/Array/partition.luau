@@ -14,13 +14,12 @@
 ]=]
 local function partition<T>(
     array: { T },
-    filterer: (value: T, index: number) -> boolean
+    filterer: (value: T, index: number, array: { T }) -> boolean
 ): ({ T }, { T })
-    local pass = {}
-    local fail = {}
+    local pass, fail = {}, {}
 
     for index, value in array do
-        if filterer(value, index) then
+        if filterer(value, index, array) then
             table.insert(pass, value)
         else
             table.insert(fail, value)

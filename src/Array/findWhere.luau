@@ -1,18 +1,10 @@
 --[=[
-
-	@within Array
-
-
-
-
-
+    @within Array
 
 	Finds the index of the first item in the array that passes the predicate.
 
 	```lua
-	local array = { 1, 2, 3 }
-
-	local index = FindWhere(array, function(item, index)
+	findWhere({ 1, 2, 3 }, function(item)
 		return item > 1
 	end) -- 2
 	```

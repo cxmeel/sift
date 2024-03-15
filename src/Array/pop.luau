@@ -1,32 +1,19 @@
---[=[
+local partition = require("./partition")
 
+--[=[
 	@within Array
 
-
-
-
-
-	Removes an element from the end of the array, and returns
-	the array with the popped elements removed.
+	Returns two arrays; one with the last `count` elements removed, and one with the removed elements.
 
 	```lua
-	local array = { 1, 2, 3 }
-
-	local new = Pop(array) -- { 1, 2 }
-	local new = Pop(array, 2) -- { 1 }
+	pop({ 1, 2, 3 }) -- { 1, 2 }, { 3 }
+	pop({ 1, 2, 3 }, 2) -- { 1 }, { 2, 3 }
 	```
 ]=]
-local function pop<T>(array: { T }, count: number?): { T }
-    local length = #array
-    local result = {}
-
-    count = if typeof(count) == "number" then count else 1
-
-    for i = 1, length - count do
-        table.insert(result, array[i])
-    end
-
-    return result
+local function pop<T>(array: { T }, count: number?): ({ T }, { T })
+    return partition(array, function(_, index)
+        return index <= #array - (count or 1)
+    end)
 end
 
 return pop

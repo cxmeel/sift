@@ -1,19 +1,12 @@
 --[=[
-
-	@within Array
-
-
-
-
+    @within Array
 
 	Maps the array using the mapper function.
 
 	```lua
-	local array = { 1, 2, 3 }
-
-	local new = Map(array, function(value, index)
+	map({ 1, 2, 3, 4, 5 }, function(value)
 		return value * 2
-	end) -- { 2, 4, 6 }
+	end) -- { 2, 4, 6, 8, 10 }
 	```
 ]=]
 local function map<T, U>(array: { T }, mapper: (value: T, index: number, array: { T }) -> U?): { U }

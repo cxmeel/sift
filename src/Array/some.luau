@@ -1,23 +1,12 @@
 --[=[
-
 	@within Array
-
-
-
-
 
 	Checks whether some item in the array passes the predicate.
 
 	```lua
-	local array = { 1, 2, 3 }
-
-	local value = Some(array, function(item, index)
-		return item > 1
-	end) -- true
-
-	local value = Some(array, function(item, index)
-		return item > 3
-	end) -- false
+	some({ 1, 2, 3 }, function(value)
+        return value > 2
+    end) -- true
 	```
 ]=]
 local function some<T>(

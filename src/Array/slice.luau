@@ -1,42 +1,29 @@
---[=[
+local Util = require("@sift/Util")
 
+--[=[
 	@within Array
 
-
-
-
-
-
-	Slices an array.
+	Returns a slice of an array from `from` to `to`.
 
 	```lua
-	local array = { 1, 2, 3, 4, 5 }
-
-	local new = Slice(array, 2, 3) -- { 2, 3 }
-	local new = Slice(array, -2, -1) -- { 3, 4 }
-	local new = Slice(array, 3) -- { 3, 4, 5 }
+	slice({1, 2, 3, 4, 5}, 2, 4) -- { 2, 3, 4 }
 	```
 ]=]
 local function slice<T>(array: { T }, from: number?, to: number?): { T }
-    local length = #array
-    local result = {}
+    local out = {}
 
-    from = if typeof(from) == "number" then from else 1
-    to = if typeof(to) == "number" then to else length
+    local useFrom = Util.resolveIndex(#array, from or 1)
+    local useTo = Util.resolveIndex(#array, to or #array)
 
-    if from < 1 then
-        from += length
+    if useFrom > useTo then
+        useFrom, useTo = useTo, useFrom
     end
 
-    if to < 1 then
-        to += length
+    for index = useFrom, useTo do
+        table.insert(out, array[index])
     end
 
-    for i = from, to do
-        table.insert(result, array[i])
-    end
-
-    return result
+    return out
 end
 
 return slice

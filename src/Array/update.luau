@@ -1,65 +1,41 @@
-local Copy = require("./copy")
+local None = require("@sift/None")
 local Util = require("@sift/Util")
 
-type Callback<T> = (index: number) -> T
-type Updater<T> = (currentValue: T, index: number) -> T
-
-local function call<T>(callback: Callback<T>, index: number)
-    if typeof(callback) == "function" then
-        return callback(index)
-    end
-end
+local copy = require("./copy")
 
 --[=[
+    @within Array
 
-	@within Array
+    Updates the value at the given index in the array. If the value at the given index is `nil` or `None`, the `adder` function will be called to add a new value to the array. If the value at the given index is not `nil` or `None`, the `updater` function will be called to update the value at the given index.
 
+    ```lua
+    local array = { "a", "b", "c" }
 
+    update(array, 2, function(value, index)
+        return value .. "!"
+    }) -- { "a", "b!", "c" }
 
-
-
-
-
-	Updates an array at the given index. If the value at the given index does
-	not exist, `callback` will be called, and its return value will be used
-	as the value at the given index.
-
-	```lua
-	local array = { 1, 2, 3 }
-
-	local new = Update(array, 2, function(value)
-		return value + 1
-	end) -- { 2, 3, 3 }
-
-	local new = Update(array, 4, function(value)
-		return value + 1
-	end, function(value)
-		return 10
-	end) -- { 1, 2, 3, 10 }
-	```
+    update(array, 4, nil, function(index)
+        return "d"
+    }) -- { "a", "b", "c", "d" }
+    ```
 ]=]
 local function update<T>(
     array: { T },
     index: number,
-    updater: Updater<T>?,
-    callback: Callback<T>?
+    updater: ((value: T, index: number) -> T)?,
+    adder: ((index: number) -> T)?
 ): { T }
-    local length = #array
-    local result = Copy(array)
+    local out = copy(array)
+    index = Util.resolveIndex(index, #array)
 
-    if index < 1 then
-        index += length
+    if updater and out[index] ~= nil and out[index] ~= None then
+        out[index] = updater(out[index], index)
+    elseif adder and (out[index] == nil or out[index] == None) then
+        out[index] = adder(index)
     end
 
-    updater = if typeof(updater) == "function" then updater else Util.func.returned
-
-    if result[index] ~= nil then
-        result[index] = updater(result[index], index)
-    else
-        result[index] = call(callback, index)
-    end
-
-    return result
+    return out
 end
 
 return update

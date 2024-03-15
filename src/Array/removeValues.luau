@@ -1,23 +1,16 @@
-local ToSet = require("./toSet")
+local toSet = require("./toSet")
 
 --[=[
-
 	@within Array
-
-
-
-
 
 	Removes values from an array.
 
 	```lua
-	local array = { "a", "b", "c", "c", "d", "e" }
-
-	local new = RemoveValues(array, "c", "d") -- { "a", "b", "e" }
+	removeValues({ "a", "b", "b" }, "b") --> { "a" }
 	```
 ]=]
 local function removeValues<T>(array: { T }, ...: T): { T }
-    local valueSet = ToSet({ ... })
+    local valueSet = toSet({ ... })
     local result = {}
 
     for _, value in array do

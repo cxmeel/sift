@@ -1,11 +1,7 @@
 local None = require("@sift/None")
 
 --[=[
-
-	@within Array
-
-
-
+    @within Array
 
 	Joins multiple arrays together into a single array.
 
@@ -14,10 +10,7 @@ local None = require("@sift/None")
 	`join`, `merge`
 
 	```lua
-	local table1 = { 1, 2, 3 }
-	local table2 = { 4, 5, 6 }
-
-	local new = Concat(table1, table2) -- { 1, 2, 3, 4, 5, 6 }
+	concat({ 1, 2, 3 }, { 4, 5, 6 }) -- { 1, 2, 3, 4, 5, 6 }
 	```
 ]=]
 local function concat<T>(...: { T }): { T }

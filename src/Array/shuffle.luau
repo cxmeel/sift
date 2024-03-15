@@ -12,17 +12,14 @@ local copy = require("./copy")
 local function shuffle<T>(array: { T }, seed: number?): { T }
     math.randomseed(os.clock() + (seed or 0))
 
-    local result = copy(array)
+    local out = copy(array)
 
-    for index = #result, 1, -1 do
+    for index = #out, 2, -1 do
         local newIndex = math.random(1, index)
-        local temp = result[index]
-
-        result[index] = result[newIndex]
-        result[newIndex] = temp
+        out[index], out[newIndex] = out[newIndex], out[index]
     end
 
-    return result
+    return out
 end
 
 return shuffle

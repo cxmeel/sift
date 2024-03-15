@@ -1,10 +1,5 @@
 --[=[
-
-	@within Array
-
-
-
-
+    @within Array
 
 	Adds elements to the end of the array.
 
@@ -13,9 +8,7 @@
 	`append`
 
 	```lua
-	local array = { 1, 2, 3 }
-
-	local new = Push(array, 4, 5, 6) -- { 1, 2, 3, 4, 5, 6 }
+	push({ 1, 2, 3 }, 4, 5) -- { 1, 2, 3, 4, 5 }
 	```
 ]=]
 local function push<T>(array: { T }, ...: T): { T }

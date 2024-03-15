@@ -1,18 +1,10 @@
 --[=[
-
 	@within Array
-
-
-
-
 
 	Removes a value from an array at the given index.
 
 	```lua
-	local array = { 1, 2, 3 }
-
-	local new = RemoveIndex(array, 1) -- { 2, 3 }
-	local new = RemoveIndex(array, -1) -- { 1, 3 }
+    removeIndex({ 1, 2, 3 }, -1) -- { 1, 2 }
 	```
 ]=]
 local function removeIndex<T>(array: { T }, index: number): { T }

@@ -9,11 +9,14 @@
     end) -- { even = { 2, 4, 6 }, odd = { 1, 3, 5 } }
     ```
 ]=]
-local function group<T, K>(array: { T }, grouper: (value: T, index: number) -> K): { [K]: { T } }
+local function group<T, K>(
+    array: { T },
+    grouper: (value: T, index: number, array: { T }) -> K
+): { [K]: { T } }
     local out = {}
 
     for index, value in array do
-        local key = grouper(value, index)
+        local key = grouper(value, index, array)
 
         if out[key] == nil then
             out[key] = {}

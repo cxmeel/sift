@@ -1,17 +1,10 @@
 --[=[
-
 	@within Array
 
-
-
-
-
-
-	Finds the index of the first item in the array that matches the value. This is
-	mostly a wrapper around `table.find`, with the ability to specify a negative
-	number as the start index (to search relative to the end of the array).
+	Finds the index of the first item in the array that matches the value.
 
 	#### Aliases
+
 	`indexOf`
 
 	```lua
