@@ -1,11 +1,9 @@
 title = "Sift"
 gitSourceBranch = "main"
-changelog = true
 
 classOrder = ["Sift"]
 
 [home]
-# enabled = true
 includeReadme = true
 
 [[navbar.items]]

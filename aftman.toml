@@ -1,6 +1,5 @@
 [tools]
 rojo = "rojo-rbx/rojo@7.3.0"
-run-in-roblox = "rojo-rbx/run-in-roblox@0.3.0"
 wally = "upliftgames/wally@0.3.2"
 stylua = "johnnymorganz/stylua@0.18.1"
 selene = "kampfkarren/selene@0.25.0"
