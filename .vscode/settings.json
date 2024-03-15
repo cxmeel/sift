@@ -1,31 +1,23 @@
 {
-  "[luau]": {
-    "editor.defaultFormatter": "JohnnyMorganz.stylua",
+    "luau-lsp.completion.imports.suggestRequires": false,
+    "luau-lsp.require.mode": "relativeToFile",
+    "luau-lsp.types.roblox": false,
+    "luau-lsp.require.directoryAliases": {
+        "@lune/": "~/.lune/.typedefs/0.8.0/",
+        "@pkg": "Packages/",
+        "@dev": "DevPackages/",
+        "@sift": "src/"
+    },
+
+    "files.eol": "\n",
+
+    "editor.formatOnSave": true,
     "editor.formatOnPaste": true,
-    "editor.formatOnSave": true
-  },
-  "[json]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
-    "editor.formatOnPaste": true,
-    "editor.formatOnSave": true
-  },
-  "[typescript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
-    "editor.formatOnPaste": true,
-    "editor.formatOnSave": true
-  },
-  "editor.codeActionsOnSave": {
-    "source.fixAll": "explicit",
-    "source.organizeImports": "explicit"
-  },
-  "luau-lsp.require.directoryAliases": {
-    "@lune/": "~/.lune/.typedefs/0.8.0/",
-    "@pkg": "Packages/",
-    "@dev": "DevPackages/",
-    "@sift": "src/"
-  },
-  "luau-lsp.completion.imports.suggestRequires": false,
-  "luau-lsp.require.mode": "relativeToFile",
-  "luau-lsp.types.roblox": false,
-  "files.eol": "\n"
+    "editor.indentSize": 4,
+    "editor.insertSpaces": true,
+    "editor.detectIndentation": false,
+    "editor.codeActionsOnSave": {
+        "source.fixAll": "explicit",
+        "source.organizeImports": "explicit"
+    }
 }
