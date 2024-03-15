@@ -1,6 +1,6 @@
 [package]
 name = "csqrl/sift"
-version = "0.0.8"
+version = "0.1.0"
 
 description = """
 Immutable data library for Luau and Roblox.
