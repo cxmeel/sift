@@ -14,6 +14,7 @@ local dictionary = {
     copy = require("./copy"),
     copyDeep = require("./copyDeep"),
     count = require("./count"),
+    difference = require("./difference"),
     entries = require("./entries"),
     equals = require("./equals"),
     equalsDeep = require("./equalsDeep"),
@@ -42,6 +43,9 @@ local dictionary = {
     withKeys = require("./withKeys"),
 }
 
+dictionary.clone = dictionary.copy
+dictionary.cloneDeep = dictionary.copyDeep
+dictionary.diff = dictionary.difference
 dictionary.join = dictionary.merge
 dictionary.joinDeep = dictionary.mergeDeep
 
