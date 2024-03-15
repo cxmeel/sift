@@ -1,5 +1,3 @@
-local Util = require("@sift/Util")
-
 --[=[
     @within Dictionary
 
@@ -16,7 +14,7 @@ local function difference<K, V>(dictionary: { [K]: V }, other: { [K]: V }): { [K
     local out = {}
 
     for key, value in dictionary do
-        if not Util.areEqual(value, other[key]) then
+        if value ~= other[key] then
             out[key] = value
         end
     end
