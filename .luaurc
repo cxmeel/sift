@@ -1,0 +1,11 @@
+{
+    "aliases": {
+        "dev": "DevPackages",
+        "pkg": "Packages",
+        "sift": "src"
+    },
+    "languageMode": "strict",
+    "lint": {
+        "*": false
+    }
+}
