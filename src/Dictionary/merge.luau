@@ -1,13 +1,7 @@
-local Sift = script.Parent.Parent
-
-local None = require(Sift.None)
+local None = require("@sift/None")
 
 --[=[
-  @function merge
   @within Dictionary
-
-  @param dictionaries? ...any -- The dictionaries to merge.
-  @return T -- The merged dictionary.
 
   Merges the given dictionaries into a single dictionary. If the
   value is `None`, it will be removed from the result. The
@@ -20,25 +14,28 @@ local None = require(Sift.None)
   local dictionary1 = { hello = "roblox", goodbye = "world" }
   local dictionary2 = { goodbye = "goodbye" }
 
-  local merged = Merge(dictionary1, dictionary2) -- { hello = "roblox", goodbye = "goodbye" }
+  merge(dictionary1, dictionary2)
+  -- { hello = "roblox", goodbye = "goodbye" }
   ```
 ]=]
-local function merge<T>(...: any): T
-    local result = {}
+local function merge<K, V>(...: { [any]: any }): { [K]: V }
+    local out = {}
 
-    for dictionaryIndex = 1, select("#", ...) do
-        local dictionary = select(dictionaryIndex, ...)
-
-        if type(dictionary) ~= "table" then
+    for _, dictionary in { ... } do
+        if typeof(dictionary) ~= "table" then
             continue
         end
 
-        for key, value in pairs(dictionary) do
-            result[key] = if value == None then nil else value
+        for key, value in dictionary do
+            if value == nil or value == None then
+                continue
+            end
+
+            out[key] = value
         end
     end
 
-    return result
+    return out
 end
 
 return merge

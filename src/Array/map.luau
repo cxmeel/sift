@@ -1,10 +1,10 @@
 --[=[
-	@function map
+
 	@within Array
 
-	@param array {T} -- The array to map.
-	@param mapper (value: T, index: number, array: {T}) -> U? -- The mapper function.
-	@return {U} -- The mapped array.
+
+
+
 
 	Maps the array using the mapper function.
 
@@ -19,7 +19,7 @@
 local function map<T, U>(array: { T }, mapper: (value: T, index: number, array: { T }) -> U?): { U }
     local mapped = {}
 
-    for index, value in ipairs(array) do
+    for index, value in array do
         local mappedValue = mapper(value, index, array)
 
         if mappedValue ~= nil then

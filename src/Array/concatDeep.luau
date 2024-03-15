@@ -1,14 +1,12 @@
-local Sift = script.Parent.Parent
-
-local CopyDeep = require(script.Parent.copyDeep)
-local None = require(Sift.None)
+local None = require("@sift/None")
+local copyDeep = require("./copyDeep")
 
 --[=[
-	@function concatDeep
+
 	@within Array
 
-	@param ... ...any -- The arrays to concatenate.
-	@return {T} -- The concatenated array.
+
+
 
 	Joins multiple arrays together into a single array, with deep copies of all
 	nested arrays.
@@ -24,24 +22,24 @@ local None = require(Sift.None)
 	local new = ConcatDeep(table1, table2) -- { 1, 2, { 3, 4 }, 5, 6, { 7, 8 } }
 	```
 ]=]
-local function concatDeep<T>(...: any): { T }
+local function concatDeep<T>(...: { T }): { T }
     local result = {}
 
-    for arrayIndex = 1, select("#", ...) do
-        local array = select(arrayIndex, ...)
-
-        if type(array) ~= "table" then
+    for _, array in { ... } do
+        if typeof(array) ~= "table" then
             continue
         end
 
-        for _, value in ipairs(array) do
-            if value ~= None then
-                if type(value) == "table" then
-                    table.insert(result, CopyDeep(value))
-                else
-                    table.insert(result, value)
-                end
+        for _, value in array do
+            if value == nil or value == None then
+                continue
             end
+
+            if typeof(value) == "table" then
+                table.insert(result, copyDeep(value) :: any)
+            end
+
+            table.insert(result, value)
         end
     end
 

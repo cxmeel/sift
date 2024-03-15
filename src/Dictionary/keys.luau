@@ -1,9 +1,9 @@
 --[=[
-  @function keys
+
   @within Dictionary
 
-  @param dictionary {[K]: V} -- The dictionary to get the keys of.
-  @return {K} -- An array containing the keys of the given dictionary.
+
+
 
   Gets the keys of the given dictionary as an array.
 
@@ -16,7 +16,7 @@
 local function keys<K, V>(dictionary: { [K]: V }): { K }
     local result = {}
 
-    for key in pairs(dictionary) do
+    for key in dictionary do
         table.insert(result, key)
     end
 

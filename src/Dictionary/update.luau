@@ -1,23 +1,23 @@
-local copy = require(script.Parent.copy)
+local copy = require("./copy")
 
 type Callback<K, V> = (key: K) -> V
 type Updater<K, V> = (value: V, key: K) -> V
 
 local function call<K, V>(callback: Callback<K, V>, key: K)
-    if type(callback) == "function" then
+    if typeof(callback) == "function" then
         return callback(key)
     end
 end
 
 --[=[
-  @function update
+
   @within Dictionary
 
-  @param dictionary {[K]: V} -- The dictionary to update.
-  @param key K -- The key to update.
-  @param updater? (value: V, key: K) -> U -- The updater function.
-  @param callback? (key: K) -> C -- The callback function.
-  @return {[K]: V & U & C } -- The updated dictionary.
+
+
+
+
+
 
   Updates a value in a dictionary at the given key. If the value at the given key does not exist, `callback` will be called, and its return value will be used as the value at the given key.
 

@@ -1,11 +1,11 @@
-local At = require(script.Parent.at)
+local At = require("./at")
 
 --[=[
-	@function last
+
 	@within Array
 
-	@param array {T} -- The array to get the last element of.
-	@return T -- The last element of the array.
+
+
 
 	Gets the last element of the array.
 

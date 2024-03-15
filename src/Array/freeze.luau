@@ -1,11 +1,11 @@
-local Copy = require(script.Parent.copy)
+local Copy = require("./copy")
 
 --[=[
-  @function freeze
+
   @within Array
 
-  @param array {T} -- The array to freeze.
-  @return {T} -- The frozen array.
+
+
 
   Freezes the top level of the array, making it read-only.
 

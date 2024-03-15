@@ -1,10 +1,10 @@
 --[=[
-  @function map
+
   @within Set
 
-  @param set { [T]: boolean } -- The set to map.
-  @param mapper (T, {[T]: boolean}) -> U -- The mapper function.
-  @return {[U]: boolean} -- The mapped set.
+
+
+
 
   Iterates over a set, calling a mapper function for each item.
 
@@ -19,7 +19,7 @@
 local function map<T, U>(set: { [T]: boolean }, mapper: (T, { [T]: boolean }) -> U): { [U]: boolean }
     local result = {}
 
-    for key, _ in pairs(set) do
+    for key, _ in set do
         local mappedKey = mapper(key, set)
 
         if mappedKey ~= nil then

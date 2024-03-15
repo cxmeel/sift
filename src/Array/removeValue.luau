@@ -1,10 +1,10 @@
 --[=[
-	@function removeValue
+
 	@within Array
 
-	@param array {T} -- The array to remove the value from.
-	@param value T -- The value to remove.
-	@return {T} -- The array with the value removed.
+
+
+
 
 	Removes a value from an array.
 
@@ -17,7 +17,7 @@
 local function removeValue<T>(array: { T }, value: T): { T }
     local result = {}
 
-    for _, arrValue in ipairs(array) do
+    for _, arrValue in array do
         if arrValue ~= value then
             table.insert(result, arrValue)
         end

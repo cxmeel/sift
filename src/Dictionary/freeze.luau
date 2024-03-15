@@ -1,30 +1,20 @@
-local Copy = require(script.Parent.copy)
-local _T = require(script.Parent.Parent.Types)
+local copy = require("./copy")
 
 --[=[
-  @function freeze
-  @within Dictionary
+    @within Dictionary
 
-  @param dictionary T -- The dictionary to freeze.
-  @return T -- The frozen dictionary.
+    Returns a new dictionary that is a shallow copy of the input dictionary, but is frozen. This means that the dictionary cannot be modified in any way. This is useful for ensuring that a dictionary is not modified after it has been created. Use [Dictionary.freezeDeep] to freeze a dictionary and all of its nested dictionaries.
 
-  Freezes the given dictionary at the top level, making it read-only.
+    ```lua
+    local frozen = freeze({ queen = "elsa", princess = "anna" })
 
-  ```lua
-  local dictionary = { hello = "roblox", goodbye = { world = "world" } }
-
-  local new = Freeze(dictionary)
-
-  new.hello = "world" -- error!
-  new.goodbye.world = "hello" -- still works!
-  ```
+    frozen.princess = "elsa" -- error!
+    frozen.spirit = "bruni" -- error!
+    ```
 ]=]
-local function freeze(dictionary: _T.AnyDictionary): _T.AnyDictionary
-    local new = Copy(dictionary)
-
-    table.freeze(new)
-
-    return new
+local function freeze<K, V>(dictionary: { [K]: V }): { [K]: V }
+    local out = copy(dictionary)
+    return table.freeze(out)
 end
 
 return freeze

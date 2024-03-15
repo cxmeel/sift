@@ -1,9 +1,9 @@
 --[=[
-  @function is
+
   @within Array
 
-  @param object any -- The object to check.
-  @return boolean -- Whether the object is an array.
+
+
 
   Checks if the given object is an array.
 

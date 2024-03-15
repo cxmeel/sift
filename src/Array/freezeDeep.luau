@@ -1,9 +1,9 @@
 --[=[
-	@function freezeDeep
+
 	@within Array
 
-	@param array {T} -- The array to freeze.
-	@return {T} -- The frozen array.
+
+
 
 	Freezes the entire array, making it read-only, including all
 	nested arrays.
@@ -23,7 +23,7 @@ local function freezeDeep<T>(array: { T }): { T }
     for i = 1, #array do
         local value = array[i]
 
-        if type(value) == "table" then
+        if typeof(value) == "table" then
             table.insert(result, freezeDeep(value))
         else
             table.insert(result, value)

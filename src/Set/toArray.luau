@@ -1,9 +1,9 @@
 --[=[
-  @function toArray
+
   @within Set
 
-  @param set { [T]: boolean } -- The set to convert to an array.
-  @return {T} -- The array.
+
+
 
   Converts a set to an array.
 
@@ -16,7 +16,7 @@
 local function toArray<T>(set: { [T]: boolean }): { T }
     local result = {}
 
-    for key, _ in pairs(set) do
+    for key, _ in set do
         table.insert(result, key)
     end
 

@@ -1,11 +1,11 @@
 --[=[
-	@function reduceRight
+
 	@within Array
 
-	@param array {T} -- The array to reduce.
-	@param reducer (accumulator: U, value: T, index: number, array: {T}) -> U -- The reducer to use.
-	@param initialReduction? U = {T}[#{T}] -- The initial accumulator value.
-	@return U -- The final accumulator value.
+
+
+
+
 
 	Reduces the array using the given reducer and initial accumulator value,
 	starting from the end of the array. If no `initialReduction` value is given,

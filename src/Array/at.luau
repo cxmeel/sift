@@ -1,10 +1,10 @@
 --[=[
-	@function at
+
 	@within Array
 
-	@param array {T} -- The array to get the value from.
-	@param index number -- The index to get the value from (can be negative).
-	@return T -- The value at the given index.
+
+
+	
 
 	Gets a value from an array at the given index.
 

@@ -1,14 +1,8 @@
-local Sift = script.Parent.Parent
-
-local None = require(Sift.None)
-local copyDeep = require(script.Parent.copyDeep)
+local None = require("@sift/None")
+local copyDeep = require("./copyDeep")
 
 --[=[
-	@function mergeDeep
-	@within Dictionary
-
-	@param dictionaries? ...any -- The dictionaries to merge.
-	@return T -- The merged dictionary.
+    @within Dictionary
 
 	Merges the given dictionaries into a single dictionary. If the
 	value is `None`, it will be removed from the result. This is
@@ -21,35 +15,38 @@ local copyDeep = require(script.Parent.copyDeep)
 	local dictionary1 = { hello = "roblox", goodbye = { world = "goodbye" } }
 	local dictionary2 = { goodbye = { world = "world" } }
 
-	local merged = MergeDeep(dictionary1, dictionary2) -- { hello = "roblox", goodbye = { world = "world" } }
+	mergeDeep(dictionary1, dictionary2)
+    -- { hello = "roblox", goodbye = { world = "world" } }
 	```
 ]=]
-local function mergeDeep<T>(...: any): T
-    local result = {}
+local function mergeDeep<K, V>(...: { [any]: any }): { [K]: V }
+    local out: { [K]: V } = {}
 
-    for dictionaryIndex = 1, select("#", ...) do
-        local dictionary = select(dictionaryIndex, ...)
-
-        if type(dictionary) ~= "table" then
+    for _, dictionary in { ... } do
+        if typeof(dictionary) ~= "table" then
             continue
         end
 
-        for key, value in pairs(dictionary) do
-            if value == None then
-                result[key] = nil
-            elseif type(value) == "table" then
-                if result[key] == nil or type(result[key]) ~= "table" then
-                    result[key] = copyDeep(value)
-                else
-                    result[key] = mergeDeep(result[key], value)
-                end
-            else
-                result[key] = value
+        for key, value in dictionary do
+            if value == None or value == nil then
+                continue
             end
+
+            if typeof(value) == "table" then
+                if out[key] == nil or typeof(out[key]) ~= "table" then
+                    out[key] = copyDeep(value)
+                else
+                    out[key] = mergeDeep(out[key] :: any, value) :: any
+                end
+
+                continue
+            end
+
+            out[key] = value
         end
     end
 
-    return result
+    return out
 end
 
 return mergeDeep

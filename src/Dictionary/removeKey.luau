@@ -1,12 +1,12 @@
-local copy = require(script.Parent.copy)
+local copy = require("./copy")
 
 --[=[
-  @function removeKey
+
   @within Dictionary
 
-  @param dictionary {[K]: V} -- The dictionary to remove the key from.
-  @param key K -- The key to remove.
-  @return {[K]: V} -- The dictionary without the given key.
+
+
+
 
   Removes the given key from the given dictionary.
 

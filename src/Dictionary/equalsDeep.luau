@@ -1,20 +1,17 @@
-local Sift = script.Parent.Parent
-
-local Util = require(Sift.Util)
-local _T = require(Sift.Types)
+local Util = require("@sift/Util")
 
 local function compareDeep(a, b)
-    if type(a) ~= "table" or type(b) ~= "table" then
+    if typeof(a) ~= "table" or typeof(b) ~= "table" then
         return a == b
     end
 
-    for key, value in pairs(a) do
+    for key, value in a do
         if not compareDeep(value, b[key]) then
             return false
         end
     end
 
-    for key, value in pairs(b) do
+    for key, value in b do
         if not compareDeep(value, a[key]) then
             return false
         end
@@ -24,11 +21,7 @@ local function compareDeep(a, b)
 end
 
 --[=[
-  @function equalsDeep
   @within Dictionary
-
-  @param ... ...{ [any]: any } -- The dictionaries to compare.
-  @return boolean -- Whether the dictionaries are equal.
 
   Compares two dictionaries for equality using deep comparison.
 
@@ -37,22 +30,20 @@ end
   local other1 = { hello = "world", goodbye = { world = "hello" } }
   local other2 = { hello = "hello", world = "goodbye" }
 
-  local value = EqualsDeep(dictionary, other1) -- true
-  local value = EqualsDeep(dictionary, other1, other2) -- false
+  equalsDeep(dictionary, other1) -- true
+  equalsDeep(dictionary, other1, other2) -- false
   ```
 ]=]
-local function equalsDeep(...: _T.AnyDictionary): boolean
-    if Util.equalObjects(...) then
+local function equalsDeep(...: { [any]: any }): boolean
+    if Util.areEqual(...) then
         return true
     end
 
-    local totalArgs = select("#", ...)
-    local firstItem = select(1, ...)
+    local args = { ... }
+    local first = table.remove(args, 1) :: { [any]: any }
 
-    for i = 2, totalArgs do
-        local item = select(i, ...)
-
-        if not compareDeep(firstItem, item) then
+    for _, dictionary in args do
+        if not compareDeep(first, dictionary) then
             return false
         end
     end

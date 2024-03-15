@@ -1,11 +1,11 @@
 --[=[
-	@function set
+
 	@within Array
 
-	@param array {T} -- The array to set the value on.
-	@param index number -- The index to set the value at (can be negative).
-	@param value T -- The value to set.
-	@return {T} -- The array with the value set.
+
+
+
+
 
 	Sets a value on an array at the given index.
 
@@ -24,7 +24,7 @@ local function set<T>(array: { T }, index: number, value: T?): { T }
         index += length
     end
 
-    for arrIndex, arrValue in ipairs(array) do
+    for arrIndex, arrValue in array do
         if arrIndex == index then
             table.insert(result, value)
         else

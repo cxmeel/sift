@@ -1,32 +1,26 @@
 --[=[
-  @function merge
   @within Set
-
-  @param ... ...any -- The sets to merge.
-  @return { [T]: boolean } -- The merged set.
 
   Combines one or more sets into a single set.
 
   Aliases: `join`, `union`
 
   ```lua
-  local set1 = { hello = true, world = true }
-  local set2 = { cat = true, dog = true, hello = true }
+  local set1 = Set<{ "hello", "world" }>
+  local set2 = Set<{ "cat", "dog", "hello" }>
 
-  local merge = Merge(set1, set2) -- { hello = true, world = true, cat = true, dog = true }
+  merge(set1, set2) -- Set<{ "hello", "world", "cat", "dog" }>
   ```
 ]=]
-local function merge<T>(...: any): { [T]: boolean }
+local function merge<T>(...: { [T]: boolean }): { [T]: boolean }
     local result = {}
 
-    for setIndex = 1, select("#", ...) do
-        local set = select(setIndex, ...)
-
-        if type(set) ~= "table" then
+    for _, set in { ... } do
+        if typeof(set) ~= "table" then
             continue
         end
 
-        for key, _ in pairs(set) do
+        for key in set do
             result[key] = true
         end
     end

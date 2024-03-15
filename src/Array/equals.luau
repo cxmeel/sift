@@ -1,9 +1,7 @@
-local Sift = script.Parent.Parent
-
-local Util = require(Sift.Util)
+local Util = require("@sift/Util")
 
 local function compare(a, b)
-    if type(a) ~= "table" or type(b) ~= "table" then
+    if typeof(a) ~= "table" or typeof(b) ~= "table" then
         return a == b
     end
 
@@ -23,11 +21,11 @@ local function compare(a, b)
 end
 
 --[=[
-	@function equals
+
 	@within Array
 
-	@param ... ...{any} -- The arrays to compare.
-	@return boolean -- Whether the arrays are equal.
+
+
 
 	Compares two arrays for equality.
 
@@ -41,17 +39,15 @@ end
 	```
 ]=]
 local function equals<T>(...: { T }): boolean
-    if Util.equalObjects(...) then
+    if Util.areEqual(...) then
         return true
     end
 
-    local totalArgs = select("#", ...)
-    local firstItem = select(1, ...)
+    local args = { ... }
+    local first = table.remove(args, 1) :: { T }
 
-    for i = 2, totalArgs do
-        local item = select(i, ...)
-
-        if not compare(firstItem, item) then
+    for _, array in args do
+        if not compare(first, array) then
             return false
         end
     end

@@ -1,12 +1,12 @@
 --[=[
-	@function splice
+
 	@within Array
 
-	@param array {T} -- The array to splice.
-	@param start? number -- The index to start splicing at (can be negative).
-	@param end? number -- The index to end splicing at (can be negative).
-	@param ... ...T -- The values to insert.
-	@return {T} -- The spliced array.
+
+
+
+
+
 
 	Splices an array.
 
@@ -22,8 +22,8 @@ local function splice<T>(array: { T }, from: number?, to: number?, ...: T?): { T
     local length = #array
     local result = {}
 
-    from = if type(from) == "number" then from else 1
-    to = if type(to) == "number" then to else length
+    from = if typeof(from) == "number" then from else 1
+    to = if typeof(to) == "number" then to else length
 
     if from < 1 then
         from += length
@@ -37,7 +37,7 @@ local function splice<T>(array: { T }, from: number?, to: number?, ...: T?): { T
         table.insert(result, array[index])
     end
 
-    for _, value in ipairs({ ... }) do
+    for _, value in { ... } do
         table.insert(result, value)
     end
 

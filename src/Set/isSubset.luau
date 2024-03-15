@@ -1,10 +1,10 @@
 --[=[
-  @function isSubset
+
   @within Set
 
-  @param subset { [any]: boolean } -- The subset to check.
-  @param superset { [any]: boolean } -- The superset to check against.
-  @return boolean -- Whether the subset is a subset of the superset.
+
+
+
 
   Checks whether a set is a subset of another set.
 
@@ -16,7 +16,7 @@
   ```
 ]=]
 local function isSubset(subset: { [any]: boolean }, superset: { [any]: boolean }): boolean
-    for key, value in pairs(subset) do
+    for key, value in subset do
         if superset[key] ~= value then
             return false
         end

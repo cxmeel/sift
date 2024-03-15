@@ -1,9 +1,9 @@
 --[=[
-  @function values
+
   @within Dictionary
 
-  @param dictionary {[K]: V} -- The dictionary to get the values from.
-  @return {V} -- The values in the dictionary.
+
+
 
   Gets the values in the given dictionary.
 
@@ -16,7 +16,7 @@
 local function values<K, V>(dictionary: { [K]: V }): { V }
     local result = {}
 
-    for _, value in pairs(dictionary) do
+    for _, value in dictionary do
         table.insert(result, value)
     end
 

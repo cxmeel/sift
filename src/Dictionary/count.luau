@@ -1,14 +1,12 @@
-local Sift = script.Parent.Parent
-
-local Util = require(Sift.Util)
+local Util = require("@sift/Util")
 
 --[=[
-  @function count
+
   @within Dictionary
 
-  @param dictionary T -- The dictionary to count.
-  @param predicate? (value: T, key: K, dictionary: T) -> any -- The predicate to use to filter the dictionary.
-  @return number -- The number of items in the dictionary.
+
+
+
 
   Counts the number of items in a dictionary.
 
@@ -27,9 +25,9 @@ local function count<K, V>(
 ): number
     local counter = 0
 
-    predicate = if type(predicate) == "function" then predicate else Util.func.truthy
+    predicate = if typeof(predicate) == "function" then predicate else Util.func.truthy
 
-    for key, value in pairs(dictionary) do
+    for key, value in dictionary do
         if predicate(value, key, dictionary) then
             counter += 1
         end

@@ -1,10 +1,10 @@
 --[=[
-  @function delete
+
   @within Set
 
-  @param set { [T]: boolean } -- The set to delete from.
-  @param ... ...T -- The values to delete.
-  @return { [T]: boolean } -- The set with the values deleted.
+
+
+
 
   Deletes values from a set.
 
@@ -19,11 +19,11 @@
 local function delete<T>(set: { [T]: boolean }, ...: T): { [T]: boolean }
     local result = {}
 
-    for key, _ in pairs(set) do
+    for key, _ in set do
         result[key] = true
     end
 
-    for _, value in ipairs({ ... }) do
+    for _, value in { ... } do
         result[value] = nil
     end
 

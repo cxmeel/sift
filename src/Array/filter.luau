@@ -1,14 +1,12 @@
-local Sift = script.Parent.Parent
-
-local Util = require(Sift.Util)
+local Util = require("@sift/Util")
 
 --[=[
-	@function filter
+
 	@within Array
 
-	@param array {T} -- The array to filter.
-	@param filterer? (value: T, index: number, array: {T}) -> any -- The callback to use to filter the array.
-	@return {T} -- The filtered array.
+
+
+
 
 	Filters an array using a filterer callback. Any items that do not pass the filterer will be removed from the array.
 
@@ -28,9 +26,9 @@ local function filter<T>(
 ): { T }
     local result = {}
 
-    predicate = if type(predicate) == "function" then predicate else Util.func.truthy
+    predicate = if typeof(predicate) == "function" then predicate else Util.func.truthy
 
-    for index, value in ipairs(array) do
+    for index, value in array do
         if predicate(value, index, array) then
             table.insert(result, value)
         end

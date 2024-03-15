@@ -1,10 +1,10 @@
 --[=[
-  @function has
+
   @within Set
 
-  @param set { [T]: boolean } -- The set to check.
-  @param value any -- The value to check for.
-  @return boolean -- Whether the value is in the set.
+
+
+
 
   Checks whether a value is in a set.
 

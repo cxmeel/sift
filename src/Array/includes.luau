@@ -1,13 +1,13 @@
-local Find = require(script.Parent.find)
+local Find = require("./find")
 
 --[=[
-	@function includes
+
 	@within Array
 
-	@param array {T} -- The array to search.
-	@param value any -- The value to search for.
-	@param from? number -- The index to start searching from.
-	@return boolean -- Whether the array contains the value.
+
+
+
+
 
 	Checks whether the array contains the value. This is a wrapper
 	around `Find`.

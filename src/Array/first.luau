@@ -1,11 +1,11 @@
-local At = require(script.Parent.at)
+local At = require("./at")
 
 --[=[
-	@function first
+
 	@within Array
 
-	@param array {T} -- The array to get the first item from.
-	@return T -- The first item in the array.
+
+
 
 	Gets the first item in the array.
 

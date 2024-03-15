@@ -1,12 +1,12 @@
-local isSubset = require(script.Parent.isSubset)
+local isSubset = require("./isSubset")
 
 --[=[
-  @function isSuperset
+
   @within Set
 
-  @param superset { [any]: boolean } -- The superset to check.
-  @param subset { [any]: boolean } -- The subset to check against.
-  @return boolean -- Whether the superset is a superset of the subset.
+
+
+
 
   Checks whether a set is a superset of another set.
 

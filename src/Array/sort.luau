@@ -1,12 +1,12 @@
-local Copy = require(script.Parent.copy)
+local Copy = require("./copy")
 
 --[=[
-	@function sort
+
 	@within Array
 
-	@param array {T} -- The array to sort.
-	@param comparator? (a: T, b: T) -> boolean -- The comparator function.
-	@return {T} -- The sorted array.
+
+
+
 
 	Sorts an array.
 

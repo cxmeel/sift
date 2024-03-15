@@ -1,14 +1,12 @@
-local Sift = script.Parent.Parent
-
-local Util = require(Sift.Util)
+local Util = require("@sift/Util")
 
 --[=[
-  @function filter
+
   @within Dictionary
 
-  @param dictionary {[K]: V} -- The dictionary to filter.
-  @param predicate? (value: V, key: K, dictionary: {[K]: V}) -> any -- The predicate to use to filter the dictionary.
-  @return {[K]: V} -- The filtered dictionary.
+
+
+
 
   Filters a dictionary using a predicate. Any items that do not pass the predicate will be removed from the dictionary.
 
@@ -26,9 +24,9 @@ local function filter<K, V>(
 ): { [K]: V }
     local result = {}
 
-    predicate = if type(predicate) == "function" then predicate else Util.func.truthy
+    predicate = if typeof(predicate) == "function" then predicate else Util.func.truthy
 
-    for key, value in pairs(dictionary) do
+    for key, value in dictionary do
         if predicate(value, key, dictionary) then
             result[key] = value
         end

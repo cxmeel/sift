@@ -1,14 +1,12 @@
-local Sift = script.Parent.Parent
-
-local Util = require(Sift.Util)
+local Util = require("@sift/Util")
 
 --[=[
-  @function filter
+
   @within Set
 
-  @param set { [T]: boolean } -- The set to filter.
-  @param predicate? (item: T, set: { [T]: boolean }) -> any -- The function to filter the set with.
-  @return { [T]: boolean } -- The filtered set.
+
+
+
 
   Filters a set using a predicate. Any items that do not pass the predicate will be removed from the set.
 
@@ -26,9 +24,9 @@ local function filter<T>(
 ): { [T]: boolean }
     local result = {}
 
-    predicate = if type(predicate) == "function" then predicate else Util.func.truthy
+    predicate = if typeof(predicate) == "function" then predicate else Util.func.truthy
 
-    for key, _ in pairs(set) do
+    for key, _ in set do
         if predicate(key, set) then
             result[key] = true
         end

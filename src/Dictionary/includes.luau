@@ -1,10 +1,10 @@
 --[=[
-  @function includes
+
   @within Dictionary
 
-  @param dictionary {[K]: V} -- The dictionary to check.
-  @param value V -- The value to check for.
-  @return boolean -- Whether or not the dictionary includes the given value.
+
+
+
 
   Checks whether or not the given dictionary includes the given value.
 
@@ -16,7 +16,7 @@
   ```
 ]=]
 local function includes<K, V>(dictionary: { [K]: V }, value: V): boolean
-    for _, v in pairs(dictionary) do
+    for _, v in dictionary do
         if v == value then
             return true
         end

@@ -1,9 +1,9 @@
 --[=[
-  @function flip
+
   @within Dictionary
 
-  @param dictionary { [K]: V } -- The dictionary to flip.
-  @return { [V]: K } -- The flipped dictionary.
+
+
 
   Flips a dictionary. Keys become values and values become keys.
 
@@ -16,7 +16,7 @@
 local function flip<K, V>(dictionary: { [K]: V }): { [V]: K }
     local result = {}
 
-    for key, value in pairs(dictionary) do
+    for key, value in dictionary do
         result[value] = key
     end
 

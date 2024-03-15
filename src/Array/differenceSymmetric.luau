@@ -1,31 +1,31 @@
-local T = require(script.Parent.Parent.Types)
-
-local setDifferenceSymmetric = require(script.Parent.Parent.Set.differenceSymmetric)
-local toArray = require(script.Parent.Parent.Set.toArray)
-local toSet = require(script.Parent.toSet)
+local setDifferenceSymmetric = require("@sift/Set/differenceSymmetric")
+local toArray = require("@sift/Set/toArray")
+local toSet = require("./toSet")
 
 --[=[
-  @function differenceSymmetric
   @within Array
 
-  @param array Array<V> -- The array to compare.
-  @param ... ...Array<V> -- The arrays to compare against.
-  @return Array<V> -- The symmetric difference between the arrays.
-
   Returns an array of values that are in the first array, but not in the other arrays, and vice versa.
+
+    #### Aliases
+
+    `symDiff`
 
   ```lua
   local array1 = { "hello", "world" }
   local array2 = { "cat", "dog", "hello" }
 
-  local difference = DifferenceSymmetric(array1, array2) -- { "world", "cat", "dog" }
+  differenceSymmetric(array1, array2) -- { "world", "cat", "dog" }
   ```
 ]=]
-local function differenceSymmetric<V>(array: T.Array<V>, ...: T.Array<V>): T.Array<V>
-    local arraySet = toSet(array)
+local function differenceSymmetric<T>(...: { T }): { T }
+    local args = { ... }
+    local first = table.remove(args, 1) :: { T }
+
+    local arraySet = toSet(first)
     local otherSets = {}
 
-    for _, nextArray in { ... } do
+    for _, nextArray in args do
         if typeof(nextArray) ~= "table" then
             continue
         end
@@ -34,7 +34,6 @@ local function differenceSymmetric<V>(array: T.Array<V>, ...: T.Array<V>): T.Arr
     end
 
     local differenceSet = setDifferenceSymmetric(arraySet, unpack(otherSets))
-
     return toArray(differenceSet)
 end
 

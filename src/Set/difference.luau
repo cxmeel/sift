@@ -1,36 +1,28 @@
-local T = require(script.Parent.Parent.Types)
+local copy = require("./copy")
 
 --[=[
-  @function difference
-  @within Set
+    @within Set
 
-  @param set Set<V> -- The set to compare.
-  @param ... ...Set<V> -- The sets to compare against.
-  @return Set<V> -- The difference between the sets.
+    Returns a new set containing only values that are in the first set and not in any of the other sets.
 
-  Returns a set of values that are in the first set, but not in the other sets.
+    ```lua
+    local set1 = { a = true, b = true, c = true }
+    local set2 = { b = true, c = true, d = true }
 
-  ```lua
-  local set1 = { hello = true, world = true }
-  local set2 = { cat = true, dog = true, hello = true }
-
-  local difference = Difference(set1, set2) -- { world = true }
-  ```
+    difference(set1, set2) -- { a = true }
+    ```
 ]=]
-local function difference<V>(set: T.Set<V>, ...: T.Set<V>): T.Set<V>
-    local diff = table.clone(set)
+local function difference<T>(...: { [T]: boolean }): { [T]: boolean }
+    local args = { ... }
+    local out = copy(table.remove(args, 1) :: { [T]: boolean })
 
-    for _, nextSet in { ... } do
-        if typeof(nextSet) ~= "table" then
-            continue
-        end
-
-        for value in nextSet do
-            diff[value] = nil
+    for _, other in args do
+        for value in other do
+            out[value] = nil
         end
     end
 
-    return diff
+    return out
 end
 
 return difference

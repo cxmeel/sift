@@ -1,9 +1,9 @@
 --[=[
-  @function copyDeep
+
   @within Dictionary
 
-  @param dictionary T -- The dictionary to copy.
-  @return T -- The copied dictionary.
+
+
 
   Copies a dictionary recursively.
 
@@ -19,8 +19,8 @@
 local function copyDeep<T>(dictionary: T): T
     local new = table.clone(dictionary)
 
-    for key, value in pairs(dictionary) do
-        if type(value) == "table" then
+    for key, value in dictionary do
+        if typeof(value) == "table" then
             new[key] = copyDeep(value)
         end
     end

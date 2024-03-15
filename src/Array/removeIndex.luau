@@ -1,10 +1,10 @@
 --[=[
-	@function removeIndex
+
 	@within Array
 
-	@param array {T} -- The array to remove the value from.
-	@param index number -- The index to remove the value from (can be negative).
-	@return {T} -- The array with the value removed.
+
+
+
 
 	Removes a value from an array at the given index.
 
@@ -23,7 +23,7 @@ local function removeIndex<T>(array: { T }, index: number): { T }
         index += length
     end
 
-    for arrIndex, value in ipairs(array) do
+    for arrIndex, value in array do
         if arrIndex ~= index then
             table.insert(result, value)
         end

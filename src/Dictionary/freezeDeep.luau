@@ -1,37 +1,34 @@
-local _T = require(script.Parent.Parent.Types)
-
 --[=[
-  @function freezeDeep
-  @within Dictionary
+    @within Dictionary
 
-  @param dictionary T -- The dictionary to freeze.
-  @return T -- The frozen dictionary.
+    Recursively freezes a dictionary and all of its nested dictionaries. Using [Dictionary.freeze] will only freeze the top level of the dictionary, leaving nested dictionaries mutable.
 
-  Freezes the entire dictionary, making it read-only, including all nested dictionaries.
+    ```lua
+    local frozen = freezeDeep({
+        a = "apple",
+        b = { c = "carrot" },
+    })
 
-  ```lua
-  local dictionary = { hello = "roblox", goodbye = { world = "world" } }
-
-  local new = FreezeDeep(dictionary)
-
-  new.hello = "world" -- error!
-  new.goodbye.world = "hello" -- error!
-  ```
+    frozen.a = "avocado" -- error!
+    frozen.b.c = "cabbage" -- error!
+    frozen.c = "coconut" -- error!
+    ```
 ]=]
-local function freezeDeep(dictionary: _T.AnyDictionary): _T.AnyDictionary
-    local result = {}
+local function freezeDeep<K, V>(dictionary: { [K]: V }): { [K]: V }
+    local out = {}
 
-    for key, value in pairs(dictionary) do
-        if type(value) == "table" then
-            result[key] = freezeDeep(value)
-        else
-            result[key] = value
+    for key, value in dictionary do
+        if typeof(value) == "table" then
+            local nested: any = freezeDeep(value)
+            out[key] = nested
+
+            continue
         end
+
+        out[key] = value
     end
 
-    table.freeze(result)
-
-    return result
+    return table.freeze(out)
 end
 
 return freezeDeep

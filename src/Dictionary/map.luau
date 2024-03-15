@@ -1,10 +1,10 @@
 --[=[
-  @function map
+
   @within Dictionary
 
-  @param dictionary {[K]: V} -- The dictionary to map.
-  @param mapper (value: V, key: K, dictionary: {[K]: V}) -> (Y?, X?) -- The mapper function.
-  @return {[X]: Y} -- The mapped dictionary.
+
+
+
 
   Maps the dictionary using the mapper function. The mapper function can
   return a value and a key. If the mapper function does not return a key,
@@ -28,7 +28,7 @@ local function map<K, V, X, Y>(
 ): { [X]: Y }
     local mapped = {}
 
-    for key, value in pairs(dictionary) do
+    for key, value in dictionary do
         local mappedValue, mappedKey = mapper(value, key, dictionary)
         mapped[mappedKey or key] = mappedValue
     end

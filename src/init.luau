@@ -15,7 +15,7 @@ local sift = {
 
     equalObjects = Util.areEqual,
     isEmpty = Util.isEmpty,
-    normalizeIndex = Util.normalizeIndex,
+    resolveIndex = Util.resolveIndex,
 }
 
 sift.List = sift.Array

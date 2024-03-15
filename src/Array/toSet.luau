@@ -1,25 +1,16 @@
-local Sift = script.Parent.Parent
-local _T = require(Sift.Types)
-
 --[=[
-	@function toSet
 	@within Array
 
-	@param array {T} -- The array to convert to a set.
-	@return Set<T> -- The set.
-
-	Converts an array to a set.
+    Converts an array to a set.
 
 	```lua
-	local array = { "a", "b", "b", "c", "d" }
-
-	local set = ToSet(array) -- { a = true, b = true, c = true, d = true }
+	toSet({ "a", "b", "b", "c" }) -- Set<{ "a", "b", "c" }>
 	```
 ]=]
-local function toSet<T>(array: { T }): _T.Set<T>
+local function toSet<T>(array: { T }): { [T]: boolean }
     local set = {}
 
-    for _, value in ipairs(array) do
+    for _, value in array do
         set[value] = true
     end
 

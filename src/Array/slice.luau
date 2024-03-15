@@ -1,11 +1,11 @@
 --[=[
-	@function slice
+
 	@within Array
 
-	@param array {T} -- The array to slice.
-	@param from? number -- The index to start from (can be negative).
-	@param to? number -- The index to end at (can be negative).
-	@return {T} -- The sliced array.
+
+
+
+
 
 	Slices an array.
 
@@ -21,8 +21,8 @@ local function slice<T>(array: { T }, from: number?, to: number?): { T }
     local length = #array
     local result = {}
 
-    from = if type(from) == "number" then from else 1
-    to = if type(to) == "number" then to else length
+    from = if typeof(from) == "number" then from else 1
+    to = if typeof(to) == "number" then to else length
 
     if from < 1 then
         from += length

@@ -1,10 +1,10 @@
 --[=[
-	@function some
+
 	@within Array
 
-	@param array {T} -- The array to check.
-	@param predicate (value: T, index: number, array: {T}) -> any -- The predicate to use to check the array.
-	@return boolean -- Whether some item in the array passes the predicate.
+
+
+
 
 	Checks whether some item in the array passes the predicate.
 
@@ -24,7 +24,7 @@ local function some<T>(
     array: { T },
     predicate: (value: T, index: number, array: { T }) -> any
 ): boolean
-    for index, value in ipairs(array) do
+    for index, value in array do
         if predicate(value, index, array) then
             return true
         end

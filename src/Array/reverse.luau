@@ -1,9 +1,9 @@
 --[=[
-	@function reverse
+
 	@within Array
 
-	@param array {T} -- The array to reverse.
-	@return {T} -- The reversed array.
+
+
 
 	Reverses the order of the items in an array.
 

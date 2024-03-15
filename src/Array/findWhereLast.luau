@@ -1,11 +1,11 @@
 --[=[
-	@function findWhereLast
+
 	@within Array
 
-	@param array {T} -- The array to search.
-	@param predicate (value: T, index: number, array: {T}) -> any -- The predicate to use to check the array.
-	@param from? number -- The index to start searching from.
-	@return number -- The index of the last item in the array that matches the predicate.
+
+
+
+
 
 	Finds the index of the last item in the array that passes the predicate.
 
@@ -28,7 +28,7 @@ local function findWhereLast<T>(
 ): number?
     local length = #array
 
-    from = if type(from) == "number" then if from < 1 then length + from else from else length
+    from = if typeof(from) == "number" then if from < 1 then length + from else from else length
 
     for index = from, 1, -1 do
         if predicate(array[index], index, array) then

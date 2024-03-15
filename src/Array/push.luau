@@ -1,10 +1,10 @@
 --[=[
-	@function push
+
 	@within Array
 
-	@param array {T} -- The array to push an element to.
-	@param ... ...T -- The elements to push.
-	@return {T} -- The array with the pushed elements.
+
+
+
 
 	Adds elements to the end of the array.
 
@@ -21,11 +21,11 @@
 local function push<T>(array: { T }, ...: T): { T }
     local result = {}
 
-    for _, value in ipairs(array) do
+    for _, value in array do
         table.insert(result, value)
     end
 
-    for _, value in ipairs({ ... }) do
+    for _, value in { ... } do
         table.insert(result, value)
     end
 

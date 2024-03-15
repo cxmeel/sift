@@ -1,14 +1,12 @@
-local Sift = script.Parent.Parent
-
-local Util = require(Sift.Util)
+local Util = require("@sift/Util")
 
 --[=[
-	@function count
+
 	@within Array
 
-	@param array {T} -- The array to count the number of items in.
-	@param predicate? (value: T, index: number, array: {T}) -> any -- The predicate to use to filter the array.
-	@return number -- The number of items in the array.
+
+
+
 
 	Counts the number of items in an array.
 
@@ -27,9 +25,9 @@ local function count<T>(
 ): number
     local counter = 0
 
-    predicate = if type(predicate) == "function" then predicate else Util.func.truthy
+    predicate = if typeof(predicate) == "function" then predicate else Util.func.truthy
 
-    for index, value in ipairs(array) do
+    for index, value in array do
         if predicate(value, index, array) then
             counter += 1
         end

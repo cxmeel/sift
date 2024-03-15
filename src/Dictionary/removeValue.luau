@@ -1,10 +1,10 @@
 --[=[
-  @function removeValue
+
   @within Dictionary
 
-  @param dictionary {[K]: V} -- The dictionary to remove the value from.
-  @param value V -- The value to remove.
-  @return {[K]: V} -- The dictionary without the given value.
+
+
+
 
   Removes the given value from the given dictionary.
 
@@ -18,7 +18,7 @@
 local function removeValue<K, V>(dictionary: { [K]: V }, value: V): { [K]: V }
     local result = {}
 
-    for key, v in pairs(dictionary) do
+    for key, v in dictionary do
         if v ~= value then
             result[key] = v
         end

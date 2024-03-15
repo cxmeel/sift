@@ -1,9 +1,7 @@
-local Sift = script.Parent.Parent
-
-local Util = require(Sift.Util)
+local Util = require("@sift/Util")
 
 local function compareDeep(a, b)
-    if type(a) ~= "table" or type(b) ~= "table" then
+    if typeof(a) ~= "table" or typeof(b) ~= "table" then
         return a == b
     end
 
@@ -14,7 +12,7 @@ local function compareDeep(a, b)
     end
 
     for i = 1, aLength do
-        if not compareDeep(a[i], b[i]) then
+        if not compareDeep(a[i] :: any, b[i] :: any) then
             return false
         end
     end
@@ -23,11 +21,11 @@ local function compareDeep(a, b)
 end
 
 --[=[
-	@function equalsDeep
+
 	@within Array
 
-	@param ... ...{any} -- The arrays to compare.
-	@return boolean -- Whether the arrays are equal.
+
+
 
 	Compares two arrays for equality using deep comparison.
 
@@ -41,17 +39,15 @@ end
 	```
 ]=]
 local function equalsDeep<T>(...: { T }): boolean
-    if Util.equalObjects(...) then
+    if Util.areEqual(...) then
         return true
     end
 
-    local totalArgs = select("#", ...)
-    local firstItem = select(1, ...)
+    local args = { ... }
+    local first = table.remove(args, 1) :: { T }
 
-    for i = 2, totalArgs do
-        local item = select(i, ...)
-
-        if not compareDeep(firstItem, item) then
+    for _, array in args do
+        if not compareDeep(first, array) then
             return false
         end
     end

@@ -1,51 +1,30 @@
-local _T = require(script.Parent.Parent.Types)
+local INF = newproxy()
 
 --[=[
-  @function flatten
-  @within Dictionary
+    @within Dictionary
 
-  @param dictionary T -- The dictionary to flatten.
-  @param depth? number -- The depth to flatten the dictionary to.
-  @return T -- The flattened dictionary.
-
-  Flattens a dictionary. If depth is not specified, it will flatten the dictionary as far as it can go.
-
-  ```lua
-  local dictionary = {
-    hello = "world",
-    goodbye = {
-      world = "hello",
-      roblox = {
-        yes = "no",
-        no = "yes",
-      }
-    }
-  }
-
-  local new = Flatten(dictionary) -- { hello = "world", world = "hello", yes = "no", no = "yes" }
-  local new = Flatten(dictionary, 1) -- { hello = "world", world = "hello", roblox = { yes = "no", no = "yes" } }
-  ```
+    Flattens nested dictionaries into a single dictionary. The `depth` parameter specifies the depth of the flattening. If `depth` is not specified, the dictionary is flattened as much as possible.
 ]=]
-local function flatten(dictionary: _T.AnyDictionary, depth: number?): _T.AnyDictionary
-    depth = if type(depth) == "number" then depth else math.huge
+local function flatten<K, V>(dictionary: { [any]: any }, depth: number?): { [K]: V }
+    local withDepth = depth or INF
+    local out = {}
 
-    local result = {}
+    for key, value in dictionary do
+        if typeof(value) == "table" and (withDepth == INF or withDepth > 0) then
+            local useDepth = withDepth == INF and INF or withDepth - 1
+            local nested = flatten(value, useDepth)
 
-    for key, value in pairs(dictionary :: _T.AnyDictionary) do
-        if type(value) == "table" and depth > 0 then
-            local nested = flatten(value, depth - 1)
-
-            for resultKey, resultValue in pairs(result) do
-                nested[resultKey] = resultValue
+            for nestedKey, nestedValue in nested do
+                out[nestedKey] = nestedValue
             end
 
-            result = nested
-        else
-            result[key] = value
+            continue
         end
+
+        out[key] = value
     end
 
-    return result
+    return out
 end
 
 return flatten

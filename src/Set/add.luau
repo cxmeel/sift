@@ -1,10 +1,10 @@
 --[=[
-  @function add
+
   @within Set
 
-  @param set { [T]: boolean } -- The set to add the value to.
-  @param ... ...T -- The values to add.
-  @return { [T]: boolean } -- The set with the values added.
+
+
+
 
   Adds values to a set.
 
@@ -17,11 +17,11 @@
 local function add<T>(set: { [T]: boolean }, ...: T): { [T]: boolean }
     local result = {}
 
-    for key, _ in pairs(set) do
+    for key, _ in set do
         result[key] = true
     end
 
-    for _, value in ipairs({ ... }) do
+    for _, value in { ... } do
         result[value] = true
     end
 

@@ -1,18 +1,15 @@
 --[=[
-	@function copy
 	@within Array
-
-	@param array {T} -- The array to copy.
-	@return {T} -- The copied array.
 
 	Copies an array.
 
+    #### Aliases
+
+    `clone`
+
 	```lua
-	local array = { 1, 2, 3 }
-
-	local new = Copy(array) -- { 1, 2, 3 }
-
-	print(new == array) -- false
+	copy({ 1, 2, 3 }) -- { 1, 2, 3 }
 	```
 ]=]
-return table.clone
+local copy = table.clone
+return copy
