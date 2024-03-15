@@ -34,6 +34,7 @@ local array = {
     flatten = require("./flatten"),
     freeze = require("./freeze"),
     freezeDeep = require("./freezeDeep"),
+    group = require("./group"),
     includes = require("./includes"),
     insert = require("./insert"),
     is = require("./is"),
