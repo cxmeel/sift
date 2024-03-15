@@ -7,7 +7,6 @@
 [sift/releases]: https://github.com/cxmeel/sift/releases
 [sift/wally]: https://wally.run/package/cxmeel/sift
 [sift/roblox]: https://www.roblox.com/library/9486684823
-[sift/itch.io]: https://cxmeel.itch.io/sift
 [sift/npm]: https://npmjs.com/package/@rbxts/sift
 
 <!-- Shields -->
@@ -19,7 +18,6 @@
 <!-- Badges -->
 
 [badges/github]: https://raw.githubusercontent.com/gist/cxmeel/56c5f18b229ca1e61feb6eb5fb149f43/raw/githubSource.svg
-[badges/itch]: https://raw.githubusercontent.com/gist/cxmeel/56c5f18b229ca1e61feb6eb5fb149f43/raw/itch.svg
 [badges/npm]: https://raw.githubusercontent.com/gist/cxmeel/56c5f18b229ca1e61feb6eb5fb149f43/raw/npm.svg
 [badges/roblox]: https://raw.githubusercontent.com/gist/cxmeel/56c5f18b229ca1e61feb6eb5fb149f43/raw/roblox.svg
 
@@ -28,13 +26,13 @@
 <!-- markdownlint-disable-next-line MD033 -->
 <div align="center">
 
-[![Source code][badges/github]][sift] [![NPM Package][badges/npm]][sift/npm] [![Itch.io store page][badges/itch]][sift/itch.io] [![Roblox library][badges/roblox]][sift/roblox]
+[![Source code][badges/github]][sift] [![NPM Package][badges/npm]][sift/npm] [![Roblox library][badges/roblox]][sift/roblox]
 
 [![Latest GitHub version][shields/github-release]][sift/releases] [![Latest Wally version][shields/wally]][sift/wally] [![Latest NPM version][shields/npm]][sift/npm]
 
 </div>
 
-Immutable data library for Luau and roblox-ts.
+Immutable data library for Luau, Roblox and roblox-ts.
 
 Heavily based on [@freddylist's Llama][freddylist/llama] library, which is no longer maintained.
 
@@ -53,9 +51,7 @@ This will remain the same until v1.x.
 
 ## Quick Start
 
-Sift is available from [Wally][sift/wally], [Itch.io][sift/itch.io], the [Roblox Library][sift/roblox], and [GitHub releases][sift/releases].
-
-While Sift is 100% free and open source, if you feel like sponsoring, Sift is also available on [Itch.io][sift/itch.io].
+Sift is available from [Wally][sift/wally], the [Roblox Library][sift/roblox] and [GitHub releases][sift/releases].
 
 ### Wally
 
@@ -65,10 +61,10 @@ Wally is a CLI package manager (much like NPM, Yarn or Cargo) for Roblox by @Upl
 # wally.toml
 
 [dependencies]
-Sift = "cxmeel/sift@0.0.X" # Replace with current version number
+Sift = "csqrl/sift@X.X.X" # Replace with current version number
 ```
 
-```shell
+```sh
 wally install
 ```
 
@@ -76,15 +72,18 @@ wally install
 
 v0.0.1 of Sift includes TypeScript typings. This means Sift is now compatible with roblox-ts. Refer to the Luau docs for API details.
 
-```shell
+```sh
 npm install @rbxts/sift
 ```
 
 ```ts
 // example.ts
-import Sift from "@rbxts/sift"
+import { None, Dictionary } from "@rbxts/sift"
 
-Sift.Dictionary.merge({ a: 1, c: 2 }, { b: 3, c: Sift.None }) // { a: 1, b: 3 }
+Dictionary.merge(
+    { a: 1, c: 2 },
+    { b: 3, c: None }
+) // { a: 1, b: 3 }
 ```
 
 ### Manual Installation
