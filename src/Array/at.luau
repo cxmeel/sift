@@ -1,4 +1,3 @@
---!strict
 --[=[
 	@function at
 	@within Array
@@ -12,18 +11,18 @@
 	```lua
 	local array = { 1, 2, 3 }
 
-	local value = At(array, 1) -- 1
-	local value = At(array, 0) -- 3
+	at(array, 1) -- 1
+	at(array, 0) -- 3
 	```
 ]=]
 local function at<T>(array: { T }, index: number): T
-	local length = #array
+    local length = #array
 
-	if index < 1 then
-		index += length
-	end
+    if index < 1 then
+        index += length
+    end
 
-	return array[index]
+    return array[index]
 end
 
 return at

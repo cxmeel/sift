@@ -1,4 +1,3 @@
---!strict
 --[=[
   @function flip
   @within Dictionary
@@ -15,13 +14,13 @@
   ```
 ]=]
 local function flip<K, V>(dictionary: { [K]: V }): { [V]: K }
-	local result = {}
+    local result = {}
 
-	for key, value in pairs(dictionary) do
-		result[value] = key
-	end
+    for key, value in pairs(dictionary) do
+        result[value] = key
+    end
 
-	return result
+    return result
 end
 
 return flip

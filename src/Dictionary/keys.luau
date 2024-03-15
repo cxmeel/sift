@@ -1,4 +1,3 @@
---!strict
 --[=[
   @function keys
   @within Dictionary
@@ -15,13 +14,13 @@
   ```
 ]=]
 local function keys<K, V>(dictionary: { [K]: V }): { K }
-	local result = {}
+    local result = {}
 
-	for key in pairs(dictionary) do
-		table.insert(result, key)
-	end
+    for key in pairs(dictionary) do
+        table.insert(result, key)
+    end
 
-	return result
+    return result
 end
 
 return keys

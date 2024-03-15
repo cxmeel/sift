@@ -1,4 +1,3 @@
---!strict
 --[=[
   @function delete
   @within Set
@@ -18,17 +17,17 @@
   ```
 ]=]
 local function delete<T>(set: { [T]: boolean }, ...: T): { [T]: boolean }
-	local result = {}
+    local result = {}
 
-	for key, _ in pairs(set) do
-		result[key] = true
-	end
+    for key, _ in pairs(set) do
+        result[key] = true
+    end
 
-	for _, value in ipairs({ ... }) do
-		result[value] = nil
-	end
+    for _, value in ipairs({ ... }) do
+        result[value] = nil
+    end
 
-	return result
+    return result
 end
 
 return delete

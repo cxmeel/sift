@@ -1,4 +1,3 @@
---!strict
 --[=[
 	@function shift
 	@within Array
@@ -18,16 +17,16 @@
 	```
 ]=]
 local function shift<T>(array: { T }, count: number?): { T }
-	local length = #array
-	local result = {}
+    local length = #array
+    local result = {}
 
-	count = if type(count) == "number" then count + 1 else 2
+    count = if type(count) == "number" then count + 1 else 2
 
-	for i = count, length do
-		table.insert(result, array[i])
-	end
+    for i = count, length do
+        table.insert(result, array[i])
+    end
 
-	return result
+    return result
 end
 
 return shift

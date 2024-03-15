@@ -1,4 +1,3 @@
---!strict
 --[=[
   @function map
   @within Set
@@ -18,17 +17,17 @@
   ```
 ]=]
 local function map<T, U>(set: { [T]: boolean }, mapper: (T, { [T]: boolean }) -> U): { [U]: boolean }
-	local result = {}
+    local result = {}
 
-	for key, _ in pairs(set) do
-		local mappedKey = mapper(key, set)
+    for key, _ in pairs(set) do
+        local mappedKey = mapper(key, set)
 
-		if mappedKey ~= nil then
-			result[mappedKey] = true
-		end
-	end
+        if mappedKey ~= nil then
+            result[mappedKey] = true
+        end
+    end
 
-	return result
+    return result
 end
 
 return map

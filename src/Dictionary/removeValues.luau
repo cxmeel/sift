@@ -1,4 +1,3 @@
---!strict
 local Sift = script.Parent.Parent
 
 local ToSet = require(Sift.Array.toSet)
@@ -21,16 +20,16 @@ local ToSet = require(Sift.Array.toSet)
   ```
 ]=]
 local function removeValues<K, V>(dictionary: { [K]: V }, ...: V): { [K]: V }
-	local values = ToSet({ ... })
-	local result = {}
+    local values = ToSet({ ... })
+    local result = {}
 
-	for key, value in pairs(dictionary) do
-		if not values[value] then
-			result[key] = value
-		end
-	end
+    for key, value in pairs(dictionary) do
+        if not values[value] then
+            result[key] = value
+        end
+    end
 
-	return result
+    return result
 end
 
 return removeValues

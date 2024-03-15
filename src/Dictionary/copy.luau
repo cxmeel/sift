@@ -1,4 +1,3 @@
---!strict
 --[=[
   @function copy
   @within Dictionary

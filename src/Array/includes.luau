@@ -1,4 +1,3 @@
---!strict
 local Find = require(script.Parent.find)
 
 --[=[
@@ -26,7 +25,7 @@ local Find = require(script.Parent.find)
 	```
 ]=]
 local function includes<T>(array: { T }, value: any, from: number?): boolean
-	return Find(array, value, from) ~= nil
+    return Find(array, value, from) ~= nil
 end
 
 return includes

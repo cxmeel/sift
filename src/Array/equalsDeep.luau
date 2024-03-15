@@ -1,26 +1,25 @@
---!strict
 local Sift = script.Parent.Parent
 
 local Util = require(Sift.Util)
 
 local function compareDeep(a, b)
-	if type(a) ~= "table" or type(b) ~= "table" then
-		return a == b
-	end
+    if type(a) ~= "table" or type(b) ~= "table" then
+        return a == b
+    end
 
-	local aLength = #a
+    local aLength = #a
 
-	if #b ~= aLength then
-		return false
-	end
+    if #b ~= aLength then
+        return false
+    end
 
-	for i = 1, aLength do
-		if not compareDeep(a[i], b[i]) then
-			return false
-		end
-	end
+    for i = 1, aLength do
+        if not compareDeep(a[i], b[i]) then
+            return false
+        end
+    end
 
-	return true
+    return true
 end
 
 --[=[
@@ -42,22 +41,22 @@ end
 	```
 ]=]
 local function equalsDeep<T>(...: { T }): boolean
-	if Util.equalObjects(...) then
-		return true
-	end
+    if Util.equalObjects(...) then
+        return true
+    end
 
-	local totalArgs = select("#", ...)
-	local firstItem = select(1, ...)
+    local totalArgs = select("#", ...)
+    local firstItem = select(1, ...)
 
-	for i = 2, totalArgs do
-		local item = select(i, ...)
+    for i = 2, totalArgs do
+        local item = select(i, ...)
 
-		if not compareDeep(firstItem, item) then
-			return false
-		end
-	end
+        if not compareDeep(firstItem, item) then
+            return false
+        end
+    end
 
-	return true
+    return true
 end
 
 return equalsDeep

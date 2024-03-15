@@ -1,13 +1,12 @@
---!strict
 local copy = require(script.Parent.copy)
 
 type Callback<K, V> = (key: K) -> V
 type Updater<K, V> = (value: V, key: K) -> V
 
 local function call<K, V>(callback: Callback<K, V>, key: K)
-	if type(callback) == "function" then
-		return callback(key)
-	end
+    if type(callback) == "function" then
+        return callback(key)
+    end
 end
 
 --[=[
@@ -37,24 +36,24 @@ end
   ```
 ]=]
 local function update<K, V, U, C>(
-	dictionary: { [K]: V },
-	key: K,
-	updater: ((value: V, key: K) -> U)?,
-	callback: ((key: K) -> C)?
+    dictionary: { [K]: V },
+    key: K,
+    updater: ((value: V, key: K) -> U)?,
+    callback: ((key: K) -> C)?
 ): { [K]: V & U & C }
-	local result = copy(dictionary)
+    local result = copy(dictionary)
 
-	if result[key] ~= nil then
-		if updater then
-			result[key] = updater(result[key], key)
-		end
-	else
-		if callback then
-			result[key] = call(callback, key)
-		end
-	end
+    if result[key] ~= nil then
+        if updater then
+            result[key] = updater(result[key], key)
+        end
+    else
+        if callback then
+            result[key] = call(callback, key)
+        end
+    end
 
-	return result
+    return result
 end
 
 return update

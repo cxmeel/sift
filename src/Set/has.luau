@@ -1,4 +1,3 @@
---!strict
 --[=[
   @function has
   @within Set
@@ -16,7 +15,7 @@
   ```
 ]=]
 local function has<T>(set: { [T]: boolean }, value: any): boolean
-	return set[value] == true
+    return set[value] == true
 end
 
 return has

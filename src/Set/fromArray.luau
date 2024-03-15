@@ -1,4 +1,3 @@
---!strict
 --[=[
   @function fromArray
   @within Set
@@ -18,13 +17,13 @@
   ```
 ]=]
 local function fromArray<T>(array: { T }): { [T]: boolean }
-	local result = table.create(#array)
+    local result = table.create(#array)
 
-	for _, value in ipairs(array) do
-		result[value] = true
-	end
+    for _, value in ipairs(array) do
+        result[value] = true
+    end
 
-	return result
+    return result
 end
 
 return fromArray

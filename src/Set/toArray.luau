@@ -1,4 +1,3 @@
---!strict
 --[=[
   @function toArray
   @within Set
@@ -15,13 +14,13 @@
   ```
 ]=]
 local function toArray<T>(set: { [T]: boolean }): { T }
-	local result = {}
+    local result = {}
 
-	for key, _ in pairs(set) do
-		table.insert(result, key)
-	end
+    for key, _ in pairs(set) do
+        table.insert(result, key)
+    end
 
-	return result
+    return result
 end
 
 return toArray

@@ -1,4 +1,3 @@
---!strict
 --[=[
   @function create
   @within Array

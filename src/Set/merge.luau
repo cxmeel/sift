@@ -1,4 +1,3 @@
---!strict
 --[=[
   @function merge
   @within Set
@@ -18,21 +17,21 @@
   ```
 ]=]
 local function merge<T>(...: any): { [T]: boolean }
-	local result = {}
+    local result = {}
 
-	for setIndex = 1, select("#", ...) do
-		local set = select(setIndex, ...)
+    for setIndex = 1, select("#", ...) do
+        local set = select(setIndex, ...)
 
-		if type(set) ~= "table" then
-			continue
-		end
+        if type(set) ~= "table" then
+            continue
+        end
 
-		for key, _ in pairs(set) do
-			result[key] = true
-		end
-	end
+        for key, _ in pairs(set) do
+            result[key] = true
+        end
+    end
 
-	return result
+    return result
 end
 
 return merge

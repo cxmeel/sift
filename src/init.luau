@@ -1,58 +1,42 @@
---!strict
-local Types = require(script.Types)
+local None = require("./None")
+local Util = require("./Util")
 
 --[=[
 	@class Sift
 
-	Sift is a library for manipulating arrays. It provides a number of
-	functions for manipulating arrays (lists), dictionaries, and sets.
-
-	Sift is comprised of a number of submodules. Each submodule provides
-	a number of functions for manipulating a specific type of data, and
-	can be accessed via their respective names within the Sift module
-	(e.g. `Sift.Array.At()`), or accessed directly (e.g. `local At = require(Sift.Array.At)`).
-
-	Some methods and modules also have aliases, which can are documented in the
-	corresponding submodule/method's documentation.
-
-	See the individual submodule pages for full documentation.
-
-	The Luau types `Dictionary<K, V>`, `Array<T>` (aliased as `List<T>`) and `Set<T>` are exported from the Sift module (e.g. they can be used via `Sift.Array<string>`), but are also available from [Sift.Types].
+	Sift is a library for working with immutable data structures in Lua. It provides a set of methods for working with arrays, dictionaries, and sets, as well as a few utility functions for working with objects.
 ]=]
-local Sift = {
-	Array = require(script.Array),
-	Dictionary = require(script.Dictionary),
-	Set = require(script.Set),
+local sift = {
+    Array = require("./Array"),
+    Dictionary = require("./Dictionary"),
+    Set = require("./Set"),
 
-	None = require(script.None),
-	Types = require(script.Types),
+    None = None,
 
-	equalObjects = require(script.Util.equalObjects),
-	isEmpty = require(script.Util.isEmpty),
+    equalObjects = Util.areEqual,
+    isEmpty = Util.isEmpty,
+    normalizeIndex = Util.normalizeIndex,
 }
 
-Sift.List = Sift.Array
+sift.List = sift.Array
 
+--- @within Sift
 --- @prop Array Array
---- @within Sift
 
---- @prop List Array
 --- @within Sift
+--- @prop List Array
 --- @tag Alias
 
+--- @within Sift
 --- @prop Dictionary Dictionary
---- @within Sift
 
+--- @within Sift
 --- @prop Set Set
---- @within Sift
 
---- @prop Types Types
---- @within Sift
-
-export type Dictionary<K, V> = Types.Dictionary<K, V>
-
-export type Array<T> = Types.Array<T>
+export type Dictionary<K, V> = { [K]: V }
+export type Array<T> = { T }
 export type List<T> = Array<T>
-export type Set<T> = Types.Set<T>
+export type Set<T> = Dictionary<T, boolean>
+export type None = None.None
 
-return Sift
+return sift

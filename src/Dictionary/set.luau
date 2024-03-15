@@ -1,4 +1,3 @@
---!strict
 local copy = require(script.Parent.copy)
 
 --[=[
@@ -19,11 +18,11 @@ local copy = require(script.Parent.copy)
   ```
 ]=]
 local function set<K, V>(dictionary: { [K]: V }, key: K, value: V): { [K]: V }
-	local result = copy(dictionary)
+    local result = copy(dictionary)
 
-	result[key] = value
+    result[key] = value
 
-	return result
+    return result
 end
 
 return set

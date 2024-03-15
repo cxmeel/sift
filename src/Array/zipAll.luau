@@ -1,8 +1,7 @@
---!strict
 local Sift = script.Parent.Parent
 
-local Reduce = require(script.Parent.reduce)
 local None = require(Sift.None)
+local Reduce = require(script.Parent.reduce)
 
 --[=[
 	@function zipAll
@@ -22,30 +21,30 @@ local None = require(Sift.None)
 	```
 ]=]
 local function zipAll<T>(...: { any }): T
-	local argCount = select("#", ...)
-	local arguments = { ... }
-	local result = {}
+    local argCount = select("#", ...)
+    local arguments = { ... }
+    local result = {}
 
-	if argCount == 0 then
-		return result
-	end
+    if argCount == 0 then
+        return result
+    end
 
-	local maxLength = Reduce(arguments, function(acc, val)
-		return math.max(acc, #val)
-	end, #arguments[1])
+    local maxLength = Reduce(arguments, function(acc, val)
+        return math.max(acc, #val)
+    end, #arguments[1])
 
-	for index = 1, maxLength do
-		local values = {}
+    for index = 1, maxLength do
+        local values = {}
 
-		for _, argArray in ipairs(arguments) do
-			local value = argArray[index]
-			table.insert(values, if value == nil then None else value)
-		end
+        for _, argArray in ipairs(arguments) do
+            local value = argArray[index]
+            table.insert(values, if value == nil then None else value)
+        end
 
-		table.insert(result, values)
-	end
+        table.insert(result, values)
+    end
 
-	return result
+    return result
 end
 
 return zipAll

@@ -1,4 +1,3 @@
---!strict
 local Copy = require(script.Parent.copy)
 
 --[=[
@@ -19,12 +18,15 @@ local Copy = require(script.Parent.copy)
 	end) -- { "e", "d", "c", "b", "a" }
 	```
 ]=]
-local function sort<T>(array: { T }, comparator: ((firstValue: T, secondValue: T) -> boolean)?): { T }
-	local result = Copy(array)
+local function sort<T>(
+    array: { T },
+    comparator: ((firstValue: T, secondValue: T) -> boolean)?
+): { T }
+    local result = Copy(array)
 
-	table.sort(result, comparator)
+    table.sort(result, comparator)
 
-	return result
+    return result
 end
 
 return sort

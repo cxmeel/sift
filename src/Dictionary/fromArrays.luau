@@ -1,4 +1,3 @@
---!strict
 --[=[
   @function fromArrays
   @within Dictionary
@@ -18,14 +17,14 @@
   ```
 ]=]
 local function fromArrays<K, V>(keys: { K }, values: { V }): { [K]: V }
-	local keysLength = #keys
-	local result = {}
+    local keysLength = #keys
+    local result = {}
 
-	for i = 1, keysLength do
-		result[keys[i]] = values[i]
-	end
+    for i = 1, keysLength do
+        result[keys[i]] = values[i]
+    end
 
-	return result
+    return result
 end
 
 return fromArrays

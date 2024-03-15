@@ -1,4 +1,3 @@
---!strict
 local Sift = script.Parent.Parent
 
 local CopyDeep = require(script.Parent.copyDeep)
@@ -26,27 +25,27 @@ local None = require(Sift.None)
 	```
 ]=]
 local function concatDeep<T>(...: any): { T }
-	local result = {}
+    local result = {}
 
-	for arrayIndex = 1, select("#", ...) do
-		local array = select(arrayIndex, ...)
+    for arrayIndex = 1, select("#", ...) do
+        local array = select(arrayIndex, ...)
 
-		if type(array) ~= "table" then
-			continue
-		end
+        if type(array) ~= "table" then
+            continue
+        end
 
-		for _, value in ipairs(array) do
-			if value ~= None then
-				if type(value) == "table" then
-					table.insert(result, CopyDeep(value))
-				else
-					table.insert(result, value)
-				end
-			end
-		end
-	end
+        for _, value in ipairs(array) do
+            if value ~= None then
+                if type(value) == "table" then
+                    table.insert(result, CopyDeep(value))
+                else
+                    table.insert(result, value)
+                end
+            end
+        end
+    end
 
-	return result
+    return result
 end
 
 return concatDeep

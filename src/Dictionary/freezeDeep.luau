@@ -1,4 +1,3 @@
---!strict
 local _T = require(script.Parent.Parent.Types)
 
 --[=[
@@ -20,19 +19,19 @@ local _T = require(script.Parent.Parent.Types)
   ```
 ]=]
 local function freezeDeep(dictionary: _T.AnyDictionary): _T.AnyDictionary
-	local result = {}
+    local result = {}
 
-	for key, value in pairs(dictionary) do
-		if type(value) == "table" then
-			result[key] = freezeDeep(value)
-		else
-			result[key] = value
-		end
-	end
+    for key, value in pairs(dictionary) do
+        if type(value) == "table" then
+            result[key] = freezeDeep(value)
+        else
+            result[key] = value
+        end
+    end
 
-	table.freeze(result)
+    table.freeze(result)
 
-	return result
+    return result
 end
 
 return freezeDeep

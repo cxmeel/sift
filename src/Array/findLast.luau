@@ -1,4 +1,3 @@
---!strict
 --[=[
 	@function findLast
 	@within Array
@@ -18,17 +17,17 @@
 	```
 ]=]
 local function findLast<T>(array: { T }, value: any?, from: number?): number?
-	local length = #array
+    local length = #array
 
-	from = if type(from) == "number" then if from < 1 then length + from else from else length
+    from = if type(from) == "number" then if from < 1 then length + from else from else length
 
-	for index = from, 1, -1 do
-		if array[index] == value then
-			return index
-		end
-	end
+    for index = from, 1, -1 do
+        if array[index] == value then
+            return index
+        end
+    end
 
-	return
+    return
 end
 
 return findLast
