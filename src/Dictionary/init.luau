@@ -36,6 +36,7 @@ local dictionary = {
     map = require("./map"),
     merge = require("./merge"),
     mergeDeep = require("./mergeDeep"),
+    patchDiff = require("./patchDiff"),
     removeKey = require("./removeKey"),
     removeKeys = require("./removeKeys"),
     removeValue = require("./removeValue"),
