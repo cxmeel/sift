@@ -29,6 +29,7 @@ local dictionary = {
     freezeDeep = require("./freezeDeep"),
     fromArrays = require("./fromArrays"),
     fromEntries = require("./fromEntries"),
+    get = require("./get"),
     has = require("./has"),
     includes = require("./includes"),
     keys = require("./keys"),
