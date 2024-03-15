@@ -1,3 +1,5 @@
+local get = require("./get")
+
 --[=[
     @within Dictionary
 
@@ -7,8 +9,8 @@
     has({ a = 1, b = 2 }, "a") -- true
     ```
 ]=]
-local function has<K, V>(dictionary: { [K]: V }, key: K): boolean
-    return dictionary[key] ~= nil
+local function has<K, V>(dictionary: { [K]: V }, key: K, separated: string?): boolean
+    return get(dictionary, key, separated) ~= nil
 end
 
 return has
