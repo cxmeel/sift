@@ -13,7 +13,7 @@
 <!-- Shields -->
 
 [shields/github-release]: https://img.shields.io/github/v/release/cxmeel/sift?label=latest+release&style=flat
-[shields/wally]: https://img.shields.io/endpoint?url=https://runkit.io/clockworksquirrel/wally-version-shield/branches/master/cxmeel/sift&color=blue&label=wally&style=flat
+[shields/wally]: https://img.shields.io/endpoint?url=https://runkit.io/clockworksquirrel/wally-version-shield/branches/master/csqrl/sift&color=blue&label=wally&style=flat
 [shields/npm]: https://img.shields.io/npm/v/@rbxts/sift?style=flat
 
 <!-- Badges -->
