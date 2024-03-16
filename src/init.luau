@@ -13,12 +13,13 @@ local sift = {
 
     None = None,
 
-    equalObjects = Util.areEqual,
     isEmpty = Util.isEmpty,
+    areEqual = Util.areEqual,
     resolveIndex = Util.resolveIndex,
 }
 
 sift.List = sift.Array
+sift.equalObjects = sift.areEqual
 
 --- @within Sift
 --- @prop Array Array
