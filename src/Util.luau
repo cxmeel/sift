@@ -33,6 +33,10 @@ end
     ```
 ]=]
 local function areEqual(...: any): boolean
+    if select("#", ...) < 2 then
+        return true
+    end
+
     local args = { ... }
     local first = table.remove(args, 1)
 
@@ -48,7 +52,7 @@ end
 --[=[
     @within Util
 
-    Normalizes an index to be within the bounds of a given length. If the index is 0, it will be converted to 1. If the index is negative, it will be converted to a positive index.
+    Normalizes an index to be within the bounds of a given length. If the index is 0, it will be converted to 1. If the index is negative, it will be converted to a positive index. Omitting `index` will default to 1.
 
     ```lua
     resolveIndex(5, 1) -- 1
@@ -56,8 +60,8 @@ end
     resolveIndex(5, -1) -- 5
     ```
 ]=]
-local function resolveIndex(length: number, index: number): number
-    if index == 0 then
+local function resolveIndex(length: number, index: number?): number
+    if not index or index == 0 then
         return 1
     elseif index < 0 then
         return index + length + 1
