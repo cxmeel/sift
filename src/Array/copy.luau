@@ -1,5 +1,8 @@
 --[=[
 	@within Array
+    @function copy
+    @param array { T }
+    @return { T }
 
 	Copies an array.
 

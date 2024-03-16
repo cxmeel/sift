@@ -2,6 +2,9 @@ local copy = require("./copy")
 
 --[=[
 	@within Array
+    @function copyDeep
+    @param array { T }
+    @return { T }
 
 	Copies an array, with deep copies of all nested arrays.
 
