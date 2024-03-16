@@ -1,3 +1,5 @@
+local copy = require("./copy")
+
 --[=[
 	@within Array
 
@@ -12,7 +14,7 @@
 	```
 ]=]
 local function copyDeep<T>(array: { T }): { T }
-    local result = table.clone(array)
+    local result = copy(array)
 
     for index, value in array do
         if typeof(value) == "table" then

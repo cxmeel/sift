@@ -1,38 +1,35 @@
 --[=[
     @within Array
 
-	Freezes the entire array, making it read-only, including all
-	nested arrays.
+    Recursively freezes an array and its nested arrays. Using [Array.freeze] will only freeze the top level of the array, leaving nested arrays mutable.
 
-	```lua
-	local frozen = freezeDeep({
-        { 1, 2, 3 },
-        { 4, 5, 6 },
+    ```lua
+    local frozen = freezeDeep({
+        { "anna", "elsa" },
+        { "kristoff", "sven" },
+        { "olaf", "marshmallow" },
     })
 
-	frozen[1][2] = 4 -- error!
-	frozen[2][1] = 7 -- error!
-
-    table.insert(frozen[1], 4) -- error!
-    table.remove(frozen[2], 7) -- error!
-	```
+    frozen[1][2] = "hans" -- error!
+    table.insert(frozen[3], "bruni") -- error!
+    table.insert(frozen, { "oaken", "samantha" }) -- error!
+    ```
 ]=]
 local function freezeDeep<T>(array: { T }): { T }
-    local result = {}
+    local out: { T } = {}
 
-    for i = 1, #array do
-        local value = array[i]
-
+    for _, value in array do
         if typeof(value) == "table" then
-            table.insert(result, freezeDeep(value))
-        else
-            table.insert(result, value)
+            local nested: any = freezeDeep(value)
+            table.insert(out, nested)
+
+            continue
         end
+
+        table.insert(out, value)
     end
 
-    table.freeze(result)
-
-    return result
+    return table.freeze(out)
 end
 
 return freezeDeep

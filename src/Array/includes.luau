@@ -17,8 +17,8 @@ local find = require("./find")
     includes(array, "hello", 2) -- false
 	```
 ]=]
-local function includes<T>(array: { T }, value: any, from: number?): boolean
-    return find(array, value, from) ~= nil
+local function includes<T>(array: { T }, value: any, startAt: number?): boolean
+    return find(array, value, startAt) ~= nil
 end
 
 return includes

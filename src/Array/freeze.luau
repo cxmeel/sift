@@ -1,22 +1,21 @@
 local copy = require("./copy")
 
 --[=[
-  @within Array
+    @within Array
 
-  Freezes the top level of the array, making it read-only.
+    Returns a shallow copy of the array that is frozen. This means that the array cannot be modified in any way; i.e. it is read-only. Use [Array.freezeDeep] to freeze nested arrays as well.
 
-  ```lua
-  local frozen = Freeze({ 1, 2, 3 })
+    ```lua
+    local frozen = freeze({ "anna", "elsa", "kristoff" })
 
-  frozen[1] = 2 -- error!
-  table.insert(frozen, 4) -- error!
-  ```
+    table.insert(frozen, "olaf") -- error!
+    frozen[4] = "oaken" -- error!
+    frozen[2] = "sven" -- error!
+    ```
 ]=]
 local function freeze<T>(array: { T }): { T }
-    local new = copy(array)
-    table.freeze(new)
-
-    return new
+    local out = copy(array)
+    return table.freeze(out)
 end
 
 return freeze

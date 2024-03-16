@@ -1,7 +1,9 @@
+local Util = require("@sift/Util")
+
 --[=[
     @within Array
 
-	Finds the index of the first item in the array that passes the predicate.
+	Finds the index of the first element in the array that satisfies the provided testing function. Otherwise, it returns `nil`.
 
 	```lua
 	findWhere({ 1, 2, 3 }, function(item)
@@ -11,20 +13,16 @@
 ]=]
 local function findWhere<T>(
     array: { T },
-    predicate: (value: T, index: number, array: { T }) -> any,
-    from: number?
+    predicate: (value: T, index: number, array: { T }) -> boolean,
+    startAt: number?
 ): number?
-    local length = #array
-
-    from = if typeof(from) == "number" then if from < 1 then length + from else from else 1
-
-    for index = from, #array do
+    for index = Util.resolveIndex(#array, startAt), #array do
         if predicate(array[index], index, array) then
             return index
         end
     end
 
-    return
+    return nil
 end
 
 return findWhere

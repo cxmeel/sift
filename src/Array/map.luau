@@ -1,3 +1,5 @@
+local None = require("@sift/None")
+
 --[=[
     @within Array
 
@@ -10,17 +12,19 @@
 	```
 ]=]
 local function map<T, U>(array: { T }, mapper: (value: T, index: number, array: { T }) -> U?): { U }
-    local mapped = {}
+    local out = {}
 
     for index, value in array do
-        local mappedValue = mapper(value, index, array)
+        local mapped = mapper(value, index, array)
 
-        if mappedValue ~= nil then
-            table.insert(mapped, mappedValue)
+        if mapped == None or mapped == nil then
+            continue
         end
+
+        table.insert(out, mapped)
     end
 
-    return mapped
+    return out
 end
 
 return map

@@ -1,3 +1,5 @@
+local reduce = require("./reduce")
+
 --[=[
 	@within Array
 
@@ -8,13 +10,10 @@
 	```
 ]=]
 local function toSet<T>(array: { T }): { [T]: boolean }
-    local set = {}
-
-    for _, value in array do
+    return reduce(array, function(set, value)
         set[value] = true
-    end
-
-    return set
+        return set
+    end, {})
 end
 
 return toSet

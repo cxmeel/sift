@@ -5,7 +5,7 @@ local toSet = require("./toSet")
 --[=[
   @within Array
 
-  Returns an array of values that are in the first array, but not in the other arrays.
+  Returns an array of values that are unique to the first array, and not present in any of the other arrays.
 
   #### Aliases
 
@@ -13,7 +13,7 @@ local toSet = require("./toSet")
 
   ```lua
   difference({ "hello", "world" }, { "goodbye", "world" })
-  -- { "world" }
+  -- { "hello" }
   ```
 ]=]
 local function difference<T>(...: { T }): { T }

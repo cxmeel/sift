@@ -1,9 +1,7 @@
-local Util = require("@sift/Util")
-
 --[=[
 	@within Array
 
-	Counts the number of items in an array.
+	Counts the number of items in an array. If a `predicate` function is provided, it will only count the items that pass the test.
 
 	```lua
 	count({ 1, 2, 3 }) -- 3
@@ -18,10 +16,8 @@ local function count<T>(
 ): number
     local counter = 0
 
-    predicate = if typeof(predicate) == "function" then predicate else Util.func.truthy
-
     for index, value in array do
-        if predicate(value, index, array) then
+        if not predicate or predicate(value, index, array) then
             counter += 1
         end
     end

@@ -3,7 +3,7 @@ local at = require("./at")
 --[=[
 	@within Array
 
-	Gets the first item in the array.
+	Returns the first element of an array.
 
 	```lua
 	first({ 1, 2, 3 }) -- 1

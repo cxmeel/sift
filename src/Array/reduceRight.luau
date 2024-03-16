@@ -1,37 +1,34 @@
+local None = require("@sift/None")
+
 --[=[
-	@within Array
+    @within Array
 
-	Reduces the array using the given reducer and initial accumulator value, starting from the end of the array. If no `initialReduction` value is given, the last item in the array is used.
+    Reduces an array into a single value from end to start.
 
-	```lua
-	reduceRight({ 1, 2, 3 }, function(acc, item)
-		return acc - item
-	end) -- 0
-	```
+    ```lua
+    reduceRight({ 1, 2, 3 }, function(accumulator, value)
+        return accumulator - value
+    end) -- 0
+    ```
 ]=]
 local function reduceRight<T, U>(
     array: { T },
-    reducer: (
-        acc: U,
-        value: T,
-        index: number,
-        array: { T }
-    ) -> U,
-    initReduction: U?
+    reducer: (acc: U, value: T, index: number) -> U,
+    initAccumulator: U?
 ): U
-    local result = initReduction
+    local out = initAccumulator :: U
     local start = #array
 
-    if result == nil then
-        result = array[start]
+    if out == nil or out == None then
+        out = array[start] :: any
         start -= 1
     end
 
     for index = start, 1, -1 do
-        result = reducer(result, array[index], index, array)
+        out = reducer(out, array[index], index)
     end
 
-    return result
+    return out
 end
 
 return reduceRight

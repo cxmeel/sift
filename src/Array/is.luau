@@ -1,17 +1,17 @@
 --[=[
-  @within Array
+    @within Array
 
-  Checks if the given object is an array. Empty tables are not considered arrays, as they could later be used as objects.
+    Checks if `value` is an array. An array is a table with a length greater than 0 and no keys other than integer keys from 1 to `#value`. Empty tables are not considered arrays, as they may be used as dictionaries.
 
-  ```lua
-  is({1, 2, 3}) -- true
-  is({a = 1, b = 2}) -- false
-  is({}) -- false
-  is("hello") -- false
-  ```
+    ```lua
+    is({ 1, 2, 3 }) -- true
+    is({ a = 1, b = 2, c = 3 }) -- false
+    is("hello") -- false
+    is({}) -- false
+    ```
 ]=]
-local function is(object: any): boolean
-    return typeof(object) == "table" and #object > 0 and next(object, #object) == nil
+local function is(value: any): boolean
+    return typeof(value) == "table" and #value > 0 and next(value, #value) == nil
 end
 
 return is

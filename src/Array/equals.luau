@@ -23,7 +23,7 @@ end
 --[=[
 	@within Array
 
-	Compares two arrays for equality.
+    Checks if all arrays are equal; i.e. they have the same length and the same elements in the same order.
 
 	```lua
 	local array1 = { 1, 2, 3 }

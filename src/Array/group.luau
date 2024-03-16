@@ -16,13 +16,13 @@ local function group<T, K>(
     local out = {}
 
     for index, value in array do
-        local key = grouper(value, index, array)
+        local groupKey = grouper(value, index, array)
 
-        if out[key] == nil then
-            out[key] = {}
+        if out[groupKey] == nil then
+            out[groupKey] = {}
         end
 
-        table.insert(out[key], value)
+        table.insert(out[groupKey], value)
     end
 
     return out

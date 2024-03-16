@@ -12,7 +12,7 @@ local partition = require("./partition")
 ]=]
 local function shift<T>(array: { T }, count: number?): ({ T }, { T })
     return partition(array, function(_, index)
-        return index <= (count or 1)
+        return index > (count or 1)
     end)
 end
 

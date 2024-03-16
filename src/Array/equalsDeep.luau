@@ -23,12 +23,12 @@ end
 --[=[
     @within Array
 
-	Compares two arrays for equality using deep comparison.
+	Compares two arrays for equality using deep comparison; i.e. they have the same length and the same elements in the same order, including nested arrays.
 
 	```lua
-	local array1 = { 1, 2, 3, { 4, 5 } }
-	local array2 = { 1, 2, 3, { 4, 5 } }
-    local array3 = { 1, 2, 3, { 4, 6 } }
+	local array1 = { { "a", "b" }, { "c", "d" } }
+	local array2 = { { "a", "b" }, { "c", "d" } }
+    local array3 = { { "a", "b" }, { "e", "f" } }
 
 	equalsDeep(array1, array2) -- true
 	equalsDeep(array1, array3) -- false

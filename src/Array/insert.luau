@@ -1,9 +1,10 @@
+local Util = require("@sift/Util")
+local splice = require("./splice")
+
 --[=[
 	@within Array
 
-	Inserts the given values into an array at the given index, shifting all values after it to the right. If the index is negative (or 0), it is counted from the end of the array.
-
-	If the index to insert at is out of range, the array is not modified.
+	Inserts new elements at the specified index within an array. An error will be thrown if the index is greater than the length of the array. Use [Array.push] to append.
 
 	```lua
 	insert({ "foo", "baz", "qux" }, 2, "bar")
@@ -11,36 +12,13 @@
 	```
 ]=]
 local function insert<T>(array: { T }, index: number, ...: T): { T }
-    local length = #array
+    index = Util.resolveIndex(#array, index)
 
-    updateme!
-
-    if index < 1 then
-        index += length + 1
+    if index > #array then
+        error(`index {index} out of bounds for array of length {#array}`)
     end
 
-    if index > length then
-        if index > length + 1 then
-            return array
-        end
-
-        index = length + 1
-        length += 1
-    end
-
-    local result = {}
-
-    for i = 1, length do
-        if i == index then
-            for _, value in { ... } do
-                table.insert(result, value)
-            end
-        end
-
-        table.insert(result, array[i])
-    end
-
-    return result
+    return splice(array, index, 0, ...)
 end
 
 return insert

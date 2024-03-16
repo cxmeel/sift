@@ -7,8 +7,8 @@ local copy = require("./copy")
 
 	```lua
     sort({ "a", "c", "b" }, function(a, b)
-        return a < b
-    }) -- { "a", "b", "c" }
+        return a > b
+    }) -- { "c", "b", "a" }
 	```
 ]=]
 local function sort<T>(array: { T }, sorter: (a: T, b: T) -> boolean): { T }

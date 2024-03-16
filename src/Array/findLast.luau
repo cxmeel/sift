@@ -1,28 +1,26 @@
+local Util = require("@sift/Util")
+
 --[=[
 	@within Array
 
-	Finds the index of the last item in the array that matches the value.
+	Searches the array backwards and returns the index of the last occurrence of `value`, or `nil` if not found. If `startAt` is provided, the search will start at that index.
 
     #### Aliases
 
     `lastIndexOf`
 
 	```lua
-	findLast({ "hello", "world", "hello" }, "hello") -- 3
+	findLast({ "a", "b", "c", "b", "d" }, "b") -- 4
 	```
 ]=]
-local function findLast<T>(array: { T }, value: any?, from: number?): number?
-    local length = #array
-
-    from = if typeof(from) == "number" then if from < 1 then length + from else from else length
-
-    for index = from, 1, -1 do
+local function findLast<T>(array: { T }, value: any?, startAt: number?): number?
+    for index = Util.resolveIndex(#array, startAt or -1), 1, -1 do
         if array[index] == value then
             return index
         end
     end
 
-    return
+    return nil
 end
 
 return findLast

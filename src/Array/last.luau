@@ -3,7 +3,7 @@ local at = require("./at")
 --[=[
 	@within Array
 
-	Gets the last element of the array.
+	Returns the last element of an array.
 
 	```lua
 	last({ 1, 2, 3 }) -- 3

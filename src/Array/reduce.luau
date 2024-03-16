@@ -1,32 +1,34 @@
+local None = require("@sift/None")
+
 --[=[
-	@within Array
+    @within Array
 
-	Reduces the array using the given reducer and initial accumulator value. If no `initialReduction` value is given, the first item in the array is used.
+    Reduces an array to a single value using a reducer function.
 
-	```lua
-	reduce({ 1, 2, 3 }, function(acc, value)
-		return acc + value
-	end) -- 6
-	```
+    ```lua
+    reduce({ 1, 2, 3 }, function(accumulator, value)
+        return accumulator + value
+    end) -- 6
+    ```
 ]=]
 local function reduce<T, U>(
     array: { T },
-    reducer: (acc: U, value: T, index: number, array: { T }) -> U,
-    initReduction: U?
+    reducer: (acc: U, value: T, index: number) -> U,
+    initAccumulator: U?
 ): U
-    local result = initReduction
+    local out = initAccumulator :: U
     local start = 1
 
-    if result == nil then
-        result = array[1]
+    if out == nil or out == None then
+        out = array[1] :: any
         start = 2
     end
 
     for index = start, #array do
-        result = reducer(result, array[index], index, array)
+        out = reducer(out, array[index], index)
     end
 
-    return result
+    return out
 end
 
 return reduce

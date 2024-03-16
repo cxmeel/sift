@@ -1,3 +1,5 @@
+local removeIndices = require("./removeIndices")
+
 --[=[
 	@within Array
 
@@ -8,20 +10,7 @@
 	```
 ]=]
 local function removeIndex<T>(array: { T }, index: number): { T }
-    local length = #array
-    local result = {}
-
-    if index < 1 then
-        index += length
-    end
-
-    for arrIndex, value in array do
-        if arrIndex ~= index then
-            table.insert(result, value)
-        end
-    end
-
-    return result
+    return removeIndices(array, index)
 end
 
 return removeIndex

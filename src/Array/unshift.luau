@@ -1,3 +1,5 @@
+local splice = require("./splice")
+
 --[=[
 	@within Array
 
@@ -12,13 +14,7 @@
 	```
 ]=]
 local function unshift<T>(array: { T }, ...: T): { T }
-    local result = { ... }
-
-    for _, value in array do
-        table.insert(result, value)
-    end
-
-    return result
+    return splice(array, 1, 0, ...)
 end
 
 return unshift

@@ -1,3 +1,5 @@
+local splice = require("./splice")
+
 --[=[
     @within Array
 
@@ -12,17 +14,7 @@
 	```
 ]=]
 local function push<T>(array: { T }, ...: T): { T }
-    local result = {}
-
-    for _, value in array do
-        table.insert(result, value)
-    end
-
-    for _, value in { ... } do
-        table.insert(result, value)
-    end
-
-    return result
+    return splice(array, #array + 1, 0, ...)
 end
 
 return push

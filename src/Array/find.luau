@@ -1,3 +1,5 @@
+local Util = require("@sift/Util")
+
 --[=[
 	@within Array
 
@@ -8,18 +10,12 @@
 	`indexOf`
 
 	```lua
-	local array = { "hello", "world", "hello" }
-
-	local index = Find(array, "hello") -- 1
-	local index = Find(array, "hello", 2) -- 3
+    find({ "a", "b", "c", "b", "d" }, "b") -- 2
+    find({ "a", "b", "c", "b", "d" }, "b", 3) -- 4
 	```
 ]=]
-local function find<T>(array: { T }, value: any?, from: number?): number?
-    local length = #array
-
-    from = if typeof(from) == "number" then if from < 1 then length + from else from else 1
-
-    return table.find(array, value, from)
+local function find<T>(array: { T }, value: T, startAt: number?): number?
+    return table.find(array, value, Util.resolveIndex(#array, startAt))
 end
 
 return find

@@ -1,11 +1,16 @@
 --[=[
-  @within Array
+    @within Array
+    @function create
+    @param count number
+    @param value T
+    @return { T }
 
-  Creates an array of the given length, filled with the given value.
-  This is just a wrapper around `table.create`.
+    Creates an array with `count` elements. If `value` is provided, all elements will be set to `value`.
 
-  ```lua
-  create(3, "Hello") -- { "Hello", "Hello", "Hello" }
-  ```
+    ```lua
+    create(3) -- { nil, nil, nil }
+    create(3, "Hello") -- { "Hello", "Hello", "Hello" }
+    ```
 ]=]
-return table.create
+local create = table.create
+return create

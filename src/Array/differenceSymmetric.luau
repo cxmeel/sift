@@ -3,18 +3,18 @@ local toArray = require("@sift/Set/toArray")
 local toSet = require("./toSet")
 
 --[=[
-  @within Array
+    @within Array
 
-  Returns an array of unique values across all given arrays; i.e. values that only appear once.
+    Returns an array of unique values across all given arrays; i.e. values that only appear once.
 
-  #### Aliases
+    #### Aliases
 
-  `symDiff`
+    `symDiff`
 
-  ```lua
-  differenceSymmetric({ "hello", "world" }, { "goodbye", "world" })
-  -- { "hello", "goodbye" }
-  ```
+    ```lua
+    differenceSymmetric({ "hello", "world" }, { "goodbye", "world" })
+    -- { "hello", "goodbye" }
+    ```
 ]=]
 local function differenceSymmetric<T>(...: { T }): { T }
     local args = { ... }

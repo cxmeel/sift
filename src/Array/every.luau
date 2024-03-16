@@ -1,7 +1,7 @@
 --[=[
 	@within Array
 
-	Checks whether every item in the array passes the predicate.
+	Returns `true` if every element in the array passes the test implemented by the provided function. Otherwise, it returns `false`.
 
 	```lua
 	every({ 1, 2, 3 }, function(item, index)

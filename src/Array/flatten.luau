@@ -1,38 +1,36 @@
 --[=[
-	@within Array
+    @within Array
 
-	Flattens an array. If depth is not specified, it will flatten
-	the array infinitely.
+    Flattens an array of arrays into a single array. The `depth` parameter specifies the depth of the flattening. If `depth` is not specified, the array is flattened infinitely.
 
-	```lua
-	local array = {
-		{ 1, 2, 3 },
-		{ 4, 5, 6 },
-		{ 7, { 8, 9 } },
-	}
+    ```lua
+    local array = {
+        { "a", { 1, 2 } },
+        { "b", { 3, 4 } },
+    }
 
-	flatten(array) -- { 1, 2, 3, 4, 5, 6, 7, 8, 9 }
-	flatten(array, 1) -- { 1, 2, 3, 4, 5, 6, 7, { 8, 9 } }
-	```
+    flatten(array) -- { "a", 1, 2, "b", 3, 4 }
+    flatten(array, 1) -- { "a", { 1, 2 }, "b", { 3, 4 } }
+    ```
 ]=]
 local function flatten<T>(array: { T }, depth: number?): { T }
-    depth = if typeof(depth) == "number" then depth else math.huge
-
-    local result = {}
+    local out = {}
 
     for _, value in array do
-        if typeof(value) == "table" and depth > 0 then
-            local nested = flatten(value, depth - 1)
+        if typeof(value) == "table" and (not depth or depth > 0) then
+            local nested = flatten(value, depth and depth - 1)
 
             for _, nestedValue in nested do
-                table.insert(result, nestedValue)
+                table.insert(out, nestedValue)
             end
-        else
-            table.insert(result, value)
+
+            continue
         end
+
+        table.insert(out, value)
     end
 
-    return result
+    return out
 end
 
 return flatten
