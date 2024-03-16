@@ -1,38 +1,27 @@
-local Util = require("@sift/Util")
-
 --[=[
+    @within Set
 
-  @within Set
+    Returns a new set containing only the elements that satisfy the given filter function.
 
-
-
-
-
-  Filters a set using a predicate. Any items that do not pass the predicate will be removed from the set.
-
-  ```lua
-  local set = { hello = true, world = true }
-
-  local newSet = Filter(set, function(value)
-    return value ~= "hello"
-  end) -- { world = true }
-  ```
+    ```lua
+    filter(Set<{ 1, 2, 3, 4 }>, function(value)
+        return value % 2 == 0
+    end) -- Set<{ 2, 4 }>
+    ```
 ]=]
 local function filter<T>(
     set: { [T]: boolean },
-    predicate: ((T, { [T]: boolean }) -> any)?
+    filterer: (value: T, set: { [T]: boolean }) -> boolean
 ): { [T]: boolean }
-    local result = {}
+    local out = {}
 
-    predicate = if typeof(predicate) == "function" then predicate else Util.func.truthy
-
-    for key, _ in set do
-        if predicate(key, set) then
-            result[key] = true
+    for value in set do
+        if not filterer or filterer(value, set) then
+            out[value] = true
         end
     end
 
-    return result
+    return out
 end
 
 return filter

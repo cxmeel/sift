@@ -1,23 +1,15 @@
 --[=[
+    @within Set
 
-  @within Set
+    Checks whether a set is a subset of another set; i.e. whether all the elements of the subset are also elements of the superset.
 
-
-
-
-
-  Checks whether a set is a subset of another set.
-
-  ```lua
-  local set = { hello = true, world = true }
-  local subset = { hello = true }
-
-  local isSubset = IsSubset(subset, set) -- true
-  ```
+    ```lua
+    isSubset(Set<{ "a", "b" }>, Set<{ "a", "b", "c" }>) -- true
+    ```
 ]=]
 local function isSubset(subset: { [any]: boolean }, superset: { [any]: boolean }): boolean
-    for key, value in subset do
-        if superset[key] ~= value then
+    for key in subset do
+        if superset[key] ~= true then
             return false
         end
     end

@@ -1,34 +1,25 @@
-local Util = require("@sift/Util")
-
 --[=[
+    @within Set
 
-  @within Set
+    Returns the number of elements in a set. If a `filterer` function is provided, it will return the number of elements that satisfy the condition.
 
+    ```lua
+    local set = Set<{ 1, 2, 3, 4 }>
 
-
-
-
-  Counts the number of items in a set.
-
-  ```lua
-  local set = { hello = true, world = true }
-
-  local count = Count(set) -- 2
-  local count = Count(set, function(item)
-    return item == "hello"
-  end) -- 1
+    count(set) -- 3
+    count(set, function(value)
+        return value % 2 == 0
+    end) -- 2
   ```
 ]=]
 local function count<T>(
     set: { [T]: boolean },
-    predicate: ((item: T, set: { [T]: boolean }) -> boolean?)?
+    filterer: ((value: T, set: { [T]: boolean }) -> boolean)?
 ): number
     local counter = 0
 
-    predicate = if typeof(predicate) == "function" then predicate else Util.func.truthy
-
-    for item, _ in set do
-        if predicate(item, set) then
+    for value in set do
+        if not filterer or filterer(value, set) then
             counter += 1
         end
     end

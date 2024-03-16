@@ -3,21 +3,31 @@ local copy = require("./copy")
 --[=[
     @within Set
 
-    Returns a new set containing only values that are in the first set and not in any of the other sets.
+    Returns a new set containing only values that are unique to the first set.
+
+    #### Aliases
+
+    `diff`
 
     ```lua
-    local set1 = { a = true, b = true, c = true }
-    local set2 = { b = true, c = true, d = true }
-
-    difference(set1, set2) -- { a = true }
+    difference(Set<{ "a", "b" }>, Set<{ "b", "c" }>)
+    -- Set<{ "a" }>
     ```
 ]=]
 local function difference<T>(...: { [T]: boolean }): { [T]: boolean }
-    local args = { ... }
-    local out = copy(table.remove(args, 1) :: { [T]: boolean })
+    local out: { [T]: boolean } = nil
 
-    for _, other in args do
-        for value in other do
+    for _, set in { ... } do
+        if typeof(set) ~= "table" then
+            continue
+        end
+
+        if out == nil then
+            out = copy(set)
+            continue
+        end
+
+        for value in set do
             out[value] = nil
         end
     end

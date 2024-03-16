@@ -1,23 +1,15 @@
 local isSubset = require("./isSubset")
 
 --[=[
+    @within Set
 
-  @within Set
+    Checks whether a set is a superset of another set; i.e. whether all elements of the subset are also elements of the superset.
 
-
-
-
-
-  Checks whether a set is a superset of another set.
-
-  ```lua
-  local set = { hello = true, world = true }
-  local subset = { hello = true }
-
-  local isSuperset = IsSuperset(set, subset) -- true
-  ```
+    ```lua
+    isSuperset(Set<{ "a", "b", "c" }>, Set<{ "a", "b" }>) -- true
+    ```
 ]=]
-local function isSuperset<any>(superset: { [any]: boolean }, subset: { [any]: boolean }): boolean
+local function isSuperset<T>(superset: { [T]: boolean }, subset: { [T]: boolean }): boolean
     return isSubset(subset, superset)
 end
 

@@ -1,16 +1,12 @@
 --[=[
-  @within Set
+    @within Set
 
-  Creates the intersection of multiple sets. The intersection
-  is when both sets have a value in common. Unmatched values
-  are discarded.
+    Returns a new set containing only the elements that appear in all of the input sets.
 
-  ```lua
-  local set1 = { hello = true, world = true }
-  local set2 = { world = true, universe = true }
-
-  intersection(set1, set2) -- { world = true }
-  ```
+    ```lua
+    intersection(Set<{ "a", "b" }>, Set<{ "b", "c" }>)
+    -- Set<{ "b" }>
+    ```
 ]=]
 local function intersection<T>(...: { [T]: boolean }): { [T]: boolean }
     local args = { ... }

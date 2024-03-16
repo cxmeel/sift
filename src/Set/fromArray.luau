@@ -1,29 +1,24 @@
 --[=[
+    @within Set
 
-  @within Set
+    Converts an array to a set.
 
+    #### Aliases
 
+    `fromList`
 
-
-  Converts an array to a set, where each item is mapped to true.
-  Duplicate items are discarded.
-
-  Aliases: `fromList`
-
-  ```lua
-  local array = { "hello", "world", "hello" }
-
-  local set = FromArray(array) -- { hello = true, world = true }
-  ```
+    ```lua
+    fromArray({ "a", "b", "c" }) -- Set<{ "a", "b", "c" }>
+    ```
 ]=]
 local function fromArray<T>(array: { T }): { [T]: boolean }
-    local result = table.create(#array)
+    local out = {}
 
     for _, value in array do
-        result[value] = true
+        out[value] = true
     end
 
-    return result
+    return out
 end
 
 return fromArray

@@ -1,26 +1,24 @@
+local None = require("@sift/None")
+
 --[=[
+    @within Set
 
-  @within Set
+    Converts a set to an array.
 
-
-
-
-  Converts a set to an array.
-
-  ```lua
-  local set = { hello = true, world = true }
-
-  local array = ToArray(set) -- { "hello", "world" }
-  ```
+    ```lua
+    toArray(Set<{ "a", "b", "c" }>) -- { "a", "b", "c" }
+    ```
 ]=]
 local function toArray<T>(set: { [T]: boolean }): { T }
-    local result = {}
+    local out = {}
 
-    for key, _ in set do
-        table.insert(result, key)
+    for value in set do
+        if value ~= None then
+            table.insert(out, value)
+        end
     end
 
-    return result
+    return out
 end
 
 return toArray

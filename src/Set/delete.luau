@@ -1,33 +1,25 @@
+local partition = require("./partition")
+
 --[=[
+    @within Set
 
-  @within Set
+    Returns two sets; one with the specified elements removed, and one containing only the removed elements.
 
+    #### Aliases
 
+    `subtract`
 
-
-
-  Deletes values from a set.
-
-  Aliases: `subtract`
-
-  ```lua
-  local set = { hello = true, world = true }
-
-  local newSet = Delete(set, "hello") -- { world = true }
-  ```
+    ```lua
+    delete(Set<{ "a", "b", "c" }>, "a", "c")
+    -- Set<{ "b" }>, Set<{ "a", "c" }>
+    ```
 ]=]
-local function delete<T>(set: { [T]: boolean }, ...: T): { [T]: boolean }
-    local result = {}
+local function delete<T>(set: { [T]: boolean }, ...: T): ({ [T]: boolean }, { [T]: boolean })
+    local values = { ... }
 
-    for key, _ in set do
-        result[key] = true
-    end
-
-    for _, value in { ... } do
-        result[value] = nil
-    end
-
-    return result
+    return partition(set, function(value)
+        return not table.find(values, value)
+    end)
 end
 
 return delete

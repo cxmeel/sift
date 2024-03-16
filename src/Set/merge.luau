@@ -1,31 +1,35 @@
+local None = require("@sift/None")
+
 --[=[
-  @within Set
+    @within Set
 
-  Combines one or more sets into a single set.
+    Combines one or more sets into a single set.
 
-  Aliases: `join`, `union`
+    #### Aliases
 
-  ```lua
-  local set1 = Set<{ "hello", "world" }>
-  local set2 = Set<{ "cat", "dog", "hello" }>
+    `join`, `union`
 
-  merge(set1, set2) -- Set<{ "hello", "world", "cat", "dog" }>
-  ```
+    ```lua
+    merge(Set<{ "a", "b" }>, Set<{ "b", "c" }>)
+    -- Set<{ "a", "b", "c" }>
+    ```
 ]=]
 local function merge<T>(...: { [T]: boolean }): { [T]: boolean }
-    local result = {}
+    local out = {}
 
     for _, set in { ... } do
         if typeof(set) ~= "table" then
             continue
         end
 
-        for key in set do
-            result[key] = true
+        for value in set do
+            if value ~= None then
+                out[value] = true
+            end
         end
     end
 
-    return result
+    return out
 end
 
 return merge

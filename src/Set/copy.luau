@@ -1,18 +1,18 @@
-local copy = require("@sift/Dictionary/copy")
-
 --[=[
+    @within Set
+    @function copy
+    @param set Set<T>
+    @return Set<T>
 
-  @within Set
+    Creates a copy of a set.
 
+    #### Aliases
 
+    `clone`
 
-
-  Creates a copy of a set.
-
-  ```lua
-  local set = { hello = true }
-
-  local newSet = Copy(set) -- { hello = true }
-  ```
+    ```lua
+    copy(Set<{ 1, 2, 3 }>) -- Set<{ 1, 2, 3 }>
+    ```
 ]=]
+local copy = table.clone
 return copy

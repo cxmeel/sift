@@ -1,29 +1,32 @@
-local copy = require("./copy")
-
 --[=[
     @within Set
 
     Returns a new set containing only unique values across all input sets.
 
-    ```lua
-    local set1 = { a = true, b = true, c = true }
-    local set2 = { b = true, c = true, d = true }
+    #### Aliases
 
-    differenceSymmetric(set1, set2) -- { a = true, d = true }
+    `symDiff`
+
+    ```lua
+    differenceSymmetric(Set<{ "a", "b" }>, Set<{ "b", "c" }>)
+    -- Set<{ "a", "c" }>
     ```
 ]=]
 local function differenceSymmetric<T>(...: { [T]: boolean }): { [T]: boolean }
-    local args = { ... }
-    local out = copy(table.remove(args, 1) :: { [T]: boolean })
+    local out = {}
 
-    for _, other in args do
-        for value in other do
-            out[value] = out[value] == nil
+    for _, set in { ... } do
+        if typeof(set) ~= "table" then
+            continue
+        end
+
+        for value in set do
+            out[value] = not out[value]
         end
     end
 
-    for value, keep in out do
-        if not keep then
+    for value in out do
+        if not out[value] then
             out[value] = nil
         end
     end

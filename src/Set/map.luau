@@ -1,33 +1,33 @@
+local None = require("@sift/None")
+
 --[=[
+    @within Set
 
-  @within Set
+    Iterates over a set, calling a mapper function for each item.
 
-
-
-
-
-  Iterates over a set, calling a mapper function for each item.
-
-  ```lua
-  local set = { hello = true, world = true }
-
-  local mappedSet = Map(set, function(value)
-    return value .. "!"
-  end) -- { ["hello!"] = true, ["world!"] = true }
-  ```
+    ```lua
+    map(Set<{ 1, 2, 3, 4, 5 }>, function(value)
+        return value * 2
+    end) -- Set<{ 2, 4, 6, 8, 10 }>
+    ```
 ]=]
-local function map<T, U>(set: { [T]: boolean }, mapper: (T, { [T]: boolean }) -> U): { [U]: boolean }
-    local result = {}
+local function map<T, U>(
+    set: { [T]: boolean },
+    mapper: (value: T, set: { [T]: boolean }) -> U
+): { [U]: boolean }
+    local out = {}
 
-    for key, _ in set do
-        local mappedKey = mapper(key, set)
+    for value in set do
+        local mapped = mapper(value, set)
 
-        if mappedKey ~= nil then
-            result[mappedKey] = true
+        if mapped == nil or mapped == None then
+            continue
         end
+
+        out[mapped] = true
     end
 
-    return result
+    return out
 end
 
 return map
