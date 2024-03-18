@@ -30,7 +30,18 @@ local function fix_identation(contents: string)
     local out = {}
 
     for index, line in lines do
-        if (index == 1 and #line == 0) or (#line == 0 and #lines[index - 1] == 0) then
+        local prevLine = lines[index - 1] or ""
+
+        -- or prevLine was opening multiline comment
+        if
+            #line == 0
+            and (
+                index == 1
+                or #prevLine == 0
+                or prevLine:match("^%s*[%-%-]+%[")
+                or prevLine:match("%]%p*%]%s*$")
+            )
+        then
             continue
         end
 
