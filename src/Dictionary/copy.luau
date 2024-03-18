@@ -1,19 +1,18 @@
 --[=[
+    @within Dictionary
+    @function copy
+    @param dictionary { [K]: V }
+    @return { [K]: V }
 
-  @within Dictionary
+    Returns a shallow copy of a dictionary.
 
+    #### Aliases
 
+    `clone`
 
-
-  Copies a dictionary.
-
-  ```lua
-  local dictionary = { hello = "world" }
-
-  local new = Copy(dictionary) -- { hello = "world" }
-
-  print(new == dictionary) -- false
-  print(new.hello == dictionary.hello) -- true
-  ```
+    ```lua
+    copy({ foo = "bar" }) -- { foo = "bar" }
+    ```
 ]=]
-return table.clone
+local copy = table.clone
+return copy

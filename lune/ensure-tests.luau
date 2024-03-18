@@ -5,7 +5,7 @@ local crayon = require("./lib/crayon")
 
 local cwd = process.cwd:gsub("\\", "/"):gsub("/$", "")
 local src = `{cwd}/src`
-local tests = `{src}/__tests__`
+local tests = `{cwd}/__tests__`
 
 local IGNORED_FILES = {
     `{src}/Array/init.luau`,
