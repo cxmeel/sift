@@ -10,7 +10,7 @@
     count(set, function(value)
         return value % 2 == 0
     end) -- 2
-  ```
+    ```
 ]=]
 local function count<T>(
     set: { [T]: boolean },

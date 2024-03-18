@@ -1,17 +1,13 @@
 --[=[
+    @within Dictionary
 
-  @within Dictionary
+    Gets the keys of the given dictionary as an array.
 
+    ```lua
+    local dictionary = { hello = "roblox", goodbye = "world" }
 
-
-
-  Gets the keys of the given dictionary as an array.
-
-  ```lua
-  local dictionary = { hello = "roblox", goodbye = "world" }
-
-  local keys = Keys(dictionary) -- { "hello", "goodbye" }
-  ```
+    local keys = Keys(dictionary) -- { "hello", "goodbye" }
+    ```
 ]=]
 local function keys<K, V>(dictionary: { [K]: V }): { K }
     local result = {}

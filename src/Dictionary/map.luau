@@ -1,26 +1,21 @@
 --[=[
+    @within Dictionary
 
-  @within Dictionary
+    Maps the dictionary using the mapper function. The mapper function can
+    return a value and a key. If the mapper function does not return a key,
+    the original key will be used.
 
+    ```lua
+    local dictionary = { hello = 10, goodbye = 20 }
 
-
-
-
-  Maps the dictionary using the mapper function. The mapper function can
-  return a value and a key. If the mapper function does not return a key,
-  the original key will be used.
-
-  ```lua
-  local dictionary = { hello = 10, goodbye = 20 }
-
-  local new = Map(dictionary, function(value, key)
+    local new = Map(dictionary, function(value, key)
     return value * 2, key .. "!"
-  end) -- { ["hello!"] = 20, ["goodbye!"] = 40 }
+    end) -- { ["hello!"] = 20, ["goodbye!"] = 40 }
 
-  local new = Map(dictionary, function(value, key)
+    local new = Map(dictionary, function(value, key)
     return value * 10
-  end) -- { hello = 100, goodbye = 200 }
-  ```
+    end) -- { hello = 100, goodbye = 200 }
+    ```
 ]=]
 local function map<K, V, X, Y>(
     dictionary: { [K]: V },

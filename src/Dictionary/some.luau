@@ -1,24 +1,19 @@
 --[=[
+    @within Dictionary
 
-  @within Dictionary
+    Checks whether or not the predicate returned true for any value in the dictionary.
 
+    ```lua
+    local dictionary = { hello = "world", cat = "meow", unicorn = "rainbow" }
 
-
-
-
-  Checks whether or not the predicate returned true for any value in the dictionary.
-
-  ```lua
-  local dictionary = { hello = "world", cat = "meow", unicorn = "rainbow" }
-
-  local hasMeow = Some(dictionary, function(value)
+    local hasMeow = Some(dictionary, function(value)
     return value == "meow"
-  end) -- true
+    end) -- true
 
-  local hasDog = Some(dictionary, function(_, key)
+    local hasDog = Some(dictionary, function(_, key)
     return key == "dog"
-  end) -- false
-  ```
+    end) -- false
+    ```
 ]=]
 local function some<K, V>(
     dictionary: { [K]: V },

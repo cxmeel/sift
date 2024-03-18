@@ -1,14 +1,14 @@
 --[=[
-	@within Array
+    @within Array
 
-	Counts the number of items in an array. If a `predicate` function is provided, it will only count the items that pass the test.
+    Counts the number of items in an array. If a `predicate` function is provided, it will only count the items that pass the test.
 
-	```lua
-	count({ 1, 2, 3 }) -- 3
-	count({ 1, 2, 3 }, function(item, index)
-		return item > 1
-	end) -- 2
-	```
+    ```lua
+    count({ 1, 2, 3 }) -- 3
+    count({ 1, 2, 3 }, function(item, index)
+        return item > 1
+    end) -- 2
+    ```
 ]=]
 local function count<T>(
     array: { T },

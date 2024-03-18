@@ -1,24 +1,19 @@
 --[=[
+    @within Dictionary
 
-  @within Dictionary
+    Checks whether every item in the dictionary passes the predicate.
 
+    ```lua
+    local dictionary = { hello = "world", goodbye = "world" }
 
-
-
-
-  Checks whether every item in the dictionary passes the predicate.
-
-  ```lua
-  local dictionary = { hello = "world", goodbye = "world" }
-
-  local value = Every(dictionary, function(value, key)
+    local value = Every(dictionary, function(value, key)
     return value == "world"
-  end) -- true
+    end) -- true
 
-  local value = Every(dictionary, function(value, key)
+    local value = Every(dictionary, function(value, key)
     return value == "hello"
-  end) -- false
-  ```
+    end) -- false
+    ```
 ]=]
 local function every<K, V>(
     dictionary: { [K]: V },

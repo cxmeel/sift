@@ -1,17 +1,13 @@
 --[=[
+    @within Dictionary
 
-  @within Dictionary
+    Flips a dictionary. Keys become values and values become keys.
 
+    ```lua
+    local dictionary = { hello = "roblox", goodbye = "world" }
 
-
-
-  Flips a dictionary. Keys become values and values become keys.
-
-  ```lua
-  local dictionary = { hello = "roblox", goodbye = "world" }
-
-  local new = Flip(dictionary) -- { world = "goodbye", roblox = "hello" }
-  ```
+    local new = Flip(dictionary) -- { world = "goodbye", roblox = "hello" }
+    ```
 ]=]
 local function flip<K, V>(dictionary: { [K]: V }): { [V]: K }
     local result = {}

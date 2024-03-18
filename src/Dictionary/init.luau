@@ -1,14 +1,14 @@
 --[=[
-	@class Dictionary
+    @class Dictionary
 
-	Dictionaries are a type of data structure that can be used to store key-value pairs.
+    Dictionaries are a type of data structure that can be used to store key-value pairs.
 
-	```lua
-	local dictionary = {
-		cats = true,
-		dogs = false,
-	}
-	```
+    ```lua
+    local dictionary = {
+        cats = true,
+        dogs = false,
+    }
+    ```
 ]=]
 local dictionary = {
     copy = require("./copy"),

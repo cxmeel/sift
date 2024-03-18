@@ -1,11 +1,11 @@
 --[=[
-	@within Array
+    @within Array
 
-	Reverses the order of the items in an array.
+    Reverses the order of the items in an array.
 
-	```lua
-	reverse({ "a", "b", "c" }) -- { "c", "b", "a" }
-	```
+    ```lua
+    reverse({ "a", "b", "c" }) -- { "c", "b", "a" }
+    ```
 ]=]
 local function reverse<T>(array: { T }): { T }
     local out = {}

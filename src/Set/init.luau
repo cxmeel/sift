@@ -1,13 +1,13 @@
 --[=[
-	@class Set
+    @class Set
 
-	Sets are a collection of values. They are used to store unique values.
-	They are essentially a dictionary, but each value is stored as a boolean.
-	This means that a value can only appear in a set once.
+    Sets are a collection of values. They are used to store unique values.
+    They are essentially a dictionary, but each value is stored as a boolean.
+    This means that a value can only appear in a set once.
 
-	```lua
-	local set = { foo = true, bar = true }
-	```
+    ```lua
+    local set = { foo = true, bar = true }
+    ```
 ]=]
 local set = {
     add = require("./add"),

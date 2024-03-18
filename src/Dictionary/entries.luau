@@ -1,17 +1,13 @@
 --[=[
+    @within Dictionary
 
-  @within Dictionary
+    Returns the entries in the given dictionary as an array of key-value pairs.
 
+    ```lua
+    local dictionary = { hello = "roblox", goodbye = "world" }
 
-
-
-  Returns the entries in the given dictionary as an array of key-value pairs.
-
-  ```lua
-  local dictionary = { hello = "roblox", goodbye = "world" }
-
-  local entries = Entries(dictionary) -- { { "hello", "roblox" }, { "goodbye", "world" } }
-  ```
+    local entries = Entries(dictionary) -- { { "hello", "roblox" }, { "goodbye", "world" } }
+    ```
 ]=]
 local function entries<K, V>(dictionary: { [K]: V }): { [number]: { [number]: K | V } }
     local result = {}

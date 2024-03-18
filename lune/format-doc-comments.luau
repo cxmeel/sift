@@ -1,26 +1,23 @@
 local fs = require("@lune/fs")
 local process = require("@lune/process")
-local stdio = require("@lune/stdio")
-local task = require("@lune/task")
 
 local crayon = require("./lib/crayon")
 
 local cwd = process.cwd:gsub("\\", "/"):gsub("/$", "")
 local src = `{cwd}/src`
 
-local _prev_output = ""
-local function overprint(...)
-    local args = { ... }
-
-    for index, arg in args do
-        args[index] = tostring(arg)
+local function utf8_equals(a: string, b: string)
+    if #a ~= #b then
+        return false
     end
 
-    local output = table.concat(args, " ")
-    local clear = string.rep(" ", #_prev_output)
+    for byteOffset, codepoint in utf8.codes(a) do
+        if utf8.codepoint(b, byteOffset) ~= codepoint then
+            return false
+        end
+    end
 
-    stdio.write(`\r{clear}\r{output}`)
-    _prev_output = output
+    return true
 end
 
 local function get_files_flat(dir: string)
@@ -43,15 +40,51 @@ local function get_files_flat(dir: string)
 end
 
 local function format_doc_comments(contents: string)
-    return contents:gsub("%-%-%[%=%[(.-)%]=%]", function(comment)
-        local out = {}
+    return contents:gsub(
+        "^%s*(%-%-%[%=%[)(.-)(%]=%])",
+        function(open: string, comment: string, close: string)
+            local lines = comment:split("\n")
+            local out = {}
 
-        for _, line in comment:split("\n") do
-            table.insert(out, line)
-        end
+            for index, line in lines do
+                -- Remove duplicate blank lines
+                local lineNoWhitespace = line:gsub("%s", "")
 
-        return table.concat(out, "\n")
-    end)
+                if index == 1 and lineNoWhitespace == "" then
+                    continue
+                end
+
+                local prevLine = lines[index - 1]
+                local prevLineNoWhitespace = prevLine:gsub("%s", "")
+
+                if lineNoWhitespace == "" and prevLineNoWhitespace == "" then
+                    continue
+                end
+
+                -- Fix indentation
+                line = line:gsub("^\t+", function(tabs)
+                    return string.rep("    ", #tabs)
+                end)
+
+                local indentation = line:match("^%s*")
+
+                if indentation and #indentation % 4 ~= 0 then
+                    line = `{(" "):rep(4 - (#indentation % 4))}{line}`
+                end
+
+                -- Remove trailing whitespace
+                line = line:gsub("%s+$", "")
+
+                table.insert(out, line)
+            end
+
+            if out[#out]:gsub("%s", "") == "" then
+                table.remove(out)
+            end
+
+            return `{open}\n{table.concat(out, "\n")}\n{close}`
+        end :: any
+    )
 end
 
 local function format_file(full_path: string)
@@ -60,52 +93,46 @@ local function format_file(full_path: string)
 
     formatted = format_doc_comments(contents)
 
+    if utf8_equals(contents, formatted) then
+        return false
+    end
+
     fs.writeFile(full_path, formatted)
+
+    return true
 end
 
 local function main()
-    local threads = {}
+    local modified_files = 0
 
     for _, file_path in get_files_flat(src) do
         if not file_path:match("%.luau?$") then
             continue
         end
 
-        local thread = task.spawn(format_file, file_path)
-        table.insert(threads, thread)
-    end
-
-    while true do
-        local live_threads = 0
-
-        for _, thread in threads do
-            if coroutine.status(thread) ~= "dead" then
-                live_threads += 1
-            end
+        if not format_file(file_path) then
+            continue
         end
 
-        overprint(
-            `{crayon.label("FORMATTING", crayon.bgBlue)}{crayon.label(
-                `{live_threads}/{#threads}`,
-                crayon.bgBlueBright
-            )}`,
-            " Formatting files..."
+        local relative_path = file_path:sub(#cwd + 2)
+
+        print(
+            crayon.label("MODIFIED", crayon.bgYellow),
+            "Formatted doc comments in",
+            crayon.yellow(`"./{relative_path}"`)
         )
 
-        if live_threads == 0 then
-            break
-        end
-
-        task.wait(1 / 1000)
+        modified_files += 1
     end
 
-    overprint(
+    process.spawn("stylua", { "src" })
+
+    print(
         crayon.label("DONE", crayon.bgGreen),
         "Formatted",
-        crayon.bold(#threads),
+        crayon.bold(modified_files),
         "files in",
-        crayon.yellow(`"./{src:sub(#cwd + 2)}"`),
-        "\n"
+        crayon.yellow(`"./{src:sub(#cwd + 2)}"`)
     )
 end
 
