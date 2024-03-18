@@ -26,9 +26,9 @@ end)()
 local function styler(codepoint: { number })
     local open, close = codepoint[1], codepoint[2]
 
-    return function(text: string)
+    return function(text: any)
         if not isColorSupported then
-            return text
+            return tostring(text)
         end
 
         return `\27[{open}m{text}\27[{close}m`
@@ -99,9 +99,9 @@ local LIGHT_BACKGROUNDS = {
 }
 
 -- selene: allow(shadowing)
-function Crayon.label(text: string, styler: (string) -> string)
+function Crayon.label(text: any, styler: (text: any) -> string)
     local foreground = table.find(LIGHT_BACKGROUNDS, styler) and Crayon.black or Crayon.white
-    return styler(Crayon.bold(foreground(` {text:upper()} `)))
+    return styler(Crayon.bold(foreground(` {tostring(text):upper()} `)))
 end
 
 return Crayon
