@@ -1,20 +1,20 @@
 local copy = require("./copy")
 
 --[=[
-	@within Array
+    @within Array
     @function copyDeep
     @param array { T }
     @return { T }
 
-	Copies an array, with deep copies of all nested arrays.
+    Copies an array, with deep copies of all nested arrays.
 
     #### Aliases
 
     `cloneDeep`
 
-	```lua
-	copyDeep({ 1, 2, 3, { 4, 5 } }) -- { 1, 2, 3, { 4, 5 } }
-	```
+    ```lua
+    copyDeep({ 1, 2, 3, { 4, 5 } }) -- { 1, 2, 3, { 4, 5 } }
+    ```
 ]=]
 local function copyDeep<T>(array: { T }): { T }
     local result = copy(array)

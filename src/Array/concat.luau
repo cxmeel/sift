@@ -3,15 +3,15 @@ local None = require("@sift/None")
 --[=[
     @within Array
 
-	Joins multiple arrays together into a single array.
+    Joins multiple arrays together into a single array.
 
-	#### Aliases
+    #### Aliases
 
-	`join`, `merge`
+    `join`, `merge`
 
-	```lua
-	concat({ 1, 2, 3 }, { 4, 5, 6 }) -- { 1, 2, 3, 4, 5, 6 }
-	```
+    ```lua
+    concat({ 1, 2, 3 }, { 4, 5, 6 }) -- { 1, 2, 3, 4, 5, 6 }
+    ```
 ]=]
 local function concat<T>(...: { T }): { T }
     local result = {}

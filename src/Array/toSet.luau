@@ -1,13 +1,13 @@
 local reduce = require("./reduce")
 
 --[=[
-	@within Array
+    @within Array
 
     Converts an array to a set.
 
-	```lua
-	toSet({ "a", "b", "b", "c" }) -- Set<{ "a", "b", "c" }>
-	```
+    ```lua
+    toSet({ "a", "b", "b", "c" }) -- Set<{ "a", "b", "c" }>
+    ```
 ]=]
 local function toSet<T>(array: { T }): { [T]: boolean }
     return reduce(array, function(set, value)

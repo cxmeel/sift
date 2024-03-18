@@ -1,21 +1,21 @@
 local find = require("./find")
 
 --[=[
-	@within Array
+    @within Array
 
-	Checks whether the array contains the value.
+    Checks whether the array contains the value.
 
-	#### Aliases
+    #### Aliases
 
-	`contains`, `has`
+    `contains`, `has`
 
-	```lua
-	local array = { "hello", "world", "goodbye" }
+    ```lua
+    local array = { "hello", "world", "goodbye" }
 
     includes(array, "hello") -- true
     includes(array, "sift") -- false
     includes(array, "hello", 2) -- false
-	```
+    ```
 ]=]
 local function includes<T>(array: { T }, value: any, startAt: number?): boolean
     return find(array, value, startAt) ~= nil

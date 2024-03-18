@@ -3,13 +3,13 @@ local Util = require("@sift/Util")
 --[=[
     @within Array
 
-	Finds the index of the first element in the array that satisfies the provided testing function. Otherwise, it returns `nil`.
+    Finds the index of the first element in the array that satisfies the provided testing function. Otherwise, it returns `nil`.
 
-	```lua
-	findWhere({ 1, 2, 3 }, function(item)
-		return item > 1
-	end) -- 2
-	```
+    ```lua
+    findWhere({ 1, 2, 3 }, function(item)
+        return item > 1
+    end) -- 2
+    ```
 ]=]
 local function findWhere<T>(
     array: { T },

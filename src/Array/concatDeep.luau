@@ -2,22 +2,22 @@ local None = require("@sift/None")
 local copyDeep = require("./copyDeep")
 
 --[=[
-	@within Array
+    @within Array
 
-	Joins multiple arrays together into a single array, with deep copies of all
-	nested arrays.
+    Joins multiple arrays together into a single array, with deep copies of all
+    nested arrays.
 
-	#### Aliases
+    #### Aliases
 
-	`joinDeep`, `mergeDeep`
+    `joinDeep`, `mergeDeep`
 
-	```lua
-	local table1 = { 1, 2, { 3, 4 } }
-	local table2 = { 5, 6, { 7, 8 } }
+    ```lua
+    local table1 = { 1, 2, { 3, 4 } }
+    local table2 = { 5, 6, { 7, 8 } }
 
-	concatDeep(table1, table2)
+    concatDeep(table1, table2)
     -- { 1, 2, { 3, 4 }, 5, 6, { 7, 8 } }
-	```
+    ```
 ]=]
 local function concatDeep<T>(...: { T }): { T }
     local result = {}

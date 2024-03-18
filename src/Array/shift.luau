@@ -1,14 +1,14 @@
 local partition = require("./partition")
 
 --[=[
-	@within Array
+    @within Array
 
-	Returns two arrays; one with the first `count` elements removed, and one with the removed elements.
+    Returns two arrays; one with the first `count` elements removed, and one with the removed elements.
 
-	```lua
-	shift({ 1, 2, 3 }) -- { 2, 3 }, { 1 }
+    ```lua
+    shift({ 1, 2, 3 }) -- { 2, 3 }, { 1 }
     shift({ 1, 2, 3 }, 2) -- { 3 }, { 1, 2 }
-	```
+    ```
 ]=]
 local function shift<T>(array: { T }, count: number?): ({ T }, { T })
     return partition(array, function(_, index)
