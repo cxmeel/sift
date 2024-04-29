@@ -14,7 +14,7 @@ end
   @function update
   @within Dictionary
 
-  @param dictionary {[K]: V} -- The dictionary to update.
+  @param dictionary {[K]: V?} -- The dictionary to update.
   @param key K -- The key to update.
   @param updater? (value: V, key: K) -> U -- The updater function.
   @param callback? (key: K) -> C -- The callback function.
@@ -37,7 +37,7 @@ end
   ```
 ]=]
 local function update<K, V, U, C>(
-	dictionary: { [K]: V },
+	dictionary: { [K]: V? },
 	key: K,
 	updater: ((value: V, key: K) -> U)?,
 	callback: ((key: K) -> C)?
