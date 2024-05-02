@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="generator" content="Docusaurus v2.3.1">
-<title data-rh="true">Set | Sift</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:url" content="https://csqrl.github.io/sift/api/Set"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docusaurus_tag" content="default"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docsearch:docusaurus_tag" content="default"><meta data-rh="true" property="og:title" content="Set | Sift"><meta data-rh="true" name="description" content="Sets are a collection of values. They are used to store unique values.
+<title data-rh="true">Set | Sift</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:url" content="https://cxmeel.github.io/sift/api/Set"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docusaurus_tag" content="default"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docsearch:docusaurus_tag" content="default"><meta data-rh="true" property="og:title" content="Set | Sift"><meta data-rh="true" name="description" content="Sets are a collection of values. They are used to store unique values.
 They are essentially a dictionary, but each value is stored as a boolean.
 This means that a value can only be in a set once.
 
@@ -19,13 +19,13 @@ This means that a value can only be in a set once.
 local set = { hello = true }
 
 local newSet = Add(set, &quot;world&quot;) -- { hello = true, world = true }
-```"><link data-rh="true" rel="canonical" href="https://csqrl.github.io/sift/api/Set"><link data-rh="true" rel="alternate" href="https://csqrl.github.io/sift/api/Set" hreflang="en"><link data-rh="true" rel="alternate" href="https://csqrl.github.io/sift/api/Set" hreflang="x-default"><link rel="stylesheet" href="/sift/assets/css/styles.6b33bbd6.css">
-<link rel="preload" href="/sift/assets/js/runtime~main.def62a50.js" as="script">
-<link rel="preload" href="/sift/assets/js/main.ffe14e76.js" as="script">
+```"><link data-rh="true" rel="canonical" href="https://cxmeel.github.io/sift/api/Set"><link data-rh="true" rel="alternate" href="https://cxmeel.github.io/sift/api/Set" hreflang="en"><link data-rh="true" rel="alternate" href="https://cxmeel.github.io/sift/api/Set" hreflang="x-default"><link rel="stylesheet" href="/sift/assets/css/styles.6b33bbd6.css">
+<link rel="preload" href="/sift/assets/js/runtime~main.07c39ec1.js" as="script">
+<link rel="preload" href="/sift/assets/js/main.b47e52bb.js" as="script">
 </head>
 <body class="navigation-with-keyboard">
 <script>!function(){function e(e){document.documentElement.setAttribute("data-theme",e)}var t=function(){var e=null;try{e=localStorage.getItem("theme")}catch(e){}return e}();null!==t?e(t):window.matchMedia("(prefers-color-scheme: dark)").matches?e("dark"):(window.matchMedia("(prefers-color-scheme: light)").matches,e("light"))}()</script><div id="__docusaurus">
-<div role="region" aria-label="Skip to main content"><a class="skipToContent_fXgn" href="#docusaurus_skipToContent_fallback">Skip to main content</a></div><nav aria-label="Main" class="navbar navbar--fixed-top"><div class="navbar__inner"><div class="navbar__items"><button aria-label="Toggle navigation bar" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="navbar__brand" href="/sift/"><b class="navbar__title text--truncate">Sift</b></a><a class="navbar__item navbar__link" href="/sift/docs/intro">Docs</a><a aria-current="page" class="navbar__item navbar__link navbar__link--active" href="/sift/api/">API</a><a class="navbar__item navbar__link" href="/sift/changelog">Changelog</a></div><div class="navbar__items navbar__items--right"><a href="https://github.com/sponsors/csqrl" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link">Sponsor<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a><a href="https://github.com/csqrl/sift" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link">GitHub<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a><div class="toggle_vylO colorModeToggle_DEke"><button class="clean-btn toggleButton_gllP toggleButtonDisabled_aARS" type="button" disabled="" title="Switch between dark and light mode (currently light mode)" aria-label="Switch between dark and light mode (currently light mode)" aria-live="polite"><svg viewBox="0 0 24 24" width="24" height="24" class="lightToggleIcon_pyhR"><path fill="currentColor" d="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95 c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41 L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06 c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" class="darkToggleIcon_wfgR"><path fill="currentColor" d="M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"></path></svg></button></div><div class="searchBox_ZlJk"><div class="navbar__search"><span aria-label="expand searchbar" role="button" class="search-icon" tabindex="0"></span><input type="search" id="search_input_react" placeholder="Loading..." aria-label="Search" class="navbar__search-input search-bar" disabled=""></div></div></div></div><div role="presentation" class="navbar-sidebar__backdrop"></div></nav><div id="docusaurus_skipToContent_fallback" class="main-wrapper mainWrapper_z2l0 docPageContainer_wNNk"><div class="docPage_Dpn1"><div class="docSidebarContainer_o_re"><div class="sidebar_njMd"><nav aria-label="Docs sidebar" class="menu thin-scrollbar menu_SIkG"><ul class="theme-doc-sidebar-menu menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/sift/api/Sift">​Sift</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/sift/api/Array">​Array</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/sift/api/Dictionary">​Dictionary</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link menu__link--active" aria-current="page" href="/sift/api/Set">​Set</a></li></ul></nav></div></div><main class="docMainContainer_HJE1"><div class="container padding-vert--lg"><div class="row"><div class="col docItemCol_MU3C"><div class="docItemContainer_Wv98"><article><div class="member_J0w1 markdown"><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_oUs_"><button type="button" class="clean-btn tocCollapsibleButton_TO0P">On this page</button></div><header><h1 class="docTitle_mZRt" style="text-decoration:none"><span style="display:inline-block">Set</span></h1><div class="luaClassTags_EipM"></div><div>
+<div role="region" aria-label="Skip to main content"><a class="skipToContent_fXgn" href="#docusaurus_skipToContent_fallback">Skip to main content</a></div><nav aria-label="Main" class="navbar navbar--fixed-top"><div class="navbar__inner"><div class="navbar__items"><button aria-label="Toggle navigation bar" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="navbar__brand" href="/sift/"><b class="navbar__title text--truncate">Sift</b></a><a class="navbar__item navbar__link" href="/sift/docs/intro">Docs</a><a aria-current="page" class="navbar__item navbar__link navbar__link--active" href="/sift/api/">API</a><a class="navbar__item navbar__link" href="/sift/changelog">Changelog</a></div><div class="navbar__items navbar__items--right"><a href="https://github.com/sponsors/csqrl" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link">Sponsor<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a><a href="https://github.com/cxmeel/sift" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link">GitHub<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a><div class="toggle_vylO colorModeToggle_DEke"><button class="clean-btn toggleButton_gllP toggleButtonDisabled_aARS" type="button" disabled="" title="Switch between dark and light mode (currently light mode)" aria-label="Switch between dark and light mode (currently light mode)" aria-live="polite"><svg viewBox="0 0 24 24" width="24" height="24" class="lightToggleIcon_pyhR"><path fill="currentColor" d="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95 c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41 L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06 c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" class="darkToggleIcon_wfgR"><path fill="currentColor" d="M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"></path></svg></button></div><div class="searchBox_ZlJk"><div class="navbar__search"><span aria-label="expand searchbar" role="button" class="search-icon" tabindex="0"></span><input type="search" id="search_input_react" placeholder="Loading..." aria-label="Search" class="navbar__search-input search-bar" disabled=""></div></div></div></div><div role="presentation" class="navbar-sidebar__backdrop"></div></nav><div id="docusaurus_skipToContent_fallback" class="main-wrapper mainWrapper_z2l0 docPageContainer_wNNk"><div class="docPage_Dpn1"><div class="docSidebarContainer_o_re"><div class="sidebar_njMd"><nav aria-label="Docs sidebar" class="menu thin-scrollbar menu_SIkG"><ul class="theme-doc-sidebar-menu menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/sift/api/Sift">​Sift</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/sift/api/Array">​Array</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/sift/api/Dictionary">​Dictionary</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link menu__link--active" aria-current="page" href="/sift/api/Set">​Set</a></li></ul></nav></div></div><main class="docMainContainer_HJE1"><div class="container padding-vert--lg"><div class="row"><div class="col docItemCol_MU3C"><div class="docItemContainer_Wv98"><article><div class="member_J0w1 markdown"><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_oUs_"><button type="button" class="clean-btn tocCollapsibleButton_TO0P">On this page</button></div><header><h1 class="docTitle_mZRt" style="text-decoration:none"><span style="display:inline-block">Set</span></h1><div class="luaClassTags_EipM"></div><div>
 <p>
   Sets are a collection of values. They are used to store unique values.
   They are essentially a dictionary, but each value is stored as a boolean.
@@ -35,57 +35,31 @@ local newSet = Add(set, &quot;world&quot;) -- { hello = true, world = true }
 
 <span class="token keyword">local</span> newSet <span class="token operator">=</span> <span class="token function">Add</span><span class="token punctuation">(</span>set<span class="token punctuation">,</span> <span class="token string">"world"</span><span class="token punctuation">)</span> <span class="token comment">-- { hello = true, world = true }</span>
 </code></pre>
-</div></header><h2 class="anchor anchorWithStickyNavbar_LWe7" id="functions">Functions<a href="#functions" class="hash-link" aria-label="Direct link to Functions" title="Direct link to Functions">​</a></h2><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="count"><code style="text-decoration:none">count</code><a href="#count" class="hash-link" aria-label="Direct link to count" title="Direct link to count">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/csqrl/sift/blob/main/src/Set/count.lua#L25"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>Set<!-- -->.</code><code class="green_DgR4">count</code><code>(</code><div class="inset_uKQm"><div><code>set<!-- -->: </code><code class="purple_ieR2">{</code><span><code>[</code><code class="blue_P4bS">T</code><code>]</code></span><code>: </code><code class="blue_P4bS">boolean</code><code class="purple_ieR2">}</code><code>,</code><span class="inlineDescription_G7Er">-- <span>
-<p>The set to count.</p>
-</span></span></div><div><code>predicate?<!-- -->: </code><code class="purple_ieR2">(</code><div class="inset_uKQm"><code>item<!-- -->: </code><code class="blue_P4bS">T</code><code class="purple_ieR2">,</code></div><div class="inset_uKQm"><code>set<!-- -->: </code><code class="green_DgR4">{</code><span><code>[</code><code class="blue_P4bS">T</code><code>]</code></span><code>: </code><code class="blue_P4bS">boolean</code><code class="green_DgR4">}</code></div><code class="purple_ieR2">)</code><code class="purple_ieR2"> → </code><code class="blue_P4bS">boolean?</code><span class="inlineDescription_G7Er">-- <span>
-<p>The predicate to use to count.</p>
-</span></span></div></div><code>) → </code><code class="blue_P4bS">number</code><span class="inlineDescription_G7Er">-- <span>
-<p>The number of items in the set.</p>
+</div></header><h2 class="anchor anchorWithStickyNavbar_LWe7" id="functions">Functions<a href="#functions" class="hash-link" aria-label="Direct link to Functions" title="Direct link to Functions">​</a></h2><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="copy"><code style="text-decoration:none">copy</code><a href="#copy" class="hash-link" aria-label="Direct link to copy" title="Direct link to copy">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/cxmeel/sift/blob/main/src/Set/copy.lua#L21"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>Set<!-- -->.</code><code class="green_DgR4">copy</code><code>(</code><div class="inset_uKQm"><div><code>set<!-- -->: </code><code class="purple_ieR2">{</code><span><code>[</code><code class="blue_P4bS">T</code><code>]</code></span><code>: </code><code class="blue_P4bS">boolean</code><code class="purple_ieR2">}</code><span class="inlineDescription_G7Er">-- <span>
+<p>The set to copy.</p>
+</span></span></div></div><code>) → </code><code class="purple_ieR2">{</code><span><code>[</code><code class="blue_P4bS">T</code><code>]</code></span><code>: </code><code class="blue_P4bS">boolean</code><code class="purple_ieR2">}</code><span class="inlineDescription_G7Er">-- <span>
+<p>A copy of the set.</p>
 </span></span></div><div>
-<p>Counts the number of items in a set.</p>
-<pre class="language-lua"><code class="language-lua"><span class="token keyword">local</span> set <span class="token operator">=</span> <span class="token punctuation">{</span> hello <span class="token operator">=</span> <span class="token keyword">true</span><span class="token punctuation">,</span> world <span class="token operator">=</span> <span class="token keyword">true</span> <span class="token punctuation">}</span>
-
-<span class="token keyword">local</span> count <span class="token operator">=</span> <span class="token function">Count</span><span class="token punctuation">(</span>set<span class="token punctuation">)</span> <span class="token comment">-- 2</span>
-<span class="token keyword">local</span> count <span class="token operator">=</span> <span class="token function">Count</span><span class="token punctuation">(</span>set<span class="token punctuation">,</span> <span class="token keyword">function</span><span class="token punctuation">(</span>item<span class="token punctuation">)</span>
-  <span class="token keyword">return</span> item <span class="token operator">==</span> <span class="token string">"hello"</span>
-<span class="token keyword">end</span><span class="token punctuation">)</span> <span class="token comment">-- 1</span>
-</code></pre>
-</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="isSuperset"><code style="text-decoration:none">isSuperset</code><a href="#isSuperset" class="hash-link" aria-label="Direct link to isSuperset" title="Direct link to isSuperset">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/csqrl/sift/blob/main/src/Set/isSuperset.lua#L21"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>Set<!-- -->.</code><code class="green_DgR4">isSuperset</code><code>(</code><div class="inset_uKQm"><div><code>superset<!-- -->: </code><code class="purple_ieR2">{</code><span><code>[</code><code class="blue_P4bS">any</code><code>]</code></span><code>: </code><code class="blue_P4bS">boolean</code><code class="purple_ieR2">}</code><code>,</code><span class="inlineDescription_G7Er">-- <span>
-<p>The superset to check.</p>
-</span></span></div><div><code>subset<!-- -->: </code><code class="purple_ieR2">{</code><span><code>[</code><code class="blue_P4bS">any</code><code>]</code></span><code>: </code><code class="blue_P4bS">boolean</code><code class="purple_ieR2">}</code><span class="inlineDescription_G7Er">-- <span>
-<p>The subset to check against.</p>
-</span></span></div></div><code>) → </code><code class="blue_P4bS">boolean</code><span class="inlineDescription_G7Er">-- <span>
-<p>Whether the superset is a superset of the subset.</p>
-</span></span></div><div>
-<p>Checks whether a set is a superset of another set.</p>
-<pre class="language-lua"><code class="language-lua"><span class="token keyword">local</span> set <span class="token operator">=</span> <span class="token punctuation">{</span> hello <span class="token operator">=</span> <span class="token keyword">true</span><span class="token punctuation">,</span> world <span class="token operator">=</span> <span class="token keyword">true</span> <span class="token punctuation">}</span>
-<span class="token keyword">local</span> subset <span class="token operator">=</span> <span class="token punctuation">{</span> hello <span class="token operator">=</span> <span class="token keyword">true</span> <span class="token punctuation">}</span>
-
-<span class="token keyword">local</span> isSuperset <span class="token operator">=</span> <span class="token function">IsSuperset</span><span class="token punctuation">(</span>set<span class="token punctuation">,</span> subset<span class="token punctuation">)</span> <span class="token comment">-- true</span>
-</code></pre>
-</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="has"><code style="text-decoration:none">has</code><a href="#has" class="hash-link" aria-label="Direct link to has" title="Direct link to has">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/csqrl/sift/blob/main/src/Set/has.lua#L18"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>Set<!-- -->.</code><code class="green_DgR4">has</code><code>(</code><div class="inset_uKQm"><div><code>set<!-- -->: </code><code class="purple_ieR2">{</code><span><code>[</code><code class="blue_P4bS">T</code><code>]</code></span><code>: </code><code class="blue_P4bS">boolean</code><code class="purple_ieR2">}</code><code>,</code><span class="inlineDescription_G7Er">-- <span>
-<p>The set to check.</p>
-</span></span></div><div><code>value<!-- -->: </code><code class="blue_P4bS">any</code><span class="inlineDescription_G7Er">-- <span>
-<p>The value to check for.</p>
-</span></span></div></div><code>) → </code><code class="blue_P4bS">boolean</code><span class="inlineDescription_G7Er">-- <span>
-<p>Whether the value is in the set.</p>
-</span></span></div><div>
-<p>Checks whether a value is in a set.</p>
+<p>Creates a copy of a set.</p>
 <pre class="language-lua"><code class="language-lua"><span class="token keyword">local</span> set <span class="token operator">=</span> <span class="token punctuation">{</span> hello <span class="token operator">=</span> <span class="token keyword">true</span> <span class="token punctuation">}</span>
 
-<span class="token keyword">local</span> has <span class="token operator">=</span> <span class="token function">Has</span><span class="token punctuation">(</span>set<span class="token punctuation">,</span> <span class="token string">"hello"</span><span class="token punctuation">)</span> <span class="token comment">-- true</span>
+<span class="token keyword">local</span> newSet <span class="token operator">=</span> <span class="token function">Copy</span><span class="token punctuation">(</span>set<span class="token punctuation">)</span> <span class="token comment">-- { hello = true }</span>
 </code></pre>
-</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="toArray"><code style="text-decoration:none">toArray</code><a href="#toArray" class="hash-link" aria-label="Direct link to toArray" title="Direct link to toArray">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/csqrl/sift/blob/main/src/Set/toArray.lua#L17"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>Set<!-- -->.</code><code class="green_DgR4">toArray</code><code>(</code><div class="inset_uKQm"><div><code>set<!-- -->: </code><code class="purple_ieR2">{</code><span><code>[</code><code class="blue_P4bS">T</code><code>]</code></span><code>: </code><code class="blue_P4bS">boolean</code><code class="purple_ieR2">}</code><span class="inlineDescription_G7Er">-- <span>
-<p>The set to convert to an array.</p>
-</span></span></div></div><code>) → </code><code class="purple_ieR2">{</code><code class="blue_P4bS">T</code><code class="purple_ieR2">}</code><span class="inlineDescription_G7Er">-- <span>
-<p>The array.</p>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="fromArray"><code style="text-decoration:none">fromArray</code><a href="#fromArray" class="hash-link" aria-label="Direct link to fromArray" title="Direct link to fromArray">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/cxmeel/sift/blob/main/src/Set/fromArray.lua#L20"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>Set<!-- -->.</code><code class="green_DgR4">fromArray</code><code>(</code><div class="inset_uKQm"><div><code>array<!-- -->: </code><code class="purple_ieR2">{</code><code class="blue_P4bS">T</code><code class="purple_ieR2">}</code><span class="inlineDescription_G7Er">-- <span>
+<p>The array to convert to a set.</p>
+</span></span></div></div><code>) → </code><code class="purple_ieR2">{</code><span><code>[</code><code class="blue_P4bS">T</code><code>]</code></span><code>: </code><code class="blue_P4bS">boolean</code><code class="purple_ieR2">}</code><span class="inlineDescription_G7Er">-- <span>
+<p>The set.</p>
 </span></span></div><div>
-<p>Converts a set to an array.</p>
-<pre class="language-lua"><code class="language-lua"><span class="token keyword">local</span> set <span class="token operator">=</span> <span class="token punctuation">{</span> hello <span class="token operator">=</span> <span class="token keyword">true</span><span class="token punctuation">,</span> world <span class="token operator">=</span> <span class="token keyword">true</span> <span class="token punctuation">}</span>
+<p>
+  Converts an array to a set, where each item is mapped to true.
+  Duplicate items are discarded.
+</p>
+<p>Aliases: <code>fromList</code></p>
+<pre class="language-lua"><code class="language-lua"><span class="token keyword">local</span> array <span class="token operator">=</span> <span class="token punctuation">{</span> <span class="token string">"hello"</span><span class="token punctuation">,</span> <span class="token string">"world"</span><span class="token punctuation">,</span> <span class="token string">"hello"</span> <span class="token punctuation">}</span>
 
-<span class="token keyword">local</span> array <span class="token operator">=</span> <span class="token function">ToArray</span><span class="token punctuation">(</span>set<span class="token punctuation">)</span> <span class="token comment">-- { "hello", "world" }</span>
+<span class="token keyword">local</span> set <span class="token operator">=</span> <span class="token function">FromArray</span><span class="token punctuation">(</span>array<span class="token punctuation">)</span> <span class="token comment">-- { hello = true, world = true }</span>
 </code></pre>
-</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="map"><code style="text-decoration:none">map</code><a href="#map" class="hash-link" aria-label="Direct link to map" title="Direct link to map">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/csqrl/sift/blob/main/src/Set/map.lua#L20"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>Set<!-- -->.</code><code class="green_DgR4">map</code><code>(</code><div class="inset_uKQm"><div><code>set<!-- -->: </code><code class="purple_ieR2">{</code><span><code>[</code><code class="blue_P4bS">T</code><code>]</code></span><code>: </code><code class="blue_P4bS">boolean</code><code class="purple_ieR2">}</code><code>,</code><span class="inlineDescription_G7Er">-- <span>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="map"><code style="text-decoration:none">map</code><a href="#map" class="hash-link" aria-label="Direct link to map" title="Direct link to map">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/cxmeel/sift/blob/main/src/Set/map.lua#L20"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>Set<!-- -->.</code><code class="green_DgR4">map</code><code>(</code><div class="inset_uKQm"><div><code>set<!-- -->: </code><code class="purple_ieR2">{</code><span><code>[</code><code class="blue_P4bS">T</code><code>]</code></span><code>: </code><code class="blue_P4bS">boolean</code><code class="purple_ieR2">}</code><code>,</code><span class="inlineDescription_G7Er">-- <span>
 <p>The set to map.</p>
 </span></span></div><div><code>mapper<!-- -->: </code><code class="purple_ieR2">(</code><div class="inset_uKQm"><code class="blue_P4bS">T</code><code class="purple_ieR2">,</code></div><div class="inset_uKQm"><code class="green_DgR4">{</code><span><code>[</code><code class="blue_P4bS">T</code><code>]</code></span><code>: </code><code class="blue_P4bS">boolean</code><code class="green_DgR4">}</code></div><code class="purple_ieR2">)</code><code class="purple_ieR2"> → </code><code class="blue_P4bS">U</code><span class="inlineDescription_G7Er">-- <span>
 <p>The mapper function.</p>
@@ -99,19 +73,7 @@ local newSet = Add(set, &quot;world&quot;) -- { hello = true, world = true }
   <span class="token keyword">return</span> value <span class="token operator">..</span> <span class="token string">"!"</span>
 <span class="token keyword">end</span><span class="token punctuation">)</span> <span class="token comment">-- { ["hello!"] = true, ["world!"] = true }</span>
 </code></pre>
-</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="merge"><code style="text-decoration:none">merge</code><a href="#merge" class="hash-link" aria-label="Direct link to merge" title="Direct link to merge">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/csqrl/sift/blob/main/src/Set/merge.lua#L20"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>Set<!-- -->.</code><code class="green_DgR4">merge</code><code>(</code><div class="inset_uKQm"><div><code>...<!-- -->: </code><code class="blue_P4bS">...any</code><span class="inlineDescription_G7Er">-- <span>
-<p>The sets to merge.</p>
-</span></span></div></div><code>) → </code><code class="purple_ieR2">{</code><span><code>[</code><code class="blue_P4bS">T</code><code>]</code></span><code>: </code><code class="blue_P4bS">boolean</code><code class="purple_ieR2">}</code><span class="inlineDescription_G7Er">-- <span>
-<p>The merged set.</p>
-</span></span></div><div>
-<p>Combines one or more sets into a single set.</p>
-<p>Aliases: <code>join</code>, <code>union</code></p>
-<pre class="language-lua"><code class="language-lua"><span class="token keyword">local</span> set1 <span class="token operator">=</span> <span class="token punctuation">{</span> hello <span class="token operator">=</span> <span class="token keyword">true</span><span class="token punctuation">,</span> world <span class="token operator">=</span> <span class="token keyword">true</span> <span class="token punctuation">}</span>
-<span class="token keyword">local</span> set2 <span class="token operator">=</span> <span class="token punctuation">{</span> cat <span class="token operator">=</span> <span class="token keyword">true</span><span class="token punctuation">,</span> dog <span class="token operator">=</span> <span class="token keyword">true</span><span class="token punctuation">,</span> hello <span class="token operator">=</span> <span class="token keyword">true</span> <span class="token punctuation">}</span>
-
-<span class="token keyword">local</span> merge <span class="token operator">=</span> <span class="token function">Merge</span><span class="token punctuation">(</span>set1<span class="token punctuation">,</span> set2<span class="token punctuation">)</span> <span class="token comment">-- { hello = true, world = true, cat = true, dog = true }</span>
-</code></pre>
-</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="intersection"><code style="text-decoration:none">intersection</code><a href="#intersection" class="hash-link" aria-label="Direct link to intersection" title="Direct link to intersection">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/csqrl/sift/blob/main/src/Set/intersection.lua#L20"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>Set<!-- -->.</code><code class="green_DgR4">intersection</code><code>(</code><div class="inset_uKQm"><div><code>...<!-- -->: </code><code class="blue_P4bS">...</code><code class="purple_ieR2">{</code><span><code>[</code><code class="blue_P4bS">any</code><code>]</code></span><code>: </code><code class="blue_P4bS">boolean</code><code class="purple_ieR2">}</code><span class="inlineDescription_G7Er">-- <span>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="intersection"><code style="text-decoration:none">intersection</code><a href="#intersection" class="hash-link" aria-label="Direct link to intersection" title="Direct link to intersection">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/cxmeel/sift/blob/main/src/Set/intersection.lua#L20"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>Set<!-- -->.</code><code class="green_DgR4">intersection</code><code>(</code><div class="inset_uKQm"><div><code>...<!-- -->: </code><code class="blue_P4bS">...</code><code class="purple_ieR2">{</code><span><code>[</code><code class="blue_P4bS">any</code><code>]</code></span><code>: </code><code class="blue_P4bS">boolean</code><code class="purple_ieR2">}</code><span class="inlineDescription_G7Er">-- <span>
 <p>The sets to intersect.</p>
 </span></span></div></div><code>) → </code><code class="purple_ieR2">{</code><span><code>[</code><code class="blue_P4bS">T</code><code>]</code></span><code>: </code><code class="blue_P4bS">boolean</code><code class="purple_ieR2">}</code><span class="inlineDescription_G7Er">-- <span>
 <p>The intersection of the sets.</p>
@@ -126,19 +88,45 @@ local newSet = Add(set, &quot;world&quot;) -- { hello = true, world = true }
 
 <span class="token keyword">local</span> intersection <span class="token operator">=</span> <span class="token function">Intersection</span><span class="token punctuation">(</span>set1<span class="token punctuation">,</span> set2<span class="token punctuation">)</span> <span class="token comment">-- { world = true }</span>
 </code></pre>
-</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="add"><code style="text-decoration:none">add</code><a href="#add" class="hash-link" aria-label="Direct link to add" title="Direct link to add">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/csqrl/sift/blob/main/src/Set/add.lua#L18"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>Set<!-- -->.</code><code class="green_DgR4">add</code><code>(</code><div class="inset_uKQm"><div><code>set<!-- -->: </code><code class="purple_ieR2">{</code><span><code>[</code><code class="blue_P4bS">T</code><code>]</code></span><code>: </code><code class="blue_P4bS">boolean</code><code class="purple_ieR2">}</code><code>,</code><span class="inlineDescription_G7Er">-- <span>
-<p>The set to add the value to.</p>
-</span></span></div><div><code>...<!-- -->: </code><code class="blue_P4bS">...T</code><span class="inlineDescription_G7Er">-- <span>
-<p>The values to add.</p>
-</span></span></div></div><code>) → </code><code class="purple_ieR2">{</code><span><code>[</code><code class="blue_P4bS">T</code><code>]</code></span><code>: </code><code class="blue_P4bS">boolean</code><code class="purple_ieR2">}</code><span class="inlineDescription_G7Er">-- <span>
-<p>The set with the values added.</p>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="difference"><code style="text-decoration:none">difference</code><a href="#difference" class="hash-link" aria-label="Direct link to difference" title="Direct link to difference">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/cxmeel/sift/blob/main/src/Set/difference.lua#L21"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>Set<!-- -->.</code><code class="green_DgR4">difference</code><code>(</code><div class="inset_uKQm"><div><code>set<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="/sift/api/Set">Set</a></code><code class="op_lSLc">&lt;</code><code class="blue_P4bS">V</code><code class="op_lSLc">&gt;</code><code>,</code><span class="inlineDescription_G7Er">-- <span>
+<p>The set to compare.</p>
+</span></span></div><div><code>...<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="/sift/api/Set">...Set</a></code><code class="op_lSLc">&lt;</code><code class="blue_P4bS">V</code><code class="op_lSLc">&gt;</code><span class="inlineDescription_G7Er">-- <span>
+<p>The sets to compare against.</p>
+</span></span></div></div><code>) → </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="/sift/api/Set">Set</a></code><code class="op_lSLc">&lt;</code><code class="blue_P4bS">V</code><code class="op_lSLc">&gt;</code><span class="inlineDescription_G7Er">-- <span>
+<p>The difference between the sets.</p>
 </span></span></div><div>
-<p>Adds values to a set.</p>
-<pre class="language-lua"><code class="language-lua"><span class="token keyword">local</span> set <span class="token operator">=</span> <span class="token punctuation">{</span> hello <span class="token operator">=</span> <span class="token keyword">true</span> <span class="token punctuation">}</span>
+<p>Returns a set of values that are in the first set, but not in the other sets.</p>
+<pre class="language-lua"><code class="language-lua"><span class="token keyword">local</span> set1 <span class="token operator">=</span> <span class="token punctuation">{</span> hello <span class="token operator">=</span> <span class="token keyword">true</span><span class="token punctuation">,</span> world <span class="token operator">=</span> <span class="token keyword">true</span> <span class="token punctuation">}</span>
+<span class="token keyword">local</span> set2 <span class="token operator">=</span> <span class="token punctuation">{</span> cat <span class="token operator">=</span> <span class="token keyword">true</span><span class="token punctuation">,</span> dog <span class="token operator">=</span> <span class="token keyword">true</span><span class="token punctuation">,</span> hello <span class="token operator">=</span> <span class="token keyword">true</span> <span class="token punctuation">}</span>
 
-<span class="token keyword">local</span> newSet <span class="token operator">=</span> <span class="token function">Add</span><span class="token punctuation">(</span>set<span class="token punctuation">,</span> <span class="token string">"world"</span><span class="token punctuation">)</span> <span class="token comment">-- { hello = true, world = true }</span>
+<span class="token keyword">local</span> difference <span class="token operator">=</span> <span class="token function">Difference</span><span class="token punctuation">(</span>set1<span class="token punctuation">,</span> set2<span class="token punctuation">)</span> <span class="token comment">-- { world = true }</span>
 </code></pre>
-</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="filter"><code style="text-decoration:none">filter</code><a href="#filter" class="hash-link" aria-label="Direct link to filter" title="Direct link to filter">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/csqrl/sift/blob/main/src/Set/filter.lua#L24"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>Set<!-- -->.</code><code class="green_DgR4">filter</code><code>(</code><div class="inset_uKQm"><div><code>set<!-- -->: </code><code class="purple_ieR2">{</code><span><code>[</code><code class="blue_P4bS">T</code><code>]</code></span><code>: </code><code class="blue_P4bS">boolean</code><code class="purple_ieR2">}</code><code>,</code><span class="inlineDescription_G7Er">-- <span>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="isSuperset"><code style="text-decoration:none">isSuperset</code><a href="#isSuperset" class="hash-link" aria-label="Direct link to isSuperset" title="Direct link to isSuperset">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/cxmeel/sift/blob/main/src/Set/isSuperset.lua#L21"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>Set<!-- -->.</code><code class="green_DgR4">isSuperset</code><code>(</code><div class="inset_uKQm"><div><code>superset<!-- -->: </code><code class="purple_ieR2">{</code><span><code>[</code><code class="blue_P4bS">any</code><code>]</code></span><code>: </code><code class="blue_P4bS">boolean</code><code class="purple_ieR2">}</code><code>,</code><span class="inlineDescription_G7Er">-- <span>
+<p>The superset to check.</p>
+</span></span></div><div><code>subset<!-- -->: </code><code class="purple_ieR2">{</code><span><code>[</code><code class="blue_P4bS">any</code><code>]</code></span><code>: </code><code class="blue_P4bS">boolean</code><code class="purple_ieR2">}</code><span class="inlineDescription_G7Er">-- <span>
+<p>The subset to check against.</p>
+</span></span></div></div><code>) → </code><code class="blue_P4bS">boolean</code><span class="inlineDescription_G7Er">-- <span>
+<p>Whether the superset is a superset of the subset.</p>
+</span></span></div><div>
+<p>Checks whether a set is a superset of another set.</p>
+<pre class="language-lua"><code class="language-lua"><span class="token keyword">local</span> set <span class="token operator">=</span> <span class="token punctuation">{</span> hello <span class="token operator">=</span> <span class="token keyword">true</span><span class="token punctuation">,</span> world <span class="token operator">=</span> <span class="token keyword">true</span> <span class="token punctuation">}</span>
+<span class="token keyword">local</span> subset <span class="token operator">=</span> <span class="token punctuation">{</span> hello <span class="token operator">=</span> <span class="token keyword">true</span> <span class="token punctuation">}</span>
+
+<span class="token keyword">local</span> isSuperset <span class="token operator">=</span> <span class="token function">IsSuperset</span><span class="token punctuation">(</span>set<span class="token punctuation">,</span> subset<span class="token punctuation">)</span> <span class="token comment">-- true</span>
+</code></pre>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="merge"><code style="text-decoration:none">merge</code><a href="#merge" class="hash-link" aria-label="Direct link to merge" title="Direct link to merge">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/cxmeel/sift/blob/main/src/Set/merge.lua#L20"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>Set<!-- -->.</code><code class="green_DgR4">merge</code><code>(</code><div class="inset_uKQm"><div><code>...<!-- -->: </code><code class="blue_P4bS">...any</code><span class="inlineDescription_G7Er">-- <span>
+<p>The sets to merge.</p>
+</span></span></div></div><code>) → </code><code class="purple_ieR2">{</code><span><code>[</code><code class="blue_P4bS">T</code><code>]</code></span><code>: </code><code class="blue_P4bS">boolean</code><code class="purple_ieR2">}</code><span class="inlineDescription_G7Er">-- <span>
+<p>The merged set.</p>
+</span></span></div><div>
+<p>Combines one or more sets into a single set.</p>
+<p>Aliases: <code>join</code>, <code>union</code></p>
+<pre class="language-lua"><code class="language-lua"><span class="token keyword">local</span> set1 <span class="token operator">=</span> <span class="token punctuation">{</span> hello <span class="token operator">=</span> <span class="token keyword">true</span><span class="token punctuation">,</span> world <span class="token operator">=</span> <span class="token keyword">true</span> <span class="token punctuation">}</span>
+<span class="token keyword">local</span> set2 <span class="token operator">=</span> <span class="token punctuation">{</span> cat <span class="token operator">=</span> <span class="token keyword">true</span><span class="token punctuation">,</span> dog <span class="token operator">=</span> <span class="token keyword">true</span><span class="token punctuation">,</span> hello <span class="token operator">=</span> <span class="token keyword">true</span> <span class="token punctuation">}</span>
+
+<span class="token keyword">local</span> merge <span class="token operator">=</span> <span class="token function">Merge</span><span class="token punctuation">(</span>set1<span class="token punctuation">,</span> set2<span class="token punctuation">)</span> <span class="token comment">-- { hello = true, world = true, cat = true, dog = true }</span>
+</code></pre>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="filter"><code style="text-decoration:none">filter</code><a href="#filter" class="hash-link" aria-label="Direct link to filter" title="Direct link to filter">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/cxmeel/sift/blob/main/src/Set/filter.lua#L24"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>Set<!-- -->.</code><code class="green_DgR4">filter</code><code>(</code><div class="inset_uKQm"><div><code>set<!-- -->: </code><code class="purple_ieR2">{</code><span><code>[</code><code class="blue_P4bS">T</code><code>]</code></span><code>: </code><code class="blue_P4bS">boolean</code><code class="purple_ieR2">}</code><code>,</code><span class="inlineDescription_G7Er">-- <span>
 <p>The set to filter.</p>
 </span></span></div><div><code>predicate?<!-- -->: </code><code class="purple_ieR2">(</code><div class="inset_uKQm"><code>item<!-- -->: </code><code class="blue_P4bS">T</code><code class="purple_ieR2">,</code></div><div class="inset_uKQm"><code>set<!-- -->: </code><code class="green_DgR4">{</code><span><code>[</code><code class="blue_P4bS">T</code><code>]</code></span><code>: </code><code class="blue_P4bS">boolean</code><code class="green_DgR4">}</code></div><code class="purple_ieR2">)</code><code class="purple_ieR2"> → </code><code class="blue_P4bS">any</code><span class="inlineDescription_G7Er">-- <span>
 <p>The function to filter the set with.</p>
@@ -152,21 +140,7 @@ local newSet = Add(set, &quot;world&quot;) -- { hello = true, world = true }
   <span class="token keyword">return</span> value <span class="token operator">~=</span> <span class="token string">"hello"</span>
 <span class="token keyword">end</span><span class="token punctuation">)</span> <span class="token comment">-- { world = true }</span>
 </code></pre>
-</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="fromArray"><code style="text-decoration:none">fromArray</code><a href="#fromArray" class="hash-link" aria-label="Direct link to fromArray" title="Direct link to fromArray">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/csqrl/sift/blob/main/src/Set/fromArray.lua#L20"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>Set<!-- -->.</code><code class="green_DgR4">fromArray</code><code>(</code><div class="inset_uKQm"><div><code>array<!-- -->: </code><code class="purple_ieR2">{</code><code class="blue_P4bS">T</code><code class="purple_ieR2">}</code><span class="inlineDescription_G7Er">-- <span>
-<p>The array to convert to a set.</p>
-</span></span></div></div><code>) → </code><code class="purple_ieR2">{</code><span><code>[</code><code class="blue_P4bS">T</code><code>]</code></span><code>: </code><code class="blue_P4bS">boolean</code><code class="purple_ieR2">}</code><span class="inlineDescription_G7Er">-- <span>
-<p>The set.</p>
-</span></span></div><div>
-<p>
-  Converts an array to a set, where each item is mapped to true.
-  Duplicate items are discarded.
-</p>
-<p>Aliases: <code>fromList</code></p>
-<pre class="language-lua"><code class="language-lua"><span class="token keyword">local</span> array <span class="token operator">=</span> <span class="token punctuation">{</span> <span class="token string">"hello"</span><span class="token punctuation">,</span> <span class="token string">"world"</span><span class="token punctuation">,</span> <span class="token string">"hello"</span> <span class="token punctuation">}</span>
-
-<span class="token keyword">local</span> set <span class="token operator">=</span> <span class="token function">FromArray</span><span class="token punctuation">(</span>array<span class="token punctuation">)</span> <span class="token comment">-- { hello = true, world = true }</span>
-</code></pre>
-</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="isSubset"><code style="text-decoration:none">isSubset</code><a href="#isSubset" class="hash-link" aria-label="Direct link to isSubset" title="Direct link to isSubset">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/csqrl/sift/blob/main/src/Set/isSubset.lua#L19"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>Set<!-- -->.</code><code class="green_DgR4">isSubset</code><code>(</code><div class="inset_uKQm"><div><code>subset<!-- -->: </code><code class="purple_ieR2">{</code><span><code>[</code><code class="blue_P4bS">any</code><code>]</code></span><code>: </code><code class="blue_P4bS">boolean</code><code class="purple_ieR2">}</code><code>,</code><span class="inlineDescription_G7Er">-- <span>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="isSubset"><code style="text-decoration:none">isSubset</code><a href="#isSubset" class="hash-link" aria-label="Direct link to isSubset" title="Direct link to isSubset">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/cxmeel/sift/blob/main/src/Set/isSubset.lua#L19"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>Set<!-- -->.</code><code class="green_DgR4">isSubset</code><code>(</code><div class="inset_uKQm"><div><code>subset<!-- -->: </code><code class="purple_ieR2">{</code><span><code>[</code><code class="blue_P4bS">any</code><code>]</code></span><code>: </code><code class="blue_P4bS">boolean</code><code class="purple_ieR2">}</code><code>,</code><span class="inlineDescription_G7Er">-- <span>
 <p>The subset to check.</p>
 </span></span></div><div><code>superset<!-- -->: </code><code class="purple_ieR2">{</code><span><code>[</code><code class="blue_P4bS">any</code><code>]</code></span><code>: </code><code class="blue_P4bS">boolean</code><code class="purple_ieR2">}</code><span class="inlineDescription_G7Er">-- <span>
 <p>The superset to check against.</p>
@@ -179,7 +153,32 @@ local newSet = Add(set, &quot;world&quot;) -- { hello = true, world = true }
 
 <span class="token keyword">local</span> isSubset <span class="token operator">=</span> <span class="token function">IsSubset</span><span class="token punctuation">(</span>subset<span class="token punctuation">,</span> set<span class="token punctuation">)</span> <span class="token comment">-- true</span>
 </code></pre>
-</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="delete"><code style="text-decoration:none">delete</code><a href="#delete" class="hash-link" aria-label="Direct link to delete" title="Direct link to delete">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/csqrl/sift/blob/main/src/Set/delete.lua#L20"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>Set<!-- -->.</code><code class="green_DgR4">delete</code><code>(</code><div class="inset_uKQm"><div><code>set<!-- -->: </code><code class="purple_ieR2">{</code><span><code>[</code><code class="blue_P4bS">T</code><code>]</code></span><code>: </code><code class="blue_P4bS">boolean</code><code class="purple_ieR2">}</code><code>,</code><span class="inlineDescription_G7Er">-- <span>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="count"><code style="text-decoration:none">count</code><a href="#count" class="hash-link" aria-label="Direct link to count" title="Direct link to count">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/cxmeel/sift/blob/main/src/Set/count.lua#L25"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>Set<!-- -->.</code><code class="green_DgR4">count</code><code>(</code><div class="inset_uKQm"><div><code>set<!-- -->: </code><code class="purple_ieR2">{</code><span><code>[</code><code class="blue_P4bS">T</code><code>]</code></span><code>: </code><code class="blue_P4bS">boolean</code><code class="purple_ieR2">}</code><code>,</code><span class="inlineDescription_G7Er">-- <span>
+<p>The set to count.</p>
+</span></span></div><div><code>predicate?<!-- -->: </code><code class="purple_ieR2">(</code><div class="inset_uKQm"><code>item<!-- -->: </code><code class="blue_P4bS">T</code><code class="purple_ieR2">,</code></div><div class="inset_uKQm"><code>set<!-- -->: </code><code class="green_DgR4">{</code><span><code>[</code><code class="blue_P4bS">T</code><code>]</code></span><code>: </code><code class="blue_P4bS">boolean</code><code class="green_DgR4">}</code></div><code class="purple_ieR2">)</code><code class="purple_ieR2"> → </code><code class="blue_P4bS">boolean?</code><span class="inlineDescription_G7Er">-- <span>
+<p>The predicate to use to count.</p>
+</span></span></div></div><code>) → </code><code class="blue_P4bS">number</code><span class="inlineDescription_G7Er">-- <span>
+<p>The number of items in the set.</p>
+</span></span></div><div>
+<p>Counts the number of items in a set.</p>
+<pre class="language-lua"><code class="language-lua"><span class="token keyword">local</span> set <span class="token operator">=</span> <span class="token punctuation">{</span> hello <span class="token operator">=</span> <span class="token keyword">true</span><span class="token punctuation">,</span> world <span class="token operator">=</span> <span class="token keyword">true</span> <span class="token punctuation">}</span>
+
+<span class="token keyword">local</span> count <span class="token operator">=</span> <span class="token function">Count</span><span class="token punctuation">(</span>set<span class="token punctuation">)</span> <span class="token comment">-- 2</span>
+<span class="token keyword">local</span> count <span class="token operator">=</span> <span class="token function">Count</span><span class="token punctuation">(</span>set<span class="token punctuation">,</span> <span class="token keyword">function</span><span class="token punctuation">(</span>item<span class="token punctuation">)</span>
+  <span class="token keyword">return</span> item <span class="token operator">==</span> <span class="token string">"hello"</span>
+<span class="token keyword">end</span><span class="token punctuation">)</span> <span class="token comment">-- 1</span>
+</code></pre>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="toArray"><code style="text-decoration:none">toArray</code><a href="#toArray" class="hash-link" aria-label="Direct link to toArray" title="Direct link to toArray">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/cxmeel/sift/blob/main/src/Set/toArray.lua#L17"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>Set<!-- -->.</code><code class="green_DgR4">toArray</code><code>(</code><div class="inset_uKQm"><div><code>set<!-- -->: </code><code class="purple_ieR2">{</code><span><code>[</code><code class="blue_P4bS">T</code><code>]</code></span><code>: </code><code class="blue_P4bS">boolean</code><code class="purple_ieR2">}</code><span class="inlineDescription_G7Er">-- <span>
+<p>The set to convert to an array.</p>
+</span></span></div></div><code>) → </code><code class="purple_ieR2">{</code><code class="blue_P4bS">T</code><code class="purple_ieR2">}</code><span class="inlineDescription_G7Er">-- <span>
+<p>The array.</p>
+</span></span></div><div>
+<p>Converts a set to an array.</p>
+<pre class="language-lua"><code class="language-lua"><span class="token keyword">local</span> set <span class="token operator">=</span> <span class="token punctuation">{</span> hello <span class="token operator">=</span> <span class="token keyword">true</span><span class="token punctuation">,</span> world <span class="token operator">=</span> <span class="token keyword">true</span> <span class="token punctuation">}</span>
+
+<span class="token keyword">local</span> array <span class="token operator">=</span> <span class="token function">ToArray</span><span class="token punctuation">(</span>set<span class="token punctuation">)</span> <span class="token comment">-- { "hello", "world" }</span>
+</code></pre>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="delete"><code style="text-decoration:none">delete</code><a href="#delete" class="hash-link" aria-label="Direct link to delete" title="Direct link to delete">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/cxmeel/sift/blob/main/src/Set/delete.lua#L20"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>Set<!-- -->.</code><code class="green_DgR4">delete</code><code>(</code><div class="inset_uKQm"><div><code>set<!-- -->: </code><code class="purple_ieR2">{</code><span><code>[</code><code class="blue_P4bS">T</code><code>]</code></span><code>: </code><code class="blue_P4bS">boolean</code><code class="purple_ieR2">}</code><code>,</code><span class="inlineDescription_G7Er">-- <span>
 <p>The set to delete from.</p>
 </span></span></div><div><code>...<!-- -->: </code><code class="blue_P4bS">...T</code><span class="inlineDescription_G7Er">-- <span>
 <p>The values to delete.</p>
@@ -192,30 +191,31 @@ local newSet = Add(set, &quot;world&quot;) -- { hello = true, world = true }
 
 <span class="token keyword">local</span> newSet <span class="token operator">=</span> <span class="token function">Delete</span><span class="token punctuation">(</span>set<span class="token punctuation">,</span> <span class="token string">"hello"</span><span class="token punctuation">)</span> <span class="token comment">-- { world = true }</span>
 </code></pre>
-</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="copy"><code style="text-decoration:none">copy</code><a href="#copy" class="hash-link" aria-label="Direct link to copy" title="Direct link to copy">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/csqrl/sift/blob/main/src/Set/copy.lua#L21"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>Set<!-- -->.</code><code class="green_DgR4">copy</code><code>(</code><div class="inset_uKQm"><div><code>set<!-- -->: </code><code class="purple_ieR2">{</code><span><code>[</code><code class="blue_P4bS">T</code><code>]</code></span><code>: </code><code class="blue_P4bS">boolean</code><code class="purple_ieR2">}</code><span class="inlineDescription_G7Er">-- <span>
-<p>The set to copy.</p>
-</span></span></div></div><code>) → </code><code class="purple_ieR2">{</code><span><code>[</code><code class="blue_P4bS">T</code><code>]</code></span><code>: </code><code class="blue_P4bS">boolean</code><code class="purple_ieR2">}</code><span class="inlineDescription_G7Er">-- <span>
-<p>A copy of the set.</p>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="has"><code style="text-decoration:none">has</code><a href="#has" class="hash-link" aria-label="Direct link to has" title="Direct link to has">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/cxmeel/sift/blob/main/src/Set/has.lua#L18"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>Set<!-- -->.</code><code class="green_DgR4">has</code><code>(</code><div class="inset_uKQm"><div><code>set<!-- -->: </code><code class="purple_ieR2">{</code><span><code>[</code><code class="blue_P4bS">T</code><code>]</code></span><code>: </code><code class="blue_P4bS">boolean</code><code class="purple_ieR2">}</code><code>,</code><span class="inlineDescription_G7Er">-- <span>
+<p>The set to check.</p>
+</span></span></div><div><code>value<!-- -->: </code><code class="blue_P4bS">any</code><span class="inlineDescription_G7Er">-- <span>
+<p>The value to check for.</p>
+</span></span></div></div><code>) → </code><code class="blue_P4bS">boolean</code><span class="inlineDescription_G7Er">-- <span>
+<p>Whether the value is in the set.</p>
 </span></span></div><div>
-<p>Creates a copy of a set.</p>
+<p>Checks whether a value is in a set.</p>
 <pre class="language-lua"><code class="language-lua"><span class="token keyword">local</span> set <span class="token operator">=</span> <span class="token punctuation">{</span> hello <span class="token operator">=</span> <span class="token keyword">true</span> <span class="token punctuation">}</span>
 
-<span class="token keyword">local</span> newSet <span class="token operator">=</span> <span class="token function">Copy</span><span class="token punctuation">(</span>set<span class="token punctuation">)</span> <span class="token comment">-- { hello = true }</span>
+<span class="token keyword">local</span> has <span class="token operator">=</span> <span class="token function">Has</span><span class="token punctuation">(</span>set<span class="token punctuation">,</span> <span class="token string">"hello"</span><span class="token punctuation">)</span> <span class="token comment">-- true</span>
 </code></pre>
-</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="difference"><code style="text-decoration:none">difference</code><a href="#difference" class="hash-link" aria-label="Direct link to difference" title="Direct link to difference">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/csqrl/sift/blob/main/src/Set/difference.lua#L21"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>Set<!-- -->.</code><code class="green_DgR4">difference</code><code>(</code><div class="inset_uKQm"><div><code>set<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="/sift/api/Set">Set</a></code><code class="op_lSLc">&lt;</code><code class="blue_P4bS">V</code><code class="op_lSLc">&gt;</code><code>,</code><span class="inlineDescription_G7Er">-- <span>
-<p>The set to compare.</p>
-</span></span></div><div><code>...<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="/sift/api/Set">...Set</a></code><code class="op_lSLc">&lt;</code><code class="blue_P4bS">V</code><code class="op_lSLc">&gt;</code><span class="inlineDescription_G7Er">-- <span>
-<p>The sets to compare against.</p>
-</span></span></div></div><code>) → </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="/sift/api/Set">Set</a></code><code class="op_lSLc">&lt;</code><code class="blue_P4bS">V</code><code class="op_lSLc">&gt;</code><span class="inlineDescription_G7Er">-- <span>
-<p>The difference between the sets.</p>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="add"><code style="text-decoration:none">add</code><a href="#add" class="hash-link" aria-label="Direct link to add" title="Direct link to add">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/cxmeel/sift/blob/main/src/Set/add.lua#L18"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>Set<!-- -->.</code><code class="green_DgR4">add</code><code>(</code><div class="inset_uKQm"><div><code>set<!-- -->: </code><code class="purple_ieR2">{</code><span><code>[</code><code class="blue_P4bS">T</code><code>]</code></span><code>: </code><code class="blue_P4bS">boolean</code><code class="purple_ieR2">}</code><code>,</code><span class="inlineDescription_G7Er">-- <span>
+<p>The set to add the value to.</p>
+</span></span></div><div><code>...<!-- -->: </code><code class="blue_P4bS">...T</code><span class="inlineDescription_G7Er">-- <span>
+<p>The values to add.</p>
+</span></span></div></div><code>) → </code><code class="purple_ieR2">{</code><span><code>[</code><code class="blue_P4bS">T</code><code>]</code></span><code>: </code><code class="blue_P4bS">boolean</code><code class="purple_ieR2">}</code><span class="inlineDescription_G7Er">-- <span>
+<p>The set with the values added.</p>
 </span></span></div><div>
-<p>Returns a set of values that are in the first set, but not in the other sets.</p>
-<pre class="language-lua"><code class="language-lua"><span class="token keyword">local</span> set1 <span class="token operator">=</span> <span class="token punctuation">{</span> hello <span class="token operator">=</span> <span class="token keyword">true</span><span class="token punctuation">,</span> world <span class="token operator">=</span> <span class="token keyword">true</span> <span class="token punctuation">}</span>
-<span class="token keyword">local</span> set2 <span class="token operator">=</span> <span class="token punctuation">{</span> cat <span class="token operator">=</span> <span class="token keyword">true</span><span class="token punctuation">,</span> dog <span class="token operator">=</span> <span class="token keyword">true</span><span class="token punctuation">,</span> hello <span class="token operator">=</span> <span class="token keyword">true</span> <span class="token punctuation">}</span>
+<p>Adds values to a set.</p>
+<pre class="language-lua"><code class="language-lua"><span class="token keyword">local</span> set <span class="token operator">=</span> <span class="token punctuation">{</span> hello <span class="token operator">=</span> <span class="token keyword">true</span> <span class="token punctuation">}</span>
 
-<span class="token keyword">local</span> difference <span class="token operator">=</span> <span class="token function">Difference</span><span class="token punctuation">(</span>set1<span class="token punctuation">,</span> set2<span class="token punctuation">)</span> <span class="token comment">-- { world = true }</span>
+<span class="token keyword">local</span> newSet <span class="token operator">=</span> <span class="token function">Add</span><span class="token punctuation">(</span>set<span class="token punctuation">,</span> <span class="token string">"world"</span><span class="token punctuation">)</span> <span class="token comment">-- { hello = true, world = true }</span>
 </code></pre>
-</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="differenceSymmetric"><code style="text-decoration:none">differenceSymmetric</code><a href="#differenceSymmetric" class="hash-link" aria-label="Direct link to differenceSymmetric" title="Direct link to differenceSymmetric">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/csqrl/sift/blob/main/src/Set/differenceSymmetric.lua#L21"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>Set<!-- -->.</code><code class="green_DgR4">differenceSymmetric</code><code>(</code><div class="inset_uKQm"><div><code>set<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="/sift/api/Set">Set</a></code><code class="op_lSLc">&lt;</code><code class="blue_P4bS">V</code><code class="op_lSLc">&gt;</code><code>,</code><span class="inlineDescription_G7Er">-- <span>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="differenceSymmetric"><code style="text-decoration:none">differenceSymmetric</code><a href="#differenceSymmetric" class="hash-link" aria-label="Direct link to differenceSymmetric" title="Direct link to differenceSymmetric">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/cxmeel/sift/blob/main/src/Set/differenceSymmetric.lua#L21"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>Set<!-- -->.</code><code class="green_DgR4">differenceSymmetric</code><code>(</code><div class="inset_uKQm"><div><code>set<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="/sift/api/Set">Set</a></code><code class="op_lSLc">&lt;</code><code class="blue_P4bS">V</code><code class="op_lSLc">&gt;</code><code>,</code><span class="inlineDescription_G7Er">-- <span>
 <p>The set to compare.</p>
 </span></span></div><div><code>...<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="/sift/api/Set">...Set</a></code><code class="op_lSLc">&lt;</code><code class="blue_P4bS">V</code><code class="op_lSLc">&gt;</code><span class="inlineDescription_G7Er">-- <span>
 <p>The sets to compare against.</p>
@@ -231,106 +231,47 @@ local newSet = Add(set, &quot;world&quot;) -- { hello = true, world = true }
 </div></div></article></div><details><summary>Show raw api</summary><pre style="max-width:100%;white-space:pre-wrap">{
     &quot;functions&quot;: [
         {
-            &quot;name&quot;: &quot;count&quot;,
-            &quot;desc&quot;: &quot;Counts the number of items in a set.\n\n```lua\nlocal set = { hello = true, world = true }\n\nlocal count = Count(set) -- 2\nlocal count = Count(set, function(item)\n  return item == \&quot;hello\&quot;\nend) -- 1\n```&quot;,
+            &quot;name&quot;: &quot;copy&quot;,
+            &quot;desc&quot;: &quot;Creates a copy of a set.\n\n```lua\nlocal set = { hello = true }\n\nlocal newSet = Copy(set) -- { hello = true }\n```&quot;,
             &quot;params&quot;: [
                 {
                     &quot;name&quot;: &quot;set&quot;,
-                    &quot;desc&quot;: &quot;The set to count.&quot;,
+                    &quot;desc&quot;: &quot;The set to copy.&quot;,
                     &quot;lua_type&quot;: &quot;{ [T]: boolean }&quot;
-                },
-                {
-                    &quot;name&quot;: &quot;predicate?&quot;,
-                    &quot;desc&quot;: &quot;The predicate to use to count.&quot;,
-                    &quot;lua_type&quot;: &quot;(item: T, set: { [T]: boolean }) -&gt; boolean?&quot;
                 }
             ],
             &quot;returns&quot;: [
                 {
-                    &quot;desc&quot;: &quot;The number of items in the set.&quot;,
-                    &quot;lua_type&quot;: &quot;number&quot;
-                }
-            ],
-            &quot;function_type&quot;: &quot;static&quot;,
-            &quot;source&quot;: {
-                &quot;line&quot;: 25,
-                &quot;path&quot;: &quot;src/Set/count.lua&quot;
-            }
-        },
-        {
-            &quot;name&quot;: &quot;isSuperset&quot;,
-            &quot;desc&quot;: &quot;Checks whether a set is a superset of another set.\n\n```lua\nlocal set = { hello = true, world = true }\nlocal subset = { hello = true }\n\nlocal isSuperset = IsSuperset(set, subset) -- true\n```&quot;,
-            &quot;params&quot;: [
-                {
-                    &quot;name&quot;: &quot;superset&quot;,
-                    &quot;desc&quot;: &quot;The superset to check.&quot;,
-                    &quot;lua_type&quot;: &quot;{ [any]: boolean }&quot;
-                },
-                {
-                    &quot;name&quot;: &quot;subset&quot;,
-                    &quot;desc&quot;: &quot;The subset to check against.&quot;,
-                    &quot;lua_type&quot;: &quot;{ [any]: boolean }&quot;
-                }
-            ],
-            &quot;returns&quot;: [
-                {
-                    &quot;desc&quot;: &quot;Whether the superset is a superset of the subset.&quot;,
-                    &quot;lua_type&quot;: &quot;boolean&quot;
+                    &quot;desc&quot;: &quot;A copy of the set.&quot;,
+                    &quot;lua_type&quot;: &quot;{ [T]: boolean }&quot;
                 }
             ],
             &quot;function_type&quot;: &quot;static&quot;,
             &quot;source&quot;: {
                 &quot;line&quot;: 21,
-                &quot;path&quot;: &quot;src/Set/isSuperset.lua&quot;
+                &quot;path&quot;: &quot;src/Set/copy.lua&quot;
             }
         },
         {
-            &quot;name&quot;: &quot;has&quot;,
-            &quot;desc&quot;: &quot;Checks whether a value is in a set.\n\n```lua\nlocal set = { hello = true }\n\nlocal has = Has(set, \&quot;hello\&quot;) -- true\n```&quot;,
+            &quot;name&quot;: &quot;fromArray&quot;,
+            &quot;desc&quot;: &quot;Converts an array to a set, where each item is mapped to true.\nDuplicate items are discarded.\n\nAliases: `fromList`\n\n```lua\nlocal array = { \&quot;hello\&quot;, \&quot;world\&quot;, \&quot;hello\&quot; }\n\nlocal set = FromArray(array) -- { hello = true, world = true }\n```&quot;,
             &quot;params&quot;: [
                 {
-                    &quot;name&quot;: &quot;set&quot;,
-                    &quot;desc&quot;: &quot;The set to check.&quot;,
-                    &quot;lua_type&quot;: &quot;{ [T]: boolean }&quot;
-                },
-                {
-                    &quot;name&quot;: &quot;value&quot;,
-                    &quot;desc&quot;: &quot;The value to check for.&quot;,
-                    &quot;lua_type&quot;: &quot;any&quot;
-                }
-            ],
-            &quot;returns&quot;: [
-                {
-                    &quot;desc&quot;: &quot;Whether the value is in the set.&quot;,
-                    &quot;lua_type&quot;: &quot;boolean&quot;
-                }
-            ],
-            &quot;function_type&quot;: &quot;static&quot;,
-            &quot;source&quot;: {
-                &quot;line&quot;: 18,
-                &quot;path&quot;: &quot;src/Set/has.lua&quot;
-            }
-        },
-        {
-            &quot;name&quot;: &quot;toArray&quot;,
-            &quot;desc&quot;: &quot;Converts a set to an array.\n\n```lua\nlocal set = { hello = true, world = true }\n\nlocal array = ToArray(set) -- { \&quot;hello\&quot;, \&quot;world\&quot; }\n```&quot;,
-            &quot;params&quot;: [
-                {
-                    &quot;name&quot;: &quot;set&quot;,
-                    &quot;desc&quot;: &quot;The set to convert to an array.&quot;,
-                    &quot;lua_type&quot;: &quot;{ [T]: boolean }&quot;
-                }
-            ],
-            &quot;returns&quot;: [
-                {
-                    &quot;desc&quot;: &quot;The array.&quot;,
+                    &quot;name&quot;: &quot;array&quot;,
+                    &quot;desc&quot;: &quot;The array to convert to a set.&quot;,
                     &quot;lua_type&quot;: &quot;{T}&quot;
                 }
             ],
+            &quot;returns&quot;: [
+                {
+                    &quot;desc&quot;: &quot;The set.&quot;,
+                    &quot;lua_type&quot;: &quot;{[T]: boolean}&quot;
+                }
+            ],
             &quot;function_type&quot;: &quot;static&quot;,
             &quot;source&quot;: {
-                &quot;line&quot;: 17,
-                &quot;path&quot;: &quot;src/Set/toArray.lua&quot;
+                &quot;line&quot;: 20,
+                &quot;path&quot;: &quot;src/Set/fromArray.lua&quot;
             }
         },
         {
@@ -361,28 +302,6 @@ local newSet = Add(set, &quot;world&quot;) -- { hello = true, world = true }
             }
         },
         {
-            &quot;name&quot;: &quot;merge&quot;,
-            &quot;desc&quot;: &quot;Combines one or more sets into a single set.\n\nAliases: `join`, `union`\n\n```lua\nlocal set1 = { hello = true, world = true }\nlocal set2 = { cat = true, dog = true, hello = true }\n\nlocal merge = Merge(set1, set2) -- { hello = true, world = true, cat = true, dog = true }\n```&quot;,
-            &quot;params&quot;: [
-                {
-                    &quot;name&quot;: &quot;...&quot;,
-                    &quot;desc&quot;: &quot;The sets to merge.&quot;,
-                    &quot;lua_type&quot;: &quot;...any&quot;
-                }
-            ],
-            &quot;returns&quot;: [
-                {
-                    &quot;desc&quot;: &quot;The merged set.&quot;,
-                    &quot;lua_type&quot;: &quot;{ [T]: boolean }&quot;
-                }
-            ],
-            &quot;function_type&quot;: &quot;static&quot;,
-            &quot;source&quot;: {
-                &quot;line&quot;: 20,
-                &quot;path&quot;: &quot;src/Set/merge.lua&quot;
-            }
-        },
-        {
             &quot;name&quot;: &quot;intersection&quot;,
             &quot;desc&quot;: &quot;Creates the intersection of multiple sets. The intersection\nis when both sets have a value in common. Unmatched values\nare discarded.\n\n```lua\nlocal set1 = { hello = true, world = true }\nlocal set2 = { world = true, universe = true }\n\nlocal intersection = Intersection(set1, set2) -- { world = true }\n```&quot;,
             &quot;params&quot;: [
@@ -405,30 +324,79 @@ local newSet = Add(set, &quot;world&quot;) -- { hello = true, world = true }
             }
         },
         {
-            &quot;name&quot;: &quot;add&quot;,
-            &quot;desc&quot;: &quot;Adds values to a set.\n\n```lua\nlocal set = { hello = true }\n\nlocal newSet = Add(set, \&quot;world\&quot;) -- { hello = true, world = true }\n```&quot;,
+            &quot;name&quot;: &quot;difference&quot;,
+            &quot;desc&quot;: &quot;Returns a set of values that are in the first set, but not in the other sets.\n\n```lua\nlocal set1 = { hello = true, world = true }\nlocal set2 = { cat = true, dog = true, hello = true }\n\nlocal difference = Difference(set1, set2) -- { world = true }\n```&quot;,
             &quot;params&quot;: [
                 {
                     &quot;name&quot;: &quot;set&quot;,
-                    &quot;desc&quot;: &quot;The set to add the value to.&quot;,
-                    &quot;lua_type&quot;: &quot;{ [T]: boolean }&quot;
+                    &quot;desc&quot;: &quot;The set to compare.&quot;,
+                    &quot;lua_type&quot;: &quot;Set&lt;V&gt;&quot;
                 },
                 {
                     &quot;name&quot;: &quot;...&quot;,
-                    &quot;desc&quot;: &quot;The values to add.&quot;,
-                    &quot;lua_type&quot;: &quot;...T&quot;
+                    &quot;desc&quot;: &quot;The sets to compare against.&quot;,
+                    &quot;lua_type&quot;: &quot;...Set&lt;V&gt;&quot;
                 }
             ],
             &quot;returns&quot;: [
                 {
-                    &quot;desc&quot;: &quot;The set with the values added.&quot;,
+                    &quot;desc&quot;: &quot;The difference between the sets.&quot;,
+                    &quot;lua_type&quot;: &quot;Set&lt;V&gt;&quot;
+                }
+            ],
+            &quot;function_type&quot;: &quot;static&quot;,
+            &quot;source&quot;: {
+                &quot;line&quot;: 21,
+                &quot;path&quot;: &quot;src/Set/difference.lua&quot;
+            }
+        },
+        {
+            &quot;name&quot;: &quot;isSuperset&quot;,
+            &quot;desc&quot;: &quot;Checks whether a set is a superset of another set.\n\n```lua\nlocal set = { hello = true, world = true }\nlocal subset = { hello = true }\n\nlocal isSuperset = IsSuperset(set, subset) -- true\n```&quot;,
+            &quot;params&quot;: [
+                {
+                    &quot;name&quot;: &quot;superset&quot;,
+                    &quot;desc&quot;: &quot;The superset to check.&quot;,
+                    &quot;lua_type&quot;: &quot;{ [any]: boolean }&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;subset&quot;,
+                    &quot;desc&quot;: &quot;The subset to check against.&quot;,
+                    &quot;lua_type&quot;: &quot;{ [any]: boolean }&quot;
+                }
+            ],
+            &quot;returns&quot;: [
+                {
+                    &quot;desc&quot;: &quot;Whether the superset is a superset of the subset.&quot;,
+                    &quot;lua_type&quot;: &quot;boolean&quot;
+                }
+            ],
+            &quot;function_type&quot;: &quot;static&quot;,
+            &quot;source&quot;: {
+                &quot;line&quot;: 21,
+                &quot;path&quot;: &quot;src/Set/isSuperset.lua&quot;
+            }
+        },
+        {
+            &quot;name&quot;: &quot;merge&quot;,
+            &quot;desc&quot;: &quot;Combines one or more sets into a single set.\n\nAliases: `join`, `union`\n\n```lua\nlocal set1 = { hello = true, world = true }\nlocal set2 = { cat = true, dog = true, hello = true }\n\nlocal merge = Merge(set1, set2) -- { hello = true, world = true, cat = true, dog = true }\n```&quot;,
+            &quot;params&quot;: [
+                {
+                    &quot;name&quot;: &quot;...&quot;,
+                    &quot;desc&quot;: &quot;The sets to merge.&quot;,
+                    &quot;lua_type&quot;: &quot;...any&quot;
+                }
+            ],
+            &quot;returns&quot;: [
+                {
+                    &quot;desc&quot;: &quot;The merged set.&quot;,
                     &quot;lua_type&quot;: &quot;{ [T]: boolean }&quot;
                 }
             ],
             &quot;function_type&quot;: &quot;static&quot;,
             &quot;source&quot;: {
-                &quot;line&quot;: 18,
-                &quot;path&quot;: &quot;src/Set/add.lua&quot;
+                &quot;line&quot;: 20,
+                &quot;path&quot;: &quot;src/Set/merge.lua&quot;
             }
         },
         {
@@ -459,28 +427,6 @@ local newSet = Add(set, &quot;world&quot;) -- { hello = true, world = true }
             }
         },
         {
-            &quot;name&quot;: &quot;fromArray&quot;,
-            &quot;desc&quot;: &quot;Converts an array to a set, where each item is mapped to true.\nDuplicate items are discarded.\n\nAliases: `fromList`\n\n```lua\nlocal array = { \&quot;hello\&quot;, \&quot;world\&quot;, \&quot;hello\&quot; }\n\nlocal set = FromArray(array) -- { hello = true, world = true }\n```&quot;,
-            &quot;params&quot;: [
-                {
-                    &quot;name&quot;: &quot;array&quot;,
-                    &quot;desc&quot;: &quot;The array to convert to a set.&quot;,
-                    &quot;lua_type&quot;: &quot;{T}&quot;
-                }
-            ],
-            &quot;returns&quot;: [
-                {
-                    &quot;desc&quot;: &quot;The set.&quot;,
-                    &quot;lua_type&quot;: &quot;{[T]: boolean}&quot;
-                }
-            ],
-            &quot;function_type&quot;: &quot;static&quot;,
-            &quot;source&quot;: {
-                &quot;line&quot;: 20,
-                &quot;path&quot;: &quot;src/Set/fromArray.lua&quot;
-            }
-        },
-        {
             &quot;name&quot;: &quot;isSubset&quot;,
             &quot;desc&quot;: &quot;Checks whether a set is a subset of another set.\n\n```lua\nlocal set = { hello = true, world = true }\nlocal subset = { hello = true }\n\nlocal isSubset = IsSubset(subset, set) -- true\n```&quot;,
             &quot;params&quot;: [
@@ -505,6 +451,55 @@ local newSet = Add(set, &quot;world&quot;) -- { hello = true, world = true }
             &quot;source&quot;: {
                 &quot;line&quot;: 19,
                 &quot;path&quot;: &quot;src/Set/isSubset.lua&quot;
+            }
+        },
+        {
+            &quot;name&quot;: &quot;count&quot;,
+            &quot;desc&quot;: &quot;Counts the number of items in a set.\n\n```lua\nlocal set = { hello = true, world = true }\n\nlocal count = Count(set) -- 2\nlocal count = Count(set, function(item)\n  return item == \&quot;hello\&quot;\nend) -- 1\n```&quot;,
+            &quot;params&quot;: [
+                {
+                    &quot;name&quot;: &quot;set&quot;,
+                    &quot;desc&quot;: &quot;The set to count.&quot;,
+                    &quot;lua_type&quot;: &quot;{ [T]: boolean }&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;predicate?&quot;,
+                    &quot;desc&quot;: &quot;The predicate to use to count.&quot;,
+                    &quot;lua_type&quot;: &quot;(item: T, set: { [T]: boolean }) -&gt; boolean?&quot;
+                }
+            ],
+            &quot;returns&quot;: [
+                {
+                    &quot;desc&quot;: &quot;The number of items in the set.&quot;,
+                    &quot;lua_type&quot;: &quot;number&quot;
+                }
+            ],
+            &quot;function_type&quot;: &quot;static&quot;,
+            &quot;source&quot;: {
+                &quot;line&quot;: 25,
+                &quot;path&quot;: &quot;src/Set/count.lua&quot;
+            }
+        },
+        {
+            &quot;name&quot;: &quot;toArray&quot;,
+            &quot;desc&quot;: &quot;Converts a set to an array.\n\n```lua\nlocal set = { hello = true, world = true }\n\nlocal array = ToArray(set) -- { \&quot;hello\&quot;, \&quot;world\&quot; }\n```&quot;,
+            &quot;params&quot;: [
+                {
+                    &quot;name&quot;: &quot;set&quot;,
+                    &quot;desc&quot;: &quot;The set to convert to an array.&quot;,
+                    &quot;lua_type&quot;: &quot;{ [T]: boolean }&quot;
+                }
+            ],
+            &quot;returns&quot;: [
+                {
+                    &quot;desc&quot;: &quot;The array.&quot;,
+                    &quot;lua_type&quot;: &quot;{T}&quot;
+                }
+            ],
+            &quot;function_type&quot;: &quot;static&quot;,
+            &quot;source&quot;: {
+                &quot;line&quot;: 17,
+                &quot;path&quot;: &quot;src/Set/toArray.lua&quot;
             }
         },
         {
@@ -535,52 +530,57 @@ local newSet = Add(set, &quot;world&quot;) -- { hello = true, world = true }
             }
         },
         {
-            &quot;name&quot;: &quot;copy&quot;,
-            &quot;desc&quot;: &quot;Creates a copy of a set.\n\n```lua\nlocal set = { hello = true }\n\nlocal newSet = Copy(set) -- { hello = true }\n```&quot;,
+            &quot;name&quot;: &quot;has&quot;,
+            &quot;desc&quot;: &quot;Checks whether a value is in a set.\n\n```lua\nlocal set = { hello = true }\n\nlocal has = Has(set, \&quot;hello\&quot;) -- true\n```&quot;,
             &quot;params&quot;: [
                 {
                     &quot;name&quot;: &quot;set&quot;,
-                    &quot;desc&quot;: &quot;The set to copy.&quot;,
+                    &quot;desc&quot;: &quot;The set to check.&quot;,
                     &quot;lua_type&quot;: &quot;{ [T]: boolean }&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;value&quot;,
+                    &quot;desc&quot;: &quot;The value to check for.&quot;,
+                    &quot;lua_type&quot;: &quot;any&quot;
                 }
             ],
             &quot;returns&quot;: [
                 {
-                    &quot;desc&quot;: &quot;A copy of the set.&quot;,
-                    &quot;lua_type&quot;: &quot;{ [T]: boolean }&quot;
+                    &quot;desc&quot;: &quot;Whether the value is in the set.&quot;,
+                    &quot;lua_type&quot;: &quot;boolean&quot;
                 }
             ],
             &quot;function_type&quot;: &quot;static&quot;,
             &quot;source&quot;: {
-                &quot;line&quot;: 21,
-                &quot;path&quot;: &quot;src/Set/copy.lua&quot;
+                &quot;line&quot;: 18,
+                &quot;path&quot;: &quot;src/Set/has.lua&quot;
             }
         },
         {
-            &quot;name&quot;: &quot;difference&quot;,
-            &quot;desc&quot;: &quot;Returns a set of values that are in the first set, but not in the other sets.\n\n```lua\nlocal set1 = { hello = true, world = true }\nlocal set2 = { cat = true, dog = true, hello = true }\n\nlocal difference = Difference(set1, set2) -- { world = true }\n```&quot;,
+            &quot;name&quot;: &quot;add&quot;,
+            &quot;desc&quot;: &quot;Adds values to a set.\n\n```lua\nlocal set = { hello = true }\n\nlocal newSet = Add(set, \&quot;world\&quot;) -- { hello = true, world = true }\n```&quot;,
             &quot;params&quot;: [
                 {
                     &quot;name&quot;: &quot;set&quot;,
-                    &quot;desc&quot;: &quot;The set to compare.&quot;,
-                    &quot;lua_type&quot;: &quot;Set&lt;V&gt;&quot;
+                    &quot;desc&quot;: &quot;The set to add the value to.&quot;,
+                    &quot;lua_type&quot;: &quot;{ [T]: boolean }&quot;
                 },
                 {
                     &quot;name&quot;: &quot;...&quot;,
-                    &quot;desc&quot;: &quot;The sets to compare against.&quot;,
-                    &quot;lua_type&quot;: &quot;...Set&lt;V&gt;&quot;
+                    &quot;desc&quot;: &quot;The values to add.&quot;,
+                    &quot;lua_type&quot;: &quot;...T&quot;
                 }
             ],
             &quot;returns&quot;: [
                 {
-                    &quot;desc&quot;: &quot;The difference between the sets.&quot;,
-                    &quot;lua_type&quot;: &quot;Set&lt;V&gt;&quot;
+                    &quot;desc&quot;: &quot;The set with the values added.&quot;,
+                    &quot;lua_type&quot;: &quot;{ [T]: boolean }&quot;
                 }
             ],
             &quot;function_type&quot;: &quot;static&quot;,
             &quot;source&quot;: {
-                &quot;line&quot;: 21,
-                &quot;path&quot;: &quot;src/Set/difference.lua&quot;
+                &quot;line&quot;: 18,
+                &quot;path&quot;: &quot;src/Set/add.lua&quot;
             }
         },
         {
@@ -619,8 +619,8 @@ local newSet = Add(set, &quot;world&quot;) -- { hello = true, world = true }
         &quot;line&quot;: 15,
         &quot;path&quot;: &quot;src/Set/init.lua&quot;
     }
-}</pre></details></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#types" class="table-of-contents__link toc-highlight">Types</a></li><li><a href="#properties" class="table-of-contents__link toc-highlight">Properties</a></li><li><a href="#functions" class="table-of-contents__link toc-highlight">Functions</a><ul><li><a href="#add" class="table-of-contents__link toc-highlight">.add</a></li><li><a href="#copy" class="table-of-contents__link toc-highlight">.copy</a></li><li><a href="#count" class="table-of-contents__link toc-highlight">.count</a></li><li><a href="#delete" class="table-of-contents__link toc-highlight">.delete</a></li><li><a href="#difference" class="table-of-contents__link toc-highlight">.difference</a></li><li><a href="#differenceSymmetric" class="table-of-contents__link toc-highlight">.differenceSymmetric</a></li><li><a href="#filter" class="table-of-contents__link toc-highlight">.filter</a></li><li><a href="#fromArray" class="table-of-contents__link toc-highlight">.fromArray</a></li><li><a href="#has" class="table-of-contents__link toc-highlight">.has</a></li><li><a href="#intersection" class="table-of-contents__link toc-highlight">.intersection</a></li><li><a href="#isSubset" class="table-of-contents__link toc-highlight">.isSubset</a></li><li><a href="#isSuperset" class="table-of-contents__link toc-highlight">.isSuperset</a></li><li><a href="#map" class="table-of-contents__link toc-highlight">.map</a></li><li><a href="#merge" class="table-of-contents__link toc-highlight">.merge</a></li><li><a href="#toArray" class="table-of-contents__link toc-highlight">.toArray</a></li></ul></li></ul></div></div></div></div></main></div></div><footer class="footer footer--dark"><div class="container container-fluid"><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2023 csqrl. Built with Moonwave and Docusaurus.</div></div></div></footer></div>
-<script src="/sift/assets/js/runtime~main.def62a50.js"></script>
-<script src="/sift/assets/js/main.ffe14e76.js"></script>
+}</pre></details></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#types" class="table-of-contents__link toc-highlight">Types</a></li><li><a href="#properties" class="table-of-contents__link toc-highlight">Properties</a></li><li><a href="#functions" class="table-of-contents__link toc-highlight">Functions</a><ul><li><a href="#add" class="table-of-contents__link toc-highlight">.add</a></li><li><a href="#copy" class="table-of-contents__link toc-highlight">.copy</a></li><li><a href="#count" class="table-of-contents__link toc-highlight">.count</a></li><li><a href="#delete" class="table-of-contents__link toc-highlight">.delete</a></li><li><a href="#difference" class="table-of-contents__link toc-highlight">.difference</a></li><li><a href="#differenceSymmetric" class="table-of-contents__link toc-highlight">.differenceSymmetric</a></li><li><a href="#filter" class="table-of-contents__link toc-highlight">.filter</a></li><li><a href="#fromArray" class="table-of-contents__link toc-highlight">.fromArray</a></li><li><a href="#has" class="table-of-contents__link toc-highlight">.has</a></li><li><a href="#intersection" class="table-of-contents__link toc-highlight">.intersection</a></li><li><a href="#isSubset" class="table-of-contents__link toc-highlight">.isSubset</a></li><li><a href="#isSuperset" class="table-of-contents__link toc-highlight">.isSuperset</a></li><li><a href="#map" class="table-of-contents__link toc-highlight">.map</a></li><li><a href="#merge" class="table-of-contents__link toc-highlight">.merge</a></li><li><a href="#toArray" class="table-of-contents__link toc-highlight">.toArray</a></li></ul></li></ul></div></div></div></div></main></div></div><footer class="footer footer--dark"><div class="container container-fluid"><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2024 cxmeel. Built with Moonwave and Docusaurus.</div></div></div></footer></div>
+<script src="/sift/assets/js/runtime~main.07c39ec1.js"></script>
+<script src="/sift/assets/js/main.b47e52bb.js"></script>
 </body>
 </html>

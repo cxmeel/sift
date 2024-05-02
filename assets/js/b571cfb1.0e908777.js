@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkdocs=self.webpackChunkdocs||[]).push([[213],{63891:s=>{s.exports=JSON.parse('{"sourceUrl":"https://github.com/cxmeel/sift/blob/main","baseUrl":"/sift/","classOrder":["Sift"],"apiCategories":[]}')}}]);
