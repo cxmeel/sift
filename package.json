@@ -1,6 +1,6 @@
 {
   "name": "@rbxts/sift",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "description": "Immutable data library for Luau",
   "main": "out/init.lua",
   "types": "out/index.d.ts",
@@ -10,8 +10,7 @@
   "scripts": {
     "build": "rbxtsc --type=package --rojo=''",
     "watch": "rbxtsc -w",
-    "prepublishOnly": "npm run build",
-    "prepare": "husky install"
+    "prepublishOnly": "npm run build"
   },
   "repository": {
     "type": "git",
@@ -41,8 +40,7 @@
     "@rbxts/types": "^1.0.515",
     "rbxts-transform-debug": "^1.0.0-rc.1",
     "rbxts-transform-env": "^1.0.0-rc.0",
-    "typescript": "^4.3.5",
     "roblox-ts": "^1.2.7",
-    "husky": "^8.0.0"
+    "typescript": "^4.3.5"
   }
 }
