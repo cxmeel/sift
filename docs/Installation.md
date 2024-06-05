@@ -16,7 +16,7 @@ While Sift is 100% free and open source, if you feel like sponsoring, you can su
 
 ### Wally
 
-Wally is a CLI package manager (much like NPM, Yarn or Cargo) for Roblox by @UpliftGames. Find out more more at [here][upliftgames/wally].
+Wally is a CLI package manager (much like NPM, Yarn or Cargo) for Roblox by @UpliftGames. Find out more at [here][upliftgames/wally].
 
 ```toml
 # wally.toml
