@@ -14,7 +14,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/csqrl/sift.git"
+    "url": "git+https://github.com/cxmeel/sift.git"
   },
   "keywords": [
     "array",
@@ -28,9 +28,9 @@
   ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/csqrl/sift/issues"
+    "url": "https://github.com/cxmeel/sift/issues"
   },
-  "homepage": "https://csqrl.github.io/sift",
+  "homepage": "https://cxmeel.github.io/sift",
   "files": [
     "out",
     "!**/*.tsbuildinfo"

@@ -4,30 +4,29 @@ sidebar_position: 2
 
 <!-- Links -->
 
-[sift]: https://github.com/csqrl/sift
-[sift/releases]: https://github.com/csqrl/sift/releases
+[upliftgames/wally]: https://github.com/upliftgames/wally
+[sift/releases]: https://github.com/cxmeel/sift/releases
 [sift/wally]: https://wally.run/package/csqrl/sift
-[sift/roblox]: https://www.roblox.com/library/9486684823
-[sift/itch.io]: https://csqrl.itch.io/sift
+[sift/roblox]: https://create.roblox.com/store/asset/9486684823/Sift
 [sift/npm]: https://npmjs.com/package/@rbxts/sift
 
-Sift is available from [Wally][sift/wally], [Itch.io][sift/itch.io], the [Roblox Library][sift/roblox], and [GitHub releases][sift/releases].
+Sift is available from [Wally][sift/wally], the [Roblox Library][sift/roblox], and [GitHub releases][sift/releases].
 
-While Sift is 100% free and open source, if you feel like sponsoring, Sift is also available on [Itch.io][sift/itch.io].
+While Sift is 100% free and open source, if you feel like sponsoring, you can support us on [GitHub Sponsors](https://github.com/sponsors/cxmeel).
 
 ### Wally
 
-Wally is a CLI package manager (much like NPM, Yarn or Cargo) for Roblox by @UpliftGames. Find out more at https://github.com/upliftgames/wally.
+Wally is a CLI package manager (much like NPM, Yarn or Cargo) for Roblox by @UpliftGames. Find out more more at [here][upliftgames/wally].
 
 ```toml
 # wally.toml
 
 [dependencies]
-Sift = "csqrl/sift@=0.0.1"
+Sift = "csqrl/sift@0.0.X" # Replace with latest version number
 ```
 
 ```shell
-$ wally install
+wally install
 ```
 
 ### TypeScript
@@ -35,7 +34,7 @@ $ wally install
 v0.0.1 of Sift includes TypeScript definitions. This means Sift is now compatible with roblox-ts. Refer to the Luau docs for API details.
 
 ```shell
-$ npm install @rbxts/sift
+npm install @rbxts/sift
 ```
 
 [View on NPM &rarr;][sift/npm]
