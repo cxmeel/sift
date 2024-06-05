@@ -1,10 +1,10 @@
 return function()
-	local filter = require(script.Parent.filter)
+	local Filter = require(script.Parent.filter)
 
 	it("should filter a set", function()
 		local set = { hello = true, world = true }
 
-		local newSet = filter(set, function(value)
+		local newSet = Filter(set, function(value)
 			return value ~= "hello"
 		end)
 
@@ -17,7 +17,7 @@ return function()
 	it("should not modify the original set", function()
 		local set = { hello = true }
 
-		filter(set, function(value)
+		Filter(set, function(value)
 			return value ~= "hello"
 		end)
 

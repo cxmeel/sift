@@ -1,10 +1,10 @@
 return function()
-	local toArray = require(script.Parent.toArray)
+	local ToArray = require(script.Parent.toArray)
 
 	it("should convert a set to an array", function()
 		local set = { hello = true, world = true }
 
-		local array = toArray(set)
+		local array = ToArray(set)
 
 		expect(array).to.be.a("table")
 		expect(array).never.to.equal(set)
@@ -16,7 +16,7 @@ return function()
 	it("should not modify the original set", function()
 		local set = { hello = true }
 
-		toArray(set)
+		ToArray(set)
 
 		expect(set).to.be.a("table")
 

@@ -1,8 +1,8 @@
 return function()
-	local fromArray = require(script.Parent.fromArray)
+	local FromArray = require(script.Parent.fromArray)
 
 	it("should create a set from an array", function()
-		local set = fromArray({ "hello", "world" })
+		local set = FromArray({ "hello", "world" })
 
 		expect(set).to.be.a("table")
 

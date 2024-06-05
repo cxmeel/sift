@@ -1,5 +1,5 @@
 --!strict
-local copy = require(script.Parent.copy)
+local Copy = require(script.Parent.copy)
 
 --[=[
   @function removeKeys
@@ -18,7 +18,7 @@ local copy = require(script.Parent.copy)
   ```
 ]=]
 local function removeKeys<K, V>(dictionary: { [K]: V }, ...: K): { [K]: V }
-	local result = copy(dictionary)
+	local result = Copy(dictionary)
 
 	for _, key in ipairs({ ... }) do
 		result[key] = nil

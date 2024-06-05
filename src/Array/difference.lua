@@ -1,9 +1,9 @@
 --!strict
 local T = require(script.Parent.Parent.Types)
 
-local toSet = require(script.Parent.toSet)
-local toArray = require(script.Parent.Parent.Set.toArray)
-local setDifference = require(script.Parent.Parent.Set.difference)
+local SetDifference = require(script.Parent.Parent.Set.difference)
+local ToArray = require(script.Parent.Parent.Set.toArray)
+local ToSet = require(script.Parent.toSet)
 
 --[=[
   @function difference
@@ -23,7 +23,7 @@ local setDifference = require(script.Parent.Parent.Set.difference)
   ```
 ]=]
 local function difference<V>(array: T.Array<V>, ...: T.Array<V>): T.Array<V>
-	local arraySet = toSet(array)
+	local arraySet = ToSet(array)
 	local otherSets = {}
 
 	for _, nextArray in { ... } do
@@ -31,12 +31,12 @@ local function difference<V>(array: T.Array<V>, ...: T.Array<V>): T.Array<V>
 			continue
 		end
 
-		table.insert(otherSets, toSet(nextArray))
+		table.insert(otherSets, ToSet(nextArray))
 	end
 
-	local differenceSet = setDifference(arraySet, unpack(otherSets))
+	local differenceSet = SetDifference(arraySet, unpack(otherSets))
 
-	return toArray(differenceSet)
+	return ToArray(differenceSet)
 end
 
 return difference

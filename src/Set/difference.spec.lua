@@ -1,11 +1,11 @@
 return function()
-	local difference = require(script.Parent.difference)
+	local Difference = require(script.Parent.difference)
 
 	it("should return the difference between two sets", function()
 		local set = { hello = true, world = true }
 		local otherSet = { panda = true, cat = true }
 
-		local newSet = difference(set, otherSet)
+		local newSet = Difference(set, otherSet)
 
 		expect(newSet).to.be.a("table")
 
@@ -19,7 +19,7 @@ return function()
 		local set = { hello = true, world = true }
 		local otherSet = { panda = true, cat = true }
 
-		local newSet = difference(set, nil, otherSet)
+		local newSet = Difference(set, nil, otherSet)
 
 		expect(newSet).to.be.a("table")
 		expect(newSet.hello).to.equal(true)
@@ -31,7 +31,7 @@ return function()
 		local otherSet = { panda = true, cat = true }
 		local anotherSet = { hello = true, panda = true }
 
-		local newSet = difference(set, otherSet, anotherSet)
+		local newSet = Difference(set, otherSet, anotherSet)
 
 		expect(newSet).to.be.a("table")
 

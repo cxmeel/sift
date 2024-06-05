@@ -1,11 +1,11 @@
 return function()
-	local difference = require(script.Parent.difference)
+	local Difference = require(script.Parent.difference)
 
 	it("should return the difference between two arrays", function()
 		local array = { "hello", "world" }
 		local otherArray = { "cat", "dog", "hello" }
 
-		local newArray = difference(array, otherArray)
+		local newArray = Difference(array, otherArray)
 
 		expect(newArray).to.be.a("table")
 		expect(#newArray).to.equal(1)
@@ -17,7 +17,7 @@ return function()
 		local array = { "hello", "world" }
 		local otherArray = { "cat", "dog", "hello" }
 
-		local newArray = difference(array, nil, otherArray)
+		local newArray = Difference(array, nil, otherArray)
 
 		expect(newArray).to.be.a("table")
 		expect(#newArray).to.equal(1)
@@ -30,7 +30,7 @@ return function()
 		local otherArray = { "cat", "dog", "hello" }
 		local anotherArray = { "hello", "panda" }
 
-		local newArray = difference(array, otherArray, anotherArray)
+		local newArray = Difference(array, otherArray, anotherArray)
 
 		expect(newArray).to.be.a("table")
 		expect(#newArray).to.equal(1)

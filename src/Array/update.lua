@@ -1,8 +1,8 @@
 --!strict
 local Sift = script.Parent.Parent
 
-local Util = require(Sift.Util)
 local Copy = require(script.Parent.copy)
+local Util = require(Sift.Util)
 
 type Callback<T> = (index: number) -> T
 type Updater<T> = (currentValue: T, index: number) -> T
