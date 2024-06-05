@@ -1,4 +1,12 @@
-export type SiftNone = { readonly __none__: unique symbol }
+export type SiftNone = {
+  /**
+   * **DO NOT USE!**
+   *
+   * @hidden
+   * @deprecated
+   */
+  readonly __none__: unique symbol
+}
 export type ExcludeNone<T> = Exclude<T, SiftNone>
 export type ObjectKey = string | number | symbol
 export type AnySet = Set<unknown>
