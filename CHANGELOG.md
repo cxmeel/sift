@@ -25,7 +25,7 @@
 
 ### Changed
 
-- If `update` is called with a key that doesn't exist in the specified dictionary, the key's value is **set to the key itself**. Fix by [@reselim](https://github.com/Reselim) in [PR #7](https://github.com/csqrl/sift/pull/7).
+- If `update` is called with a key that doesn't exist in the specified dictionary, the key's value is **set to the key itself**. Fix by [@reselim](https://github.com/Reselim) in [PR #7](https://github.com/cxmeel/sift/pull/7).
 - Added `aftman.toml` and switched GitHub workflows over to use aftman.
 
 ## [0.0.2]
@@ -52,7 +52,7 @@
 ### Changed
 
 - Exposed `isEmpty` and `equalObjects` from the root module
-- Improved typings for methods accepting predictes
+- Improved typings for methods accepting predicates
 - Updated documentation for some methods
 - Fixed `Dictionary.flatten` being shown in the `Array` docs (wrong `@within` tag)
 

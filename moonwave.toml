@@ -10,7 +10,7 @@ includeReadme = true
 
 [[navbar.items]]
 label = "Sponsor"
-href = "https://github.com/sponsors/csqrl"
+href = "https://github.com/sponsors/cxmeel"
 position = "right"
 
 [docusaurus.themeConfig.colorMode]
