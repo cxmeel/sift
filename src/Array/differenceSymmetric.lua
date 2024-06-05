@@ -1,9 +1,9 @@
 --!strict
 local T = require(script.Parent.Parent.Types)
 
-local toSet = require(script.Parent.toSet)
-local toArray = require(script.Parent.Parent.Set.toArray)
 local setDifferenceSymmetric = require(script.Parent.Parent.Set.differenceSymmetric)
+local toArray = require(script.Parent.Parent.Set.toArray)
+local toSet = require(script.Parent.toSet)
 
 --[=[
   @function differenceSymmetric

@@ -1,0 +1,4 @@
+column_width = 100
+
+[sort_requires]
+enabled = true

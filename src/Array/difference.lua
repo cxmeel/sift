@@ -1,9 +1,9 @@
 --!strict
 local T = require(script.Parent.Parent.Types)
 
-local toSet = require(script.Parent.toSet)
-local toArray = require(script.Parent.Parent.Set.toArray)
 local setDifference = require(script.Parent.Parent.Set.difference)
+local toArray = require(script.Parent.Parent.Set.toArray)
+local toSet = require(script.Parent.toSet)
 
 --[=[
   @function difference
