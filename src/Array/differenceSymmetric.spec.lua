@@ -1,11 +1,11 @@
 return function()
-	local differenceSymmetric = require(script.Parent.differenceSymmetric)
+	local DifferenceSymmetric = require(script.Parent.differenceSymmetric)
 
 	it("should return the symmetric difference between two arrays", function()
 		local array = { "hello", "world" }
 		local otherArray = { "cat", "dog", "hello" }
 
-		local newArray = differenceSymmetric(array, otherArray)
+		local newArray = DifferenceSymmetric(array, otherArray)
 
 		expect(newArray).to.be.a("table")
 		expect(#newArray).to.equal(3)
@@ -19,7 +19,7 @@ return function()
 		local array = { "hello", "world" }
 		local otherArray = { "cat", "dog", "hello" }
 
-		local newArray = differenceSymmetric(array, nil, otherArray)
+		local newArray = DifferenceSymmetric(array, nil, otherArray)
 
 		expect(newArray).to.be.a("table")
 		expect(#newArray).to.equal(3)
@@ -34,7 +34,7 @@ return function()
 		local otherArray = { "cat", "dog", "hello" }
 		local anotherArray = { "hello", "panda" }
 
-		local newArray = differenceSymmetric(array, otherArray, anotherArray)
+		local newArray = DifferenceSymmetric(array, otherArray, anotherArray)
 
 		expect(newArray).to.be.a("table")
 		expect(#newArray).to.equal(4)

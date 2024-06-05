@@ -1,11 +1,11 @@
 return function()
-	local intersection = require(script.Parent.intersection)
+	local Intersection = require(script.Parent.intersection)
 
 	it("should return the intersection of two sets", function()
 		local set1 = { hello = true, world = true }
 		local set2 = { world = true, cat = true }
 
-		local newSet = intersection(set1, set2)
+		local newSet = Intersection(set1, set2)
 
 		expect(newSet).to.be.a("table")
 

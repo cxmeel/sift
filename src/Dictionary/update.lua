@@ -1,5 +1,5 @@
 --!strict
-local copy = require(script.Parent.copy)
+local Copy = require(script.Parent.copy)
 
 --[=[
   @function update
@@ -33,7 +33,7 @@ local function update<K, V, U, C>(
 	updater: ((value: V, key: K) -> U)?,
 	callback: ((key: K) -> C)?
 ): { [K]: V | U | C }
-	local result: { [K]: any } = copy(dictionary)
+	local result: { [K]: any } = Copy(dictionary)
 
 	if result[key] then
 		if updater then

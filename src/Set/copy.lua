@@ -1,7 +1,7 @@
 --!strict
 local Sift = script.Parent.Parent
 
-local copy = require(Sift.Dictionary.copy)
+local Copy = require(Sift.Dictionary.copy)
 
 --[=[
   @function copy
@@ -18,4 +18,4 @@ local copy = require(Sift.Dictionary.copy)
   local newSet = Copy(set) -- { hello = true }
   ```
 ]=]
-return copy
+return Copy

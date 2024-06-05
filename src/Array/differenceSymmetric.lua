@@ -1,9 +1,9 @@
 --!strict
 local T = require(script.Parent.Parent.Types)
 
-local setDifferenceSymmetric = require(script.Parent.Parent.Set.differenceSymmetric)
-local toArray = require(script.Parent.Parent.Set.toArray)
-local toSet = require(script.Parent.toSet)
+local SetDifferenceSymmetric = require(script.Parent.Parent.Set.differenceSymmetric)
+local ToArray = require(script.Parent.Parent.Set.toArray)
+local ToSet = require(script.Parent.toSet)
 
 --[=[
   @function differenceSymmetric
@@ -23,7 +23,7 @@ local toSet = require(script.Parent.toSet)
   ```
 ]=]
 local function differenceSymmetric<V>(array: T.Array<V>, ...: T.Array<V>): T.Array<V>
-	local arraySet = toSet(array)
+	local arraySet = ToSet(array)
 	local otherSets = {}
 
 	for _, nextArray in { ... } do
@@ -31,12 +31,12 @@ local function differenceSymmetric<V>(array: T.Array<V>, ...: T.Array<V>): T.Arr
 			continue
 		end
 
-		table.insert(otherSets, toSet(nextArray))
+		table.insert(otherSets, ToSet(nextArray))
 	end
 
-	local differenceSet = setDifferenceSymmetric(arraySet, unpack(otherSets))
+	local differenceSet = SetDifferenceSymmetric(arraySet, unpack(otherSets))
 
-	return toArray(differenceSet)
+	return ToArray(differenceSet)
 end
 
 return differenceSymmetric

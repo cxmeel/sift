@@ -1,8 +1,8 @@
 --!strict
 local Sift = script.Parent.Parent
 
+local CopyDeep = require(script.Parent.copyDeep)
 local None = require(Sift.None)
-local copyDeep = require(script.Parent.copyDeep)
 
 --[=[
 	@function mergeDeep
@@ -40,7 +40,7 @@ local function mergeDeep<T>(...: any): T
 				result[key] = nil
 			elseif type(value) == "table" then
 				if result[key] == nil or type(result[key]) ~= "table" then
-					result[key] = copyDeep(value)
+					result[key] = CopyDeep(value)
 				else
 					result[key] = mergeDeep(result[key], value)
 				end
