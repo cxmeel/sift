@@ -13,15 +13,18 @@ jobs:
 
     steps:
       - name: Checkout Repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
         with:
           ref: ${{ github.event.release.tag_name }}
 
       - name: Setup Aftman
-        uses: ok-nick/setup-aftman@v0.3.0
+        uses: ok-nick/setup-aftman@v0.4.2
+        with:
+          version: v0.3.0
+          cache: true
 
       - name: Setup Node LTS
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v4
         with:
           node-version: lts/*
 
@@ -34,7 +37,7 @@ jobs:
 
       - name: Install Dependencies
         run: |
-          npm install
+          npm ci
           wally install
 
       - name: Remove Tests
@@ -53,6 +56,7 @@ jobs:
           wally publish
 
       - name: Publish to NPM
-        uses: JS-DevTools/npm-publish@v1
+        uses: JS-DevTools/npm-publish@v3
         with:
           token: ${{ secrets.NPM_TOKEN }}
+          dry-run: true
