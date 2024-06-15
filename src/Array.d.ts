@@ -75,7 +75,7 @@ declare namespace SiftArray {
 
   export function insert<T>(array: T[], index: number, ...values: T[]): T[]
 
-  export function is(value: any): boolean
+  export function is(value: any): value is Array<unknown>
 
   export function last<T>(array: T[]): T
 
