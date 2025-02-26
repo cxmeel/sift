@@ -1,7 +1,7 @@
 [package]
 name = "csqrl/sift"
 description = "Immutable data library for Luau"
-version = "0.0.9"
+version = "0.0.10"
 license = "MIT"
 registry = "https://github.com/upliftgames/wally-index"
 realm = "shared"

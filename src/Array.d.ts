@@ -21,9 +21,9 @@ declare namespace SiftArray {
 
   export function create<T = unknown>(length: number, value?: T): T[]
 
-  export function difference<T>(array: T[], ...values: T[]): T[]
+  export function difference<T>(array: T[], ...values: T[][]): T[]
 
-  export function differenceSymmetric<T>(array: T[], ...values: T[]): T[]
+  export function differenceSymmetric<T>(array: T[], ...values: T[][]): T[]
 
   export function equals(...arrays: unknown[]): boolean
 
