@@ -1,5 +1,6 @@
 --!strict
 local Sift = script.Parent.Parent
+
 local _T = require(Sift.Types)
 
 --[=[

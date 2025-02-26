@@ -1,10 +1,10 @@
 return function()
-	local map = require(script.Parent.map)
+	local Map = require(script.Parent.map)
 
 	it("should map a set", function()
 		local set = { hello = true, world = true }
 
-		local newSet = map(set, function(value)
+		local newSet = Map(set, function(value)
 			return value .. "!"
 		end)
 
@@ -21,7 +21,7 @@ return function()
 	it("should not modify the original set", function()
 		local set = { hello = true }
 
-		map(set, function(value)
+		Map(set, function(value)
 			return value .. "!"
 		end)
 

@@ -1,10 +1,10 @@
 return function()
-	local delete = require(script.Parent.delete)
+	local Delete = require(script.Parent.delete)
 
 	it("should delete a value from a set", function()
 		local set = { hello = true }
 
-		local newSet = delete(set, "hello")
+		local newSet = Delete(set, "hello")
 
 		expect(newSet).to.be.a("table")
 		expect(newSet).never.to.equal(set)
@@ -15,7 +15,7 @@ return function()
 	it("should not modify the original set", function()
 		local set = { hello = true }
 
-		delete(set, "hello")
+		Delete(set, "hello")
 
 		expect(set).to.be.a("table")
 		expect(set.hello).to.equal(true)

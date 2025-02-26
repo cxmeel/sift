@@ -1,11 +1,11 @@
 return function()
-	local differenceSymmetric = require(script.Parent.differenceSymmetric)
+	local DifferenceSymmetric = require(script.Parent.differenceSymmetric)
 
 	it("should return the symmetric difference between two sets", function()
 		local set = { hello = true, world = true }
 		local otherSet = { panda = true, cat = true }
 
-		local newSet = differenceSymmetric(set, otherSet)
+		local newSet = DifferenceSymmetric(set, otherSet)
 
 		expect(newSet).to.be.a("table")
 
@@ -19,7 +19,7 @@ return function()
 		local set = { hello = true, world = true }
 		local otherSet = { panda = true, cat = true }
 
-		local newSet = differenceSymmetric(set, nil, otherSet)
+		local newSet = DifferenceSymmetric(set, nil, otherSet)
 
 		expect(newSet).to.be.a("table")
 		expect(newSet.hello).to.equal(true)
@@ -31,7 +31,7 @@ return function()
 		local otherSet = { panda = true, cat = true }
 		local anotherSet = { hello = true, panda = true }
 
-		local newSet = differenceSymmetric(set, otherSet, anotherSet)
+		local newSet = DifferenceSymmetric(set, otherSet, anotherSet)
 
 		expect(newSet).to.be.a("table")
 

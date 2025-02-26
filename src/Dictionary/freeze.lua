@@ -1,6 +1,6 @@
 --!strict
-local _T = require(script.Parent.Parent.Types)
 local Copy = require(script.Parent.copy)
+local _T = require(script.Parent.Parent.Types)
 
 --[=[
   @function freeze

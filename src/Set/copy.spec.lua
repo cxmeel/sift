@@ -1,10 +1,10 @@
 return function()
-	local copy = require(script.Parent.copy)
+	local Copy = require(script.Parent.copy)
 
 	it("should copy a set", function()
 		local set = { hello = true }
 
-		local newSet = copy(set)
+		local newSet = Copy(set)
 
 		expect(newSet).to.be.a("table")
 		expect(newSet).never.to.equal(set)
