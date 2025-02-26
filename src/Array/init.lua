@@ -26,6 +26,7 @@ local Array = {
 	copyDeep = require(script.copyDeep),
 	count = require(script.count),
 	create = require(script.create),
+	dedupe = require(script.dedupe),
 	difference = require(script.difference),
 	differenceSymmetric = require(script.differenceSymmetric),
 	equals = require(script.equals),
