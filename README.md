@@ -20,13 +20,9 @@
 
 # Sift
 
-> Sift is no longer actively maintained. If you'd like to contribute, consider creating a fork.
-
-<div align="center">
-
 [![Source code][badges/github]][sift] [![NPM Package][badges/npm]][sift/npm] [![Roblox library][badges/roblox]][sift/roblox]
 
-</div>
+> Sift is no longer actively maintained. If you'd like to contribute, consider creating a fork.
 
 Immutable data library for Luau and roblox-ts.
 
