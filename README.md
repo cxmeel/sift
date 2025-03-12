@@ -11,12 +11,6 @@
 [sift/npm]: https://npmjs.com/package/@rbxts/sift
 [sift/docs]: https://cxmeel.github.io/sift
 
-<!-- Shields -->
-
-[shields/github-release]: https://img.shields.io/github/v/release/cxmeel/sift?label=latest+release&style=flat
-[shields/wally]: https://img.shields.io/endpoint?url=https://runkit.io/clockworksquirrel/wally-version-shield/branches/main/cxmeel/sift&color=blue&label=wally&style=flat
-[shields/npm]: https://img.shields.io/npm/v/@rbxts/sift?style=flat
-
 <!-- Badges -->
 
 [badges/github]: https://raw.githubusercontent.com/gist/cxmeel/56c5f18b229ca1e61feb6eb5fb149f43/raw/githubSource.svg
@@ -29,8 +23,6 @@
 <div align="center">
 
 [![Source code][badges/github]][sift] [![NPM Package][badges/npm]][sift/npm] [![Roblox library][badges/roblox]][sift/roblox]
-
-[![Latest GitHub version][shields/github-release]][sift/releases] [![Latest Wally version][shields/wally]][sift/wally] [![Latest NPM version][shields/npm]][sift/npm]
 
 </div>
 
