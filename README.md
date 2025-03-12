@@ -32,15 +32,6 @@ Heavily based on [@freddylist's Llama][freddylist/llama] library, which is no lo
 
 [Read the docs &rarr;][sift/docs]
 
-## v0.x
-
-For the time being, releases will remain at v0.x, and Sift should not be considered 100% stable. This is in line with the [Semantic Versioning 2.0.0](https://semver.org) specification.
-
-- Breaking changes may occur when the minor version is incremented.
-- The patch version will be incremented for additions, non-breaking changes, and bug fixes.
-
-This will remain the same until v1.x.
-
 ## Quick Start
 
 Sift is available from [Wally][sift/wally], the [Roblox Creator Store][sift/roblox] and [GitHub releases][sift/releases].
@@ -62,7 +53,7 @@ $ wally install
 
 ### TypeScript
 
-v0.0.1 of Sift includes TypeScript typings. This means Sift is now compatible with roblox-ts. Refer to the Luau docs for API details.
+Sift includes built-in TypeScript compatibility. The API is identical to the Luau counterpart.
 
 ```shell
 $ npm install @rbxts/sift
@@ -70,46 +61,24 @@ $ npm install @rbxts/sift
 
 ```ts
 // example.ts
-import Sift from "@rbxts/sift"
+import { Dictionary } from "@rbxts/sift"
 
-Sift.Dictionary.merge({ a: 1, c: 2 }, { b: 3, c: Sift.None }) // { a: 1, b: 3 }
+Dictionary.merge({ a: 1, c: 2 }, { b: 3, c: Sift.None }) // { a: 1, b: 3 }
 ```
 
 ### Manual Installation
 
-Grab a copy [from the Roblox Library][sift/roblox] or [GitHub releases][sift/releases], and drop it into Studio. The Sift model file can be synced in using Rojo.
+Grab a copy [from the Roblox Creator Store][sift/roblox] or [GitHub releases][sift/releases], and drop it into Studio. The Sift model file can be synced in using Rojo.
+
+## Contributions
+
+Sift is not open for contributions and is not actively maintained. If you would like to contribute, please consider creating a fork.
 
 ## What's Changed?
 
 As per the recommendations in [Llama's README][freddylist/llama], the following changes have been made:
 
-- Sift utilises native Luau types. Llama used [@osyrisrblx/t][osyrisrblx/t] for type checking, which meant that types were only checked at runtime.
-  - Sift _will not_ check types at runtime. If you're using the library wrong, you'll get errors at runtime anyway!
+- Sift utilises native Luau types. Llama used [@osyrisrblx/t][osyrisrblx/t] for type checking, which meant that types were only checked at runtime. **Sift does not use runtime type-checking.** You will need to install a library like [GreenTea](https://github.com/Corecii/GreenTea) or [t][osyrisrblx/t] manually.
 - Organised tests. `*.spec` files are now alongside their source files, making it easier to locate them.
 - Documentation is now generated using [@upliftgames' moonwave][upliftgames/moonwave] (Docusaurus). This makes it quick and easy to add new documentation, and provides a pleasant experience for the user.
 - Built-in TypeScript typings.
-
-## What's New?
-
-### Arrays (Lists)
-
-- `at`: Get an element at a specific index (negative indices are supported).
-- `difference`: Returns an array of values that are in the first array, but not in the other arrays.
-- `differenceSymmetric`: Returns an array of values that are in the first array, but not in the other arrays, and vice versa.
-- `freeze`: Freeze an array.
-- `freezeDeep`: Freeze an array and all nested arrays.
-- `is`: Check if the passed value is an array.
-- `shuffle`: Shuffle the elements of an array to a random order.
-
-### Dictionaries
-
-- `entries`: Get the entries of a dictionary as an array of key-value pairs.
-- `freeze`: Freeze a dictionary.
-- `freezeDeep`: Freeze a dictionary and all nested dictionaries.
-- `fromEntries`: Create a dictionary from an array of key-value pairs.
-
-### Sets
-
-- `count`: Get the number of elements in a set.
-- `difference`: Returns a set of values that are in the first set, but not in the other sets.
-- `differenceSymmetric`: Returns a set of values that are in the first set, but not in the other sets, and vice versa.
